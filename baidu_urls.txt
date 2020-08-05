@@ -1,1 +1,3 @@
-baidu_urls
+https://tolshao.github.io/2020/09/09/template/
+https://tolshao.github.io/2020/08/05/hello-world/
+https://tolshao.github.io/2020/02/16/sort-algorithms/
