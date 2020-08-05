@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.github.io/2020/08/01/settings-matlab/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.github.io/2020/08/08/rl-11/</loc>
     
     <lastmod>2020-08-05</lastmod>
@@ -86,70 +93,7 @@
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/2019/09/09/template/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/04/05/advanced-control/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/08/03/paper-writting/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/04/01/mac-settings/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/08/01/settings-python/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/08/01/settings-matlab/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/07/01/rl-1/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/07/05/rl-2/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/07/05/rl-3/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/2020/07/01/rl-4/</loc>
+    <loc>https://tolshao.github.io/2020/08/08/rl-6/</loc>
     
     <lastmod>2020-08-05</lastmod>
     
@@ -163,7 +107,63 @@
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/2020/08/08/rl-6/</loc>
+    <loc>https://tolshao.github.io/2020/07/01/rl-4/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/07/05/rl-3/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/07/05/rl-2/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/07/01/rl-1/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/08/01/settings-python/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/04/01/mac-settings/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/04/05/advanced-control/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2019/09/09/template/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/2020/08/03/paper-writting/</loc>
     
     <lastmod>2020-08-05</lastmod>
     

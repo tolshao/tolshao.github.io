@@ -550,7 +550,7 @@
 <h3 id="gamma-奖励衰减因子"><a href="#gamma-奖励衰减因子" class="headerlink" title="$\gamma$奖励衰减因子"></a>$\gamma$奖励衰减因子</h3><p>在上面的价值函数中，有一个变量$\gamma$ ，即奖励衰减因子，在[0，1]之间。如果为0，则是贪婪法，即价值只由当前的奖励决定，如果是1，则所有的后续状态奖励和当前奖励一视同仁。一般来说取0到1之间的数。</p>
 <h3 id="环境的状态转化模型"><a href="#环境的状态转化模型" class="headerlink" title="环境的状态转化模型"></a>环境的状态转化模型</h3><p>由于在某个状态下，执行一定的action，能够达到新的一个状态$S_{t+1}$，但是$S_{t+1}$不一定是唯一的。环境的状态转化模型，可以理解为一个概率状态机，它是一个概率模型，即在状态$t$下采取动作$a$,转到下一个状态$s’$的概率，表示为$P^a_{ss’}$。</p>
 <h3 id="探索率-epsilon"><a href="#探索率-epsilon" class="headerlink" title="探索率$\epsilon$"></a>探索率$\epsilon$</h3><p>怎么说的探索率呢？它主要是为了防止陷入局部最优。比如说目前在$s_1$状态下有两个$a_1,a_2$。我们通过计算出，发现执行$a_1$的动作比较好，但是为了防止陷入局部最优，我们会选择以$\epsilon$的概率来执行$a_2$，以$1-\epsilon$的概率来执行$a_1$。一般来说，$\epsilon$ 随着训练次数的增加而逐渐减小。</p>
-<p><img src="img/contact.jpg"></p>
+<p><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
