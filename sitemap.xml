@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.github.io/2020/08/01/advanced-control/</loc>
+    
+    <lastmod>2020-08-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.github.io/about/index.html</loc>
     
     <lastmod>2020-08-05</lastmod>
@@ -81,6 +88,20 @@
 
   
   <url>
+    <loc>https://tolshao.github.io/tags/leetcode/</loc>
+    <lastmod>2020-08-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-08-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.github.io/tags/test/</loc>
     <lastmod>2020-08-05</lastmod>
     <changefreq>daily</changefreq>
@@ -95,14 +116,14 @@
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/tags/leetcode/</loc>
+    <loc>https://tolshao.github.io/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/</loc>
     <lastmod>2020-08-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://tolshao.github.io/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/</loc>
     <lastmod>2020-08-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -112,6 +133,13 @@
   
   <url>
     <loc>https://tolshao.github.io/categories/%E7%BC%96%E7%A8%8B%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-08-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-08-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

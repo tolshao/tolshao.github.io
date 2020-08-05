@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, BUAA ">
+    <meta name="keywords" content="控制理论笔记, BUAA ">
     <meta name="baidu-site-verification" content="7VRrwBpvaq" />
     <meta name="description" content="北京航空航天大学 | 张小跳">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>Hello World | Tolshao</title>
+    <title>控制理论笔记 | Tolshao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -320,12 +320,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/robot.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">控制理论笔记</h1>
                 </div>
             </div>
         </div>
@@ -440,12 +440,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">经典控制理论</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">高级控制理论</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -454,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-05
+                    2020-08-01
                 </div>
                 
 
@@ -468,14 +485,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    125
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -490,15 +507,136 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new "My New Post"</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="经典控制理论"><a href="#经典控制理论" class="headerlink" title="经典控制理论"></a>经典控制理论</h1><h2 id="动态系统建模"><a href="#动态系统建模" class="headerlink" title="动态系统建模"></a>动态系统建模</h2><p>通过配置系统输入u(t)，使u(s)G(s)的极点使系统满足一定特性</p>
+<h3 id="一阶系统特性"><a href="#一阶系统特性" class="headerlink" title="一阶系统特性"></a>一阶系统特性</h3><p>$G(s) = \frac{a}{s+a}$<br>$\frac{1}{a}$是时间常数$\tau$，对应上升为0.63<br>$4\tau$对应阶跃响应0.98</p>
+<h3 id="二阶系统特性"><a href="#二阶系统特性" class="headerlink" title="二阶系统特性"></a>二阶系统特性</h3><p>$m\ddot x+B\dot x+kx=F$<br>$\ddot x+2\omega_n\xi \dot x+\omega_n^2x=\frac{F}{m}$</p>
+<p>阻尼比固有频率:$\omega_n\sqrt{1-\xi^2}$</p>
+<p>单位化：$u(t)=\frac{F}{\omega_n^2}$<br>$H(s) = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}$</p>
+<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15744291457149.jpg?x-oss-process=style/blog"></p>
+<p>零极点图：<br>极点全部在左，系统稳定<br>虚轴长度代表<strong>振荡周期</strong><br>实轴长度代表<strong>衰减速度</strong><br>$\cos \theta$代表<strong>阻尼比</strong></p>
+<h2 id="SISO-system稳定性判据"><a href="#SISO-system稳定性判据" class="headerlink" title="SISO system稳定性判据"></a>SISO system稳定性判据</h2><p>特征多项式系数判断传递函数稳定性</p>
+<ol>
+<li>Hurwitz霍尔维兹判据：构建霍尔维兹行列式，全部为正</li>
+</ol>
+<p>$D1 = a_1$</p>
+<p>$D2 = \begin{pmatrix}<br>a_1&amp;a_3\<br>a_0&amp;a_2<br>\end{pmatrix}$</p>
+<p>$D3 = \begin{pmatrix}<br>a_{1}&amp; a_{3}&amp; a_{5}\<br>a_{0}&amp; a_{2}&amp; a_{4}\<br>0&amp; a_{1}&amp; a_{3}<br>\end{pmatrix}$</p>
+<ol start="2">
+<li>Lienard-Chipard林纳德-齐帕特判据：系数都大于零，奇数或偶数阶次行列式</li>
+<li>Routh劳斯判据：<br>求$e_{ss}$时顺序，1判断稳定性、2求E(s)，3应用终值定理$e_{ss} = \lim \limits_{s\rightarrow0}sE(s)$</li>
+<li>频率稳定判据：<br>H. Nyquist奈奎斯特判据，开环频率特性，判断闭环稳定性<br>$F(s) = 1 +G(s)H(s)$的p，极点，是开环传函极点<br>z零点，闭环传递函数的极点封闭曲线内$R=P-Z$</li>
+</ol>
+<h2 id="频率特性"><a href="#频率特性" class="headerlink" title="频率特性"></a>频率特性</h2><ul>
+<li>只适用于线性定常模型，否则不能拉式变换</li>
+<li>稳定条件下使用</li>
+<li>bode图单位用dB：20log(Mo/Mi)，表征了能量</li>
+</ul>
+<ol>
+<li><p>幅值相应:magnitude response<br>$\frac{M_o}{M_i} = \left | G(j\omega)\right |$</p>
+</li>
+<li><p>幅角响应:Phase response<br>$\phi_o-\phi_i = \angle G(j\omega)$</p>
+</li>
+<li><p>带阻尼比的共振频率:<br>$\omega = \omega_n \sqrt{1-2\zeta^2}\$<br>此时的极值：$\frac{1}{2\zeta\sqrt{1-\zeta^2}}$</p>
+</li>
+<li><p>幅值裕度h：相位为-π时，幅值距0dB的差值<br>相位裕度$\gamma$:幅值为1（0dB）时，相位距-π的差<br>根据幅相图，(0,0)出发为开环，(-1,0)出发为闭环</p>
+</li>
+<li><p>不同频段信息</p>
+</li>
+</ol>
+<ul>
+<li>低频段$G(j\omega)$反映了系统的稳态精度<br>0dB/sec-&gt;稳态精度</li>
+<li>中频段：穿越0dB$\omega_c$<br>反映了系统的平稳性和快速性</li>
+</ul>
+<p>-20dB/sec开环积分，闭环一阶，快速性<br>-40dB/sec开环双积分，闭环二阶，零阻尼，频率段不宜过宽，穿越频率取-20斜率</p>
+<ul>
+<li>高频段反映了系统对高频干扰抑制能力</li>
+</ul>
+<h2 id="系统矫正"><a href="#系统矫正" class="headerlink" title="系统矫正"></a>系统矫正</h2><h3 id="串联矫正"><a href="#串联矫正" class="headerlink" title="串联矫正"></a>串联矫正</h3><ol>
+<li><p>超前矫正<br>$G_c(s)=\frac{1+aTs}{1+Ts},a&gt;1$</p>
+</li>
+<li><p>滞后矫正<br>$G_c(s)=\frac{1+bTs}{1+Ts},b&lt;1$</p>
+</li>
+<li><p>滞后超前矫正<br>两个合起来</p>
+</li>
+<li><p>PID矫正器</p>
+</li>
+<li><p>复合矫正<br>前置矫正：指令-&gt;Gc(s)-&gt;误差，一般补偿分母s，开环前向增益1<br>干扰前置补偿：干扰测量-&gt;Gc(s)-&gt;误差，误差-&gt;干扰端传函$Gs^{-1}$</p>
+</li>
+</ol>
+<h2 id="根轨迹"><a href="#根轨迹" class="headerlink" title="根轨迹"></a>根轨迹</h2><p>（开环-&gt;闭环稳定性）:分析G(s)的N、P，看闭环系统稳定性<br>开环传递函数中开环增益K从0-无穷时，闭环特征根的移动轨迹<br>单位负反馈闭环传递函数<br>$\phi(s) = \frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}$<br>G(s)是一个<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/jie-ping20200412-xia-wu31424.png?x-oss-process=style/blog" alt="截屏2020-04-12 下午3.14.24"></p>
+<h3 id="非线性系统"><a href="#非线性系统" class="headerlink" title="非线性系统"></a>非线性系统</h3><p>叠加原理不适用<br>常规分类：<br>死区<br>饱和<br>间隙-滞环</p>
+<p>系统收敛：消耗系统能量<br>系统发散：从外界获取能量</p>
+<p>#相关词汇<br>$X_{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T_{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
+<h1 id="工程数学基础"><a href="#工程数学基础" class="headerlink" title="工程数学基础"></a>工程数学基础</h1><h2 id="1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化"><a href="#1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化" class="headerlink" title="1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化"></a>1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化</h2><p>特征值$\lambda$有$\lambda v=Av$<br>$\ | \lambda I-A\ | = 0$<br>特征值<br>解法：将$\lambda$代回$( \lambda I - A)* v = 0$<br>$\lambda_1 、\lambda_2$对应特征向量$v_1 、v_2$<br><strong>过渡矩阵</strong>：特征向量组成的矩阵<br>$P =<br>\begin {pmatrix} v_1&amp;v_2<br>\end {pmatrix}$<br>$AP=A[v_1  v_2] = [Av_1 Av_2]=[\lambda_1v_1 \lambda_2 v_2]=<br>\begin{bmatrix}<br>\lambda_1v_{11} &amp; \lambda_2v_{21}\<br>\lambda_1v_{12} &amp; \lambda_2v_{22}<br>\end{bmatrix}<br>=P\Lambda<br>$<br>所以有，单位向量矩阵P将A特征值对角化矩阵<br>$P^-1AP = \Lambda$</p>
+<h2 id="2-线性化-Linearization"><a href="#2-线性化-Linearization" class="headerlink" title="2. 线性化 Linearization"></a>2. 线性化 Linearization</h2><p>非线性：$1/x,\sqrt{x},x^n等$</p>
+<ul>
+<li>用泰勒级数展开<br>在平衡点(Fixed point)$x_0$附近线性化</li>
+</ul>
+<ol>
+<li>令导数项为0，求得平衡点x的值$x=x_0$</li>
+<li>把$x_\sigma = x_0 + x_d$代入$f(x_\sigma)=f(x_0)+f’(x_0)(x_\sigma-x_0)$</li>
+<li>把$x = x_\sigma$代入微分方程<br>将$\sigma$的x用x_0和x_d替换，然后<br>得到了关于x_d的线性化微分方程<br>$\dot x = A x + b u$求A的雅可比矩阵<br>行是函数，列为对变量的偏导；<br>求平衡点，代入偏导雅可比矩阵；<br>展开得到线性化后的微分方程</li>
+</ol>
+<h2 id="3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）"><a href="#3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）" class="headerlink" title="3. 卷积与LTI冲激响应（LTI：linear time invariant system）"></a>3. 卷积与LTI冲激响应（LTI：linear time invariant system）</h2><p>卷积：$x(t) = f(t)*h(t)=\int_0^t f(\tau)h(t-\tau)d\tau$<br>$f(t)$=输入<br>$h(t)$=单位冲激响应<br>$L_{卷积}$=L乘积</p>
+<h2 id="4-欧拉公式Euler’s-Formula"><a href="#4-欧拉公式Euler’s-Formula" class="headerlink" title="4. 欧拉公式Euler’s Formula"></a>4. 欧拉公式Euler’s Formula</h2><p>$e^{i\theta}=\cos(\theta)+i\sin(\theta)$</p>
+<h2 id="5-复数Complex-Number"><a href="#5-复数Complex-Number" class="headerlink" title="5. 复数Complex Number"></a>5. 复数Complex Number</h2><p> $\sin(x) = C\rightarrow x = \pi/2+2k\pi + \ln(C\pm\sqrt{C^2-1})i$<br>$Z = a + b i $<br>$Re(Z) =a $<br>$Im(Z)=b $<br>$\left | Z \right | = \sqrt{a^2+b^2}$<br>$Z = \left | Z \right | \cdot (\cos\theta+i\sin\theta)= \left | Z \right | \cdot e^{i\theta}$<br>$Z_1 \cdot Z_2 = \left | Z_1 \right | \left | Z_2 \right | e^{\theta_1+\theta_2}$<br>$Z+\bar Z = 2a$<br>$Z- \bar Z = 2bi$</p>
+<h2 id="6-阈值选取"><a href="#6-阈值选取" class="headerlink" title="6. 阈值选取"></a>6. 阈值选取</h2><p>Normal Distribution正态分布、高斯分布<br>$X = (\mu,\sigma^2)$<br>漏检False Dismissal<br>误警False Alarm</p>
+<h1 id="Advanced控制理论"><a href="#Advanced控制理论" class="headerlink" title="Advanced控制理论"></a>Advanced控制理论</h1><p>状态空间：State-Space，包含输入、输出、状态，写成一阶微分方程的形式<br>$\dot x = A x + B u$<br>$y = Cx+Du$</p>
+<h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><h3 id="两种类型"><a href="#两种类型" class="headerlink" title="两种类型"></a>两种类型</h3><ol>
+<li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15753853291223.jpg?x-oss-process=style/blog"><br>$a , of,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
+</li>
+<li><p>渐进稳定性：<br>$\exists \delta(t_0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits_{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a , of,  \lambda_i &lt; 0$实部</p>
+</li>
+</ol>
+<h3 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a>判别方法</h3><ol>
+<li>直接方法：解微分方程(Direct method)<br>求解λ的值，判断正负</li>
+<li>第二方法：(2nd method)<br>$(i)V(0) = 0$<br>$(ii) V(x) \geqslant  0 , in,  D-{0}$ PSD:postive semi definit<br>$(iii)\dot V(x) \leqslant 0 , in,  D-{0}$NSD:negative semi definit<br>$\Rightarrow x = 0$</li>
+</ol>
+<h3 id="3-不稳定"><a href="#3-不稳定" class="headerlink" title="3. 不稳定"></a>3. 不稳定</h3><p>存在至少一个特征值实部大于零</p>
+<h2 id="相图分析-phase-portrait"><a href="#相图分析-phase-portrait" class="headerlink" title="相图分析-phase-portrait"></a>相图分析-phase-portrait</h2><p>plot(x,$\dot x$)，通过x初值，分析点在轨迹上的移动，判断稳不稳定<br>matlab绘制实例</p>
+<pre><code>% 画解微分方程组的相图
+clear;cla;clc;
+[x,y]=meshgrid(linspace(-5,5));
+streamslice(x,y,0 * x + 2 * y,-3 * x + 0 * y );
+xlabel('x');ylabel('y');</code></pre>
+<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15747442437226.jpg?x-oss-process=style/blog" alt="w400"></p>
+<p>特征值和相图的关系<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15753593791413.jpg?x-oss-process=style/blog"></p>
+<h2 id="齐次状态方程解-dot-x-A-x"><a href="#齐次状态方程解-dot-x-A-x" class="headerlink" title="齐次状态方程解$\dot x = A x$"></a>齐次状态方程解$\dot x = A x$</h2><p>$\dot x = a x\rightarrow x(t) = e^{at}x(0)$<br>同理，多元线性方程<br>$\dot x = a x\rightarrow x(t) = e^{At}x(0)$<br>其中，<strong>状态转移矩阵$\Phi(t)$解法</strong></p>
+<ul>
+<li>数值法：<br>$\Phi(t) = e^{At}=I+At+\frac{1}{2!}A^2t^2+…+\frac{1}{k!}A^kt^k$</li>
+<li>解析法：<br>$\Phi(t) = L^{-1}[sI-A]^{-1}$</li>
+</ul>
+<p>性质：<br>$\Phi(0) = I$<br>$x(t) = \Phi(t-t_0)x(t_0)$<br>$\Phi ^{-1}(t) = \Phi(-t)$</p>
+<h2 id="非齐次状态方程-dot-x-A-x-B-u"><a href="#非齐次状态方程-dot-x-A-x-B-u" class="headerlink" title="非齐次状态方程$\dot x = A x + B u$"></a>非齐次状态方程$\dot x = A x + B u$</h2><p>$x(t) = \Phi (t)x(0)+ \int_0^t\Phi(t-\tau)Bu(\tau)d\tau$<br>初始状态x(0)响应+输入项u(t)响应</p>
+<h2 id="线性系统可控性与可观测性"><a href="#线性系统可控性与可观测性" class="headerlink" title="线性系统可控性与可观测性"></a>线性系统可控性与可观测性</h2><p>可控性：$\forall x(0),x(t_f), \exists t_f &lt; +\infty , u[0,t_f], st. x(0)\rightarrow x(t_f)$<br>充要条件：</p>
+<ol>
+<li><p>$S = [b, Ab, A^2…, A^{n-1}b]$<br>理论可行，但是实际物理不一定<br>以离散系统为例证明：<br>$$<br>x_ 0 = 0\<br>x_1 = Ax_0 + Bu_0 = Bu_0\<br>x_2 = Ax_1 + Bu_1 = ABu_0 + B u_1\<br>x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\<br>$$<br>Matlab 求解，Co矩阵 “ctrb(A,B)”</p>
+</li>
+<li><p>$rank[S] = n, det ,  S \neq 0$</p>
+</li>
+</ol>
+<p>可观性：$\forall t \in [t_0,t_f],已知y(t),u(t),可求x(t_0)$<br>$rank<br>\begin{bmatrix}<br>C\<br>CA\<br>CA^2\<br>…\<br>CA^{n-1}<br>\end{bmatrix}<br>=n<br>$</p>
+<h3 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h3><p>$f(\lambda) = \sum_{i=0}^{n}a_i\lambda ^i$<br>$f(A) = 0 \rightarrow A^n = \sum_{i=0}^{n-1}a_iA^i$</p>
+<p>求解$\left | \lambda I - A\right |$的特征多项式<br>将$\lambda = A $代入，得到递推公式，解算$A^n$</p>
+<h2 id="状态反馈与状态观测器"><a href="#状态反馈与状态观测器" class="headerlink" title="状态反馈与状态观测器"></a>状态反馈与状态观测器</h2><p>取$u=v-kx$，其中，v为参考输入，系统闭环矩阵由A变为A-Bk</p>
+<ol>
+<li>不改变可控性，有可能改变可观性</li>
+<li>闭环特征值</li>
+</ol>
+<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755438743134.jpg?x-oss-process=style/blog"></p>
+<h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x_t^- = F_t x_{t-1} + B_t u_t$</p>
+<p>状态转移矩阵:$P_t^-=FP_{t-1}F^T+Q$</p>
+<p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\<br>\sigma_{12}&amp;\sigma_{22}\<br>\end{bmatrix}<br>$</p>
+<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15748205077671.jpg?x-oss-process=style/blog" alt="w400"></p>
+<p>卡尔曼方程≠状态观测器<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755459115506.jpg?x-oss-process=style/blog" alt="m180"></p>
+<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755450314782.jpg?x-oss-process=style/blog"><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755448894756.jpg?x-oss-process=style/blog"><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
+<p>概率函数相乘，多传感器信息融合</p>
+<h2 id="非线性控制理论"><a href="#非线性控制理论" class="headerlink" title="非线性控制理论"></a>非线性控制理论</h2><h3 id="ARC"><a href="#ARC" class="headerlink" title="ARC"></a>ARC</h3><p>Barbalat’s 引理 lemma</p>
+<ol>
+<li>$V\geq0$</li>
+<li>$\dot{V} \leq -g(t)$, where $g(t)\geq 0$</li>
+<li>$\dot{g}(t)\in L_{\infty}$, if $\dot{g}(t)$ is bounded the $g(t)$ is uniformly continous.<br>Then, $\lim_{t-&gt;\infty} g(t)=0$<br>Consquently, $\lim_{t-&gt;\infty} e = 0 (k\neq0)$</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -542,7 +680,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolshao.github.io/2020/08/05/hello-world/">https://tolshao.github.io/2020/08/05/hello-world/</a>
+                    <a href="https://tolshao.github.io/2020/08/01/advanced-control/">https://tolshao.github.io/2020/08/01/advanced-control/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,7 +717,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">经典控制理论</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">高级控制理论</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -748,7 +894,7 @@
         repo: 'blog_comment',
         owner: 'tolshao',
         admin: ["tolshao"],
-        id: '2020-08-05T14-28-40',
+        id: '2020-08-01T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -776,28 +922,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/09/09/template/">
+                <a href="/2020/08/05/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="template">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">template</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            $\pi$
-
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { 
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
                         </span>
                         <span class="publish-author">
                             
@@ -806,18 +948,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">test</span>
-                    </a>
-                    
-                    <a href="/tags/hello-world/">
-                        <span class="chip bg-color">hello world</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -829,31 +959,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/01/advanced-control/">
+                <a href="/2020/02/16/sort-algorithms/">
                     <div class="card-image">
                         
-                        <img src="/medias/robot.jpg" class="responsive-img" alt="控制理论笔记">
                         
-                        <span class="card-title">控制理论笔记</span>
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="十大经典排序算法整理汇总（附代码）">
+                        
+                        <span class="card-title">十大经典排序算法整理汇总（附代码）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            经典控制理论动态系统建模通过配置系统输入u(t)，使u(s)G(s)的极点使系统满足一定特性
-一阶系统特性$G(s) = \frac{a}{s+a}$$\frac{1}{a}$是时间常数$\tau$，对应上升为0.63$4\tau$对应阶跃
+                            本文整理并总结了十大经典的排序算法（冒泡排序、选择排序、插入排序、快速排序、归并排序、希尔排序、计数排序、基数排序、桶排序、堆排序）的时间复杂度、空间复杂度等性质。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AE%97%E6%B3%95/" class="post-category">
+                                    编程算法
                                 </a>
                             
                             
@@ -863,12 +993,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">经典控制理论</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">高级控制理论</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
@@ -1039,6 +1169,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
