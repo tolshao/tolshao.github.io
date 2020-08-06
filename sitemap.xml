@@ -417,20 +417,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.168.us/tags/snippets/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/latex/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.168.us/tags/sequence-model/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
@@ -439,6 +425,20 @@
   
   <url>
     <loc>https://tolshao.168.us/tags/rnn/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/snippets/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/latex/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
