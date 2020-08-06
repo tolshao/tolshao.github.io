@@ -367,33 +367,6 @@
     
     
     <entry>
-      <title>Matlab设置</title>
-      <link href="/2020/08/01/settings-matlab/"/>
-      <url>/2020/08/01/settings-matlab/</url>
-      
-        <content type="html"><![CDATA[<h2 id="代码片段snippets"><a href="#代码片段snippets" class="headerlink" title="代码片段snippets"></a>代码片段snippets</h2><ul><li>保存pdf调整a4纸至合适大小</li></ul><pre><code>h = figure;plot(1:10);set(h,'Units','Inches');pos = get(h,'Position');set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])print(h,'filename','-dpdf','-r0')</code></pre><ul><li>缺省参数默认值设定</li></ul><pre><code>function f(arg1, arg2, arg3)if ~exist('arg2', 'var')    arg2 = arg2Default;end</code></pre><ul><li><a href="https://blog.csdn.net/ckzhb/article/details/81105384">plot-legend多行设置</a></li></ul><pre><code>hg1 = legend('第一条');set(hg1,'FontSize',12,'Location', 'SouthOutside','box','off');  %注：将legend放在图外面时，Legend 1不能通过鼠标移动，只能通过代码调整位置 % ============= Legend 2 :ah2 = axes('position',get(gca,'position'),'visible','off');hg2 = legend(ah2, [p2 p3], '第二条', '第三条');set(hg2,'FontSize',12,'Location', 'SouthOutside',...        'Orientation','horizontal','box','off');</code></pre><p>Another way:<br><code>legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)</code></p><ul><li>mac打开时闪退<br><code>/Applications/Polyspace/R2019b.app/bin/matlab -nosplash</code></li><li>matlab-mex命令 10.15.4问题<br><code>https://www.mathworks.com/matlabcentral/answers/512901-mex-xcodebuild-error-sdk-macosx10-15-4-cannot-be-located/?s_tid=mlc_lp_leaf</code></li></ul><h2 id="绘制等高线"><a href="#绘制等高线" class="headerlink" title="绘制等高线"></a>绘制等高线</h2><pre><code>contour(u, v, z, [-0.5, -0.5], 'LineWidth', 2)</code></pre><p>区间是zlim</p><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 设置备忘 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> snippets </tag>
-            
-            <tag> matlab </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>控制理论笔记</title>
       <link href="/2020/08/01/settings-python/"/>
       <url>/2020/08/01/settings-python/</url>
@@ -413,6 +386,33 @@
             <tag> snippets </tag>
             
             <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Matlab设置</title>
+      <link href="/2020/08/01/settings-matlab/"/>
+      <url>/2020/08/01/settings-matlab/</url>
+      
+        <content type="html"><![CDATA[<h2 id="代码片段snippets"><a href="#代码片段snippets" class="headerlink" title="代码片段snippets"></a>代码片段snippets</h2><ul><li>保存pdf调整a4纸至合适大小</li></ul><pre><code>h = figure;plot(1:10);set(h,'Units','Inches');pos = get(h,'Position');set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])print(h,'filename','-dpdf','-r0')</code></pre><ul><li>缺省参数默认值设定</li></ul><pre><code>function f(arg1, arg2, arg3)if ~exist('arg2', 'var')    arg2 = arg2Default;end</code></pre><ul><li><a href="https://blog.csdn.net/ckzhb/article/details/81105384">plot-legend多行设置</a></li></ul><pre><code>hg1 = legend('第一条');set(hg1,'FontSize',12,'Location', 'SouthOutside','box','off');  %注：将legend放在图外面时，Legend 1不能通过鼠标移动，只能通过代码调整位置 % ============= Legend 2 :ah2 = axes('position',get(gca,'position'),'visible','off');hg2 = legend(ah2, [p2 p3], '第二条', '第三条');set(hg2,'FontSize',12,'Location', 'SouthOutside',...        'Orientation','horizontal','box','off');</code></pre><p>Another way:<br><code>legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)</code></p><ul><li>mac打开时闪退<br><code>/Applications/Polyspace/R2019b.app/bin/matlab -nosplash</code></li><li>matlab-mex命令 10.15.4问题<br><code>https://www.mathworks.com/matlabcentral/answers/512901-mex-xcodebuild-error-sdk-macosx10-15-4-cannot-be-located/?s_tid=mlc_lp_leaf</code></li></ul><h2 id="绘制等高线"><a href="#绘制等高线" class="headerlink" title="绘制等高线"></a>绘制等高线</h2><pre><code>contour(u, v, z, [-0.5, -0.5], 'LineWidth', 2)</code></pre><p>区间是zlim</p><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设置备忘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> snippets </tag>
+            
+            <tag> matlab </tag>
             
         </tags>
       
