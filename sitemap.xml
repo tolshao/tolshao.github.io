@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.168.us/contact/index.html</loc>
+    
+    <lastmod>2020-08-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.168.us/friends/index.html</loc>
     
     <lastmod>2020-08-06</lastmod>
@@ -205,13 +212,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.168.us/contact/index.html</loc>
-    
-    <lastmod>2020-08-05</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://tolshao.168.us/404.html</loc>
     
     <lastmod>2020-04-04</lastmod>
@@ -277,20 +277,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.168.us/tags/DL/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/Coursera/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.168.us/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
@@ -299,6 +285,20 @@
   
   <url>
     <loc>https://tolshao.168.us/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/DL/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/Coursera/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -417,20 +417,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.168.us/tags/sequence-model/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/rnn/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.168.us/tags/snippets/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
@@ -439,6 +425,20 @@
   
   <url>
     <loc>https://tolshao.168.us/tags/latex/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/sequence-model/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/rnn/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
