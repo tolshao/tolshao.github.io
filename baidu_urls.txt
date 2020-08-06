@@ -11,8 +11,8 @@ https://tolshao.168.us/2020/08/03/deep-learning-summary/
 https://tolshao.168.us/2020/08/02/cnn/
 https://tolshao.168.us/2020/08/02/rk4/
 https://tolshao.168.us/2020/08/02/gym-rl-env/
-https://tolshao.168.us/2020/08/01/settings-python/
 https://tolshao.168.us/2020/08/01/settings-matlab/
+https://tolshao.168.us/2020/08/01/settings-python/
 https://tolshao.168.us/2020/07/25/sequence-model/
 https://tolshao.168.us/2020/07/18/settings-latex/
 https://tolshao.168.us/2020/07/05/rl-2/

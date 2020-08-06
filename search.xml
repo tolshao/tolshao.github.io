@@ -367,33 +367,6 @@
     
     
     <entry>
-      <title>控制理论笔记</title>
-      <link href="/2020/08/01/settings-python/"/>
-      <url>/2020/08/01/settings-python/</url>
-      
-        <content type="html"><![CDATA[<h2 id="python读取txt数据plot"><a href="#python读取txt数据plot" class="headerlink" title="python读取txt数据plot"></a>python读取txt数据plot</h2><h2 id="python保存data到excel"><a href="#python保存data到excel" class="headerlink" title="python保存data到excel"></a>python保存data到excel</h2><pre><code>import numpy as npimport pandas as pd# prepare for datadata = np.arange(1,101).reshape((10,10))data_df = pd.DataFrame(data)# change the index and column namedata_df.columns = ['A','B','C','D','E','F','G','H','I','J']data_df.index = ['a','b','c','d','e','f','g','h','i','j']# create and writer pd.DataFrame to excelwriter = pd.ExcelWriter('Save_Excel.xlsx')data_df.to_excel(writer,'page_1',float_format='%.5f') # float_format 控制精度writer.save()</code></pre><h2 id="python-Science-风格画图"><a href="#python-Science-风格画图" class="headerlink" title="python Science 风格画图"></a>python Science 风格画图</h2><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 设置备忘 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> snippets </tag>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Matlab设置</title>
       <link href="/2020/08/01/settings-matlab/"/>
       <url>/2020/08/01/settings-matlab/</url>
@@ -413,6 +386,33 @@
             <tag> snippets </tag>
             
             <tag> matlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>控制理论笔记</title>
+      <link href="/2020/08/01/settings-python/"/>
+      <url>/2020/08/01/settings-python/</url>
+      
+        <content type="html"><![CDATA[<h2 id="python读取txt数据plot"><a href="#python读取txt数据plot" class="headerlink" title="python读取txt数据plot"></a>python读取txt数据plot</h2><h2 id="python保存data到excel"><a href="#python保存data到excel" class="headerlink" title="python保存data到excel"></a>python保存data到excel</h2><pre><code>import numpy as npimport pandas as pd# prepare for datadata = np.arange(1,101).reshape((10,10))data_df = pd.DataFrame(data)# change the index and column namedata_df.columns = ['A','B','C','D','E','F','G','H','I','J']data_df.index = ['a','b','c','d','e','f','g','h','i','j']# create and writer pd.DataFrame to excelwriter = pd.ExcelWriter('Save_Excel.xlsx')data_df.to_excel(writer,'page_1',float_format='%.5f') # float_format 控制精度writer.save()</code></pre><h2 id="python-Science-风格画图"><a href="#python-Science-风格画图" class="headerlink" title="python Science 风格画图"></a>python Science 风格画图</h2><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设置备忘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> snippets </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
