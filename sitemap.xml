@@ -235,6 +235,20 @@
 
   
   <url>
+    <loc>https://tolshao.168.us/tags/RK4/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/%E6%95%B0%E5%80%BC%E4%BB%BF%E7%9C%9F/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.168.us/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
@@ -250,20 +264,6 @@
   
   <url>
     <loc>https://tolshao.168.us/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/RK4/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/%E6%95%B0%E5%80%BC%E4%BB%BF%E7%9C%9F/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -292,27 +292,6 @@
   
   <url>
     <loc>https://tolshao.168.us/tags/Coursera/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/RL/</loc>
-    <lastmod>2020-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.168.us/tags/gym/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -355,6 +334,27 @@
   
   <url>
     <loc>https://tolshao.168.us/tags/tensorflow/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/RL/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.168.us/tags/gym/</loc>
     <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
