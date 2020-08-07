@@ -442,12 +442,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/snippets/">
-                                <span class="chip bg-color">snippets</span>
-                            </a>
-                        
                             <a href="/tags/matlab/">
                                 <span class="chip bg-color">matlab</span>
+                            </a>
+                        
+                            <a href="/tags/snippets/">
+                                <span class="chip bg-color">snippets</span>
                             </a>
                         
                     </div>
@@ -623,12 +623,12 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/snippets/">
-                                    <span class="chip bg-color">snippets</span>
-                                </a>
-                            
                                 <a href="/tags/matlab/">
                                     <span class="chip bg-color">matlab</span>
+                                </a>
+                            
+                                <a href="/tags/snippets/">
+                                    <span class="chip bg-color">snippets</span>
                                 </a>
                             
                         </div>

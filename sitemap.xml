@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.github.io/posts/machine-learning</loc>
+    
+    <lastmod>2020-08-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.github.io/posts/gym-rl-env</loc>
     
     <lastmod>2020-08-07</lastmod>
@@ -136,13 +143,6 @@
   
   <url>
     <loc>https://tolshao.github.io/about/index.html</loc>
-    
-    <lastmod>2020-08-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/posts/machine-learning</loc>
     
     <lastmod>2020-08-07</lastmod>
     
@@ -312,27 +312,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/tags/keras/</loc>
-    <lastmod>2020-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/tags/tensorflow/</loc>
-    <lastmod>2020-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.github.io/tags/ios/</loc>
     <lastmod>2020-08-07</lastmod>
     <changefreq>daily</changefreq>
@@ -348,6 +327,27 @@
   
   <url>
     <loc>https://tolshao.github.io/tags/iPhone/</loc>
+    <lastmod>2020-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/tags/keras/</loc>
+    <lastmod>2020-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/tags/tensorflow/</loc>
     <lastmod>2020-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,20 +396,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/tags/snippets/</loc>
-    <lastmod>2020-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.github.io/tags/latex/</loc>
-    <lastmod>2020-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.github.io/tags/Mac/</loc>
     <lastmod>2020-08-07</lastmod>
     <changefreq>daily</changefreq>
@@ -431,7 +417,21 @@
   </url>
   
   <url>
+    <loc>https://tolshao.github.io/tags/snippets/</loc>
+    <lastmod>2020-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.github.io/tags/python/</loc>
+    <lastmod>2020-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/tags/latex/</loc>
     <lastmod>2020-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
