@@ -438,13 +438,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.github.io/tags/python/</loc>
-    <lastmod>2020-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.github.io/tags/test/</loc>
     <lastmod>2020-08-07</lastmod>
     <changefreq>daily</changefreq>
@@ -453,6 +446,13 @@
   
   <url>
     <loc>https://tolshao.github.io/tags/hello-world/</loc>
+    <lastmod>2020-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.github.io/tags/python/</loc>
     <lastmod>2020-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
