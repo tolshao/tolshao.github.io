@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-01-01
                 </div>
                 
 
@@ -777,7 +777,7 @@ writer.save()</code></pre>
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-01T15-09-31',
+        id: '2020-01-01T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1091,7 +1091,7 @@ set(h,'PaperPosi
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
                         </span>
                         <span class="publish-author">
                             
@@ -1127,36 +1127,33 @@ set(h,'PaperPosi
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/sequence-model">
+                <a href="/posts/template">
                     <div class="card-image">
                         
-                        <img src="/img/15966351726558.jpg" class="responsive-img" alt="RNN 序列模型 sequence model">
+                        <img src="/img/15966337742719.jpg" class="responsive-img" alt="template">
                         
-                        <span class="card-title">RNN 序列模型 sequence model</span>
+                        <span class="card-title">template</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Sequence model概述：处理样本数不规则的模型
+                            标题正文$$\pi$$
+footer
 
-recurrent neural network递归神经网络参数共享,前-&gt;后样本逐个扫描a激活用一套参数y激活用一套参数
-参数流
-x、y个数不一致的RNN序列样本分类问题音
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.da
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Tolshao
                             
                         </span>
                     </div>
@@ -1164,20 +1161,12 @@ x、y个数不一致的RNN序列样本分类问题音
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/test/">
+                        <span class="chip bg-color">test</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
-                    </a>
-                    
-                    <a href="/tags/sequence-model/">
-                        <span class="chip bg-color">sequence model</span>
-                    </a>
-                    
-                    <a href="/tags/rnn/">
-                        <span class="chip bg-color">rnn</span>
+                    <a href="/tags/hello-world/">
+                        <span class="chip bg-color">hello world</span>
                     </a>
                     
                 </div>

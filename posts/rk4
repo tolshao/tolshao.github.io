@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-02
+                    2020-08-05
                 </div>
                 
 
@@ -510,7 +510,7 @@
                 <p>小跳最近在搭建一个数值仿真环境，由于需要用到python里面的一些库，所以不得不把simulink的模型搬过来，我们都知道在simulink里，仿真的时候设置仿真步长和微分方程求解器是必要的步骤。但是为什么要设置这个小跳却早已忘记了。</p>
 <p>一年级的时候搬砖搬多了，数分课也没好好上，回头一看，这么简单的东西，当时竟然整的稀里糊涂的。</p>
 <h1 id="为什么要用RK4"><a href="#为什么要用RK4" class="headerlink" title="为什么要用RK4"></a>为什么要用RK4</h1><p>先po一张图，直观感受一下仿真的误差。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15956439603281.jpg?x-oss-process=style/blog" alt="-w752"></p>
-<p>对于给定线性常微分方程<br>$$\dot x = x$$<br>易得，其解是<br>$$x(t) = Ce^t<br>$$<br>RK4是龙格库塔法曲线，None是一阶解法$x(t+dt) = x(t)+\dot x dt$<br>可以看到，线性常微分方程误差尚且如此之大，那么推广到非线性微分方程，像这种形式<br>$$<br>\dot x = f(x,t) = tx^2 - \frac{x}{t}…<br>$$<br>那肯定误差直接起飞了。解析解求起来也挺麻烦，这里就不再引入分析了。</p>
+<p>对于给定线性常微分方程<br>$$<br>\dot x = x<br>$$<br>易得，其解是<br>$$<br>x(t) = Ce^t<br>$$<br>RK4是龙格库塔法曲线，None是一阶解法$x(t+dt) = x(t)+\dot x dt$<br>可以看到，线性常微分方程误差尚且如此之大，那么推广到非线性微分方程，像这种形式<br>$$<br>\dot x = f(x,t) = tx^2 - \frac{x}{t}…<br>$$<br>那肯定误差直接起飞了。解析解求起来也挺麻烦，这里就不再引入分析了。</p>
 <p>接下来把定义回顾一下，贴一下代码，有需自取，希望对大家有所帮助。</p>
 <h1 id="定义回顾"><a href="#定义回顾" class="headerlink" title="定义回顾"></a>定义回顾</h1><p>数值分析中，龙格－库塔法（Runge-Kutta methods）是用于非线性常微分方程的解的重要的一类隐式或显式迭代法。这些技术由数学家卡尔·龙格和马丁·威尔海姆·库塔于1900年左右发明。该方法主要是在已知方程导数和初值信息，利用计算机仿真时应用，省去求解微分方程的复杂过程。</p>
 <p>令初值问题表述如下。<br>$$<br>y’ = f(t,y), y(t_0) = y_0<br>$$<br>则，对于该问题的RK4由如下方程给出：<br>$$<br>y_{n+1}=y_{n}+\frac{h}{6}\left(k_{1}+2 k_{2}+2 k_{3}+k_{4}\right) \$$<br>其中<br>$$<br>\begin{matrix}<br>k_{1}=f\left(t_{n}, y_{n}\right) \<br>k_{2}=f\left(t_{n}+\frac{h}{2}, y_{n}+\frac{h}{2} k_{1}\right) \<br>k_{3}=f\left(t_{n}+\frac{h}{2}, y_{n}+\frac{h}{2} k_{2}\right) \<br>k_{4}=f\left(t_{n}+h, y_{n}+h k_{3}\right)\end{matrix}<br>$$</p>
@@ -830,7 +830,7 @@ plt.show()</code></pre>
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-02T15-09-31',
+        id: '2020-08-05T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1121,87 +1121,28 @@ plt.show()</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/cnn">
+                <a href="/posts/rl-11">
                     <div class="card-image">
                         
-                        <img src="/img/15966353155178.jpg" class="responsive-img" alt="卷积神经网络CNN（convolutional）">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记11：Matlab &amp; RL">
                         
-                        <span class="card-title">卷积神经网络CNN（convolutional）</span>
+                        <span class="card-title">强化学习笔记11：Matlab &amp; RL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            卷积神经网络CNN（convolutional）卷积运算：原图像*卷积核=新图像，经常用来做边缘检测人造核：手动指定权重，改善效果
-指定核权重为变量，通过反向传播，学习卷积核的权重补白和步幅决定了卷积后的
-补白Padding
-Valid c
+                            强化学习-11：Matlab RL
+
+Agent：由Policy 和 RL_Algorithm构成policy负责将observation映射为actionRL_Algorithm负责优化policy
+
+Enviroment：输入actio
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
-                    </a>
-                    
-                    <a href="/tags/CNN/">
-                        <span class="chip bg-color">CNN</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">卷积神经网络</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/gym-rl-env">
-                    <div class="card-image">
-                        
-                        <img src="/img/15966350249241.jpg" class="responsive-img" alt="gym 搭建 RL 环境">
-                        
-                        <span class="card-title">gym 搭建 RL 环境</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            gym调用gym的调用遵从以下的顺序
-
-env = gym.make(‘x’)
-observation = env.reset()
-for i in range(time_steps): env.render() action = poli
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1225,8 +1166,62 @@ for i in range(time_steps): env.render() action = poli
                         <span class="chip bg-color">RL</span>
                     </a>
                     
-                    <a href="/tags/gym/">
-                        <span class="chip bg-color">gym</span>
+                    <a href="/tags/Matlab/">
+                        <span class="chip bg-color">Matlab</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/rl-6">
+                    <div class="card-image">
+                        
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记6：值函数估计Value function Approximation">
+                        
+                        <span class="card-title">强化学习笔记6：值函数估计Value function Approximation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            introductionv、q表的问题
+解决离散化的s,a,导致q-table存储量、运算量大
+解决连续s、a的表示问题solution用带权重估计函数，估计v or q$$\begin{aligned}\hat{v}(s, \mathbf
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
+                    </a>
+                    
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
                     </a>
                     
                 </div>

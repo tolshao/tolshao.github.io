@@ -450,10 +450,6 @@
                                 <span class="chip bg-color">Mac</span>
                             </a>
                         
-                            <a href="/tags/VPS/">
-                                <span class="chip bg-color">VPS</span>
-                            </a>
-                        
                             <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">
                                 <span class="chip bg-color">黑苹果</span>
                             </a>
@@ -723,7 +719,7 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolshao.github.io/posts/mac-settings">https://tolshao.github.io/posts/mac-settings</a>
+                    <a href="https://tolshao.github.io/posts/settings-mac">https://tolshao.github.io/posts/settings-mac</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -767,10 +763,6 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
                             
                                 <a href="/tags/Mac/">
                                     <span class="chip bg-color">Mac</span>
-                                </a>
-                            
-                                <a href="/tags/VPS/">
-                                    <span class="chip bg-color">VPS</span>
                                 </a>
                             
                                 <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">
@@ -1289,34 +1281,33 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/template">
+                <a href="/posts/settings-latex">
                     <div class="card-image">
                         
+                        <img src="/img/15966359724040.jpg" class="responsive-img" alt="Latex设置">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/featureimages/22.jpg" class="responsive-img" alt="template">
-                        
-                        <span class="card-title">template</span>
+                        <span class="card-title">Latex设置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            $$\pi$$
-
-
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src)
+                            LatexTexpad live 编辑模式，即时编译缺点：不支持高级packages，如cref所以最后加
+\crefname&amp;#123;figure&amp;#125;&amp;#123;Fig.&amp;#125;&amp;#1
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Tolshao
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
+                                    设置备忘
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1324,12 +1315,12 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">test</span>
+                    <a href="/tags/snippets/">
+                        <span class="chip bg-color">snippets</span>
                     </a>
                     
-                    <a href="/tags/hello-world/">
-                        <span class="chip bg-color">hello world</span>
+                    <a href="/tags/latex/">
+                        <span class="chip bg-color">latex</span>
                     </a>
                     
                 </div>

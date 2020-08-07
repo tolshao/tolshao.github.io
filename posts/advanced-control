@@ -1186,25 +1186,32 @@ xlabel('x');ylabel('y');</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/machine-learning">
+                <a href="/posts/paper-writting">
                     <div class="card-image">
                         
-                        <img src="/img/15966359079445.jpg" class="responsive-img" alt="机器学习-Coursera笔记">
                         
-                        <span class="card-title">机器学习-Coursera笔记</span>
+                        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="科学写作">
+                        
+                        <span class="card-title">科学写作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            AI-&gt;机器学习分类图
-矩阵补课特征值分解EVD，奇异值分解SVD$A$是矩阵$x_i$ 是单位特征向量$\lambda_i$是特征值$\Lambda$ 是矩阵特征值
-EVD特征值分解（The eigenvalue value dec
+                            创新点
+理论创新
+结果创新
+方法创新
+
+写作规范—符号Latex
+智能引用clerveref，引用格式带标题，可改引用格式，图、表、式:label 要在caption 之后，才可以正确引用
+bib文件参考文献
+\section*{ackno
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
                         </span>
                         <span class="publish-author">
                             
@@ -1221,12 +1228,8 @@ EVD特征值分解（The eigenvalue value dec
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/ML/">
-                        <span class="chip bg-color">ML</span>
+                    <a href="/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/">
+                        <span class="chip bg-color">科学写作</span>
                     </a>
                     
                 </div>
@@ -1240,7 +1243,7 @@ EVD特征值分解（The eigenvalue value dec
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/mac-settings">
+                <a href="/posts/settings-mac">
                     <div class="card-image">
                         
                         <img src="/img/15966334903790.jpg" class="responsive-img" alt="Mac设置">
@@ -1279,10 +1282,6 @@ EVD特征值分解（The eigenvalue value dec
                     
                     <a href="/tags/Mac/">
                         <span class="chip bg-color">Mac</span>
-                    </a>
-                    
-                    <a href="/tags/VPS/">
-                        <span class="chip bg-color">VPS</span>
                     </a>
                     
                     <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">

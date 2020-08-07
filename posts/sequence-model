@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-25
+                    2020-06-25
                 </div>
                 
 
@@ -830,7 +830,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-07-25T15-09-31',
+        id: '2020-06-25T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1121,33 +1121,32 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/settings-python">
+                <a href="/posts/machine-learning">
                     <div class="card-image">
                         
-                        <img src="/img/15966336874885.jpg" class="responsive-img" alt="控制理论笔记">
+                        <img src="/img/15966359079445.jpg" class="responsive-img" alt="机器学习-Coursera笔记">
                         
-                        <span class="card-title">控制理论笔记</span>
+                        <span class="card-title">机器学习-Coursera笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python读取txt数据plotpython保存data到excelimport numpy as np
-import pandas as pd
-# prepare for data
-data = np.arange(1,101).res
+                            AI-&gt;机器学习分类图
+矩阵补课特征值分解EVD，奇异值分解SVD$A$是矩阵$x_i$ 是单位特征向量$\lambda_i$是特征值$\Lambda$ 是矩阵特征值
+EVD特征值分解（The eigenvalue value dec
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                    设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1157,12 +1156,12 @@ data = np.arange(1,101).res
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/snippets/">
-                        <span class="chip bg-color">snippets</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/ML/">
+                        <span class="chip bg-color">ML</span>
                     </a>
                     
                 </div>
@@ -1176,31 +1175,39 @@ data = np.arange(1,101).res
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/settings-latex">
+                <a href="/posts/paper-writting">
                     <div class="card-image">
                         
-                        <img src="/img/15966359724040.jpg" class="responsive-img" alt="Latex设置">
                         
-                        <span class="card-title">Latex设置</span>
+                        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="科学写作">
+                        
+                        <span class="card-title">科学写作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LatexTexpad live 编辑模式，即时编译缺点：不支持高级packages，如cref所以最后加
-\crefname&amp;#123;figure&amp;#125;&amp;#123;Fig.&amp;#125;&amp;#1
+                            创新点
+理论创新
+结果创新
+方法创新
+
+写作规范—符号Latex
+智能引用clerveref，引用格式带标题，可改引用格式，图、表、式:label 要在caption 之后，才可以正确引用
+bib文件参考文献
+\section*{ackno
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                    设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1210,12 +1217,8 @@ data = np.arange(1,101).res
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/snippets/">
-                        <span class="chip bg-color">snippets</span>
-                    </a>
-                    
-                    <a href="/tags/latex/">
-                        <span class="chip bg-color">latex</span>
+                    <a href="/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/">
+                        <span class="chip bg-color">科学写作</span>
                     </a>
                     
                 </div>

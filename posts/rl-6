@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-08
+                    2020-08-05
                 </div>
                 
 
@@ -786,7 +786,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-08T15-09-31',
+        id: '2020-08-05T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1077,27 +1077,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/rl-11">
+                <a href="/posts/rk4">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记11：Matlab &amp; RL">
+                        <img src="/img/15966348107852.jpg" class="responsive-img" alt="为什么数值仿真里要用RK4（龙格库塔法）">
                         
-                        <span class="card-title">强化学习笔记11：Matlab &amp; RL</span>
+                        <span class="card-title">为什么数值仿真里要用RK4（龙格库塔法）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            强化学习-11：Matlab RL
-
-Agent：由Policy 和 RL_Algorithm构成policy负责将observation映射为actionRL_Algorithm负责优化policy
-
-Enviroment：输入actio
+                            小跳最近在搭建一个数值仿真环境，由于需要用到python里面的一些库，所以不得不把simulink的模型搬过来，我们都知道在simulink里，仿真的时候设置仿真步长和微分方程求解器是必要的步骤。但是为什么要设置这个小跳却早已忘记了。
+一年
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
                         </span>
                         <span class="publish-author">
                             
@@ -1114,16 +1111,12 @@ Enviroment：输入actio
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/RK4/">
+                        <span class="chip bg-color">RK4</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
-                    </a>
-                    
-                    <a href="/tags/Matlab/">
-                        <span class="chip bg-color">Matlab</span>
+                    <a href="/tags/%E6%95%B0%E5%80%BC%E4%BB%BF%E7%9C%9F/">
+                        <span class="chip bg-color">数值仿真</span>
                     </a>
                     
                 </div>
@@ -1137,31 +1130,25 @@ Enviroment：输入actio
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/rl-5">
+                <a href="/posts/keras-tensorflow">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记5：无模型控制 Model-free control">
+                        <img src="/img/15966353822570.jpg" class="responsive-img" alt="Keras &amp; Tensorflow 笔记">
                         
-                        <span class="card-title">强化学习笔记5：无模型控制 Model-free control</span>
+                        <span class="card-title">Keras &amp; Tensorflow 笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            适用于：
+                            Keras是一个高层神经网络API，Keras由纯Python编写而成并基于Tensorflow、Theano以及CNTK后端。Keras为支持快速实验而生，能够把你的idea迅速转换为结果，如果你有如下需求，请选择Keras：
 
-MDP model 未知：经验的采样可以获取
-MDP model 已知：无法使用（e.g.原子级动力学），采样可以使用
-
-策略、非策略学习：
-
-On-policy：采样来自policy $\pi$
-Off-policy：采样来自
+简易和快
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
                             </span>
                         <span class="publish-author">
                             
@@ -1178,12 +1165,16 @@ Off-policy：采样来自
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
+                    <a href="/tags/keras/">
+                        <span class="chip bg-color">keras</span>
+                    </a>
+                    
+                    <a href="/tags/tensorflow/">
+                        <span class="chip bg-color">tensorflow</span>
                     </a>
                     
                 </div>

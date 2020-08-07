@@ -475,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-08
+                    2020-08-07
                 </div>
                 
 
@@ -812,7 +812,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-08T15-09-31',
+        id: '2020-08-07T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1160,23 +1160,27 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/mbse">
+                <a href="/posts/rl-11">
                     <div class="card-image">
                         
-                        <img src="/img/15966354848306.jpg" class="responsive-img" alt="MBSE 基于模型的系统工程">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记11：Matlab &amp; RL">
                         
-                        <span class="card-title">MBSE 基于模型的系统工程</span>
+                        <span class="card-title">强化学习笔记11：Matlab &amp; RL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MBSE根据国际系统工程协会（INCOSE）在 2007 年发布的《SE 愿景 2020》中的定义，MBSE 是建模方法在系统工程中的形式化应用，用以支持在系统全生命周期内开展需求、设计、分析、验证和确认相关的活动。从定义可以看到，MBSE
+                            强化学习-11：Matlab RL
+
+Agent：由Policy 和 RL_Algorithm构成policy负责将observation映射为actionRL_Algorithm负责优化policy
+
+Enviroment：输入actio
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
                             </span>
                         <span class="publish-author">
                             
@@ -1193,12 +1197,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">系统</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/MBSE/">
-                        <span class="chip bg-color">MBSE</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
+                    </a>
+                    
+                    <a href="/tags/Matlab/">
+                        <span class="chip bg-color">Matlab</span>
                     </a>
                     
                 </div>
@@ -1369,13 +1377,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 

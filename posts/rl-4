@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-01
+                    2020-07-15
                 </div>
                 
 
@@ -877,7 +877,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-07-01T15-09-31',
+        id: '2020-07-15T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1168,42 +1168,87 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/rl-1">
+                <a href="/posts/cnn">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记1：基本概念">
+                        <img src="/img/15966353155178.jpg" class="responsive-img" alt="卷积神经网络CNN（convolutional）">
                         
-                        <span class="card-title">强化学习笔记1：基本概念</span>
+                        <span class="card-title">卷积神经网络CNN（convolutional）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            概述强化学习是一门多学科交叉的技术
-与传统控制的关系：相似性：
-
-
-RL
-traditional control
-
-
-
-agent
-controller
-
-
-env
-plant + enviroment
-
-
-reward
-feedback（
+                            卷积神经网络CNN（convolutional）卷积运算：原图像*卷积核=新图像，经常用来做边缘检测人造核：手动指定权重，改善效果
+指定核权重为变量，通过反向传播，学习卷积核的权重补白和步幅决定了卷积后的
+补白Padding
+Valid c
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/tags/CNN/">
+                        <span class="chip bg-color">CNN</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">卷积神经网络</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/rl-3">
+                    <div class="card-image">
+                        
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记3：动态规划 planning by dynamic programming（DP）">
+                        
+                        <span class="card-title">强化学习笔记3：动态规划 planning by dynamic programming（DP）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            适用于MDP模型参数已知
+概述动态规划分为两步，Prediction、Control
+
+（Prediction）Value:是对策略$\pi$的评价
+（Control）Policy $\pi$:是对Value的选择例问题：每走一步，r = 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1225,60 +1270,6 @@ feedback（
                     
                     <a href="/tags/RL/">
                         <span class="chip bg-color">RL</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/machine-learning">
-                    <div class="card-image">
-                        
-                        <img src="/img/15966359079445.jpg" class="responsive-img" alt="机器学习-Coursera笔记">
-                        
-                        <span class="card-title">机器学习-Coursera笔记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            AI-&gt;机器学习分类图
-矩阵补课特征值分解EVD，奇异值分解SVD$A$是矩阵$x_i$ 是单位特征向量$\lambda_i$是特征值$\Lambda$ 是矩阵特征值
-EVD特征值分解（The eigenvalue value dec
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/ML/">
-                        <span class="chip bg-color">ML</span>
                     </a>
                     
                 </div>

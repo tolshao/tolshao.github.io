@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-18
+                    2020-03-18
                 </div>
                 
 
@@ -772,7 +772,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-07-18T15-09-31',
+        id: '2020-03-18T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1063,34 +1063,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/sequence-model">
+                <a href="/posts/settings-mac">
                     <div class="card-image">
                         
-                        <img src="/img/15966351726558.jpg" class="responsive-img" alt="RNN 序列模型 sequence model">
+                        <img src="/img/15966334903790.jpg" class="responsive-img" alt="Mac设置">
                         
-                        <span class="card-title">RNN 序列模型 sequence model</span>
+                        <span class="card-title">Mac设置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Sequence model概述：处理样本数不规则的模型
-
-recurrent neural network递归神经网络参数共享,前-&gt;后样本逐个扫描a激活用一套参数y激活用一套参数
-参数流
-x、y个数不一致的RNN序列样本分类问题音
+                            记录备忘mac系统、软件的设置
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
+                                    设置备忘
                                 </a>
                             
                             
@@ -1100,20 +1096,16 @@ x、y个数不一致的RNN序列样本分类问题音
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">系统</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
+                    <a href="/tags/Mac/">
+                        <span class="chip bg-color">Mac</span>
                     </a>
                     
-                    <a href="/tags/sequence-model/">
-                        <span class="chip bg-color">sequence model</span>
-                    </a>
-                    
-                    <a href="/tags/rnn/">
-                        <span class="chip bg-color">rnn</span>
+                    <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">
+                        <span class="chip bg-color">黑苹果</span>
                     </a>
                     
                 </div>
@@ -1127,31 +1119,37 @@ x、y个数不一致的RNN序列样本分类问题音
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/rl-2">
+                <a href="/posts/settings-matlab">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记2：Markov decision process(MDP)">
+                        <img src="/img/15966337742719.jpg" class="responsive-img" alt="Matlab设置">
                         
-                        <span class="card-title">强化学习笔记2：Markov decision process(MDP)</span>
+                        <span class="card-title">Matlab设置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            马尔科夫过程（Markov Process，MP）我们说一个state若满足 ，则其具有马尔可夫性，即该state完全包含了历史中的所有信息。马尔科夫过程是无记忆的随机过程，即随机状态序列 具有马尔可夫属性。
-一个马尔科夫过程可以由一个元组
+                            代码片段snippets
+保存pdf调整a4纸至合适大小
+
+h = figure;
+plot(1:10);
+set(h,'Units','Inches');
+pos = get(h,'Position');
+set(h,'PaperPosi
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
+                                    设置备忘
                                 </a>
                             
                             
@@ -1161,12 +1159,12 @@ x、y个数不一致的RNN序列样本分类问题音
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/snippets/">
+                        <span class="chip bg-color">snippets</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
+                    <a href="/tags/matlab/">
+                        <span class="chip bg-color">matlab</span>
                     </a>
                     
                 </div>

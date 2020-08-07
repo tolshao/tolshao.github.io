@@ -467,7 +467,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-03
+                    2020-05-03
                 </div>
                 
 
@@ -827,7 +827,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-03T15-09-31',
+        id: '2020-05-03T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1118,25 +1118,27 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/keras-tensorflow">
+                <a href="/posts/sequence-model">
                     <div class="card-image">
                         
-                        <img src="/img/15966353822570.jpg" class="responsive-img" alt="Keras &amp; Tensorflow 笔记">
+                        <img src="/img/15966351726558.jpg" class="responsive-img" alt="RNN 序列模型 sequence model">
                         
-                        <span class="card-title">Keras &amp; Tensorflow 笔记</span>
+                        <span class="card-title">RNN 序列模型 sequence model</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Keras是一个高层神经网络API，Keras由纯Python编写而成并基于Tensorflow、Theano以及CNTK后端。Keras为支持快速实验而生，能够把你的idea迅速转换为结果，如果你有如下需求，请选择Keras：
+                            Sequence model概述：处理样本数不规则的模型
 
-简易和快
+recurrent neural network递归神经网络参数共享,前-&gt;后样本逐个扫描a激活用一套参数y激活用一套参数
+参数流
+x、y个数不一致的RNN序列样本分类问题音
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
                         </span>
                         <span class="publish-author">
                             
@@ -1153,16 +1155,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/keras/">
-                        <span class="chip bg-color">keras</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
                     </a>
                     
-                    <a href="/tags/tensorflow/">
-                        <span class="chip bg-color">tensorflow</span>
+                    <a href="/tags/sequence-model/">
+                        <span class="chip bg-color">sequence model</span>
+                    </a>
+                    
+                    <a href="/tags/rnn/">
+                        <span class="chip bg-color">rnn</span>
                     </a>
                     
                 </div>
@@ -1176,23 +1182,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/deep-learning-summary">
+                <a href="/posts/advanced-control">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="深度学习22张精炼图笔记总结">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="控制理论笔记">
                         
-                        <span class="card-title">深度学习22张精炼图笔记总结</span>
+                        <span class="card-title">控制理论笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            深度学习精炼图笔记总结本文转自知乎（Sophia）公众号【计算机视觉联盟】笔记图片由 TessFerrandez 整理，这套信息图优美地记录了深度学习课程的知识与亮点。因此它不仅仅适合初学者了解深度学习，还适合机器学习从业者和研究者复习基本
+                            经典控制理论动态系统建模通过配置系统输入u(t)，使u(s)G(s)的极点使系统满足一定特性
+一阶系统特性$G(s) = \frac{a}{s+a}$$\frac{1}{a}$是时间常数$\tau$，对应上升为0.63$4\tau$对应阶跃
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
                             </span>
                         <span class="publish-author">
                             
@@ -1209,12 +1216,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">高级控制理论</span>
                     </a>
                     
-                    <a href="/tags/DL/">
-                        <span class="chip bg-color">DL</span>
+                    <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                        <span class="chip bg-color">经典控制理论</span>
                     </a>
                     
                 </div>

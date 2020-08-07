@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-02-01
                 </div>
                 
 
@@ -799,7 +799,7 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-01T15-09-31',
+        id: '2020-02-01T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1090,34 +1090,31 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/gym-rl-env">
+                <a href="/posts/settings-latex">
                     <div class="card-image">
                         
-                        <img src="/img/15966350249241.jpg" class="responsive-img" alt="gym 搭建 RL 环境">
+                        <img src="/img/15966359724040.jpg" class="responsive-img" alt="Latex设置">
                         
-                        <span class="card-title">gym 搭建 RL 环境</span>
+                        <span class="card-title">Latex设置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            gym调用gym的调用遵从以下的顺序
-
-env = gym.make(‘x’)
-observation = env.reset()
-for i in range(time_steps): env.render() action = poli
+                            LatexTexpad live 编辑模式，即时编译缺点：不支持高级packages，如cref所以最后加
+\crefname&amp;#123;figure&amp;#125;&amp;#123;Fig.&amp;#125;&amp;#1
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
+                                    设置备忘
                                 </a>
                             
                             
@@ -1127,16 +1124,12 @@ for i in range(time_steps): env.render() action = poli
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/snippets/">
+                        <span class="chip bg-color">snippets</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
-                    </a>
-                    
-                    <a href="/tags/gym/">
-                        <span class="chip bg-color">gym</span>
+                    <a href="/tags/latex/">
+                        <span class="chip bg-color">latex</span>
                     </a>
                     
                 </div>
@@ -1169,7 +1162,7 @@ data = np.arange(1,101).res
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
                             </span>
                         <span class="publish-author">
                             

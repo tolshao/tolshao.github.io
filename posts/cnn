@@ -475,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-02
+                    2020-07-15
                 </div>
                 
 
@@ -885,7 +885,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-02T15-09-31',
+        id: '2020-07-15T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1176,23 +1176,27 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/deep-learning-summary">
+                <a href="/posts/gym-rl-env">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="深度学习22张精炼图笔记总结">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="gym 搭建 RL 环境">
                         
-                        <span class="card-title">深度学习22张精炼图笔记总结</span>
+                        <span class="card-title">gym 搭建 RL 环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            深度学习精炼图笔记总结本文转自知乎（Sophia）公众号【计算机视觉联盟】笔记图片由 TessFerrandez 整理，这套信息图优美地记录了深度学习课程的知识与亮点。因此它不仅仅适合初学者了解深度学习，还适合机器学习从业者和研究者复习基本
+                            gym调用gym的调用遵从以下的顺序
+
+env = gym.make(‘x’)
+observation = env.reset()
+for i in range(time_steps): env.render() action = poli
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
                         </span>
                         <span class="publish-author">
                             
@@ -1209,12 +1213,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/DL/">
-                        <span class="chip bg-color">DL</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
+                    </a>
+                    
+                    <a href="/tags/gym/">
+                        <span class="chip bg-color">gym</span>
                     </a>
                     
                 </div>
@@ -1228,24 +1236,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/rk4">
+                <a href="/posts/rl-4">
                     <div class="card-image">
                         
-                        <img src="/img/15966348107852.jpg" class="responsive-img" alt="为什么数值仿真里要用RK4（龙格库塔法）">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记4：无模型预测 model-free prediction">
                         
-                        <span class="card-title">为什么数值仿真里要用RK4（龙格库塔法）</span>
+                        <span class="card-title">强化学习笔记4：无模型预测 model-free prediction</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            小跳最近在搭建一个数值仿真环境，由于需要用到python里面的一些库，所以不得不把simulink的模型搬过来，我们都知道在simulink里，仿真的时候设置仿真步长和微分方程求解器是必要的步骤。但是为什么要设置这个小跳却早已忘记了。
-一年
+                            这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
+对于Env来说，属于MP，但是不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知Prediction -&gt; ControlEvaluation 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
                             </span>
                         <span class="publish-author">
                             
@@ -1262,12 +1270,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RK4/">
-                        <span class="chip bg-color">RK4</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E5%80%BC%E4%BB%BF%E7%9C%9F/">
-                        <span class="chip bg-color">数值仿真</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
                     </a>
                     
                 </div>

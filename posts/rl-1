@@ -1099,22 +1099,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/rl-3">
+                <a href="/posts/rl-2">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记3：动态规划 planning by dynamic programming（DP）">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记2：Markov decision process(MDP)">
                         
-                        <span class="card-title">强化学习笔记3：动态规划 planning by dynamic programming（DP）</span>
+                        <span class="card-title">强化学习笔记2：Markov decision process(MDP)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            适用于MDP模型参数已知
-概述动态规划分为两步，Prediction、Control
-
-（Prediction）Value:是对策略$\pi$的评价
-（Control）Policy $\pi$:是对Value的选择例问题：每走一步，r = 
+                            马尔科夫过程（Markov Process，MP）我们说一个state若满足 ，则其具有马尔可夫性，即该state完全包含了历史中的所有信息。马尔科夫过程是无记忆的随机过程，即随机状态序列 具有马尔可夫属性。
+一个马尔科夫过程可以由一个元组
                         
                     </div>
                     <div class="publish-info">
@@ -1155,24 +1152,25 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/rl-4">
+                <a href="/posts/machine-learning">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记4：无模型预测 model-free prediction">
+                        <img src="/img/15966359079445.jpg" class="responsive-img" alt="机器学习-Coursera笔记">
                         
-                        <span class="card-title">强化学习笔记4：无模型预测 model-free prediction</span>
+                        <span class="card-title">机器学习-Coursera笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
-对于Env来说，属于MP，但是不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知Prediction -&gt; ControlEvaluation 
+                            AI-&gt;机器学习分类图
+矩阵补课特征值分解EVD，奇异值分解SVD$A$是矩阵$x_i$ 是单位特征向量$\lambda_i$是特征值$\Lambda$ 是矩阵特征值
+EVD特征值分解（The eigenvalue value dec
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
                             </span>
                         <span class="publish-author">
                             
@@ -1189,12 +1187,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
+                    <a href="/tags/ML/">
+                        <span class="chip bg-color">ML</span>
                     </a>
                     
                 </div>

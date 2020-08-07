@@ -320,7 +320,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/img/15966350249241.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/robot.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -475,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-02
+                    2020-07-25
                 </div>
                 
 
@@ -874,7 +874,7 @@ for i in range(nb_episodes):
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-08-02T15-09-31',
+        id: '2020-07-25T15-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1165,24 +1165,31 @@ for i in range(nb_episodes):
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/rk4">
+                <a href="/posts/rl-5">
                     <div class="card-image">
                         
-                        <img src="/img/15966348107852.jpg" class="responsive-img" alt="为什么数值仿真里要用RK4（龙格库塔法）">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记5：无模型控制 Model-free control">
                         
-                        <span class="card-title">为什么数值仿真里要用RK4（龙格库塔法）</span>
+                        <span class="card-title">强化学习笔记5：无模型控制 Model-free control</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            小跳最近在搭建一个数值仿真环境，由于需要用到python里面的一些库，所以不得不把simulink的模型搬过来，我们都知道在simulink里，仿真的时候设置仿真步长和微分方程求解器是必要的步骤。但是为什么要设置这个小跳却早已忘记了。
-一年
+                            适用于：
+
+MDP model 未知：经验的采样可以获取
+MDP model 已知：无法使用（e.g.原子级动力学），采样可以使用
+
+策略、非策略学习：
+
+On-policy：采样来自policy $\pi$
+Off-policy：采样来自
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
                         </span>
                         <span class="publish-author">
                             
@@ -1199,12 +1206,12 @@ for i in range(nb_episodes):
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RK4/">
-                        <span class="chip bg-color">RK4</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E5%80%BC%E4%BB%BF%E7%9C%9F/">
-                        <span class="chip bg-color">数值仿真</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
                     </a>
                     
                 </div>
@@ -1218,37 +1225,33 @@ for i in range(nb_episodes):
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/settings-matlab">
+                <a href="/posts/cnn">
                     <div class="card-image">
                         
-                        <img src="/img/15966337742719.jpg" class="responsive-img" alt="Matlab设置">
+                        <img src="/img/15966353155178.jpg" class="responsive-img" alt="卷积神经网络CNN（convolutional）">
                         
-                        <span class="card-title">Matlab设置</span>
+                        <span class="card-title">卷积神经网络CNN（convolutional）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            代码片段snippets
-保存pdf调整a4纸至合适大小
-
-h = figure;
-plot(1:10);
-set(h,'Units','Inches');
-pos = get(h,'Position');
-set(h,'PaperPosi
+                            卷积神经网络CNN（convolutional）卷积运算：原图像*卷积核=新图像，经常用来做边缘检测人造核：手动指定权重，改善效果
+指定核权重为变量，通过反向传播，学习卷积核的权重补白和步幅决定了卷积后的
+补白Padding
+Valid c
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                    设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1258,12 +1261,16 @@ set(h,'PaperPosi
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/snippets/">
-                        <span class="chip bg-color">snippets</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/matlab/">
-                        <span class="chip bg-color">matlab</span>
+                    <a href="/tags/CNN/">
+                        <span class="chip bg-color">CNN</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">卷积神经网络</span>
                     </a>
                     
                 </div>

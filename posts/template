@@ -320,7 +320,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/15966337742719.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -462,7 +462,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-09
+                    2019-01-01
                 </div>
                 
 
@@ -476,7 +476,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    53
+                    58
                 </div>
                 
 
@@ -498,8 +498,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>$$\pi$$</p>
-<p><img src="/img/contact.jpg"></p>
+                <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>正文<br>$$\pi$$</p>
+<p>footer<br><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -757,7 +757,7 @@
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2019-09-09T15-09-31',
+        id: '2019-01-01T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1048,23 +1048,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/mac-settings">
+                <a href="/posts/settings-python">
                     <div class="card-image">
                         
-                        <img src="/img/15966334903790.jpg" class="responsive-img" alt="Mac设置">
+                        <img src="/img/15966336874885.jpg" class="responsive-img" alt="控制理论笔记">
                         
-                        <span class="card-title">Mac设置</span>
+                        <span class="card-title">控制理论笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录备忘mac系统、软件的设置
+                            python读取txt数据plotpython保存data到excelimport numpy as np
+import pandas as pd
+# prepare for data
+data = np.arange(1,101).res
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
                         </span>
                         <span class="publish-author">
                             
@@ -1081,20 +1084,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">系统</span>
+                    <a href="/tags/snippets/">
+                        <span class="chip bg-color">snippets</span>
                     </a>
                     
-                    <a href="/tags/Mac/">
-                        <span class="chip bg-color">Mac</span>
-                    </a>
-                    
-                    <a href="/tags/VPS/">
-                        <span class="chip bg-color">VPS</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">
-                        <span class="chip bg-color">黑苹果</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -1111,8 +1106,7 @@
                 <a href="/posts/template">
                     <div class="card-image">
                         
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/featureimages/22.jpg" class="responsive-img" alt="template">
+                        <img src="/img/15966337742719.jpg" class="responsive-img" alt="template">
                         
                         <span class="card-title">template</span>
                     </div>
@@ -1120,17 +1114,17 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            $$\pi$$
-
+                            标题正文$$\pi$$
+footer
 
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
-            if (!el.dataset.src)
+            if (!el.da
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-01
                             </span>
                         <span class="publish-author">
                             
