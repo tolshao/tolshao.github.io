@@ -1,4 +1,5 @@
 https://tolshao.github.io/posts/deep-learning/
+https://tolshao.github.io/posts/set-up-hexo/
 https://tolshao.github.io/posts/ios-yellow-page/
 https://tolshao.github.io/posts/rl-11/
 https://tolshao.github.io/posts/rk4/
