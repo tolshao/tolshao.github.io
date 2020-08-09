@@ -1,4 +1,4 @@
-https://tolshao.github.io/posts/set-up-hexo/
+https://tolshao.github.io/posts/deep-learning/
 https://tolshao.github.io/posts/ios-yellow-page/
 https://tolshao.github.io/posts/rl-11/
 https://tolshao.github.io/posts/rk4/
@@ -7,7 +7,6 @@ https://tolshao.github.io/posts/keras-tensorflow/
 https://tolshao.github.io/posts/deep-learning-summary/
 https://tolshao.github.io/posts/rl-5/
 https://tolshao.github.io/posts/gym-rl-env/
-https://tolshao.github.io/posts/deep-learning/
 https://tolshao.github.io/posts/cnn/
 https://tolshao.github.io/posts/rl-4/
 https://tolshao.github.io/posts/rl-3/
