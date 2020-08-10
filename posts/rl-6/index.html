@@ -479,14 +479,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    268
+                    310
                 </div>
                 
 
@@ -520,16 +520,27 @@
 <li>领域Nearest neighbour</li>
 <li>傅里叶/ 小波Fourier/ wavelet bases</li>
 </ul>
-<h1 id="incremental-methods"><a href="#incremental-methods" class="headerlink" title="incremental methods"></a>incremental methods</h1><h2 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h2><p>值函数估计：随机梯度下降法SGD<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15965268722996.jpg?x-oss-process=style/blog" alt="-w523"></p>
-<h2 id="Table-lookup-是-GD的一种特例"><a href="#Table-lookup-是-GD的一种特例" class="headerlink" title="Table lookup 是 GD的一种特例"></a>Table lookup 是 GD的一种特例</h2><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15965277694513.jpg?x-oss-process=style/blog" alt="-w290"></p>
-<h2 id="Find-a-target-for-value-function-approximation"><a href="#Find-a-target-for-value-function-approximation" class="headerlink" title="Find a target for value function approximation"></a>Find a target for value function approximation</h2><p>把估计函数作为一个监督学习<br>目标是谁呢，通过MC、TD方法，设定目标<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15965279560154.jpg?x-oss-process=style/blog" alt="-w439"></p>
-<h2 id="生成训练集"><a href="#生成训练集" class="headerlink" title="生成训练集"></a>生成训练集</h2><ul>
-<li><p>For MC<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15965286821264.jpg?x-oss-process=style/blog" alt="-w335"><br>无偏目标，局部最优</p>
-</li>
-<li><p>For linear TD（0）<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15965287396993.jpg?x-oss-process=style/blog" alt="-w479"><br>收敛趋向全局最优</p>
-</li>
+<h1 id="incremental-methods"><a href="#incremental-methods" class="headerlink" title="incremental methods"></a>incremental methods</h1><h2 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h2><p>值函数估计：随机梯度下降法SGD<br><img src="/img/15965268722996.jpg" alt="-w523"></p>
+<h2 id="Table-lookup-是-GD的一种特例"><a href="#Table-lookup-是-GD的一种特例" class="headerlink" title="Table lookup 是 GD的一种特例"></a>Table lookup 是 GD的一种特例</h2><p><img src="/img/15965277694513.jpg" alt="-w290"></p>
+<h2 id="Find-a-target-for-value-function-approximation"><a href="#Find-a-target-for-value-function-approximation" class="headerlink" title="Find a target for value function approximation"></a>Find a target for value function approximation</h2><p>把估计函数作为一个监督学习<br>目标是谁呢，通过MC、TD方法，设定目标<br><img src="/img/15965279560154.jpg" alt="-w439"></p>
+<h2 id="生成训练集"><a href="#生成训练集" class="headerlink" title="生成训练集"></a>生成训练集</h2><h3 id="For-linear-MC"><a href="#For-linear-MC" class="headerlink" title="For linear MC"></a>For linear MC</h3><p><img src="/img/15965286821264.jpg" alt="-w335"></p>
+<ul>
+<li>无偏目标估计</li>
+<li>局部最优</li>
 </ul>
-<h1 id="batch-merhods"><a href="#batch-merhods" class="headerlink" title="batch merhods"></a>batch merhods</h1><p><img src="/img/contact.jpg"></p>
+<h3 id="For-linear-TD（0）"><a href="#For-linear-TD（0）" class="headerlink" title="For linear TD（0）"></a>For linear TD（0）</h3><p><img src="/img/15965287396993.jpg" alt="-w479"></p>
+<ul>
+<li>收敛趋向全局最优</li>
+</ul>
+<h3 id="For-linear-TD（-lambda-）"><a href="#For-linear-TD（-lambda-）" class="headerlink" title="For linear TD（$\lambda$）"></a>For linear TD（$\lambda$）</h3><p><img src="/img/15970471950069.jpg" alt="-w427"></p>
+<p>$\delta$ scalar number<br>$E_t$ 维度和s维度一致</p>
+<ul>
+<li>前后向 相等</li>
+</ul>
+<h1 id="Incremental-Control-Algorithms"><a href="#Incremental-Control-Algorithms" class="headerlink" title="Incremental Control Algorithms"></a>Incremental Control Algorithms</h1><p>用q函数，替代v函数<br><img src="/img/15970492924377.jpg" alt="-w492"></p>
+<p><img src="/img/15970496242583.jpg" alt="-w530"></p>
+<h2 id="不能保证收敛性"><a href="#不能保证收敛性" class="headerlink" title="不能保证收敛性"></a>不能保证收敛性</h2><p><img src="/img/15970511491893.jpg" alt="-w527"></p>
+<h1 id="batch-methods"><a href="#batch-methods" class="headerlink" title="batch methods"></a>batch methods</h1><p><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1327,7 +1338,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.6k</span>&nbsp;字
+                class="white-color">32.8k</span>&nbsp;字
             
             
             

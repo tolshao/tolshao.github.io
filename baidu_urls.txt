@@ -17,6 +17,7 @@ https://tolshao.now.sh/posts/rl-1/
 https://tolshao.now.sh/posts/machine-learning/
 https://tolshao.now.sh/posts/sequence-model/
 https://tolshao.now.sh/posts/paper-writting/
+https://tolshao.now.sh/posts/small-tricks/
 https://tolshao.now.sh/posts/advanced-control/
 https://tolshao.now.sh/posts/settings-mac/
 https://tolshao.now.sh/posts/settings-latex/
