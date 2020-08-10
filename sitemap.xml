@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.now.sh/about/index.html</loc>
+    
+    <lastmod>2020-08-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/posts/set-up-hexo/</loc>
     
     <lastmod>2020-08-10</lastmod>
@@ -171,13 +178,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/posts/paper-writting/</loc>
-    
-    <lastmod>2020-08-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/about/index.html</loc>
     
     <lastmod>2020-08-07</lastmod>
     
