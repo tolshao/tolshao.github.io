@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.now.sh/posts/set-up-hexo/</loc>
+    
+    <lastmod>2020-08-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/posts/deep-learning/</loc>
     
     <lastmod>2020-08-09</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
-    
-    <lastmod>2020-08-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/posts/set-up-hexo/</loc>
     
     <lastmod>2020-08-09</lastmod>
     
@@ -431,13 +431,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/matlab/</loc>
-    <lastmod>2020-08-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/Mac/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
@@ -446,6 +439,13 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/</loc>
+    <lastmod>2020-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/matlab/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
