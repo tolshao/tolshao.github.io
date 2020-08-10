@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
@@ -596,12 +596,12 @@
 <td align="center">1</td>
 </tr>
 </tbody></table>
-<p>TD用了Markov特性，因此在MP过程高效<br>MC相反，统计规律，非MP过程更高效<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15961728958158.jpg?x-oss-process=style/blog" alt="-w386"></p>
-<h1 id="TD-lambda-法"><a href="#TD-lambda-法" class="headerlink" title="TD($\lambda$)法"></a>TD($\lambda$)法</h1><p>扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15961732715990.jpg?x-oss-process=style/blog" alt="-w454"></p>
-<p>TD（N）推导<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15961732821137.jpg?x-oss-process=style/blog" alt="-w508"></p>
+<p>TD用了Markov特性，因此在MP过程高效<br>MC相反，统计规律，非MP过程更高效<br><img src="/img/15961728958158.jpg" alt="-w386"></p>
+<h1 id="TD-lambda-法"><a href="#TD-lambda-法" class="headerlink" title="TD($\lambda$)法"></a>TD($\lambda$)法</h1><p>扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC<br><img src="/img/15961732715990.jpg" alt="-w454"></p>
+<p>TD（N）推导<br><img src="/img/15961732821137.jpg" alt="-w508"></p>
 <p>对于某个问题来说，没有那个N值是最优的<br>因此，用几何加权的方法来对视野做平均</p>
-<h2 id="Forward"><a href="#Forward" class="headerlink" title="Forward"></a>Forward</h2><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15962140900575.jpg?x-oss-process=style/blog" alt="-w561"></p>
-<p>$\lambda$：对视野的平均<br>for iteration： t -&gt; t+1<br>update value function<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15961782979683.jpg?x-oss-process=style/blog" alt="-w621"><br>引入权重概念，前面的重要，指数衰减<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15961783140794.jpg?x-oss-process=style/blog" alt="-w533"></p>
+<h2 id="Forward"><a href="#Forward" class="headerlink" title="Forward"></a>Forward</h2><p><img src="/img/15962140900575.jpg" alt="-w561"></p>
+<p>$\lambda$：对视野的平均<br>for iteration： t -&gt; t+1<br>update value function<br><img src="/img/15961782979683.jpg" alt="-w621"><br>引入权重概念，前面的重要，指数衰减<br><img src="/img/15961783140794.jpg" alt="-w533"></p>
 <h2 id="Backward"><a href="#Backward" class="headerlink" title="Backward"></a>Backward</h2><p>Credit assignment：<br>引入 Eligibility Traces：关于状态s的权重<br>当s重复出现，E值升高，不出现，指数下降<br>$E_{0}(s)=0$<br>$E_{t}(s)=\gamma \lambda E_{t-1}(s)+\mathbf{1}\left(S_{t}=s\right)$</p>
 <p>Backward步骤：</p>
 <ul>
@@ -610,10 +610,10 @@
 <li>与 TD-error($\delta_t$) 和 Eligibility trace $E_t(s)$ 成比例</li>
 </ul>
 <p>$$<br>\begin{aligned}<br>\delta_{t} &amp;=R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right) \<br>V(s) &amp; \leftarrow V(s)+\alpha \delta_{t} E_{t}(s)<br>\end{aligned}<br>$$</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15962140598528.jpg?x-oss-process=style/blog" alt="-w426"></p>
-<p>$$<br>\sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)<br>$$<br>对于$\lambda \in [0,1]$，满足TD error = $\lambda-error$<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15964228971321.jpg?x-oss-process=style/blog" alt="-w605"></p>
+<p><img src="/img/15962140598528.jpg" alt="-w426"></p>
+<p>$$<br>\sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)<br>$$<br>对于$\lambda \in [0,1]$，满足TD error = $\lambda-error$<br><img src="/img/15964228971321.jpg" alt="-w605"></p>
 <p>对于online 的updates来说，TD($\lambda$)前后向视图稍有不同，引入Exact online TD($\lambda$)</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15964233494644.jpg?x-oss-process=style/blog" alt="-w627"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/img/15964233494644.jpg" alt="-w627"></p>
 <ul>
 <li>TD(0) 向后看一步</li>
 <li>TD($\lambda$) 视野距离按$\lambda$指数衰减，叠加</li>
@@ -1422,7 +1422,7 @@ Valid c
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.8k</span>&nbsp;字
+                class="white-color">32.9k</span>&nbsp;字
             
             
             

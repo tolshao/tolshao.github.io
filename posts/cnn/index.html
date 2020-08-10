@@ -483,7 +483,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
@@ -512,23 +512,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="卷积神经网络CNN（convolutional）"><a href="#卷积神经网络CNN（convolutional）" class="headerlink" title="卷积神经网络CNN（convolutional）"></a>卷积神经网络CNN（convolutional）</h1><p>卷积运算：原图像*卷积核=新图像，经常用来做边缘检测<br>人造核：手动指定权重，改善效果<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941711725552.jpg?x-oss-process=style/blog" alt="-w615"></p>
+                <h1 id="卷积神经网络CNN（convolutional）"><a href="#卷积神经网络CNN（convolutional）" class="headerlink" title="卷积神经网络CNN（convolutional）"></a>卷积神经网络CNN（convolutional）</h1><p>卷积运算：原图像*卷积核=新图像，经常用来做边缘检测<br>人造核：手动指定权重，改善效果<br><img src="/img/15941711725552.jpg" alt="-w615"></p>
 <p>指定核权重为变量，通过反向传播，学习卷积核的权重<br>补白和步幅决定了卷积后的</p>
 <h2 id="补白Padding"><a href="#补白Padding" class="headerlink" title="补白Padding"></a>补白Padding</h2><ul>
 <li>Valid convolution：p = 0<br>$n\times n * f\times f -&gt; (n-f+1)\times (n-f+1)$</li>
-<li>Same convolution：n = n<br>$(n+2p)\times (n+2p) * f\times f -&gt; n\times n$<br>得到填充边缘宽度$p = \frac{f-1}{2}$<br>所以一般卷积核大小是奇数<h2 id="步幅strides"><a href="#步幅strides" class="headerlink" title="步幅strides"></a>步幅strides</h2>s&gt;1，图像也变小<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941720564251.jpg?x-oss-process=style/blog" alt="-w600"></li>
+<li>Same convolution：n = n<br>$(n+2p)\times (n+2p) * f\times f -&gt; n\times n$<br>得到填充边缘宽度$p = \frac{f-1}{2}$<br>所以一般卷积核大小是奇数<h2 id="步幅strides"><a href="#步幅strides" class="headerlink" title="步幅strides"></a>步幅strides</h2>s&gt;1，图像也变小<br><img src="/img/15941720564251.jpg" alt="-w600"></li>
 </ul>
-<h2 id="三维卷积"><a href="#三维卷积" class="headerlink" title="三维卷积"></a>三维卷积</h2><p>对于RGB三通道图像，nc个滤波器，卷积叠加，得到深度为nc的图像<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941727037025.jpg?x-oss-process=style/blog" alt="-w710"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941735838131.jpg?x-oss-process=style/blog" alt="-w697"></p>
-<h3 id="趋势：缩减图片尺度，增加深度"><a href="#趋势：缩减图片尺度，增加深度" class="headerlink" title="趋势：缩减图片尺度，增加深度"></a>趋势：缩减图片尺度，增加深度</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941743777673.jpg?x-oss-process=style/blog" alt="-w693"></p>
-<h2 id="CNN分类"><a href="#CNN分类" class="headerlink" title="CNN分类"></a>CNN分类</h2><h3 id="卷积层Conv："><a href="#卷积层Conv：" class="headerlink" title="卷积层Conv："></a>卷积层Conv：</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941767758613.jpg?x-oss-process=style/blog" alt="-w695"></p>
+<h2 id="三维卷积"><a href="#三维卷积" class="headerlink" title="三维卷积"></a>三维卷积</h2><p>对于RGB三通道图像，nc个滤波器，卷积叠加，得到深度为nc的图像<br><img src="/img/15941727037025.jpg" alt="-w710"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/img/15941735838131.jpg" alt="-w697"></p>
+<h3 id="趋势：缩减图片尺度，增加深度"><a href="#趋势：缩减图片尺度，增加深度" class="headerlink" title="趋势：缩减图片尺度，增加深度"></a>趋势：缩减图片尺度，增加深度</h3><p><img src="/img/15941743777673.jpg" alt="-w693"></p>
+<h2 id="CNN分类"><a href="#CNN分类" class="headerlink" title="CNN分类"></a>CNN分类</h2><h3 id="卷积层Conv："><a href="#卷积层Conv：" class="headerlink" title="卷积层Conv："></a>卷积层Conv：</h3><p><img src="/img/15941767758613.jpg" alt="-w695"></p>
 <h3 id="池化层Pool：减少图片宽度，用卷积核进行特征提取"><a href="#池化层Pool：减少图片宽度，用卷积核进行特征提取" class="headerlink" title="池化层Pool：减少图片宽度，用卷积核进行特征提取"></a>池化层Pool：减少图片宽度，用卷积核进行特征提取</h3><p>欠<strong>采样</strong>（下采样），特征降维，压缩数据和参数，减小过拟合<br>只有超参数，没有参数<br>主要分类：</p>
 <ul>
 <li>最大池化</li>
 <li>平均池化</li>
 </ul>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941793237584.jpg?x-oss-process=style/blog" alt="-w730"></p>
-<h3 id="全连接层Fc：一般用来输出"><a href="#全连接层Fc：一般用来输出" class="headerlink" title="全连接层Fc：一般用来输出"></a>全连接层Fc：一般用来输出</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941799685961.jpg?x-oss-process=style/blog" alt="-w743"><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941799984582.jpg?x-oss-process=style/blog" alt="-w732"><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15941803310656.jpg?x-oss-process=style/blog" alt="-w661"></p>
+<p><img src="/img/15941793237584.jpg" alt="-w730"></p>
+<h3 id="全连接层Fc：一般用来输出"><a href="#全连接层Fc：一般用来输出" class="headerlink" title="全连接层Fc：一般用来输出"></a>全连接层Fc：一般用来输出</h3><p><img src="/img/15941799685961.jpg" alt="-w743"><br><img src="/img/15941799984582.jpg" alt="-w732"><br><img src="/img/15941803310656.jpg" alt="-w661"></p>
 <h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
 <li>优势</li>
 </ul>
@@ -537,29 +537,29 @@
 <li>稀疏性联系：输出的值只与小部分输入相关<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3>CNN从前到后，维度缩减，参数增多</li>
 </ol>
 <h2 id="CNN案例"><a href="#CNN案例" class="headerlink" title="CNN案例"></a>CNN案例</h2><h3 id="经典CNN"><a href="#经典CNN" class="headerlink" title="经典CNN"></a>经典CNN</h3><ul>
-<li><p>LeNet-5（sigmoid激活，softmax分类）<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942602914708.jpg?x-oss-process=style/blog" alt="-w767"></p>
+<li><p>LeNet-5（sigmoid激活，softmax分类）<br><img src="/img/15942602914708.jpg" alt="-w767"></p>
 </li>
 <li><p>AlexNet</p>
 </li>
 </ul>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942603354885.jpg?x-oss-process=style/blog" alt="-w772"></p>
+<p><img src="/img/15942603354885.jpg" alt="-w772"></p>
 <ul>
-<li>VGGNet<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942604999932.jpg?x-oss-process=style/blog" alt="-w775"></li>
+<li>VGGNet<br><img src="/img/15942604999932.jpg" alt="-w775"></li>
 </ul>
-<h3 id="残差网络"><a href="#残差网络" class="headerlink" title="残差网络"></a>残差网络</h3><p>传统的plain network存在梯度指数现象<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942710882961.png?x-oss-process=style/blog" alt="-w596"></p>
+<h3 id="残差网络"><a href="#残差网络" class="headerlink" title="残差网络"></a>残差网络</h3><p>传统的plain network存在梯度指数现象<br><img src="/img/15942710882961.png" alt="-w596"></p>
 <p>为了改善深度网络的梯度爆炸（消失）现象，使深度神经网训练可能</p>
 <ul>
-<li>Residual block<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942613601777.jpg?x-oss-process=style/blog" alt="-w777"></li>
+<li>Residual block<br><img src="/img/15942613601777.jpg" alt="-w777"></li>
 </ul>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942613429827.jpg?x-oss-process=style/blog" alt="-w770"><br>维数不一致的问题，可以通过构建权重矩阵，填充0元素或者其他方法进行适配</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942620573952.jpg?x-oss-process=style/blog" alt="-w723"></p>
-<h2 id="1x1-convolution"><a href="#1x1-convolution" class="headerlink" title="1x1 convolution"></a>1x1 convolution</h2><p>对image每个像素进行非线性函数映射，通过n个kernel，映射为n个特征，用于<strong>缩减图像特征深度</strong><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942632478404.jpg?x-oss-process=style/blog" alt="-w662"></p>
-<h3 id="用法，生成中间量，减少运算量"><a href="#用法，生成中间量，减少运算量" class="headerlink" title="用法，生成中间量，减少运算量"></a>用法，生成中间量，减少运算量</h3><p>直接5x5卷积<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942634806609.jpg?x-oss-process=style/blog" alt="-w576"><br>采用1x1卷积中间量，再用5x5卷积<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942635070290.jpg?x-oss-process=style/blog" alt="-w685"></p>
-<h2 id="Inception-network"><a href="#Inception-network" class="headerlink" title="Inception network"></a>Inception network</h2><h3 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942632298297.jpg?x-oss-process=style/blog" alt="-w667"></p>
-<h3 id="Inception-module"><a href="#Inception-module" class="headerlink" title="Inception module"></a>Inception module</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942639201675.jpg?x-oss-process=style/blog" alt="-w678"></p>
+<p><img src="/img/15942613429827.jpg" alt="-w770"><br>维数不一致的问题，可以通过构建权重矩阵，填充0元素或者其他方法进行适配</p>
+<p><img src="/img/15942620573952.jpg" alt="-w723"></p>
+<h2 id="1x1-convolution"><a href="#1x1-convolution" class="headerlink" title="1x1 convolution"></a>1x1 convolution</h2><p>对image每个像素进行非线性函数映射，通过n个kernel，映射为n个特征，用于<strong>缩减图像特征深度</strong><br><img src="/img/15942632478404.jpg" alt="-w662"></p>
+<h3 id="用法，生成中间量，减少运算量"><a href="#用法，生成中间量，减少运算量" class="headerlink" title="用法，生成中间量，减少运算量"></a>用法，生成中间量，减少运算量</h3><p>直接5x5卷积<br><img src="/img/15942634806609.jpg" alt="-w576"><br>采用1x1卷积中间量，再用5x5卷积<br><img src="/img/15942635070290.jpg" alt="-w685"></p>
+<h2 id="Inception-network"><a href="#Inception-network" class="headerlink" title="Inception network"></a>Inception network</h2><h3 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h3><p><img src="/img/15942632298297.jpg" alt="-w667"></p>
+<h3 id="Inception-module"><a href="#Inception-module" class="headerlink" title="Inception module"></a>Inception module</h3><p><img src="/img/15942639201675.jpg" alt="-w678"></p>
 <h3 id="Inception-network-1"><a href="#Inception-network-1" class="headerlink" title="Inception network"></a>Inception network</h3><ul>
 <li>Inception module 的串联</li>
-<li>branches用于在中间预测结果，效果不差<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942640307997.jpg?x-oss-process=style/blog" alt="-w678"></li>
+<li>branches用于在中间预测结果，效果不差<br><img src="/img/15942640307997.jpg" alt="-w678"></li>
 </ul>
 <h2 id="Transfer-learning"><a href="#Transfer-learning" class="headerlink" title="Transfer learning"></a>Transfer learning</h2><p>步骤</p>
 <ol>
@@ -580,7 +580,7 @@
 <li>增减RGB通道值，改变量随机</li>
 <li>PCA，干扰主要元素</li>
 </ul>
-<h1 id="目标检测"><a href="#目标检测" class="headerlink" title="目标检测"></a>目标检测</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>CV（computer vision）中，目标检测是并列与图像分类的一个重要应用<br>分类 -&gt; 分类+定位 = 目标检测 -&gt; 多目标检测<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942815091519.jpg?x-oss-process=style/blog" alt="-w788"></p>
+<h1 id="目标检测"><a href="#目标检测" class="headerlink" title="目标检测"></a>目标检测</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>CV（computer vision）中，目标检测是并列与图像分类的一个重要应用<br>分类 -&gt; 分类+定位 = 目标检测 -&gt; 多目标检测<br><img src="/img/15942815091519.jpg" alt="-w788"></p>
 <ul>
 <li>输出和cost function构造<br>输出$Y = [p_c,b_x,b_y,b_h,b_w,c_1,c_2……]$<br>包含<strong>有没有</strong>物体、<strong>坐标</strong>和<strong>物体类别</strong></li>
 <li>cost function<br>当$p_c$=1，计算均方根误差<br>$p_c$= 0,其他的不计算</li>
@@ -593,18 +593,18 @@
 </ol>
 <h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><ul>
 <li>小步长，计算量高</li>
-<li>大步长，计算粗略，精度差<h3 id="用卷积实现Turning-FC-layer-into-convolutional-layers"><a href="#用卷积实现Turning-FC-layer-into-convolutional-layers" class="headerlink" title="用卷积实现Turning FC layer into convolutional layers"></a>用卷积实现Turning FC layer into convolutional layers</h3>用1x1卷积实现权重线性组合<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942833041786.jpg?x-oss-process=style/blog" alt="-w670"></li>
+<li>大步长，计算粗略，精度差<h3 id="用卷积实现Turning-FC-layer-into-convolutional-layers"><a href="#用卷积实现Turning-FC-layer-into-convolutional-layers" class="headerlink" title="用卷积实现Turning FC layer into convolutional layers"></a>用卷积实现Turning FC layer into convolutional layers</h3>用1x1卷积实现权重线性组合<br><img src="/img/15942833041786.jpg" alt="-w670"></li>
 </ul>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942837667651.jpg?x-oss-process=style/blog" alt="-w669"></p>
+<p><img src="/img/15942837667651.jpg" alt="-w669"></p>
 <h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>定位不精确</p>
-<h2 id="输出更精确的边界框——YOLO"><a href="#输出更精确的边界框——YOLO" class="headerlink" title="输出更精确的边界框——YOLO"></a>输出更精确的边界框——YOLO</h2><p>YOLO算法  you only look once<br>构造输出Y.shape = (h,w,l)<br>h是高度图像分割的个数<br>w是宽度图像分割的个数<br>l方向是物体定位信息$[p_c,b_x,b_y,b_h,b_w,c_1,c_2……]$<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942851221558.jpg?x-oss-process=style/blog" alt="-w668"></p>
+<h2 id="输出更精确的边界框——YOLO"><a href="#输出更精确的边界框——YOLO" class="headerlink" title="输出更精确的边界框——YOLO"></a>输出更精确的边界框——YOLO</h2><p>YOLO算法  you only look once<br>构造输出Y.shape = (h,w,l)<br>h是高度图像分割的个数<br>w是宽度图像分割的个数<br>l方向是物体定位信息$[p_c,b_x,b_y,b_h,b_w,c_1,c_2……]$<br><img src="/img/15942851221558.jpg" alt="-w668"></p>
 <h2 id="非极大值抑制"><a href="#非极大值抑制" class="headerlink" title="非极大值抑制"></a>非极大值抑制</h2><ol>
 <li>低于阈值，直接丢弃</li>
 <li>找出最大值</li>
 <li>与最大值重叠区域IoU&gt;0.5，丢弃。多目标检测的话，运行多次IoU算法</li>
 </ol>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942863921030.jpg?x-oss-process=style/blog" alt="-w671"></p>
-<h2 id="Anchor-Boxes"><a href="#Anchor-Boxes" class="headerlink" title="Anchor Boxes"></a>Anchor Boxes</h2><p>重叠物体检测，重建Y<br>矮胖，瘦长<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942868946435.jpg?x-oss-process=style/blog" alt="-w673"></p>
+<p><img src="/img/15942863921030.jpg" alt="-w671"></p>
+<h2 id="Anchor-Boxes"><a href="#Anchor-Boxes" class="headerlink" title="Anchor Boxes"></a>Anchor Boxes</h2><p>重叠物体检测，重建Y<br>矮胖，瘦长<br><img src="/img/15942868946435.jpg" alt="-w673"></p>
 <h1 id="人脸识别——单样本学习"><a href="#人脸识别——单样本学习" class="headerlink" title="人脸识别——单样本学习"></a>人脸识别——单样本学习</h1><ul>
 <li><p>Verification验证<br>input： 图片 姓名 140311199402071213<br>output：是否对应</p>
 </li>
@@ -612,18 +612,18 @@
 </li>
 </ul>
 <p>相似度函数$d(img1,img2)$，函数和照片没关系</p>
-<h2 id="孪生网络Siamese-network"><a href="#孪生网络Siamese-network" class="headerlink" title="孪生网络Siamese network"></a>孪生网络Siamese network</h2><p>核心思想：NN生成编码，比较不同样本编码的范数<br>CNN的参数相同，<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942958881883.jpg?x-oss-process=style/blog" alt="-w663"></p>
-<h3 id="三重损耗函数-Triple-loss"><a href="#三重损耗函数-Triple-loss" class="headerlink" title="三重损耗函数 Triple loss"></a>三重损耗函数 Triple loss</h3><p>防止NN输出退化解，布置小于0<br>$\alpha$ is margin<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942962863559.jpg?x-oss-process=style/blog" alt="-w662"></p>
-<h3 id="another相似性函数"><a href="#another相似性函数" class="headerlink" title="another相似性函数"></a>another相似性函数</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943010618021.jpg?x-oss-process=style/blog" alt="-w413"></p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943009025922.jpg?x-oss-process=style/blog" alt="-w672"></p>
-<h1 id="风格转换Styler-transfer"><a href="#风格转换Styler-transfer" class="headerlink" title="风格转换Styler transfer"></a>风格转换Styler transfer</h1><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943016778419.jpg?x-oss-process=style/blog" alt="-w670"></p>
-<h2 id="可视化hidden-unit"><a href="#可视化hidden-unit" class="headerlink" title="可视化hidden unit"></a>可视化hidden unit</h2><p>浅层学习基本特征<br>深层学习宏观特征<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943015979608.jpg?x-oss-process=style/blog" alt="-w667"></p>
+<h2 id="孪生网络Siamese-network"><a href="#孪生网络Siamese-network" class="headerlink" title="孪生网络Siamese network"></a>孪生网络Siamese network</h2><p>核心思想：NN生成编码，比较不同样本编码的范数<br>CNN的参数相同，<br><img src="/img/15942958881883.jpg" alt="-w663"></p>
+<h3 id="三重损耗函数-Triple-loss"><a href="#三重损耗函数-Triple-loss" class="headerlink" title="三重损耗函数 Triple loss"></a>三重损耗函数 Triple loss</h3><p>防止NN输出退化解，布置小于0<br>$\alpha$ is margin<br><img src="/img/15942962863559.jpg" alt="-w662"></p>
+<h3 id="another相似性函数"><a href="#another相似性函数" class="headerlink" title="another相似性函数"></a>another相似性函数</h3><p><img src="/img/15943010618021.jpg" alt="-w413"></p>
+<p><img src="/img/15943009025922.jpg" alt="-w672"></p>
+<h1 id="风格转换Styler-transfer"><a href="#风格转换Styler-transfer" class="headerlink" title="风格转换Styler transfer"></a>风格转换Styler transfer</h1><p><img src="/img/15943016778419.jpg" alt="-w670"></p>
+<h2 id="可视化hidden-unit"><a href="#可视化hidden-unit" class="headerlink" title="可视化hidden unit"></a>可视化hidden unit</h2><p>浅层学习基本特征<br>深层学习宏观特征<br><img src="/img/15943015979608.jpg" alt="-w667"></p>
 <h2 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h2><p>Main idea: 和两张图片都很像<br>$J(G) = \alpha J_{content}(C,G) + \beta J_{style}(S,G)$</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943018797577.jpg?x-oss-process=style/blog" alt="-w682"></p>
-<h3 id="content-cost-function"><a href="#content-cost-function" class="headerlink" title="content cost function"></a>content cost function</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943020713953.jpg?x-oss-process=style/blog" alt="-w698"></p>
-<h3 id="Style-cost-function"><a href="#Style-cost-function" class="headerlink" title="Style cost function"></a>Style cost function</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943023722812.jpg?x-oss-process=style/blog" alt="-w603"><br>$\lambda$ 是 l 层的权重<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943032075944.jpg?x-oss-process=style/blog" alt="-w468"></p>
-<h2 id="卷积1D和3D形式"><a href="#卷积1D和3D形式" class="headerlink" title="卷积1D和3D形式"></a>卷积1D和3D形式</h2><h3 id="1D形式"><a href="#1D形式" class="headerlink" title="1D形式"></a>1D形式</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943038817548.jpg?x-oss-process=style/blog" alt="-w707"></p>
-<h3 id="3D形式"><a href="#3D形式" class="headerlink" title="3D形式"></a>3D形式</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15943041391653.jpg?x-oss-process=style/blog" alt="-w695"></p>
+<p><img src="/img/15943018797577.jpg" alt="-w682"></p>
+<h3 id="content-cost-function"><a href="#content-cost-function" class="headerlink" title="content cost function"></a>content cost function</h3><p><img src="/img/15943020713953.jpg" alt="-w698"></p>
+<h3 id="Style-cost-function"><a href="#Style-cost-function" class="headerlink" title="Style cost function"></a>Style cost function</h3><p><img src="/img/15943023722812.jpg" alt="-w603"><br>$\lambda$ 是 l 层的权重<br><img src="/img/15943032075944.jpg" alt="-w468"></p>
+<h2 id="卷积1D和3D形式"><a href="#卷积1D和3D形式" class="headerlink" title="卷积1D和3D形式"></a>卷积1D和3D形式</h2><h3 id="1D形式"><a href="#1D形式" class="headerlink" title="1D形式"></a>1D形式</h3><p><img src="/img/15943038817548.jpg" alt="-w707"></p>
+<h3 id="3D形式"><a href="#3D形式" class="headerlink" title="3D形式"></a>3D形式</h3><p><img src="/img/15943041391653.jpg" alt="-w695"></p>
 <p><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1420,7 +1420,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.8k</span>&nbsp;字
+                class="white-color">32.9k</span>&nbsp;字
             
             
             

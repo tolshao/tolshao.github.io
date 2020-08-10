@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
@@ -510,7 +510,7 @@
             <div id="articleContent">
                 <p>小跳最近在搭建一个数值仿真环境，由于需要用到python里面的一些库，所以不得不把simulink的模型搬过来，我们都知道在simulink里，仿真的时候设置仿真步长和微分方程求解器是必要的步骤。但是为什么要设置这个小跳却早已忘记了。</p>
 <p>一年级的时候搬砖搬多了，数分课也没好好上，回头一看，这么简单的东西，当时竟然整的稀里糊涂的。</p>
-<h1 id="为什么要用RK4"><a href="#为什么要用RK4" class="headerlink" title="为什么要用RK4"></a>为什么要用RK4</h1><p>先po一张图，直观感受一下仿真的误差。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15956439603281.jpg?x-oss-process=style/blog" alt="-w752"></p>
+<h1 id="为什么要用RK4"><a href="#为什么要用RK4" class="headerlink" title="为什么要用RK4"></a>为什么要用RK4</h1><p>先po一张图，直观感受一下仿真的误差。<br><img src="/img/15956439603281.jpg" alt="-w752"></p>
 <p>对于给定线性常微分方程<br>$$<br>\dot x = x<br>$$<br>易得，其解是<br>$$<br>x(t) = Ce^t<br>$$<br>RK4是龙格库塔法曲线，None是一阶解法$x(t+dt) = x(t)+\dot x dt$<br>可以看到，线性常微分方程误差尚且如此之大，那么推广到非线性微分方程，像这种形式<br>$$<br>\dot x = f(x,t) = tx^2 - \frac{x}{t}…<br>$$<br>那肯定误差直接起飞了。解析解求起来也挺麻烦，这里就不再引入分析了。</p>
 <p>接下来把定义回顾一下，贴一下代码，有需自取，希望对大家有所帮助。</p>
 <h1 id="定义回顾"><a href="#定义回顾" class="headerlink" title="定义回顾"></a>定义回顾</h1><p>数值分析中，龙格－库塔法（Runge-Kutta methods）是用于非线性常微分方程的解的重要的一类隐式或显式迭代法。这些技术由数学家卡尔·龙格和马丁·威尔海姆·库塔于1900年左右发明。该方法主要是在已知方程导数和初值信息，利用计算机仿真时应用，省去求解微分方程的复杂过程。</p>
@@ -570,7 +570,7 @@ plt.legend()
 plt.xlabel('Time(s)')
 plt.show()</code></pre>
 <h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1><p>这里推荐一个提高效率的工具Matplotlib cheat sheet</p>
-<p>对于一个经常画图的科研狗来说，这张图真是太太太太有必要了，因为时常遇到以下场景，不记得colormap名字，打开文档查一番，不记得线宽关键词，打开文档查一番，不记得marker名字，打开文档查一番。。。。。等等等等<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15956450473625.jpg?x-oss-process=style/blog"></p>
+<p>对于一个经常画图的科研狗来说，这张图真是太太太太有必要了，因为时常遇到以下场景，不记得colormap名字，打开文档查一番，不记得线宽关键词，打开文档查一番，不记得marker名字，打开文档查一番。。。。。等等等等<br><img src="/img/15956450473625.jpg"></p>
 <p>所以，有了这张图，在平常画图的时候中遇到的95%需要查文档的问题都可以在这张图中找到答案。</p>
 <p>===<br>这个速查表，可以关注微信公众号“探物及理”后台回复“python画图”领取。</p>
 <p>===<br><img src="/img/contact.jpg"></p>
@@ -1374,7 +1374,7 @@ Enviroment：输入actio
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.8k</span>&nbsp;字
+                class="white-color">32.9k</span>&nbsp;字
             
             
             

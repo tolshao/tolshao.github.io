@@ -513,7 +513,7 @@
 <h3 id="二阶系统特性"><a href="#二阶系统特性" class="headerlink" title="二阶系统特性"></a>二阶系统特性</h3><p>$m\ddot x+B\dot x+kx=F$<br>$\ddot x+2\omega_n\xi \dot x+\omega_n^2x=\frac{F}{m}$</p>
 <p>阻尼比固有频率:$\omega_n\sqrt{1-\xi^2}$</p>
 <p>单位化：$u(t)=\frac{F}{\omega_n^2}$<br>$H(s) = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}$</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15744291457149.jpg?x-oss-process=style/blog"></p>
+<p><img src="/img/15744291457149.jpg"></p>
 <p>零极点图：<br>极点全部在左，系统稳定<br>虚轴长度代表<strong>振荡周期</strong><br>实轴长度代表<strong>衰减速度</strong><br>$\cos \theta$代表<strong>阻尼比</strong></p>
 <h2 id="SISO-system稳定性判据"><a href="#SISO-system稳定性判据" class="headerlink" title="SISO system稳定性判据"></a>SISO system稳定性判据</h2><p>特征多项式系数判断传递函数稳定性</p>
 <ol>
@@ -564,7 +564,8 @@
 <li><p>复合矫正<br>前置矫正：指令-&gt;Gc(s)-&gt;误差，一般补偿分母s，开环前向增益1<br>干扰前置补偿：干扰测量-&gt;Gc(s)-&gt;误差，误差-&gt;干扰端传函$Gs^{-1}$</p>
 </li>
 </ol>
-<h2 id="根轨迹"><a href="#根轨迹" class="headerlink" title="根轨迹"></a>根轨迹</h2><p>（开环-&gt;闭环稳定性）:分析G(s)的N、P，看闭环系统稳定性<br>开环传递函数中开环增益K从0-无穷时，闭环特征根的移动轨迹<br>单位负反馈闭环传递函数<br>$\phi(s) = \frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}$<br>G(s)是一个<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/jie-ping20200412-xia-wu31424.png?x-oss-process=style/blog" alt="截屏2020-04-12 下午3.14.24"></p>
+<h2 id="根轨迹"><a href="#根轨迹" class="headerlink" title="根轨迹"></a>根轨迹</h2><p>（开环-&gt;闭环稳定性）:分析G(s)的N、P，看闭环系统稳定性<br>开环传递函数中开环增益K从0-无穷时，闭环特征根的移动轨迹<br>单位负反馈闭环传递函数<br>$\phi(s) = \frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}$<br>G(s)是一个 </p>
+<p><img src="/img/%E6%88%AA%E5%B1%8F2020-04-12%20%E4%B8%8B%E5%8D%883.14.24-1.png" alt="截屏2020-04-12 下午3.14.24"></p>
 <h3 id="非线性系统"><a href="#非线性系统" class="headerlink" title="非线性系统"></a>非线性系统</h3><p>叠加原理不适用<br>常规分类：<br>死区<br>饱和<br>间隙-滞环</p>
 <p>系统收敛：消耗系统能量<br>系统发散：从外界获取能量</p>
 <p>#相关词汇<br>$X_{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T_{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
@@ -584,7 +585,7 @@
 <h2 id="6-阈值选取"><a href="#6-阈值选取" class="headerlink" title="6. 阈值选取"></a>6. 阈值选取</h2><p>Normal Distribution正态分布、高斯分布<br>$X = (\mu,\sigma^2)$<br>漏检False Dismissal<br>误警False Alarm</p>
 <h1 id="Advanced控制理论"><a href="#Advanced控制理论" class="headerlink" title="Advanced控制理论"></a>Advanced控制理论</h1><p>状态空间：State-Space，包含输入、输出、状态，写成一阶微分方程的形式<br>$\dot x = A x + B u$<br>$y = Cx+Du$</p>
 <h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><h3 id="两种类型"><a href="#两种类型" class="headerlink" title="两种类型"></a>两种类型</h3><ol>
-<li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15753853291223.jpg?x-oss-process=style/blog"><br>$a , of,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
+<li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="/img/15753853291223.jpg"><br>$a , of,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
 </li>
 <li><p>渐进稳定性：<br>$\exists \delta(t_0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits_{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a , of,  \lambda_i &lt; 0$实部</p>
 </li>
@@ -600,8 +601,8 @@ clear;cla;clc;
 [x,y]=meshgrid(linspace(-5,5));
 streamslice(x,y,0 * x + 2 * y,-3 * x + 0 * y );
 xlabel('x');ylabel('y');</code></pre>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15747442437226.jpg?x-oss-process=style/blog" alt="w400"></p>
-<p>特征值和相图的关系<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15753593791413.jpg?x-oss-process=style/blog"></p>
+<p><img src="/img/15747442437226.jpg" alt="w400"></p>
+<p>特征值和相图的关系<br><img src="/img/15753593791413.jpg"></p>
 <h2 id="齐次状态方程解-dot-x-A-x"><a href="#齐次状态方程解-dot-x-A-x" class="headerlink" title="齐次状态方程解$\dot x = A x$"></a>齐次状态方程解$\dot x = A x$</h2><p>$\dot x = a x\rightarrow x(t) = e^{at}x(0)$<br>同理，多元线性方程<br>$\dot x = a x\rightarrow x(t) = e^{At}x(0)$<br>其中，<strong>状态转移矩阵$\Phi(t)$解法</strong></p>
 <ul>
 <li>数值法：<br>$\Phi(t) = e^{At}=I+At+\frac{1}{2!}A^2t^2+…+\frac{1}{k!}A^kt^k$</li>
@@ -624,13 +625,13 @@ xlabel('x');ylabel('y');</code></pre>
 <li>不改变可控性，有可能改变可观性</li>
 <li>闭环特征值</li>
 </ol>
-<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755438743134.jpg?x-oss-process=style/blog"></p>
+<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><p><img src="/img/15755438743134.jpg"></p>
 <h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x_t^- = F_t x_{t-1} + B_t u_t$</p>
 <p>状态转移矩阵:$P_t^-=FP_{t-1}F^T+Q$</p>
 <p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\<br>\sigma_{12}&amp;\sigma_{22}\<br>\end{bmatrix}<br>$</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15748205077671.jpg?x-oss-process=style/blog" alt="w400"></p>
-<p>卡尔曼方程≠状态观测器<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755459115506.jpg?x-oss-process=style/blog" alt="m180"></p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755450314782.jpg?x-oss-process=style/blog"><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15755448894756.jpg?x-oss-process=style/blog"><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
+<p><img src="/img/15748205077671.jpg" alt="w400"></p>
+<p>卡尔曼方程≠状态观测器<br><img src="/img/15755459115506.jpg" alt="m180"></p>
+<p><img src="/img/15755450314782.jpg"><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="/img/15755448894756.jpg"><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
 <p>概率函数相乘，多传感器信息融合</p>
 <h2 id="非线性控制理论"><a href="#非线性控制理论" class="headerlink" title="非线性控制理论"></a>非线性控制理论</h2><h3 id="ARC"><a href="#ARC" class="headerlink" title="ARC"></a>ARC</h3><p>Barbalat’s 引理 lemma</p>
 <ol>
@@ -1435,7 +1436,7 @@ xlabel('x');ylabel('y');</code></pre>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.8k</span>&nbsp;字
+                class="white-color">32.9k</span>&nbsp;字
             
             
             

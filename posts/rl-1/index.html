@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
@@ -508,7 +508,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>强化学习是一门多学科交叉的技术<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/07/29/jie-ping20200727-xia-wu53546.png" alt="-w400"></p>
+                <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>强化学习是一门多学科交叉的技术<br><img src="/img/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%885.35.46-1.png" alt="截屏2020-07-27 下午5.35.46"></p>
 <h2 id="与传统控制的关系："><a href="#与传统控制的关系：" class="headerlink" title="与传统控制的关系："></a>与传统控制的关系：</h2><h3 id="相似性："><a href="#相似性：" class="headerlink" title="相似性："></a>相似性：</h3><table>
 <thead>
 <tr>
@@ -535,17 +535,18 @@
 </tbody></table>
 <h3 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h3><ul>
 <li>传统的控制：将任务分解成多个任务的串并联，设计（子）控制器</li>
-<li>机器学习：将控制器压缩成黑盒Black box<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/07/29/15953218263369.jpg" alt="-w1354"></li>
+<li>机器学习：将控制器压缩成黑盒Black box<br><img src="/img/15953218263369.jpg" alt="-w1354"></li>
 </ul>
 <p>强化学习不同于 监督、非监督学习（与静态数据交互），与环境产生交互，产生最优结果的动作序列。</p>
 <h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><p>RL组成要素Agent、Env</p>
-<h2 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h2><p>组成要素：Policy、Value function、Model其中至少一个<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/07/29/15958481757170.jpg" alt="-w410"></p>
+<h2 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h2><p>组成要素：Policy、Value function、Model其中至少一个<br><img src="/img/15958481757170.jpg" alt="-w410"></p>
 <h3 id="策略-Policy-：observation-to-action的映射"><a href="#策略-Policy-：observation-to-action的映射" class="headerlink" title="策略(Policy)：observation to action的映射"></a>策略(Policy)：observation to action的映射</h3><ul>
 <li>固定策略：$a = \pi(s)$给定状态$s$，对应fixed的action $a$</li>
-<li>随机策略：当Agent处于某一个state的时候，它做的Action是不确定的，例如你可以选择study也可以选择game，也就是说你在某一个状态是以一定的概率去选择某一个action。也就是说，策略的选择是一个条件概率$\pi(a|s)$，这里的$\pi$与数序中的$\pi$没有任何关系，他只是代表一个函数而已（其实就是$f(a|s)$）。<br>$$<br>\pi(a \mid s)=P\left(A_{t}=a \mid S_{t}=s\right)<br>$$<br>函数代表：在状态$s$时采取动作$a$的概率分布。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/07/29/jie-ping20200727-xia-wu70757.png" alt="截屏2020-07-27 下午7.07.57"></li>
+<li>随机策略：当Agent处于某一个state的时候，它做的Action是不确定的，例如你可以选择study也可以选择game，也就是说你在某一个状态是以一定的概率去选择某一个action。也就是说，策略的选择是一个条件概率$\pi(a|s)$，这里的$\pi$与数序中的$\pi$没有任何关系，他只是代表一个函数而已（其实就是$f(a|s)$）。<br>$$<br>\pi(a \mid s)=P\left(A_{t}=a \mid S_{t}=s\right)<br>$$<br>函数代表：在状态$s$时采取动作$a$的概率分布。</li>
 </ul>
+<p><img src="/img/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%887.07.57-1.png" alt="截屏2020-07-27 下午7.07.57"></p>
 <h3 id="价值-value-function-：未来奖励的预测（期望）"><a href="#价值-value-function-：未来奖励的预测（期望）" class="headerlink" title="价值(value function)：未来奖励的预测（期望）"></a>价值(value function)：未来奖励的预测（期望）</h3><p>前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R_{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R_{t+1}}$，那么他会不会影响$\mathcal{R_{t+2}},\mathcal{R_{t+3}}…$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：<br>$$<br>v_{\pi}(s)=\mathbb{E}<em>{\pi}\left(R</em>{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+\ldots \mid S_{t}=s\right)<br>$$</p>
-<p>$v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/07/29/15958481422216.png" alt="-w425"></p>
+<p>$v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。<br><img src="/img/15958481422216.png" alt="-w425"></p>
 <h3 id="模型Model：对env的预测"><a href="#模型Model：对env的预测" class="headerlink" title="模型Model：对env的预测"></a>模型Model：对env的预测</h3><h4 id="预测状态：s-gt-s’的概率"><a href="#预测状态：s-gt-s’的概率" class="headerlink" title="预测状态：s->s’的概率"></a>预测状态：s-&gt;s’的概率</h4><p>$$<br>\mathcal{P}<em>{s s^{\prime}}^{a} =\mathbb{P}  \left(S</em>{t+1}=s^{\prime} \mid S_{t}=s, A_{t}=a\right)<br>$$</p>
 <h4 id="预测奖励：R的期望"><a href="#预测奖励：R的期望" class="headerlink" title="预测奖励：R的期望"></a>预测奖励：R的期望</h4><p>$$<br>\mathcal{R}<em>{s}^{a} =\mathbb{E}<br> R</em>{t+1} \left( \mid S_{t}=s, A_{t}=a\right)<br>$$</p>
 <h3 id="gamma-奖励衰减因子"><a href="#gamma-奖励衰减因子" class="headerlink" title="$\gamma$奖励衰减因子"></a>$\gamma$奖励衰减因子</h3><p>在上面的价值函数中，有一个变量$\gamma$ ，即奖励衰减因子，在[0，1]之间。如果为0，则是贪婪法，即价值只由当前的奖励决定，如果是1，则所有的后续状态奖励和当前奖励一视同仁。一般来说取0到1之间的数。</p>
@@ -1345,7 +1346,7 @@ EVD特征值分解（The eigenvalue value dec
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.8k</span>&nbsp;字
+                class="white-color">32.9k</span>&nbsp;字
             
             
             
