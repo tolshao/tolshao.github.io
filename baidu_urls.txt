@@ -1,8 +1,6 @@
 https://tolshao.now.sh/posts/set-up-hexo/
 https://tolshao.now.sh/posts/ios-yellow-page/
-https://tolshao.now.sh/posts/rl-11/
 https://tolshao.now.sh/posts/rk4/
-https://tolshao.now.sh/posts/rl-6/
 https://tolshao.now.sh/posts/keras-tensorflow/
 https://tolshao.now.sh/posts/deep-learning-summary/
 https://tolshao.now.sh/posts/rl-5/

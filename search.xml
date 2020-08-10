@@ -54,35 +54,6 @@
     
     
     <entry>
-      <title>强化学习笔记11：Matlab &amp; RL</title>
-      <link href="/posts/rl-11/"/>
-      <url>/posts/rl-11/</url>
-      
-        <content type="html"><![CDATA[<h1 id="强化学习-11：Matlab-RL"><a href="#强化学习-11：Matlab-RL" class="headerlink" title="强化学习-11：Matlab RL"></a>强化学习-11：Matlab RL</h1><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953228371087.jpg?x-oss-process=style/blog" alt="-w698"></p><ul><li><p>Agent：<br>由Policy 和 RL_Algorithm构成<br>policy负责将observation映射为action<br>RL_Algorithm负责优化policy</p></li><li><p>Enviroment：<br>输入action<br>输出reward、state</p></li></ul><h2 id="关键定义"><a href="#关键定义" class="headerlink" title="关键定义"></a>关键定义</h2><ul><li>Reward：根据当前状态得到的即刻奖励</li><li>Value：根据当前状态预测的整个周期的reward（包括未来）</li></ul><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953233239703.jpg?x-oss-process=style/blog" alt="-w389"></p><p>未来奖励折扣：未来Value不最优</p><ol><li>reward now &gt; reward later</li><li>未来的不确定性</li></ol><ul><li>Balance: exploration探索 vs exploitation利用</li></ul><p>one step update<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953235640183.jpg?x-oss-process=style/blog" alt="-w668"><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953236270668.jpg?x-oss-process=style/blog" alt="-w651"></p><h2 id="RL-workflow"><a href="#RL-workflow" class="headerlink" title="RL workflow"></a>RL workflow</h2><ul><li>Env：Real or simulated？</li><li>Reward signal：指导agent按预期action</li><li>Policy：observation 映射到 action的结构</li><li>Training：选择算法寻优</li><li>Deploy/verify：部署agent</li></ul><h2 id="一些策略"><a href="#一些策略" class="headerlink" title="一些策略"></a>一些策略</h2><h3 id="Q-function"><a href="#Q-function" class="headerlink" title="Q-function"></a>Q-function</h3><p>更新states-action表格，根据s，选a<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953248613942.jpg?x-oss-process=style/blog" alt="-w395"></p><p>缺点：带来维度灾难<br>对于连续空间，构建Value = w1 * state + w2 * action<br>手段：函数近似器<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953249979358.jpg?x-oss-process=style/blog" alt="-w1317"></p><h3 id="策略梯度法"><a href="#策略梯度法" class="headerlink" title="策略梯度法"></a>策略梯度法</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953279655333.jpg?x-oss-process=style/blog" alt="-w701"></p><p>缺点：</p><ol><li>对于稀疏奖励问题，梯度小，训练慢</li><li>容易陷入区间极值</li></ol><h3 id="Value-function-based"><a href="#Value-function-based" class="headerlink" title="Value-function based"></a>Value-function based</h3><p>crictic评价网络<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953280498462.jpg?x-oss-process=style/blog" alt="-w604"></p><ul><li>贝尔曼方程：<br>R:reward<br>Q:当前Q<br>maxQ’：未来最大的Q<br>γ：折扣率discount factor[0,1]<br>α：学习率learning rate<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953283341441.jpg?x-oss-process=style/blog" alt="-w586"></li></ul><h3 id="AC算法"><a href="#AC算法" class="headerlink" title="AC算法"></a>AC算法</h3><p>图中有两个网络：actor、critic<br>actor：根据policy给出最大概率下的action<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953289716908.jpg?x-oss-process=style/blog" alt="-w744"></p><p>完成离线仿真和学习之后，将policy部署到硬件<br>RL algorithm学习能力对于适应不确定干扰和缓变环境尤为重要<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953297916839.jpg?x-oss-process=style/blog" alt="-w641"></p><h4 id="AC网络的执行逻辑"><a href="#AC网络的执行逻辑" class="headerlink" title="AC网络的执行逻辑"></a>AC网络的执行逻辑</h4><pre><code>while True: &nbsp;a = actor.choose_action(s)s_,r,done,info = env.step(a)td_error = critic.learn(s,r,s_)actor.learn(s,a,td_error)s = s_</code></pre><h3 id="DDPG——deep-deterministic-policy-gradient"><a href="#DDPG——deep-deterministic-policy-gradient" class="headerlink" title="DDPG——deep deterministic policy gradient"></a>DDPG——deep deterministic policy gradient</h3><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul><li>连续空间与环境学习</li><li>确定策略比随机快</li></ul><p>加入视觉、雷达等传感器后，观测量维数暴增，全连接层不管用<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953840126963.jpg?x-oss-process=style/blog" alt="-w408"></p><h2 id="改进RL系统需要注意的点"><a href="#改进RL系统需要注意的点" class="headerlink" title="改进RL系统需要注意的点"></a>改进RL系统需要注意的点</h2><p>鲁棒性、安全性、可变性、可验证性<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953856661541.jpg?x-oss-process=style/blog" alt="-w765"></p><ol><li>Robust：对于实际系统具有不确定性的值：制造装配公差引起的几何参数、力（力矩）、传感器采回的信号，送给agent前作随机处理。</li><li>Safety：建立monitor，在系统出问题时接管到安全模式</li></ol><h2 id="与传统控制方式的结合"><a href="#与传统控制方式的结合" class="headerlink" title="与传统控制方式的结合"></a>与传统控制方式的结合</h2><h3 id="将RL-agent用于高级任务，低级任务交给传统"><a href="#将RL-agent用于高级任务，低级任务交给传统" class="headerlink" title="将RL-agent用于高级任务，低级任务交给传统"></a>将RL-agent用于高级任务，低级任务交给传统</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953838314214.jpg?x-oss-process=style/blog" alt="-w772"></p><h3 id="以传统架构实现，RL网络负责调参"><a href="#以传统架构实现，RL网络负责调参" class="headerlink" title="以传统架构实现，RL网络负责调参"></a>以传统架构实现，RL网络负责调参</h3><p>优点：结构可解释， 验证性强<br>缺点：结构人为设计，对于复杂输入，性能非最优<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15953858326711.jpg?x-oss-process=style/blog" alt="-w764"></p><h2 id="几种算法类型"><a href="#几种算法类型" class="headerlink" title="几种算法类型"></a>几种算法类型</h2><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15936754840195.jpg?x-oss-process=style/blog" alt="-w855"></p><p>Model-free：不尝试去理解环境, 环境给什么就是什么，一步一步等待真实世界的反馈, 再根据反馈采取下一步行动。</p><p>Model-based：先理解真实世界是怎样的, 并建立一个模型来模拟现实世界的反馈，通过想象来预判断接下来将要发生的所有情况，然后选择这些想象情况中最好的那种，并依据这种情况来采取下一步的策略。它比 Model-free 多出了一个虚拟环境，还有想象力。</p><p>Policy based：通过感官分析所处的环境, 直接输出下一步要采取的各种动作的概率, 然后根据概率采取行动。</p><p>Value based：输出的是所有动作的价值, 根据最高价值来选动作，这类方法不能选取连续的动作。</p><p>Monte-carlo update：游戏开始后, 要等待游戏结束, 然后再总结这一回合中的所有转折点, 再更新行为准则。</p><p>Temporal-difference update：在游戏进行中每一步都在更新, 不用等待游戏的结束, 这样就能边玩边学习了。</p><p>On-policy：必须本人在场, 并且一定是本人边玩边学习。</p><p>Off-policy：可以选择自己玩, 也可以选择看着别人玩, 通过看别人玩来学习别人的行为准则。</p><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 强化学习 </tag>
-            
-            <tag> RL </tag>
-            
-            <tag> Matlab </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>为什么数值仿真里要用RK4（龙格库塔法）</title>
       <link href="/posts/rk4/"/>
       <url>/posts/rk4/</url>
@@ -102,33 +73,6 @@
             <tag> RK4 </tag>
             
             <tag> 数值仿真 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>强化学习笔记6：值函数估计Value function Approximation</title>
-      <link href="/posts/rl-6/"/>
-      <url>/posts/rl-6/</url>
-      
-        <content type="html"><![CDATA[<h1 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h1><h2 id="v、q表的问题"><a href="#v、q表的问题" class="headerlink" title="v、q表的问题"></a>v、q表的问题</h2><ul><li>解决离散化的s,a,导致q-table存储量、运算量大</li><li>解决连续s、a的表示问题<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2>用带权重估计函数，估计v or q<br>$$<br>\begin{aligned}<br>\hat{v}(s, \mathbf{w}) &amp; \approx v_{\pi}(s) \<br>\text { or } \hat{q}(s, a, \mathbf{w}) &amp; \approx q_{\pi}(s, a)<br>\end{aligned}<br>$$<h2 id="函数估计器"><a href="#函数估计器" class="headerlink" title="函数估计器"></a>函数估计器</h2>可谓函数逼近，需要函数式可微分的</li><li>线性组合</li><li>神经网络</li></ul><p>这些<strong>不可微</strong></p><ul><li>决策树 decision tree</li><li>领域Nearest neighbour</li><li>傅里叶/ 小波Fourier/ wavelet bases</li></ul><h1 id="incremental-methods"><a href="#incremental-methods" class="headerlink" title="incremental methods"></a>incremental methods</h1><h2 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h2><p>值函数估计：随机梯度下降法SGD<br><img src="/img/15965268722996.jpg" alt="-w523"></p><h2 id="Table-lookup-是-GD的一种特例"><a href="#Table-lookup-是-GD的一种特例" class="headerlink" title="Table lookup 是 GD的一种特例"></a>Table lookup 是 GD的一种特例</h2><p><img src="/img/15965277694513.jpg" alt="-w290"></p><h2 id="Find-a-target-for-value-function-approximation"><a href="#Find-a-target-for-value-function-approximation" class="headerlink" title="Find a target for value function approximation"></a>Find a target for value function approximation</h2><p>把估计函数作为一个监督学习<br>目标是谁呢，通过MC、TD方法，设定目标<br><img src="/img/15965279560154.jpg" alt="-w439"></p><h2 id="生成训练集"><a href="#生成训练集" class="headerlink" title="生成训练集"></a>生成训练集</h2><h3 id="For-linear-MC"><a href="#For-linear-MC" class="headerlink" title="For linear MC"></a>For linear MC</h3><p><img src="/img/15965286821264.jpg" alt="-w335"></p><ul><li>无偏目标估计</li><li>局部最优</li></ul><h3 id="For-linear-TD（0）"><a href="#For-linear-TD（0）" class="headerlink" title="For linear TD（0）"></a>For linear TD（0）</h3><p><img src="/img/15965287396993.jpg" alt="-w479"></p><ul><li>收敛趋向全局最优</li></ul><h3 id="For-linear-TD（-lambda-）"><a href="#For-linear-TD（-lambda-）" class="headerlink" title="For linear TD（$\lambda$）"></a>For linear TD（$\lambda$）</h3><p><img src="/img/15970471950069.jpg" alt="-w427"></p><p>$\delta$ scalar number<br>$E_t$ 维度和s维度一致</p><ul><li>前后向 相等</li></ul><h1 id="Incremental-Control-Algorithms"><a href="#Incremental-Control-Algorithms" class="headerlink" title="Incremental Control Algorithms"></a>Incremental Control Algorithms</h1><p>用q函数，替代v函数<br><img src="/img/15970492924377.jpg" alt="-w492"></p><p><img src="/img/15970496242583.jpg" alt="-w530"></p><h2 id="不能保证收敛性"><a href="#不能保证收敛性" class="headerlink" title="不能保证收敛性"></a>不能保证收敛性</h2><ul><li>On-policy：一般边训练，边执行，(s,a)是当前policy产生的</li><li>off-policy：离线训练，通过训练其他策略或者agent产生的(s,a)训练集<br><img src="/img/15970511491893.jpg" alt="-w527"><br>引入Gradient TD，完全满足贝尔曼方程，无差<br><img src="/img/15970539060941.jpg" alt="-w540"></li></ul><p><img src="/img/15970539922026.jpg" alt="-w503"></p><h1 id="batch-methods"><a href="#batch-methods" class="headerlink" title="batch methods"></a>batch methods</h1><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 强化学习 </tag>
-            
-            <tag> RL </tag>
             
         </tags>
       
@@ -714,7 +658,7 @@
       <link href="/posts/template/"/>
       <url>/posts/template/</url>
       
-        <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>正文<br>$$\pi$$</p><p>footer<br><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>正文<br>$$\pi$$</p><p><img src="/img/contact.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       
