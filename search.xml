@@ -278,6 +278,33 @@
     
     
     <entry>
+      <title>控制理论笔记-2</title>
+      <link href="/posts/advance-control-2/"/>
+      <url>/posts/advance-control-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="高级控制理论"><a href="#高级控制理论" class="headerlink" title="高级控制理论"></a>高级控制理论</h1><p><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-1.jpg" alt="Advanced控制理论-1"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-3.jpg" alt="Advanced控制理论-3"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-4.jpg" alt="Advanced控制理论-4"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-5.jpg" alt="Advanced控制理论-5"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-6.jpg" alt="Advanced控制理论-6"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-7.jpg" alt="Advanced控制理论-7"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-8.jpg" alt="Advanced控制理论-8"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-9.jpg" alt="Advanced控制理论-9"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-10.jpg" alt="Advanced控制理论-10"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-11.jpg" alt="Advanced控制理论-11"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-12.jpg" alt="Advanced控制理论-12"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-13.jpg" alt="Advanced控制理论-13"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-14.jpg" alt="Advanced控制理论-14"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-15.jpg" alt="Advanced控制理论-15"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-16.jpg" alt="Advanced控制理论-16"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-17.jpg" alt="Advanced控制理论-17"></p><h2 id="Dr-can-ARC-步骤"><a href="#Dr-can-ARC-步骤" class="headerlink" title="Dr_can   ARC 步骤"></a>Dr_can   ARC 步骤</h2><p><img src="/img/DR_can_NARC%E8%87%AA%E9%80%82%E5%BA%94%E5%8F%8D%E6%AD%A5%E6%8E%A7%E5%88%B6%E6%AD%A5%E9%AA%A4.jpg" alt="DR_can_NARC自适应反步控制步骤"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 高级控制理论 </tag>
+            
+            <tag> 经典控制理论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>卷积神经网络CNN（convolutional）</title>
       <link href="/posts/cnn/"/>
       <url>/posts/cnn/</url>
@@ -656,7 +683,7 @@
     
     
     <entry>
-      <title>控制理论笔记</title>
+      <title>python-snippets</title>
       <link href="/posts/settings-python/"/>
       <url>/posts/settings-python/</url>
       

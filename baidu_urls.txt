@@ -8,6 +8,7 @@ https://tolshao.now.sh/posts/deep-learning-summary/
 https://tolshao.now.sh/posts/rl-5/
 https://tolshao.now.sh/posts/gym-rl-env/
 https://tolshao.now.sh/posts/deep-learning/
+https://tolshao.now.sh/posts/advance-control-2/
 https://tolshao.now.sh/posts/cnn/
 https://tolshao.now.sh/posts/rl-4/
 https://tolshao.now.sh/posts/rl-3/

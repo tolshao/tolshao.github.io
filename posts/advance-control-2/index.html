@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Matlab设置, BUAA ">
+    <meta name="keywords" content="控制理论笔记-2, BUAA ">
     <meta name="baidu-site-verification" content="7VRrwBpvaq" />
     <meta name="description" content="北京航空航天大学 | 张小跳">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>Matlab设置 | Tolshao</title>
+    <title>控制理论笔记-2 | Tolshao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/img/15966337742719.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Matlab设置</h1>
+                    <h1 class="description center-align post-title">控制理论笔记-2</h1>
                 </div>
             </div>
         </div>
@@ -443,12 +443,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/snippets/">
-                                <span class="chip bg-color">snippets</span>
+                            <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">高级控制理论</span>
                             </a>
                         
-                            <a href="/tags/matlab/">
-                                <span class="chip bg-color">matlab</span>
+                            <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">经典控制理论</span>
                             </a>
                         
                     </div>
@@ -459,8 +459,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -472,21 +472,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-01
+                    2020-07-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    271
+                    62
                 </div>
                 
 
@@ -508,41 +508,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="代码片段snippets"><a href="#代码片段snippets" class="headerlink" title="代码片段snippets"></a>代码片段snippets</h2><ul>
-<li>保存pdf调整a4纸至合适大小</li>
-</ul>
-<pre><code>h = figure;
-plot(1:10);
-set(h,'Units','Inches');
-pos = get(h,'Position');
-set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
-print(h,'filename','-dpdf','-r0')</code></pre>
-<ul>
-<li>缺省参数默认值设定</li>
-</ul>
-<pre><code>function f(arg1, arg2, arg3)
-if ~exist('arg2', 'var')
-    arg2 = arg2Default;
-end</code></pre>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ckzhb/article/details/81105384">plot-legend多行设置</a></li>
-</ul>
-<pre><code>hg1 = legend('第一条');
-set(hg1,'FontSize',12,'Location', 'SouthOutside','box','off');  
-%注：将legend放在图外面时，Legend 1不能通过鼠标移动，只能通过代码调整位置 
-% ============= Legend 2 :
-ah2 = axes('position',get(gca,'position'),'visible','off');
-hg2 = legend(ah2, [p2 p3], '第二条', '第三条');
-set(hg2,'FontSize',12,'Location', 'SouthOutside',...
-        'Orientation','horizontal','box','off');</code></pre>
-<p>Another way:<br><code>legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)</code></p>
-<ul>
-<li>mac打开时闪退<br><code>/Applications/Polyspace/R2019b.app/bin/matlab -nosplash</code></li>
-<li>matlab-mex命令 10.15.4问题<br><code>https://www.mathworks.com/matlabcentral/answers/512901-mex-xcodebuild-error-sdk-macosx10-15-4-cannot-be-located/?s_tid=mlc_lp_leaf</code></li>
-</ul>
-<h2 id="绘制等高线"><a href="#绘制等高线" class="headerlink" title="绘制等高线"></a>绘制等高线</h2><pre><code>contour(u, v, z, [-0.5, -0.5], 'LineWidth', 2)</code></pre>
-<p>区间是zlim</p>
-<p><img src="/img/contact.jpg"></p>
+                <h1 id="高级控制理论"><a href="#高级控制理论" class="headerlink" title="高级控制理论"></a>高级控制理论</h1><p><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-1.jpg" alt="Advanced控制理论-1"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-3.jpg" alt="Advanced控制理论-3"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-4.jpg" alt="Advanced控制理论-4"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-5.jpg" alt="Advanced控制理论-5"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-6.jpg" alt="Advanced控制理论-6"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-7.jpg" alt="Advanced控制理论-7"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-8.jpg" alt="Advanced控制理论-8"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-9.jpg" alt="Advanced控制理论-9"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-10.jpg" alt="Advanced控制理论-10"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-11.jpg" alt="Advanced控制理论-11"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-12.jpg" alt="Advanced控制理论-12"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-13.jpg" alt="Advanced控制理论-13"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-14.jpg" alt="Advanced控制理论-14"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-15.jpg" alt="Advanced控制理论-15"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-16.jpg" alt="Advanced控制理论-16"><br><img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-17.jpg" alt="Advanced控制理论-17"></p>
+<h2 id="Dr-can-ARC-步骤"><a href="#Dr-can-ARC-步骤" class="headerlink" title="Dr_can   ARC 步骤"></a>Dr_can   ARC 步骤</h2><p><img src="/img/DR_can_NARC%E8%87%AA%E9%80%82%E5%BA%94%E5%8F%8D%E6%AD%A5%E6%8E%A7%E5%88%B6%E6%AD%A5%E9%AA%A4.jpg" alt="DR_can_NARC自适应反步控制步骤"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -586,7 +553,7 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolshao.now.sh/posts/settings-matlab/">https://tolshao.now.sh/posts/settings-matlab/</a>
+                    <a href="https://tolshao.now.sh/posts/advance-control-2/">https://tolshao.now.sh/posts/advance-control-2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,12 +591,12 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/snippets/">
-                                    <span class="chip bg-color">snippets</span>
+                                <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">高级控制理论</span>
                                 </a>
                             
-                                <a href="/tags/matlab/">
-                                    <span class="chip bg-color">matlab</span>
+                                <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">经典控制理论</span>
                                 </a>
                             
                         </div>
@@ -800,7 +767,7 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
         repo: 'tolshao.github.io',
         owner: 'tolshao',
         admin: "tolshao",
-        id: '2020-02-01T15-09-31',
+        id: '2020-07-15T18-09-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1091,31 +1058,31 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/settings-latex/">
+                <a href="/posts/deep-learning/">
                     <div class="card-image">
                         
-                        <img src="/img/15966359724040.jpg" class="responsive-img" alt="Latex设置">
+                        <img src="/img/15966357686226.jpg" class="responsive-img" alt="深度学习-Coursera笔记">
                         
-                        <span class="card-title">Latex设置</span>
+                        <span class="card-title">深度学习-Coursera笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LatexTexpad live 编辑模式，即时编译缺点：不支持高级packages，如cref所以最后加
-\crefname&amp;#123;figure&amp;#125;&amp;#123;Fig.&amp;#125;&amp;#1
+                            AI-&gt;机器学习分类图
+分类几种网络结构分类NN——回归预测CNN（convolution NN）卷积神经网络——图片RNN (Recurrent Neural Network）递归神经网络——声音、语言处理LSTM长短期记忆网络——
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-23
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                    设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1125,12 +1092,16 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/snippets/">
-                        <span class="chip bg-color">snippets</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/latex/">
-                        <span class="chip bg-color">latex</span>
+                    <a href="/tags/DL/">
+                        <span class="chip bg-color">DL</span>
+                    </a>
+                    
+                    <a href="/tags/Coursera/">
+                        <span class="chip bg-color">Coursera</span>
                     </a>
                     
                 </div>
@@ -1144,33 +1115,33 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/settings-python/">
+                <a href="/posts/cnn/">
                     <div class="card-image">
                         
-                        <img src="/img/15966336874885.jpg" class="responsive-img" alt="python-snippets">
+                        <img src="/img/15966353155178.jpg" class="responsive-img" alt="卷积神经网络CNN（convolutional）">
                         
-                        <span class="card-title">python-snippets</span>
+                        <span class="card-title">卷积神经网络CNN（convolutional）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python读取txt数据plotpython保存data到excelimport numpy as np
-import pandas as pd
-# prepare for data
-data = np.arange(1,101).res
+                            卷积神经网络CNN（convolutional）卷积运算：原图像*卷积核=新图像，经常用来做边缘检测人造核：手动指定权重，改善效果
+指定核权重为变量，通过反向传播，学习卷积核的权重补白和步幅决定了卷积后的
+补白Padding
+Valid c
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                    设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1180,12 +1151,16 @@ data = np.arange(1,101).res
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/snippets/">
-                        <span class="chip bg-color">snippets</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/CNN/">
+                        <span class="chip bg-color">CNN</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">卷积神经网络</span>
                     </a>
                     
                 </div>
@@ -1315,13 +1290,6 @@ data = np.arange(1,101).res
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 

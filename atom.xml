@@ -304,6 +304,33 @@
   </entry>
   
   <entry>
+    <title>控制理论笔记-2</title>
+    <link href="https://tolshao.now.sh/posts/advance-control-2/"/>
+    <id>https://tolshao.now.sh/posts/advance-control-2/</id>
+    <published>2020-07-15T10:09:31.000Z</published>
+    <updated>2020-08-10T10:00:44.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;高级控制理论&quot;&gt;&lt;a href=&quot;#高级控制理论&quot; class=&quot;headerlink&quot; title=&quot;高级控制理论&quot;&gt;&lt;/a&gt;高级控制理论&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="高级控制理论" scheme="https://tolshao.now.sh/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/"/>
+    
+    <category term="经典控制理论" scheme="https://tolshao.now.sh/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>卷积神经网络CNN（convolutional）</title>
     <link href="https://tolshao.now.sh/posts/cnn/"/>
     <id>https://tolshao.now.sh/posts/cnn/</id>
@@ -554,34 +581,6 @@
     
     
     <category term="科学写作" scheme="https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Small tricks</title>
-    <link href="https://tolshao.now.sh/posts/small-tricks/"/>
-    <id>https://tolshao.now.sh/posts/small-tricks/</id>
-    <published>2020-04-30T16:00:00.000Z</published>
-    <updated>2020-08-10T09:50:50.759Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;有用的工具&quot;&gt;&lt;a href=&quot;#有用的工具&quot; class=&quot;headerlink&quot; title=&quot;有用的工具&quot;&gt;&lt;/a&gt;有用的工具&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;[十分钟邮箱- BccTo.ME](goodness for free)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1</summary>
-        
-      
-    
-    
-    
-    
-    <category term="tricks" scheme="https://tolshao.now.sh/tags/tricks/"/>
-    
-    <category term="工具" scheme="https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
