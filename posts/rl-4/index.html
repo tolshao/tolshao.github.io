@@ -486,7 +486,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.4k
                 </div>
                 
 
@@ -515,15 +515,22 @@
 <li>定义：在不清楚MDP状态转移及即时奖励的情况下，直接从经历完整的Episode来学习状态价值，通常情况下某状态的价值等于在多个Episode中以该状态算得到的所有收获的平均。</li>
 </ul>
 <p>适用于MDP参数<strong>未知</strong>，回合制更新，遍历了所有状态s</p>
-<p>MC是基于大数定律的：<br>当采样足够多时，就可以代表真值<br>$$ N(s)-&gt;\infty \Rightarrow V(s) -&gt; V_\pi(s)$$</p>
-<ul>
+<p>MC是基于大数定律的：<br>当采样足够多时，就可以代表真值</p>
+<script type="math/tex; mode=display">N(s)->\infty \Rightarrow V(s) -> V_\pi(s)</script><ul>
 <li>说明：<ul>
 <li>均值累计计算可以用$v = sum/N$</li>
-<li>也可以用累进更新 Incremental Mean<br>$$<br>\begin{aligned}<br>\mu_{k} &amp;=\frac{1}{k} \sum_{j=1}^{k} x_{j} \<br>&amp;=\frac{1}{k}\left(x_{k}+\sum_{j=1}^{k-1} x_{j}\right) \<br>&amp;=\frac{1}{k}\left(x_{k}+(k-1) \mu_{k-1}\right) \<br>&amp;=\mu_{k-1}+\frac{1}{k}\left(x_{k}-\mu_{k-1}\right)<br>\end{aligned}<br>$$</li>
+<li>也可以用累进更新 Incremental Mean<script type="math/tex; mode=display">
+\begin{aligned}
+\mu_{k} &=\frac{1}{k} \sum_{j=1}^{k} x_{j} \\
+&=\frac{1}{k}\left(x_{k}+\sum_{j=1}^{k-1} x_{j}\right) \\
+&=\frac{1}{k}\left(x_{k}+(k-1) \mu_{k-1}\right) \\
+&=\mu_{k-1}+\frac{1}{k}\left(x_{k}-\mu_{k-1}\right)
+\end{aligned}</script></li>
 </ul>
 </li>
 </ul>
-<p>类似于PID的P 增益随着N增大，在逐步缩小<br>为了简化计算，改写方程，用$\alpha$代替$\frac{1}{N(s_t)}$<br>这样可以用固定步长来替代变步长$\frac{1}{k}$<br>$$V(S_t) \leftarrow V(S_t)+\alpha(G_t - V(S_t))$$<br>可以看做是，$v_{new} = v_{old} + \alpha(v_{target} - v_{old})$，括号里面是误差<br>可以看到这里的$\alpha$和机器学习里面用的学习率是一个符号</p>
+<p>类似于PID的P 增益随着N增大，在逐步缩小<br>为了简化计算，改写方程，用$\alpha$代替$\frac{1}{N(s_t)}$<br>这样可以用固定步长来替代变步长$\frac{1}{k}$</p>
+<script type="math/tex; mode=display">V(S_t) \leftarrow V(S_t)+\alpha(G_t - V(S_t))</script><p>可以看做是，$v_{new} = v_{old} + \alpha(v_{target} - v_{old})$，括号里面是误差<br>可以看到这里的$\alpha$和机器学习里面用的学习率是一个符号</p>
 <h1 id="差分法Temporal-Difference-learning"><a href="#差分法Temporal-Difference-learning" class="headerlink" title="差分法Temporal-Difference learning"></a>差分法Temporal-Difference learning</h1><p>MC 在 episode遍历完之后，回合更新，效率低<br>TD 实现边走边更新</p>
 <p>引入时间t的概念</p>
 <ul>
@@ -532,13 +539,14 @@
 <li>Bootstrapping自举学习，从部分例子学习</li>
 </ul>
 <p>Goal：学习$v_{\pi}$ 的值，under policy $\pi$</p>
-<h2 id="时序分析法-TD-0）："><a href="#时序分析法-TD-0）：" class="headerlink" title="时序分析法 TD(0）："></a>时序分析法 TD(0）：</h2><p>$$<br>V\left(S_{t}\right) \leftarrow V\left(S_{t}\right)+\alpha\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)<br>$$</p>
-<ul>
+<h2 id="时序分析法-TD-0）："><a href="#时序分析法-TD-0）：" class="headerlink" title="时序分析法 TD(0）："></a>时序分析法 TD(0）：</h2><script type="math/tex; mode=display">
+V\left(S_{t}\right) \leftarrow V\left(S_{t}\right)+\alpha\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)</script><ul>
 <li>TD target 是 下一个时刻的$R_{t+1}+\gamma V\left(S_{t+1}\right)$</li>
 <li>TD误差：$\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)$</li>
 </ul>
 <p>Bootstrapping：根据episode表现来更新V值，自举（依靠自己努力获得）</p>
-<h2 id="与MC方法区别"><a href="#与MC方法区别" class="headerlink" title="与MC方法区别"></a>与MC方法区别</h2><table>
+<h2 id="与MC方法区别"><a href="#与MC方法区别" class="headerlink" title="与MC方法区别"></a>与MC方法区别</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>项目</th>
@@ -546,7 +554,8 @@
 <th>TD</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>不完整片段学习能力</td>
 <td>无</td>
 <td>有</td>
@@ -581,38 +590,47 @@
 <td>high</td>
 <td>low</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="估计方法背后的理论"><a href="#估计方法背后的理论" class="headerlink" title="估计方法背后的理论"></a>估计方法背后的理论</h2><ul>
-<li>MC方法：最小化均方根MSE<br>$$<br>\sum_{k=1}^{K} \sum_{t=1}^{T_{k}}\left(G_{t}^{k}-V\left(s_{t}^{k}\right)\right)^{2}<br>$$</li>
-<li>TD（0）方法：<strong>最大似然估计</strong> max likelihood Markov model<br>Solution to the MDP $\langle\mathcal{S}, \mathcal{A}, \hat{\mathcal{P}}, \hat{\mathcal{R}}, \gamma\rangle$ that best fits the data<br>$$<br>\hat{\mathcal{P}}<em>{s, s^{\prime}}^{a} =\frac{1}{N(s, a)} \sum</em>{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}, s_{t+1}^{k}=s, a, s^{\prime}\right) $$<br>$$<br>\hat{\mathcal{R}}<em>{s}^{a} =\frac{1}{N(s, a)} \sum</em>{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}=s, a\right) r_{t}^{k}<br>$$</li>
+<li>MC方法：最小化均方根MSE<script type="math/tex; mode=display">
+\sum_{k=1}^{K} \sum_{t=1}^{T_{k}}\left(G_{t}^{k}-V\left(s_{t}^{k}\right)\right)^{2}</script></li>
+<li>TD（0）方法：<strong>最大似然估计</strong> max likelihood Markov model<br>Solution to the MDP $\langle\mathcal{S}, \mathcal{A}, \hat{\mathcal{P}}, \hat{\mathcal{R}}, \gamma\rangle$ that best fits the data<script type="math/tex; mode=display">
+\hat{\mathcal{P}}_{s, s^{\prime}}^{a} =\frac{1}{N(s, a)} \sum_{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}, s_{t+1}^{k}=s, a, s^{\prime}\right)</script><script type="math/tex; mode=display">
+\hat{\mathcal{R}}_{s}^{a} =\frac{1}{N(s, a)} \sum_{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}=s, a\right) r_{t}^{k}</script></li>
 </ul>
 <p><img src="/img/15972187186144.jpg" alt="MC-TD收敛速度对比"></p>
 <h2 id="总结：DP、MC、TD"><a href="#总结：DP、MC、TD" class="headerlink" title="总结：DP、MC、TD"></a>总结：DP、MC、TD</h2><ul>
 <li>Bootstrapping自举：利用自己估计值update</li>
 <li>Sampling采样 ：更新样本期望</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">项目</th>
-<th align="center">动态规划DP</th>
-<th align="center">蒙特卡洛MC</th>
-<th align="center">差分TD</th>
+<th style="text-align:center">项目</th>
+<th style="text-align:center">动态规划DP</th>
+<th style="text-align:center">蒙特卡洛MC</th>
+<th style="text-align:center">差分TD</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">自举Bootstrapping</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
+<tbody>
+<tr>
+<td style="text-align:center">自举Bootstrapping</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 <tr>
-<td align="center">采样Sampling</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
+<td style="text-align:center">采样Sampling</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>TD用了Markov特性，因此在MP过程高效</li>
 <li>MC相反，统计规律，非MP过程同样有效</li>
@@ -622,12 +640,12 @@
 <p>TD：采样，经历可不完整，用喜爱状态的预估状态价值预估收获再更新预估价值<br><img src="/img/15972190329229.png" alt="TD-窄而浅"></p>
 <p>DP：没有采样，根据完整模型，依靠预估数据更新状态价值<br><img src="/img/15972190846702.png" alt="DP-宽度"></p>
 <p><img src="/img/15961728958158.jpg" alt="全尺度搜索、动态规划、MC、TD 对比"></p>
-<h1 id="TD-lambda-法"><a href="#TD-lambda-法" class="headerlink" title="TD($\lambda$)法"></a>TD($\lambda$)法</h1><p>视野（深度）影响TD算法的稳定性，但是视野去多深，不知道<br>因此，综合不同深度的视野，加权求和，即$TD(\lambda)$</p>
-<p>扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC<br><img src="/img/15961732715990.jpg"></p>
+<h1 id="TD-λ-法"><a href="#TD-λ-法" class="headerlink" title="TD(λ)法"></a>TD(λ)法</h1><p>视野（深度）影响TD算法的稳定性，但是视野去多深，不知道<br>因此，综合不同深度的视野，加权求和，即TD$(\lambda)$</p>
+<p>扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC<br><img src="/img/15961732715990.jpg" alt=""></p>
 <p>TD（N）推导<br><img src="/img/15961732821137.jpg" alt="TD（N）"><br><img src="/img/15972192509726.jpg" alt="不同深度TD效果对比"></p>
 <p>对于某个问题来说，没有那个N值是最优的<br>因此，用几何加权的方法来对视野做平均</p>
 <h2 id="Forward-前向视角认知-TD-lambda"><a href="#Forward-前向视角认知-TD-lambda" class="headerlink" title="Forward 前向视角认知 $TD(\lambda)$"></a>Forward 前向视角认知 $TD(\lambda)$</h2><ul>
-<li><p>例子：<br>老鼠在连续接受了3次响铃和1次亮灯信号后遭到了电击，那么在分析遭电击的原因时，到底是响铃的因素较重要还是亮灯的因素更重要呢？<br><img src="/img/15972196164084.png"></p>
+<li><p>例子：<br>老鼠在连续接受了3次响铃和1次亮灯信号后遭到了电击，那么在分析遭电击的原因时，到底是响铃的因素较重要还是亮灯的因素更重要呢？<br><img src="/img/15972196164084.png" alt=""></p>
 </li>
 <li><p>两个启发：</p>
 <ul>
@@ -647,10 +665,13 @@
 <li>对每个状态s 更新 V(s)</li>
 <li>与 TD-error($\delta_t$) 和 Eligibility trace $E_t(s)$ 成比例</li>
 </ul>
-<p>$$<br>\begin{aligned}<br>\delta_{t} &amp;=R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right) \<br>V(s) &amp; \leftarrow V(s)+\alpha \delta_{t} E_{t}(s)<br>\end{aligned}<br>$$</p>
-<p><img src="/img/15962140598528.jpg" alt="-w426"></p>
-<p>$$<br>\sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)<br>$$</p>
-<p><img src="/img/15964228971321.jpg" alt="-w605"></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\delta_{t} &=R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\\
+V(s) & \leftarrow V(s)+\alpha \delta_{t} E_{t}(s)
+\end{aligned}</script><p><img src="/img/15962140598528.jpg" alt="-w426"></p>
+<script type="math/tex; mode=display">
+\sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)</script><p><img src="/img/15964228971321.jpg" alt="-w605"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="/img/15964233494644.jpg" alt="-w627"></p>
 <ul>
 <li>Offline update：TD(0) = TD($\lambda$) = TD(1)</li>
@@ -660,7 +681,7 @@
 <li>TD(1) 视野不按指数衰减</li>
 <li>能在RL中被应用，看中了TD的自举特性</li>
 </ul>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1282,7 +1303,8 @@ Valid c
                             规划，适用于MDP模型参数已知学习，适用于Env未知或部分未知
 概述动态规划分为两步，Prediction、Control
 
-（Prediction）Value:是对策略$\pi$的评价$$&lt;s,P^\pi,R^\pi,\gamma&
+（Prediction）Value:是对策略$\pi$的评价, \pi \rightarrow V_\pi
+（Co
                         
                     </div>
                     <div class="publish-info">
@@ -1443,11 +1465,23 @@ Valid c
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1461,7 +1495,7 @@ Valid c
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

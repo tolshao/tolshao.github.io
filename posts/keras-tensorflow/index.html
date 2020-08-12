@@ -522,9 +522,10 @@
 <ul>
 <li>串联式Sequential：</li>
 </ul>
-<pre><code class="python">model = Sequential()
+<pre><code class="lang-python">model = Sequential()
 model.add(Dense(32, input_dim=784))
-model.add(Activation('relu'))</code></pre>
+model.add(Activation('relu'))
+</code></pre>
 <ul>
 <li>函数式：</li>
 </ul>
@@ -535,8 +536,8 @@ model.add(Activation('relu'))</code></pre>
     predictions = Dense(output_shape,activation='softmax')(x)
 
     model = Model(inputs=inputs, outputs=predictions)
-    return model</code></pre>
-<h1 id="学习一般操作步骤"><a href="#学习一般操作步骤" class="headerlink" title="学习一般操作步骤"></a>学习一般操作步骤</h1><p>from keras import Model ……</p>
+    return model
+</code></pre><h1 id="学习一般操作步骤"><a href="#学习一般操作步骤" class="headerlink" title="学习一般操作步骤"></a>学习一般操作步骤</h1><p>from keras import Model ……</p>
 <ol>
 <li>Generate：<br><code>model = Model(inputs = input, outputs = output)</code></li>
 <li>Compile：<br>model.compile(配置优化器，学习率，误差等参数)</li>
@@ -545,7 +546,8 @@ model.add(Activation('relu'))</code></pre>
 </ol>
 <h1 id="Tricks-and-Snippets"><a href="#Tricks-and-Snippets" class="headerlink" title="Tricks and Snippets"></a>Tricks and Snippets</h1><h2 id="模型可视化"><a href="#模型可视化" class="headerlink" title="模型可视化"></a>模型可视化</h2><h3 id="命令行打印：keras自带的summary函数"><a href="#命令行打印：keras自带的summary函数" class="headerlink" title="命令行打印：keras自带的summary函数"></a>命令行打印：keras自带的summary函数</h3><p><code>model.summary()</code><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15954994831618.jpg?x-oss-process=style/blog" alt="-w582"></p>
 <h3 id="调用库，打印保存图片"><a href="#调用库，打印保存图片" class="headerlink" title="调用库，打印保存图片"></a>调用库，打印保存图片</h3><p>使用方法：</p>
-<pre><code class="python">Keras.utils.plot_model plot_model(model,to_file='a.png')</code></pre>
+<pre><code class="lang-python">Keras.utils.plot_model plot_model(model,to_file='a.png')
+</code></pre>
 <p>结果如下，还可以保存为pdf等格式<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15955035723718.jpg?x-oss-process=style/blog" alt="-w425"></p>
 <h3 id="PlotNeuralNet绘制latex风格的网络图"><a href="#PlotNeuralNet绘制latex风格的网络图" class="headerlink" title="PlotNeuralNet绘制latex风格的网络图"></a><a target="_blank" rel="noopener" href="https://github.com/HarisIqbal88/PlotNeuralNet">PlotNeuralNet</a>绘制latex风格的网络图</h3><p>例图：<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15955111765714.jpg?x-oss-process=style/blog" alt="-w456"></p>
 <p>使用方法：</p>
@@ -556,9 +558,10 @@ model.add(Activation('relu'))</code></pre>
 <li><code>pdflatex filename.tex</code>，此步骤需要提前拷贝源文件layers中sty文件至tex文件目录，用pdflaetx编译需要texlive环境，请提前安装。</li>
 </ol>
 <h3 id="model-fit函数调用"><a href="#model-fit函数调用" class="headerlink" title="model.fit函数调用"></a>model.fit函数调用</h3><p>这个方法最为硬核，其中mandb还可以横纵向对比多个模型的各个参数，并方便debug和optimize<br>使用方法：</p>
-<pre><code class="python">from rl.callbacks import WandbLogger
+<pre><code class="lang-python">from rl.callbacks import WandbLogger
 import tensorboard
-model.fig(巴拉巴拉, callbacks = [函数])</code></pre>
+model.fig(巴拉巴拉, callbacks = [函数])
+</code></pre>
 <p>``，在网页localhost可视化</p>
 <ul>
 <li>TensorBoard</li>
@@ -566,8 +569,8 @@ model.fig(巴拉巴拉, callbacks = [函数])</code></pre>
 </ul>
 <h3 id="Netron软件"><a href="#Netron软件" class="headerlink" title="Netron软件"></a>Netron软件</h3><p>下载安装，导入keras模型.h5即可食用，也支持tf、pytorch等多种模型，界面如下<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15954993270061.jpg?x-oss-process=style/blog" alt="-w866"></p>
 <h3 id="超参数调节"><a href="#超参数调节" class="headerlink" title="超参数调节"></a>超参数调节</h3><p>超参数就是模型权重以外的其他参数，比如层种类，层深度、宽度，优化器类型、学习率大小等等，它们都影响着模型的表现和上限，超参数一动，就是一个新的模型了。但是超参数却没有像构建神经网络一样有可遵照的理论指导，一直以来都是从业人员的难点。<br>虽然网上已经有很多关于超参数调节的帖子，但大多都为经验之谈，是研究人员在实践中摸索、发现并总结的。就像控制理论里最简单PID调节一样，三个参数就能调的人头大，有些模型遵照经验去调还可能不work。<br>其实这点早就为我们想到了，作者找到了几个超参数调节器</p>
-<h4 id="keras-tunner"><a href="#keras-tunner" class="headerlink" title="keras tunner"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/wmq104/article/details/105740497">keras tunner</a></h4><p>根据验证集的表现自动优化超参数<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15955749309209.jpg?x-oss-process=style/blog"></p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15955749728608.jpg?x-oss-process=style/blog"></p>
+<h4 id="keras-tunner"><a href="#keras-tunner" class="headerlink" title="keras tunner"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/wmq104/article/details/105740497">keras tunner</a></h4><p>根据验证集的表现自动优化超参数<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15955749309209.jpg?x-oss-process=style/blog" alt=""></p>
+<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15955749728608.jpg?x-oss-process=style/blog" alt=""></p>
 <h4 id="keras-lr-finder"><a href="#keras-lr-finder" class="headerlink" title="keras-lr-finder"></a>keras-lr-finder</h4><p>使用方法：安装python库keras_lr_finder</p>
 <p>代码：引用库，包装模型，绘制结果</p>
 <pre><code>import keras_lr_finder
@@ -580,21 +583,21 @@ lr_finder = LRFinder(model)
 lr_finder.find(x_train, y_train, start_lr=0.0001, end_lr=1, batch_size=512, epochs=5)
 
 # Plot the loss, ignore 20 batches in the beginning and 5 in the end
-lr_finder.plot_loss(n_skip_beginning=20, n_skip_end=5)</code></pre>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15948027436905.png?x-oss-process=style/blog"></p>
+lr_finder.plot_loss(n_skip_beginning=20, n_skip_end=5)
+</code></pre><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15948027436905.png?x-oss-process=style/blog" alt=""></p>
 <pre><code># Plot rate of change of the loss
 # Ignore 20 batches in the beginning and 5 in the end
 # Smooth the curve using simple moving average of 20 batches
 # Limit the range for y axis to (-0.02, 0.01)
-lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.01, 0.01))</code></pre>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15948027304867.png?x-oss-process=style/blog"></p>
+lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.01, 0.01))
+</code></pre><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15948027304867.png?x-oss-process=style/blog" alt=""></p>
 <h4 id="利用scikit-learn交互网格搜索超参数"><a href="#利用scikit-learn交互网格搜索超参数" class="headerlink" title="利用scikit-learn交互网格搜索超参数"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/happytofly/article/details/80124813">利用scikit-learn交互网格搜索超参数</a></h4><h1 id="设置备忘"><a href="#设置备忘" class="headerlink" title="设置备忘"></a>设置备忘</h1><h2 id="Keras下载的预训练数据存放目录"><a href="#Keras下载的预训练数据存放目录" class="headerlink" title="Keras下载的预训练数据存放目录"></a>Keras下载的预训练数据存放目录</h2><p><code>root\\.keras\models</code></p>
 <h1 id="错误记录"><a href="#错误记录" class="headerlink" title="错误记录"></a>错误记录</h1><ul>
 <li><strong>非</strong>张量运算变量运算用内置函数，+ - 操作会把张量 转为 Tensorflow，报错</li>
 <li>实数，不用tf. 或者 K. 函数库运算，报错“张量”</li>
 <li>张量一定用内置函数，python支持@ + - 等操作，但是偶尔报错</li>
 </ul>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1160,7 +1163,9 @@ lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.
                         
                             introductionv、q表的问题
 解决离散化的s,a,导致q-table存储量、运算量大
-解决连续s、a的表示问题solution用带权重估计函数，估计v or q$$\begin{aligned}\hat{v}(s, \mathbf
+解决连续s、a的表示问题solution用带权重估计函数，估计v or q
+\begin{aligned}
+\hat{v}(s, \mathbf
                         
                     </div>
                     <div class="publish-info">
@@ -1377,11 +1382,23 @@ lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1395,7 +1412,7 @@ lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

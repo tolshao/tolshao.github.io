@@ -486,14 +486,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    857
+                    846
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -511,11 +511,12 @@
                 <p>规划，适用于MDP模型参数<strong>已知</strong><br>学习，适用于Env未知或部分未知</p>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>动态规划分为两步，Prediction、Control</p>
 <ul>
-<li>（Prediction）Value:是对策略$\pi$的评价<br>$$&lt;s,P^\pi,R^\pi,\gamma&gt;, \pi \rightarrow V_\pi$$</li>
-<li>（Control）Policy $\pi$:是对Value的选择<br>$$&lt;s,P^\pi,R^\pi,\gamma&gt;, V \rightarrow \pi $$</li>
+<li>（Prediction）Value:是对策略$\pi$的评价<script type="math/tex; mode=display"><s,P^\pi,R^\pi,\gamma>, \pi \rightarrow V_\pi</script></li>
+<li>（Control）Policy $\pi$:是对Value的选择<script type="math/tex; mode=display"><s,P^\pi,R^\pi,\gamma>, V \rightarrow \pi</script></li>
 </ul>
 <h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><ul>
-<li>prediction：迭代法<br>对所有状态s，应用贝尔曼公式<br>$$<br>v_{k+1}(s)=\sum_{a \in A} \pi(a \mid s)\left(R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{k}\left(s^{\prime}\right)\right)<br>$$</li>
+<li>prediction：迭代法<br>对所有状态s，应用贝尔曼公式<script type="math/tex; mode=display">
+v_{k+1}(s)=\sum_{a \in A} \pi(a \mid s)\left(R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{k}\left(s^{\prime}\right)\right)</script></li>
 </ul>
 <p>右边的$v_k$不确定，但是迭代下去，因为$R^a_s$确定，所以收敛到真值$v_\pi$</p>
 <ul>
@@ -523,13 +524,26 @@
 </ul>
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>问题：每走一步，r = -1，走到出口可以停止<br>在随机策略下，迭代k，最使v收敛<br>得到$v^{\pi}(s)$<br><img src="/img/15959276754125.jpg" alt="-w395"><br>然后最简单的策略，greedy，往v值高的地方走。<br><img src="/img/15959300701562.jpg" alt="-w562"></p>
 <h1 id="Policy-iteration：-O-mn-2"><a href="#Policy-iteration：-O-mn-2" class="headerlink" title="Policy iteration：$O(mn^2)$"></a>Policy iteration：$O(mn^2)$</h1><p>每一步，遍历动作A</p>
-<p>Find optim policy：<br>以Greedy为例，迭代：$\pi’ = greedy(v_{\pi})$<br>策略更新为：<br>$$<br>\pi^{\prime}(s)=\underset{a \in \mathcal{A}}{\operatorname{argmax}} q_{\pi}(s, a)<br>$$<br>值函数更新为：<br>$$<br>v_{\pi}(s)=\max <em>{a \in \mathcal{A}} q</em>{\pi}(s, a)<br>$$<br><strong>主动</strong>改变策略，策略改变之后进行评估<br>根据q值，从集合A中选a，更新策略$\pi$，使新q大于之前一步<br>$$<br>q_{\pi}\left(s, \pi^{\prime}(s)\right)=\max <em>{a \in \mathcal{A}} q</em>{\pi}(s, a) \geq q_{\pi}(s, \pi(s))=v_{\pi}(s)<br>$$</p>
-<p>证明：<br>$$<br>\begin{aligned}<br>v_{\pi}(s) &amp; \leq q_{\pi}\left(s, \pi^{\prime}(s)\right)=\mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma q_{\pi}\left(S_{t+1}, \pi^{\prime}\left(S_{t+1}\right)\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma R_{t+2}+\gamma^{2} q_{\pi}\left(S_{t+2}, \pi^{\prime}\left(S_{t+2}\right)\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma R_{t+2}+\ldots \mid S_{t}=s\right]=v_{\pi^{\prime}}(s)<br>\end{aligned}<br>$$<br>所以保证了每次迭代，价值函数 与 策略 增长</p>
+<p>Find optim policy：<br>以Greedy为例，迭代：$\pi’ = greedy(v_{\pi})$<br>策略更新为：</p>
+<script type="math/tex; mode=display">
+\pi^{\prime}(s)=\underset{a \in \mathcal{A}}{\operatorname{argmax}} q_{\pi}(s, a)</script><p>值函数更新为：</p>
+<script type="math/tex; mode=display">
+v_{\pi}(s)=\max _{a \in \mathcal{A}} q_{\pi}(s, a)</script><p><strong>主动</strong>改变策略，策略改变之后进行评估<br>根据q值，从集合A中选a，更新策略$\pi$，使新q大于之前一步</p>
+<script type="math/tex; mode=display">
+q_{\pi}\left(s, \pi^{\prime}(s)\right)=\max _{a \in \mathcal{A}} q_{\pi}(s, a) \geq q_{\pi}(s, \pi(s))=v_{\pi}(s)</script><p>证明：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+v_{\pi}(s) & \leq q_{\pi}\left(s, \pi^{\prime}(s)\right)=\mathbb{E}_{\pi^{\prime}}\left[R_{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right] \\
+& \leq \mathbb{E}_{\pi^{\prime}}\left[R_{t+1}+\gamma q_{\pi}\left(S_{t+1}, \pi^{\prime}\left(S_{t+1}\right)\right) \mid S_{t}=s\right] \\
+& \leq \mathbb{E}_{\pi^{\prime}}\left[R_{t+1}+\gamma R_{t+2}+\gamma^{2} q_{\pi}\left(S_{t+2}, \pi^{\prime}\left(S_{t+2}\right)\right) \mid S_{t}=s\right] \\
+& \leq \mathbb{E}_{\pi^{\prime}}\left[R_{t+1}+\gamma R_{t+2}+\ldots \mid S_{t}=s\right]=v_{\pi^{\prime}}(s)
+\end{aligned}</script><p>所以保证了每次迭代，价值函数 与 策略 增长</p>
 <h1 id="Value-iteration：-O-m-2n-2"><a href="#Value-iteration：-O-m-2n-2" class="headerlink" title="Value iteration：$O(m^2n^2)$"></a>Value iteration：$O(m^2n^2)$</h1><p>每一步，遍历了状态S和动作A</p>
 <p>最优策略：</p>
 <ul>
 <li>当前状态s下，所有动作a产生回报的最大值</li>
-<li>采取动作a后，状态由s -&gt; s’的期望<br>公式：<br>$$<br>v_{<em>}(s)=\max <em>{a} \mathcal{R}</em>{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{</em>}\left(s^{\prime}\right)<br>$$</li>
+<li>采取动作a后，状态由s -&gt; s’的期望<br>公式：<script type="math/tex; mode=display">
+v_{*}(s)=\max _{a} \mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} v_{*}\left(s^{\prime}\right)</script></li>
 </ul>
 <p>根据值函数，选择策略</p>
 <h1 id="值迭代和policy迭代的区别"><a href="#值迭代和policy迭代的区别" class="headerlink" title="值迭代和policy迭代的区别"></a>值迭代和policy迭代的区别</h1><ul>
@@ -556,7 +570,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1331,11 +1345,23 @@ Prediction -&gt; ControlEvalu
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1349,7 +1375,7 @@ Prediction -&gt; ControlEvalu
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

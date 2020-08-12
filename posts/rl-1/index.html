@@ -512,30 +512,34 @@
 <h2 id="与传统控制的关系："><a href="#与传统控制的关系：" class="headerlink" title="与传统控制的关系："></a>与传统控制的关系：</h2><ul>
 <li>相似性：</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">RL</th>
-<th align="center">traditional control</th>
+<th style="text-align:center">RL</th>
+<th style="text-align:center">traditional control</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">agent</td>
-<td align="center">controller</td>
+<tbody>
+<tr>
+<td style="text-align:center">agent</td>
+<td style="text-align:center">controller</td>
 </tr>
 <tr>
-<td align="center">env</td>
-<td align="center">plant + enviroment</td>
+<td style="text-align:center">env</td>
+<td style="text-align:center">plant + enviroment</td>
 </tr>
 <tr>
-<td align="center">reward</td>
-<td align="center">feedback（error signals）</td>
+<td style="text-align:center">reward</td>
+<td style="text-align:center">feedback（error signals）</td>
 </tr>
 <tr>
-<td align="center">value</td>
-<td align="center">optimize function</td>
+<td style="text-align:center">value</td>
+<td style="text-align:center">optimize function</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>不同点：<ul>
 <li>传统的控制：将任务分解成多个任务的串并联，设计（子）控制器</li>
@@ -544,23 +548,28 @@
 </li>
 </ul>
 <p>强化学习不同于 监督、非监督学习（与静态数据交互），与环境产生交互，产生最优结果的动作序列。</p>
-<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><p>RL组成要素Agent、Env<br><img src="/img/15972068404024.png"></p>
+<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><p>RL组成要素Agent、Env<br><img src="/img/15972068404024.png" alt=""></p>
 <h2 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h2><p>组成要素：Policy、Value function、Model其中至少一个<br><img src="/img/15958481757170.jpg" alt="-w410"></p>
 <h3 id="策略-Policy-：observation-to-action的映射"><a href="#策略-Policy-：observation-to-action的映射" class="headerlink" title="策略(Policy)：observation to action的映射"></a>策略(Policy)：observation to action的映射</h3><ul>
 <li>固定策略：$a = \pi(s)$给定状态$s$，对应fixed的action $a$</li>
-<li>随机策略：当Agent处于某一个state的时候，它做的Action是不确定的，例如你可以选择study也可以选择game，也就是说你在某一个状态是以一定的概率去选择某一个action。也就是说，策略的选择是一个条件概率$\pi(a|s)$，这里的$\pi$与数序中的$\pi$没有任何关系，他只是代表一个函数而已（其实就是$f(a|s)$）。<br>$$<br>\pi(a \mid s)=P\left(A_{t}=a \mid S_{t}=s\right)<br>$$<br>函数代表：在状态$s$时采取动作$a$的概率分布。</li>
+<li>随机策略：当Agent处于某一个state的时候，它做的Action是不确定的，例如你可以选择study也可以选择game，也就是说你在某一个状态是以一定的概率去选择某一个action。也就是说，策略的选择是一个条件概率$\pi(a|s)$，这里的$\pi$与数序中的$\pi$没有任何关系，他只是代表一个函数而已（其实就是$f(a|s)$）。<script type="math/tex; mode=display">
+\pi(a \mid s)=P\left(A_{t}=a \mid S_{t}=s\right)</script>函数代表：在状态$s$时采取动作$a$的概率分布。</li>
 </ul>
 <p><img src="/img/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%887.07.57-1.png" alt="截屏2020-07-27 下午7.07.57"></p>
-<h3 id="价值-value-function-：未来奖励的预测（期望）"><a href="#价值-value-function-：未来奖励的预测（期望）" class="headerlink" title="价值(value function)：未来奖励的预测（期望）"></a>价值(value function)：未来奖励的预测（期望）</h3><p>前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R_{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R_{t+1}}$，那么他会不会影响$\mathcal{R_{t+2}},\mathcal{R_{t+3}}…$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：<br>$$<br>v_{\pi}(s)=\mathbb{E}<em>{\pi}\left(R</em>{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+\ldots \mid S_{t}=s\right)<br>$$</p>
-<p>$v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。<br><img src="/img/15958481422216.png" alt="-w425"></p>
+<h3 id="价值-value-function-：未来奖励的预测（期望）"><a href="#价值-value-function-：未来奖励的预测（期望）" class="headerlink" title="价值(value function)：未来奖励的预测（期望）"></a>价值(value function)：未来奖励的预测（期望）</h3><p>前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R_{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R_{t+1}}$，那么他会不会影响$\mathcal{R_{t+2}},\mathcal{R_{t+3}}…$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：</p>
+<script type="math/tex; mode=display">
+v_{\pi}(s)=\mathbb{E}_{\pi}\left(R_{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+\ldots \mid S_{t}=s\right)</script><p>$v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。<br><img src="/img/15958481422216.png" alt="-w425"></p>
 <h2 id="模型Model："><a href="#模型Model：" class="headerlink" title="模型Model："></a>模型Model：</h2><p>对未知env的预测，包括状态s、奖励r</p>
-<h3 id="预测状态：s-gt-s’的概率"><a href="#预测状态：s-gt-s’的概率" class="headerlink" title="预测状态：s->s’的概率"></a>预测状态：s-&gt;s’的概率</h3><p>$$<br>\mathcal{P}<em>{s s^{\prime}}^{a} =\mathbb{P}  \left(S</em>{t+1}=s^{\prime} \mid S_{t}=s, A_{t}=a\right)<br>$$</p>
-<h3 id="预测奖励：R的期望"><a href="#预测奖励：R的期望" class="headerlink" title="预测奖励：R的期望"></a>预测奖励：R的期望</h3><p>$$<br>\mathcal{R}<em>{s}^{a} =\mathbb{E}<br> R</em>{t+1} \left( \mid S_{t}=s, A_{t}=a\right)<br>$$</p>
-<h2 id="环境Env"><a href="#环境Env" class="headerlink" title="环境Env"></a>环境Env</h2><h3 id="完全可观测环境"><a href="#完全可观测环境" class="headerlink" title="完全可观测环境"></a>完全可观测环境</h3><p>个体观测=个体状态=环境状态<br>标准的**MDP **</p>
+<h3 id="预测状态：s-gt-s’的概率"><a href="#预测状态：s-gt-s’的概率" class="headerlink" title="预测状态：s->s’的概率"></a>预测状态：s-&gt;s’的概率</h3><script type="math/tex; mode=display">
+\mathcal{P}_{s s^{\prime}}^{a} =\mathbb{P}  \left(S_{t+1}=s^{\prime} \mid S_{t}=s, A_{t}=a\right)</script><h3 id="预测奖励：R的期望"><a href="#预测奖励：R的期望" class="headerlink" title="预测奖励：R的期望"></a>预测奖励：R的期望</h3><script type="math/tex; mode=display">
+\mathcal{R}_{s}^{a} =\mathbb{E}
+ R_{t+1} \left( \mid S_{t}=s, A_{t}=a\right)</script><h2 id="环境Env"><a href="#环境Env" class="headerlink" title="环境Env"></a>环境Env</h2><h3 id="完全可观测环境"><a href="#完全可观测环境" class="headerlink" title="完全可观测环境"></a>完全可观测环境</h3><p>个体观测=个体状态=环境状态<br>标准的<strong>MDP </strong></p>
 <h3 id="部分可观测环境"><a href="#部分可观测环境" class="headerlink" title="部分可观测环境"></a>部分可观测环境</h3><p>环境不完全可观测</p>
 <h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><ul>
-<li>Beliefs of environment state：用个体的经验，记录历史状态并创建概率分布函数<br>$$<br>S_{t}^{a}=\left(\mathbb{P}\left[S_{t}^{e}=s^{1}\right], \ldots, \mathbb{P}\left[S_{t}^{e}=s^{n}\right]\right)<br>$$</li>
-<li>Recurrent neural network：用循环神经网络，表示为，上个状态和当前观测的函数<br>$$<br>S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)<br>$$</li>
+<li>Beliefs of environment state：用个体的经验，记录历史状态并创建概率分布函数<script type="math/tex; mode=display">
+S_{t}^{a}=\left(\mathbb{P}\left[S_{t}^{e}=s^{1}\right], \ldots, \mathbb{P}\left[S_{t}^{e}=s^{n}\right]\right)</script></li>
+<li>Recurrent neural network：用循环神经网络，表示为，上个状态和当前观测的函数<script type="math/tex; mode=display">
+S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
 </ul>
 <h1 id="概念区分"><a href="#概念区分" class="headerlink" title="概念区分"></a>概念区分</h1><h2 id="学习和规划-Learning-amp-Planning"><a href="#学习和规划-Learning-amp-Planning" class="headerlink" title="学习和规划 Learning &amp; Planning"></a>学习和规划 Learning &amp; Planning</h2><ul>
 <li>学习：环境初始时是<strong>未知</strong>的，个体不知道环境如何工作，个体通过与环境进行交互，逐渐改善其行为策略。</li>
@@ -576,7 +585,7 @@
 <h2 id="其他概念"><a href="#其他概念" class="headerlink" title="其他概念"></a>其他概念</h2><h3 id="gamma-奖励衰减因子"><a href="#gamma-奖励衰减因子" class="headerlink" title="$\gamma$奖励衰减因子"></a>$\gamma$奖励衰减因子</h3><p>在上面的价值函数中，有一个变量$\gamma$ ，即奖励衰减因子，在[0，1]之间。如果为0，则是贪婪法，即价值只由当前的奖励决定，如果是1，则所有的后续状态奖励和当前奖励一视同仁。一般来说取0到1之间的数。</p>
 <h3 id="环境的状态转化模型"><a href="#环境的状态转化模型" class="headerlink" title="环境的状态转化模型"></a>环境的状态转化模型</h3><p>由于在某个状态下，执行一定的action，能够达到新的一个状态$S_{t+1}$，但是$S_{t+1}$不一定是唯一的。环境的状态转化模型，可以理解为一个概率状态机，它是一个概率模型，即在状态$t$下采取动作$a$,转到下一个状态$s’$的概率，表示为$P^a_{ss’}$。</p>
 <p>具体在RL_2，MP 中讲解</p>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1352,11 +1361,23 @@ EVD特征值分解（The eigenvalue value dec
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1370,7 +1391,7 @@ EVD特征值分解（The eigenvalue value dec
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

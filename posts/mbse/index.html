@@ -527,7 +527,7 @@
 </ul>
 <p>技术领导力和技术管理</p>
 <p>下面就来看看每一项活动的具体内容。为了清晰展示各项活动的关联关系，下图展示了各项活动在我们熟知 V 流程中的位置。</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942030645422.jpg?x-oss-process=style/blog"></p>
+<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15942030645422.jpg?x-oss-process=style/blog" alt=""></p>
 <p>◆  ◆  ◆  ◆</p>
 <h2 id="任务-目标定义"><a href="#任务-目标定义" class="headerlink" title="任务/目标定义"></a>任务/目标定义</h2><p>创造新系统或对现有系统进行修改，都是从任务/目标定义开始，也就是捕获涉众需求。任务或目标定义并不聚焦在特定的待开发系统上，而是在一个更大的背景中识别潜在的需求，这种需求将成为开发某个系统的理由。这种需求通常用系统使用者的语言进行描述，而不是技术语言，很多时候也会包括一定程度的定量描述。一般通过 CONOPS（Concept of Operations）文件来描述待开发系统的任务和目标。</p>
 <h2 id="系统架构"><a href="#系统架构" class="headerlink" title="系统架构"></a>系统架构</h2><p>系统工程中的架构设计主要是指定义其组成和各部分的关系，通常以示意图（Diagrams）的形式体现.包括在一定环境下的系统高层概念描述、系统的组成部分、系统各部分的交互、系统与环境的交互等。同时，系统架构设计也要描述系统产生的过程和对各备选方案的评估过程，并基于系统需求来定义低层需求，从而将需求分配到各组成部分。<br>工程实践过程中，我们常常会将待设计的系统或产品按照物理形式进行分解，称为产品分解结构 PBS（Product Breakdown Structure），同时也会根据任务/目标定义的内容以及需求工程中获取的功能要求进行逻辑分解，形成功能分解结构 FBS（Function Breakdown Structure），简单直观的可将 PBS 与 FBS 之间的映射关系称为系统架构。</p>
@@ -537,7 +537,7 @@
 <h2 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h2><p>这里的技术分析是指系统级技术分析，尤其是对系统性能满足需求的满足度进行评估；包括性能分析，时序分析，容量分析，质量分析，趋势，敏感度，失效模式和影响性分析等，主要涉及技术性能度量，以及其他类似的对系统配置和组件的多学科评价；除非是与需求工程或系统架构设计不可分割，可能还需要进行功能分析，预测分析，权衡分析等。<br>这些技术分析一般都是基于不同的系统层级，使用不同的定量建模技术构建不同逼真度的分析模型进行计算和仿真而开展的，是为技术理解和决策提供严格的数据和信息基础的必要手段。</p>
 <h2 id="范围管理"><a href="#范围管理" class="headerlink" title="范围管理"></a>范围管理</h2><p>采购和供应链问题的技术定义和管理，主要关注与上下游的合同关系：向上是开发合同，对整个系统开发的范围进行定义，主要涉及系统需求，向下是对委托出去开发的系统组件的范围进行定义。</p>
 <h2 id="技术领导力和技术管理"><a href="#技术领导力和技术管理" class="headerlink" title="技术领导力和技术管理"></a>技术领导力和技术管理</h2><p>技术领导力和技术管理活动主要包括项目策划，技术过程评估，技术控制，团队建设，交叉协同，提供通用语言和目标，风险管理和接口管理等；与项目管理不同的是，技术领导力和技术管理主要关注技术目标和技术指导。</p>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1100,7 +1100,8 @@
                             规划，适用于MDP模型参数已知学习，适用于Env未知或部分未知
 概述动态规划分为两步，Prediction、Control
 
-（Prediction）Value:是对策略$\pi$的评价$$&lt;s,P^\pi,R^\pi,\gamma&
+（Prediction）Value:是对策略$\pi$的评价, \pi \rightarrow V_\pi
+（Co
                         
                     </div>
                     <div class="publish-info">
@@ -1314,11 +1315,23 @@
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1332,7 +1345,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

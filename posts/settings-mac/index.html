@@ -519,32 +519,26 @@
 </li>
 </ul>
 <h2 id="Terminal——终端"><a href="#Terminal——终端" class="headerlink" title="Terminal——终端"></a>Terminal——终端</h2><ul>
-<li><p>系统允许任何来源安装包<br>sudo spctl –master-disable</p>
-</li>
-<li><p>使其变为可执行脚本<br><code>chmod u+x filename</code> </p>
-</li>
-<li><p>更改skim背景色<br><code>defaults write -app skim SKPageBackgroundColor -array 0.78 0.93 0.8 1</code></p>
-</li>
-<li><p>命令行压缩加密压缩包<br>压缩文件<br><code>zip -e test.zip test.txt</code><br>压缩文件夹<br><code>zip -er test.zip test</code></p>
-</li>
-<li><p>读写ntfs 文件灰色，无法打开，拷贝<br><code>xattr -d com.apple.FinderInfo filepath</code></p>
-</li>
+<li>系统允许任何来源安装包<br>sudo spctl —master-disable</li>
+<li>使其变为可执行脚本<br><code>chmod u+x filename</code> </li>
+<li>更改skim背景色<br><code>defaults write -app skim SKPageBackgroundColor -array 0.78 0.93 0.8 1</code></li>
+<li>命令行压缩加密压缩包<br>压缩文件<br><code>zip -e test.zip test.txt</code><br>压缩文件夹<br><code>zip -er test.zip test</code></li>
+<li>读写ntfs 文件灰色，无法打开，拷贝<br><code>xattr -d com.apple.FinderInfo filepath</code></li>
 <li><p>跳过验证dmg<br><code>xattr -d com.apple.quarantine '/Applications/Xcode.app'</code></p>
 </li>
 <li><p>brew<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/67db55780450">brew安装</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6ea6e19c060d">mac brew install 慢解决办法</a></p>
 </li>
-<li><p>mac10.15软件安装提示已损坏解决办法<br>终端执行</p>
-<pre><code class="sudo">sudo xattr -r -d com.apple.quarantine /Applications/Sketch.app/</code></pre>
+<li><p>mac10.15软件安装提示已损坏解决办法<br>终端执行<br><code>sudo spctl --master-disable
+sudo xattr -r -d com.apple.quarantine /Applications/Sketch.app/</code></p>
 </li>
-<li><p>编辑环境变量文件文件</p>
-<pre><code class="cd">vim .bash_profile</code></pre>
-<p>粘贴入下列代码</p>
-<pre><code># proxy list
-alias proxy='export all_proxy=socks5://127.0.0.1:1086'
-alias unproxy='unset all_proxy'</code></pre>
-<p>control + c 键入wq保存退出<br>保存隐藏文件到环境变量</p>
-<pre><code class="cd">source .bash_profile</code></pre>
-</li>
+<li><p>编辑环境变量文件文件<br>```cd ~/<br>vim .bash_profile</p>
+<pre><code>粘贴入下列代码
+</code></pre><h1 id="proxy-list"><a href="#proxy-list" class="headerlink" title="proxy list"></a>proxy list</h1><p>alias proxy=’export all_proxy=socks5://127.0.0.1:1086’<br>alias unproxy=’unset all_proxy’</p>
+<pre><code>control + c 键入wq保存退出 
+保存隐藏文件到环境变量
+```cd ~/
+source .bash_profile
+</code></pre></li>
 </ul>
 <h3 id="咳血上网"><a href="#咳血上网" class="headerlink" title="咳血上网"></a>咳血上网</h3><p><a target="_blank" rel="noopener" href="https://zcssr.me/auth/login">HJF-ZCSSR订阅购买网站</a><br>订阅地址：<br>ssr订阅：<code>https://n55.pw/link/PgKooWdckjZl5hf⑧</code><br>clash订阅：<code>https://n55.pw/link/PgKooWdckjZl5hf⑧?clash=①</code></p>
 <h2 id="hosts修改"><a href="#hosts修改" class="headerlink" title="hosts修改"></a>hosts修改</h2><p>shift+command+G<br>前往<br><code>/private/etc/</code></p>
@@ -554,25 +548,26 @@ alias unproxy='unset all_proxy'</code></pre>
 <li><a target="_blank" rel="noopener" href="https://www.macx.cn/thread-2204536-1-1.html">油猴</a></li>
 </ul>
 <h2 id="Mac-OS-X-11中的-usr-bin-的“Operation-not-permitted”"><a href="#Mac-OS-X-11中的-usr-bin-的“Operation-not-permitted”" class="headerlink" title="Mac OS X 11中的/usr/bin 的“Operation not permitted”"></a>Mac OS X 11中的/usr/bin 的“Operation not permitted”</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/22b89f19afd6">https://www.jianshu.com/p/22b89f19afd6</a></p>
-<h2 id="设置mac-PATH"><a href="#设置mac-PATH" class="headerlink" title="设置mac PATH"></a>设置mac PATH</h2><p>在mac系统下打开终端，输入：<br><code>touch .bash_profile open -e .bash_profile</code><br>这样会弹出一个“.bash_profile”文件.<br>打开文件后应该是空白的，在文件中添加：<br>export PATH=${PATH}:????</p>
+<h2 id="设置mac-PATH"><a href="#设置mac-PATH" class="headerlink" title="设置mac PATH"></a>设置mac PATH</h2><p>在mac系统下打开终端，输入：<br><code>touch .bash_profile
+open -e .bash_profile</code><br>这样会弹出一个“.bash_profile”文件.<br>打开文件后应该是空白的，在文件中添加：<br>export PATH=${PATH}:????</p>
 <p>其中????代表你电脑中adb文件的路径，本人的配置文件如下：<br><code>export PATH=${PATH}:~/Library/Android/sdk/platform-tools</code><br>添加完后，保存并关闭文件，至此，adb配置完毕。</p>
 <h2 id="前往网上邻居"><a href="#前往网上邻居" class="headerlink" title="前往网上邻居"></a>前往网上邻居</h2><p>finder目录<code>command+K</code><br><strong>One cloud</strong>:<br><code>smb://192.168.31.200</code></p>
 <h2 id="Terminal-commands"><a href="#Terminal-commands" class="headerlink" title="Terminal commands"></a>Terminal commands</h2><p>图片本地压缩工具：<code>imageoptim aaa.jpg</code><br>开源软件安装：<code>brew install example</code><br>python库安装<code>pip3 install example</code><br>最后更新配置的环境变量<code>source .bash_profile</code></p>
 <p>同理：http代理设置如下：</p>
 <ul>
 <li>让终端走http代理——应用层，不改变系统层<pre><code>export http_proxy="http://localhost:1087"
-export https_proxy="http://localhost:1087"</code></pre>
-</li>
+export https_proxy="http://localhost:1087"
+</code></pre></li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/">brew 源替换清华</a><br>git 太慢的解决办法</p>
 <ol>
-<li>在<a target="_blank" rel="noopener" href="https://www.ipaddress.com/%E6%9F%A5%E8%AF%A2%E7%BD%91%E5%9D%80%E5%AF%B9%E5%BA%94ip">https://www.ipaddress.com/查询网址对应ip</a></li>
+<li>在<a target="_blank" rel="noopener" href="https://www.ipaddress.com/查询网址对应ip">https://www.ipaddress.com/查询网址对应ip</a></li>
 <li>手动更改hosts</li>
 </ol>
 <pre><code>199.232.68.133 raw.githubusercontent.com
 199.232.69.194 github.global.ssl.fastly.net
-140.82.114.4 github.com</code></pre>
-<ol start="3">
+140.82.114.4 github.com
+</code></pre><ol>
 <li><p>刷新dns缓存<br><code>sudo dscacheutil -flushcache</code></p>
 </li>
 <li><p>git 代理设置<br>手动操作</p>
@@ -582,18 +577,18 @@ export https_proxy="http://localhost:1087"</code></pre>
 <li>设置</li>
 </ul>
 <pre><code>git config --global http.proxy socks5://127.0.0.1:1086;
-git config --global https.proxy socks5://127.0.0.1:1086</code></pre>
-<ul>
+git config --global https.proxy socks5://127.0.0.1:1086
+</code></pre><ul>
 <li>卸载</li>
 </ul>
 <pre><code>git config --global --unset http.proxy
-git config --global --unset https.proxy</code></pre>
-<ul>
+git config --global --unset https.proxy
+</code></pre><ul>
 <li>写入命令行vim添加：</li>
 </ul>
 <pre><code>alias git_proxy='git config --global http.proxy socks5://127.0.0.1:1086; git config --global https.proxy socks5://127.0.0.1:1086'
-alias ungit_proxy='git config --global --unset http.proxy; git config --global --unset https.proxy'</code></pre>
-<p>查看是否添加上：<br><code>cat ~/.gitconfig</code></p>
+alias ungit_proxy='git config --global --unset http.proxy; git config --global --unset https.proxy'
+</code></pre><p>查看是否添加上：<br><code>cat ~/.gitconfig</code></p>
 <ul>
 <li>brew源更改（采用阿里云）</li>
 </ul>
@@ -605,8 +600,8 @@ git remote rm origin
 # 添加阿里源 ：
 git remote add origin https://mirrors.aliyun.com/homebrew/brew.git
 # 切换成阿里源: 
-git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git</code></pre>
-<ul>
+git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git
+</code></pre><ul>
 <li>brew-core源更改</li>
 </ul>
 <pre><code>cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
@@ -617,20 +612,20 @@ git remote rm origin
 # 添加阿里源 ：
 git remote add origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
 # 切换成阿里源： 
-git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git</code></pre>
-<ul>
+git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git
+</code></pre><ul>
 <li>bottle源更改</li>
 </ul>
 <pre><code>echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles' &gt;&gt; ~/.bash_profile
-source ~/.bash_profile</code></pre>
-<ul>
+source ~/.bash_profile
+</code></pre><ul>
 <li>cask源更改（中科大源）</li>
 </ul>
 <pre><code>cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
 git remote rm origin 
 git remote add origin https://mirrors.ustc.edu.cn/homebrew-cask.git
-git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></pre>
-<ul>
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+</code></pre><ul>
 <li>环境变量设置，快捷命令设置<br>自己在 ~/.bash_profile 中配置环境变量, 可是每次重启终端后配置的不生效.需要重新执行<br><code>$source ~/.bash_profile</code><br>发现zsh加载的是 ~/.zshrc文件，而 ‘.zshrc’ 文件中并没有定义任务环境变量。<br>解决办法</li>
 </ul>
 <p>在~/.zshrc文件最后，增加一行：<br><code>source ~/.bash_profile</code></p>
@@ -671,12 +666,13 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
 <h1 id="Something-interesting"><a href="#Something-interesting" class="headerlink" title="Something interesting"></a>Something interesting</h1><h2 id="US-fake信息"><a href="#US-fake信息" class="headerlink" title="US-fake信息"></a>US-fake信息</h2><p><a target="_blank" rel="noopener" href="https://www.fakenamegenerator.com/index.php#">https://www.fakenamegenerator.com/index.php#</a></p>
 <h2 id="mac手柄ps3-controller-on-windows"><a href="#mac手柄ps3-controller-on-windows" class="headerlink" title="mac手柄ps3 controller on windows"></a>mac手柄ps3 controller on windows</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=c0qXZHNj_P4">https://www.youtube.com/watch?v=c0qXZHNj_P4</a><br>第三方mac无线支持<br><a target="_blank" rel="noopener" href="https://gist.github.com/OlesenkoViktor/32c700e025bf4567db8feb1ed467f8ee">https://gist.github.com/OlesenkoViktor/32c700e025bf4567db8feb1ed467f8ee</a></p>
 <p>最后发现，先启动retroarch之后，手柄就可以在openemu等平台使用</p>
-<h2 id="mac——安卓刷机"><a href="#mac——安卓刷机" class="headerlink" title="mac——安卓刷机"></a>mac——安卓刷机</h2><p>android adb 黑域<br><code>adb devices adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></p>
+<h2 id="mac——安卓刷机"><a href="#mac——安卓刷机" class="headerlink" title="mac——安卓刷机"></a>mac——安卓刷机</h2><p>android adb 黑域<br><code>adb devices
+adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></p>
 <p>fastboot模式：<code>adb  reboot bootloader</code></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5ba1cf5869bc">mac_adb_安卓刷机</a></p>
 <p>[pixel_root教程] (<a target="_blank" rel="noopener" href="https://highonandroid.com/android-smartphones/how-to-root-android-p9-0-pixelpixel-xlpixel-2pixel-2xl/">https://highonandroid.com/android-smartphones/how-to-root-android-p9-0-pixelpixel-xlpixel-2pixel-2xl/</a>)</p>
-<p><a target="_blank" rel="noopener" href="https://twrp.me/">TWRP下载地址</a>：第三方recovery<br>root 管理器：magisk</p>
-<p><img src="/img/contact.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://twrp.me">TWRP下载地址</a>：第三方recovery<br>root 管理器：magisk</p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1455,11 +1451,23 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1473,7 +1481,7 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</code></
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

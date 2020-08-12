@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-5/</loc>
+    <loc>https://tolshao.now.sh/posts/template/</loc>
+    <lastmod>2020-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
     <lastmod>2020-08-12</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/rl-4/</loc>
+    <lastmod>2020-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-5/</loc>
     <lastmod>2020-08-12</lastmod>
   </url>
   <url>
@@ -21,16 +29,8 @@
     <lastmod>2020-08-12</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
-    <lastmod>2020-08-11</lastmod>
-  </url>
-  <url>
     <loc>https://tolshao.now.sh/posts/machine-learning/</loc>
-    <lastmod>2020-08-10</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/template/</loc>
-    <lastmod>2020-08-10</lastmod>
+    <lastmod>2020-08-12</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/advance-control-2/</loc>

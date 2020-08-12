@@ -521,7 +521,7 @@
 <li>内容管理系统：<br>带有后台管理的博客系统，有现成的可以装（wordpress、ghost等），装好了就和第一个一样。缺点：需要配置空间（服务器）、数据库以及域名等，经费在燃烧🔥</li>
 </ul>
 <p>如果你非说还有一种，手写html？？？<br>大型劝退现场🙄</p>
-<pre><code class="html">&lt;div class="container row center-align" style="margin-bottom: 15px !important;"&gt;
+<pre><code class="lang-html">&lt;div class="container row center-align" style="margin-bottom: 15px !important;"&gt;
         &lt;div class="col s12 m8 l8 copy-right"&gt;
             Copyright&amp;nbsp;&amp;copy;
             &lt;span id="year"&gt;2020&lt;/span&gt;
@@ -540,7 +540,7 @@
 <li>Hexo</li>
 </ul>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git">Git</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/起步-安装-Git">Git</a></li>
 </ul>
 <ul>
 <li>Node.js</li>
@@ -548,7 +548,7 @@
 <ul>
 <li>SSH配置</li>
 </ul>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1325,11 +1325,23 @@
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1343,7 +1355,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

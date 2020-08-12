@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-12
                 </div>
                 
 
@@ -560,8 +560,8 @@
 <pre><code>1.设置优化参数 optimset = 初始参数，方法，强制结束迭代次数
 2.设置初始条件，Initialpara = 
 3.[Jval, theta'] = Cost_function (X,Y)
-4.调用优化函数[Jval，theta'] = (@Cost_function,Initialpara,optimset)，</code></pre>
-<h2 id="多类别分类"><a href="#多类别分类" class="headerlink" title="多类别分类"></a>多类别分类</h2><p>构建i个分类器，利用i个h(z)，处理<br>分别给出属于某个分类的几率值</p>
+4.调用优化函数[Jval，theta'] = (@Cost_function,Initialpara,optimset)，
+</code></pre><h2 id="多类别分类"><a href="#多类别分类" class="headerlink" title="多类别分类"></a>多类别分类</h2><p>构建i个分类器，利用i个h(z)，处理<br>分别给出属于某个分类的几率值</p>
 <p>X 特征矩阵</p>
 <h2 id="3-2回归遇到的问题，解决方案，正则化"><a href="#3-2回归遇到的问题，解决方案，正则化" class="headerlink" title="3.2回归遇到的问题，解决方案，正则化"></a>3.2回归遇到的问题，解决方案，正则化</h2><ul>
 <li><p>过拟合<br>拟合特征数&gt;&gt;样本量，</p>
@@ -569,10 +569,8 @@
 <li><p>欠拟合<br>特征数不够&lt;&lt;样本量，不能正确预测，回归</p>
 <h3 id="办法"><a href="#办法" class="headerlink" title="办法"></a>办法</h3><p>1、 减少无关特征</p>
 </li>
-<li><p>手动减少无关特征</p>
-</li>
-<li><p>模型选择算法，自动选择相关变量<br>2、 regularization 正则化<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15923657698696.jpg?x-oss-process=style/blog" alt="-w452"><br>正则化参数，使特征拟合参数减小权重</p>
-</li>
+<li>手动减少无关特征</li>
+<li>模型选择算法，自动选择相关变量<br>2、 regularization 正则化<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15923657698696.jpg?x-oss-process=style/blog" alt="-w452"><br>正则化参数，使特征拟合参数减小权重</li>
 </ul>
 <h4 id="线性回归正则化"><a href="#线性回归正则化" class="headerlink" title="线性回归正则化"></a>线性回归正则化</h4><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15923660929388.jpg?x-oss-process=style/blog" alt="-w784"><br><strong>对于逻辑回归正则化，式子一样</strong></p>
 <h2 id="4、神经网络——Nonlinear-Hypotheses"><a href="#4、神经网络——Nonlinear-Hypotheses" class="headerlink" title="4、神经网络——Nonlinear Hypotheses"></a>4、神经网络——Nonlinear Hypotheses</h2><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15923834646377.jpg?x-oss-process=style/blog" alt="-w591"><br>输入层、隐藏层、输出层<br>g 激活函数$\in[0,1]$：<br>h 输出函数</p>
@@ -607,10 +605,13 @@
 <h3 id="误差度量-for-skewed-classes-偏斜类"><a href="#误差度量-for-skewed-classes-偏斜类" class="headerlink" title="误差度量 for skewed classes 偏斜类"></a>误差度量 for skewed classes 偏斜类</h3><p>precision/recall<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925459953399.jpg?x-oss-process=style/blog" alt="-w789"><br>针对最后一级h(x)，<br>防止错判，阈值提高，设定逻辑判断阈值0.9  instead of 0.5<br>防止漏过1，阈值放低</p>
 <h4 id="综合评定标准"><a href="#综合评定标准" class="headerlink" title="综合评定标准"></a>综合评定标准</h4><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925496319235.jpg?x-oss-process=style/blog" alt="-w779"></p>
 <h2 id="7、支持向量机SVM（support-vector-machine）"><a href="#7、支持向量机SVM（support-vector-machine）" class="headerlink" title="7、支持向量机SVM（support vector machine）"></a>7、支持向量机SVM（support vector machine）</h2><h3 id="7-1-SVM-大间距分类器（Large-Margin-Classification）"><a href="#7-1-SVM-大间距分类器（Large-Margin-Classification）" class="headerlink" title="7.1 SVM 大间距分类器（Large Margin Classification）"></a>7.1 SVM 大间距分类器（Large Margin Classification）</h3><p><strong>重写了cost function 和 h（z）</strong></p>
-<p>支持向量机的代价函数为：<br>$$min_{\theta} C[\sum_{i=1}^{m}{y^{(i)}}cost_1(\theta^Tx^{(i)})+(1-y^{(i)})cost_0(\theta^Tx^{(i)})]+\frac{1}{2}\sum_{j=1}^{n}{\theta_j^2}$$</p>
-<p><img src="/img/15970703768252.jpg" alt="-w578"></p>
-<p>有别于逻辑回归假设函数输出的是概率，支持向量机它是直接预测 y 的值是0还是<br><strong>假设函数</strong><br>$$h_{\theta}(x)=\left{\begin{matrix}<br>1,;;if; \theta^{T}x\geqslant 0\<br>0,;;otherwise<br>\end{matrix}\right.$$</p>
-<p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925640229783.jpg?x-oss-process=style/blog" alt="-w889"><br>最小化$\theta$的模，相当于最大化样本在$\theta$上的投影长度，图中直观表现为，绿色边界在$\theta$方向上距离样本距离最远。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925718971038.jpg?x-oss-process=style/blog" alt="-w549"><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925719456841.jpg?x-oss-process=style/blog" alt="-w587"></p>
+<p>支持向量机的代价函数为：</p>
+<script type="math/tex; mode=display">min_{\theta} C[\sum_{i=1}^{m}{y^{(i)}}cost_1(\theta^Tx^{(i)})+(1-y^{(i)})cost_0(\theta^Tx^{(i)})]+\frac{1}{2}\sum_{j=1}^{n}{\theta_j^2}</script><p><img src="/img/15970703768252.jpg" alt="-w578"></p>
+<p>有别于逻辑回归假设函数输出的是概率，支持向量机它是直接预测 y 的值是0还是<br><strong>假设函数</strong></p>
+<script type="math/tex; mode=display">h_{\theta}(x)=\left\{\begin{matrix}
+1,\;\;if\; \theta^{T}x\geqslant 0\\ 
+0,\;\;otherwise
+\end{matrix}\right.</script><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925640229783.jpg?x-oss-process=style/blog" alt="-w889"><br>最小化$\theta$的模，相当于最大化样本在$\theta$上的投影长度，图中直观表现为，绿色边界在$\theta$方向上距离样本距离最远。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925718971038.jpg?x-oss-process=style/blog" alt="-w549"><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15925719456841.jpg?x-oss-process=style/blog" alt="-w587"></p>
 <h2 id="7-2-kernels核函数"><a href="#7-2-kernels核函数" class="headerlink" title="7.2 kernels核函数"></a>7.2 kernels核函数</h2><p>核函数满足$κ(xi·xj)=φ(xi)T·φ(xj)$<br>低维线性不可分（欠拟合）-&gt;映射到高维<br>避免维度灾难，引入核函数（Kernels），用样本去构造特征<br>适用于n&lt;&lt;m, 增加特征数量变为m</p>
 <h3 id="高斯核函数"><a href="#高斯核函数" class="headerlink" title="高斯核函数"></a>高斯核函数</h3><p>参数：$l(i),\sigma$<br>$f = exp^{(-\frac{||x-l^{(i)}||^2}{2\sigma^2})}$<br>取值[0,1]</p>
 <h3 id="注意的点"><a href="#注意的点" class="headerlink" title="注意的点"></a>注意的点</h3><p>核函数用于逻辑回归，运算很慢<br>核函数优化算法仅适用于SVM<br>使用前，一定归一化处理</p>
@@ -622,7 +623,7 @@
 </ol>
 <h2 id="8、无监督学习（Unsupervised-learning）"><a href="#8、无监督学习（Unsupervised-learning）" class="headerlink" title="8、无监督学习（Unsupervised learning）"></a>8、无监督学习（Unsupervised learning）</h2><h3 id="8-1-分类K-means-algorithm-Clustering"><a href="#8-1-分类K-means-algorithm-Clustering" class="headerlink" title="8.1 分类K-means algorithm(Clustering)"></a>8.1 分类K-means algorithm(Clustering)</h3><ol>
 <li>cluster 分类，计算到$\mu_k$距离将下表k分配给$c_i$的</li>
-<li>移动cluster central到，分类的平均点<h4 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h4>Cost function<br>找到$c_i$ 和 $\mu_k$，使函数：<br>$$J(c^{(1)},c^{(2)},\cdots ,c^{(m)};\mu_1,\mu_2,\cdots ,\mu_k)=\frac{1}{m}\sum_{i=1}^m\left | x^{(i)}-\mu_c(i) \right |^2$$</li>
+<li>移动cluster central到，分类的平均点<h4 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h4>Cost function<br>找到$c_i$ 和 $\mu_k$，使函数：<script type="math/tex; mode=display">J(c^{(1)},c^{(2)},\cdots ,c^{(m)};\mu_1,\mu_2,\cdots ,\mu_k)=\frac{1}{m}\sum_{i=1}^m\left \| x^{(i)}-\mu_c(i) \right \|^2</script></li>
 </ol>
 <p>$c_i\in[1,K]$</p>
 <h4 id="mu-k-随机初始化，避免局部最优"><a href="#mu-k-随机初始化，避免局部最优" class="headerlink" title="$\mu_k$随机初始化，避免局部最优"></a>$\mu_k$随机初始化，避免局部最优</h4><ol>
@@ -632,16 +633,27 @@
 </ol>
 <h3 id="8-2-Dimensionality-reduction"><a href="#8-2-Dimensionality-reduction" class="headerlink" title="8.2 Dimensionality reduction"></a>8.2 Dimensionality reduction</h3><h4 id="数据压缩-Data-Compression"><a href="#数据压缩-Data-Compression" class="headerlink" title="数据压缩 Data Compression"></a>数据压缩 Data Compression</h4><p>减少冗余特征变量</p>
 <h4 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h4><h4 id="PCA主成分分析法（Principal-Component-Analysis）"><a href="#PCA主成分分析法（Principal-Component-Analysis）" class="headerlink" title="PCA主成分分析法（Principal Component Analysis）"></a>PCA主成分分析法（Principal Component Analysis）</h4><h3 id="PCA算法流程"><a href="#PCA算法流程" class="headerlink" title="PCA算法流程"></a>PCA算法流程</h3><ol>
-<li><p>特征压缩<br>假定我们需要将特征维度从 n 维降到 k 维。则 PCA 的执行流程如下：<br>特征标准化，平衡各个特征尺度：<br>$$x^{(i)}<em>j=\frac{x^{(i)}_j-\mu_j}{s_j}$$<br>$\mu_j$ 为特征 j 的均值，sj 为特征 j 的标准差。<br>计算协方差矩阵 $\Sigma $ ：<br>$$\Sigma =\frac{1}{m}\sum</em>{i=1}{m}(x^{(i)})(x^{(i)})^T=\frac{1}{m} \cdot  X^TX$$<br>通过奇异值分解（SVD），求取 $\Sigma $ 的特征向量（eigenvectors）：<br>$$(U,S,V^T)=SVD(\Sigma )$$<br>从 U 中取出前 k 个左奇异向量，构成一个约减矩阵 Ureduce :<br>$$U_{reduce}=(\mu^{(1)},\mu^{(2)},\cdots,\mu^{(k)})$$<br>计算新的特征向量： $z^{(i)}$<br>$$z^{(i)}=U^{T}_{reduce} \cdot  x^{(i)}$$</p>
-</li>
-<li><p>特征还原<br>因为 PCA 仅保留了特征的主成分，所以 PCA 是一种有损的压缩方式，假定我们获得新特征向量为：<br>$$z=U^T_{reduce}x$$<br>那么，还原后的特征 $x_{approx}$ 为：<br>$$x_{approx}=U_{reduce}z$$</p>
-</li>
-<li><p>信息保留评价<br>降维多少才合适？<br>从 PCA 的执行流程中，我们知道，需要为 PCA 指定目的维度 k 。如果降维不多，则性能提升不大；如果目标维度太小，则又丢失了许多信息。通常，使用如下的流程的来评估 k 值选取优异：<br>求各样本的投影均方误差:<br>$$\min \frac{1}{m}\sum_{j=1}^{m}\left | x^{(i)}-x^{(i)}<em>{approx} \right |^2$$<br>求数据的总方差variance：<br>$$\frac{1}{m}\sum</em>{j=1}^{m}\left | x^{(i)} \right |^2$$<br>评估下式是否成立:<br>$$\frac{\min \frac{1}{m}\sum_{j=1}^{m}\left | x^{(i)}-x^{(i)}<em>{approx} \right |^2}{\frac{1}{m}\sum</em>{j=1}^{m}\left | x^{(i)} \right |^2} \leqslant \epsilon $$<br>其中， $\epsilon $ 的取值可以为 0.01,0.05,0.10,⋯，假设  $\epsilon = 0.01 $ ，我们就说“特征间 99% 的差异性得到保留”。</p>
-</li>
+<li><p>特征压缩<br>假定我们需要将特征维度从 n 维降到 k 维。则 PCA 的执行流程如下：<br>特征标准化，平衡各个特征尺度：</p>
+<script type="math/tex; mode=display">x^{(i)}_j=\frac{x^{(i)}_j-\mu_j}{s_j}</script><p>$\mu_j$ 为特征 j 的均值，sj 为特征 j 的标准差。<br>计算协方差矩阵 $\Sigma $ ：</p>
+<script type="math/tex; mode=display">\Sigma =\frac{1}{m}\sum_{i=1}{m}(x^{(i)})(x^{(i)})^T=\frac{1}{m} \cdot  X^TX</script><p>通过奇异值分解（SVD），求取 $\Sigma $ 的特征向量（eigenvectors）：</p>
+<script type="math/tex; mode=display">(U,S,V^T)=SVD(\Sigma )</script><p>从 U 中取出前 k 个左奇异向量，构成一个约减矩阵 Ureduce :</p>
+<script type="math/tex; mode=display">U_{reduce}=(\mu^{(1)},\mu^{(2)},\cdots,\mu^{(k)})</script><p>计算新的特征向量： $z^{(i)}$</p>
+<script type="math/tex; mode=display">z^{(i)}=U^{T}_{reduce} \cdot  x^{(i)}</script></li>
+<li><p>特征还原<br>因为 PCA 仅保留了特征的主成分，所以 PCA 是一种有损的压缩方式，假定我们获得新特征向量为：</p>
+<script type="math/tex; mode=display">z=U^T_{reduce}x</script><p>那么，还原后的特征 $x_{approx}$ 为：</p>
+<script type="math/tex; mode=display">x_{approx}=U_{reduce}z</script></li>
+<li>信息保留评价<br>降维多少才合适？<br>从 PCA 的执行流程中，我们知道，需要为 PCA 指定目的维度 k 。如果降维不多，则性能提升不大；如果目标维度太小，则又丢失了许多信息。通常，使用如下的流程的来评估 k 值选取优异：<br>求各样本的投影均方误差:<script type="math/tex; mode=display">\min \frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)}-x^{(i)}_{approx} \right \|^2</script>求数据的总方差variance：<script type="math/tex; mode=display">\frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)} \right \|^2</script>评估下式是否成立:<script type="math/tex; mode=display">\frac{\min \frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)}-x^{(i)}_{approx} \right \|^2}{\frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)} \right \|^2} \leqslant \epsilon</script>其中， $\epsilon $ 的取值可以为 0.01,0.05,0.10,⋯，假设  $\epsilon = 0.01 $ ，我们就说“特征间 99% 的差异性得到保留”。<br><strong>看$\Sigma$矩阵的二范数占比就知道</strong><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15928009747208.jpg?x-oss-process=style/blog" alt="-w710"></li>
 </ol>
-<p><strong>看$\Sigma$矩阵的二范数占比就知道</strong><br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15928009747208.jpg?x-oss-process=style/blog" alt="-w710"></p>
 <h3 id="PCA-point"><a href="#PCA-point" class="headerlink" title="PCA-point"></a>PCA-point</h3><p>协方差矩阵$\Sigma$看主成分<br>取前k个u构成向量<br>$U_{reduce}\in \mathbb{R}^{n\times k}$<br>PCA 不能解决过拟合，要用正则化的方式</p>
-<h2 id="9、异常检测"><a href="#9、异常检测" class="headerlink" title="9、异常检测"></a>9、异常检测</h2><h3 id="9-1高斯分布-Gaussian-normal-distribution"><a href="#9-1高斯分布-Gaussian-normal-distribution" class="headerlink" title="9.1高斯分布(Gaussian normal distribution)"></a>9.1高斯分布(Gaussian normal distribution)</h3><p>$x\sim N(\mu,\sigma^2)$<br>其分布概率为：<br>$$p(x;\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})$$<br>其中 $\mu$ 为期望值（均值）， $\sigma^2$ 为方差。<br>在概率论中，对有限个样本进行参数估计<br>$$\mu_j = \frac{1}{m} \sum_{i=1}^{m}x_j^{(i)};;;,;;; \delta^2_j = \frac{1}{m} \sum_{i=1}^{m}(x_j^{(i)}-\mu_j)^2$$<br>这里对参数 $\mu$ 和参数 $\delta^2$ 的估计就是二者的极大似然估计。<br>假定每一个特征 $x_{1}$ 到 $x_{n}$ 均服从正态分布，则其模型的概率为：<br>$$<br>\begin{align*}<br>p(x)&amp;=p(x_1;\mu_1,\sigma_1^2)p(x_2;\mu_2,\sigma_2^2) \cdots p(x_n;\mu_n,\sigma_n^2)\<br>&amp;=\prod_{j=1}^{n}p(x_j;\mu_j,\sigma_j^2)\<br>&amp;=\prod_{j=1}^{n} \frac{1}{\sqrt{2\pi}\sigma_{j}}exp(-\frac{(x_{j}-\mu_{j})^2}{2\sigma_{j}^2})<br>\end{align*}<br>$$<br>当 $p(x)&lt;\varepsilon$时，$x$ 为异常样本。</p>
+<h2 id="9、异常检测"><a href="#9、异常检测" class="headerlink" title="9、异常检测"></a>9、异常检测</h2><h3 id="9-1高斯分布-Gaussian-normal-distribution"><a href="#9-1高斯分布-Gaussian-normal-distribution" class="headerlink" title="9.1高斯分布(Gaussian normal distribution)"></a>9.1高斯分布(Gaussian normal distribution)</h3><p>$x\sim N(\mu,\sigma^2)$<br>其分布概率为：</p>
+<script type="math/tex; mode=display">p(x;\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})</script><p>其中 $\mu$ 为期望值（均值）， $\sigma^2$ 为方差。<br>在概率论中，对有限个样本进行参数估计</p>
+<script type="math/tex; mode=display">\mu_j = \frac{1}{m} \sum_{i=1}^{m}x_j^{(i)}\;\;\;,\;\;\; \delta^2_j = \frac{1}{m} \sum_{i=1}^{m}(x_j^{(i)}-\mu_j)^2</script><p>这里对参数 $\mu$ 和参数 $\delta^2$ 的估计就是二者的极大似然估计。<br>假定每一个特征 $x_{1}$ 到 $x_{n}$ 均服从正态分布，则其模型的概率为：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+p(x)&amp;=p(x_1;\mu_1,\sigma_1^2)p(x_2;\mu_2,\sigma_2^2) \cdots p(x_n;\mu_n,\sigma_n^2)\\
+&amp;=\prod_{j=1}^{n}p(x_j;\mu_j,\sigma_j^2)\\
+&amp;=\prod_{j=1}^{n} \frac{1}{\sqrt{2\pi}\sigma_{j}}exp(-\frac{(x_{j}-\mu_{j})^2}{2\sigma_{j}^2})
+\end{align*}</script><p>当 $p(x)&lt;\varepsilon$时，$x$ 为异常样本。</p>
 <h3 id="算法评价"><a href="#算法评价" class="headerlink" title="算法评价"></a>算法评价</h3><p>由于异常样本是非常少的，所以整个数据集是非常偏斜的，我们不能单纯的用预测准确率来评估算法优劣，所以用我们之前的查准率（Precision）和召回率（Recall）计算出 F 值进行衡量异常检测算法了。<br>真阳性、假阳性、真阴性、假阴性<br>查准率（Precision）与 召回率（Recall）<br>F1 Score<br>我们还有一个参数 $\varepsilon$ ，这个 $\varepsilon$ 是我们用来决定什么时候把一个样本当做是异常样本的阈值。我们应该试用多个不同的 $\varepsilon$ 值，选取一个使得 F 值最大的那个 $\varepsilon$ 。</p>
 <h3 id="异常检测与逻辑回归的区别"><a href="#异常检测与逻辑回归的区别" class="headerlink" title="异常检测与逻辑回归的区别"></a>异常检测与逻辑回归的区别</h3><p><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15928075440417.jpg?x-oss-process=style/blog" alt="-w790"></p>
 <p>异常检测数据特点是：</p>
@@ -649,19 +661,23 @@
 <li>数据偏斜，y=1数据量极少</li>
 <li>异常数据特征不聚类（不稳定），难以预测</li>
 </ol>
-<h3 id="多元高斯函数"><a href="#多元高斯函数" class="headerlink" title="多元高斯函数"></a>多元高斯函数</h3><p>其概率模型为： $$p(x;\mu,\Sigma)=\frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$$<br>（其中 $|\Sigma|$ 是 $\Sigma$ 的行列式，$\mu$ 表示样本均值，$\Sigma$ 表示样本协方差矩阵。）。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15930031190056.jpg?x-oss-process=style/blog" alt="-w740"><br>其中$\Sigma$参数估计：<br>$$\mu=\frac{1}{m}\sum_{i=1}^{m}{x^{(i)}}$$$$\Sigma=\frac{1}{m}\sum_{i=1}^{m}{(x^{(i)}-\mu)(x^{(i)}-\mu)^T}$$</p>
-<h3 id="算法流程-多元高斯分布异常检测"><a href="#算法流程-多元高斯分布异常检测" class="headerlink" title="算法流程-多元高斯分布异常检测"></a>算法流程-多元高斯分布异常检测</h3><p>采用了多元高斯分布的异常检测算法流程如下：<br>选择一些足够反映异常样本的特征 $x_j$ 。<br>对各个样本进行参数估计： $$\mu=\frac{1}{m}\sum_{i=1}^{m}{x^{(i)}}$$$$\Sigma=\frac{1}{m}\sum_{i=1}^{m}{(x^{(i)}-\mu)(x^{(i)}-\mu)^T}$$<br>当新的样本 x 到来时，计算 $p(x)$ ：<br>$$p(x)=\frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$$<br>如果 $p(x)&lt;\varepsilon $ ，则认为样本 x 是异常样本。</p>
+<h3 id="多元高斯函数"><a href="#多元高斯函数" class="headerlink" title="多元高斯函数"></a>多元高斯函数</h3><p>其概率模型为： <script type="math/tex">p(x;\mu,\Sigma)=\frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))</script><br>（其中 $|\Sigma|$ 是 $\Sigma$ 的行列式，$\mu$ 表示样本均值，$\Sigma$ 表示样本协方差矩阵。）。<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15930031190056.jpg?x-oss-process=style/blog" alt="-w740"><br>其中$\Sigma$参数估计：</p>
+<script type="math/tex; mode=display">\mu=\frac{1}{m}\sum_{i=1}^{m}{x^{(i)}}$$$$\Sigma=\frac{1}{m}\sum_{i=1}^{m}{(x^{(i)}-\mu)(x^{(i)}-\mu)^T}</script><h3 id="算法流程-多元高斯分布异常检测"><a href="#算法流程-多元高斯分布异常检测" class="headerlink" title="算法流程-多元高斯分布异常检测"></a>算法流程-多元高斯分布异常检测</h3><p>采用了多元高斯分布的异常检测算法流程如下：<br>选择一些足够反映异常样本的特征 $x_j$ 。<br>对各个样本进行参数估计： <script type="math/tex">\mu=\frac{1}{m}\sum_{i=1}^{m}{x^{(i)}}$$$$\Sigma=\frac{1}{m}\sum_{i=1}^{m}{(x^{(i)}-\mu)(x^{(i)}-\mu)^T}</script><br>当新的样本 x 到来时，计算 $p(x)$ ：</p>
+<script type="math/tex; mode=display">p(x)=\frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))</script><p>如果 $p(x)&lt;\varepsilon $ ，则认为样本 x 是异常样本。</p>
 <h3 id="相关性"><a href="#相关性" class="headerlink" title="相关性"></a>相关性</h3><p>一般高斯模型：<br>需要手动创建一些特征来描述某些特征的相关性<br>多元高斯模型：<br>利用协方差矩阵$\Sigma$获得了各个特征相关性</p>
 <h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>一般高斯模型：<br>计算复杂度低，适用于高维特征<br>多元高斯模型：<br>计算复杂</p>
 <h3 id="效果¶"><a href="#效果¶" class="headerlink" title="效果¶"></a>效果¶</h3><p>一般高斯模型：<br>在样本数目 m 较小时也工作良好<br>多元高斯模型：<br>需要 $\Sigma$ 可逆，亦即需要 $m&gt;n$ ，(通常会考虑 $ m \geqslant 10*n $，确保有足够多的数据去拟合这些变量，更好的去评估协方差矩阵 $\Sigma$ )且各个特征不能线性相关，如不能存在 $x_2=3x_1$ 或者 $x_3=x_1+2x_2$</p>
 <h3 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h3><p>基于多元高斯分布模型的异常检测应用十分有限。</p>
 <h3 id="9、2-推荐器-Recommender-system"><a href="#9、2-推荐器-Recommender-system" class="headerlink" title="9、2 推荐器 Recommender system"></a>9、2 推荐器 Recommender system</h3><h4 id="Content-based-recommendations"><a href="#Content-based-recommendations" class="headerlink" title="Content based recommendations"></a>Content based recommendations</h4><p>$y(i,j) = \theta_{j}^T x_i$评分等于电影特征成分*用户喜好<br>前提：电影特征$x_i$已知，求解用户喜好$\theta_j$</p>
-<p>为了对用户 j 打分状况作出最精确的预测，我们需要：<br>$$\min_{(\theta^{(j)})}=\frac{1}{2}\sum_{i:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}$$<br>计算出所有的 $\theta$ 为：<br>$$J(\theta^{(1)},\cdots,\theta^{(n_u)})=\min_{(\theta^{(1)},\cdots,\theta^{(n_u)})}=\frac{1}{2}\sum_{j=1}^{n_u}\sum_{i:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_u}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}$$<br>与前面所学线性回归内容的思路一致，为了计算出 $J(\theta^{(1)},\cdots,\theta^{(n_u)})$，使用梯度下降法来更新参数：<br>更新偏置（插值）：<br>$$\theta^{(j)}_0=\theta^{(j)}<em>0-\alpha \sum</em>{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})x^{(i)}<em>0$$<br>更新权重：<br>$$\theta^{(j)}_k=\theta^{(j)}_k-\alpha \left( \sum</em>{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})x^{(i)}_k+\lambda \theta^{(j)}_k \right),;;; k \neq 0$$</p>
-<h4 id="协同过滤Collaborative-filtering"><a href="#协同过滤Collaborative-filtering" class="headerlink" title="协同过滤Collaborative filtering"></a>协同过滤Collaborative filtering</h4><p>电影特征成分$x_i$和用户喜好$\theta_j$均未知</p>
+<p>为了对用户 j 打分状况作出最精确的预测，我们需要：</p>
+<script type="math/tex; mode=display">\min_{(\theta^{(j)})}=\frac{1}{2}\sum_{i:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}</script><p>计算出所有的 $\theta$ 为：</p>
+<script type="math/tex; mode=display">J(\theta^{(1)},\cdots,\theta^{(n_u)})=\min_{(\theta^{(1)},\cdots,\theta^{(n_u)})}=\frac{1}{2}\sum_{j=1}^{n_u}\sum_{i:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_u}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}</script><p>与前面所学线性回归内容的思路一致，为了计算出 $J(\theta^{(1)},\cdots,\theta^{(n_u)})$，使用梯度下降法来更新参数：<br>更新偏置（插值）：</p>
+<script type="math/tex; mode=display">\theta^{(j)}_0=\theta^{(j)}_0-\alpha \sum_{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})x^{(i)}_0</script><p>更新权重：</p>
+<script type="math/tex; mode=display">\theta^{(j)}_k=\theta^{(j)}_k-\alpha \left( \sum_{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})x^{(i)}_k+\lambda \theta^{(j)}_k \right),\;\;\; k \neq 0</script><h4 id="协同过滤Collaborative-filtering"><a href="#协同过滤Collaborative-filtering" class="headerlink" title="协同过滤Collaborative filtering"></a>协同过滤Collaborative filtering</h4><p>电影特征成分$x_i$和用户喜好$\theta_j$均未知</p>
 <h4 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h4><ol>
-<li>目标优化<br>当用户给出他们喜欢的类型，即 $\theta^{(1)},\cdots,\theta^{(n_u)}$ ，我们可以由下列式子得出 $x^{(i)}$ ：<br>$$\min_{(x^{(i)})}=\frac{1}{2}\sum_{j:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{k=1}^{n}{(x_k^{(i)})^2}$$<br>可出所有的 x 则为：<br>$$\min_{(x^{(1)},\cdots,x^{(n_m)})}=\frac{1}{2}\sum_{i=1}^{n_m}\sum_{j:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}{(x_k^{(i)})^2}$$<br>只要我们得到 $\theta$ 或者 x ，都能互相推导出来。<br>协同过滤算法基本思想就是当我们得到其中一个数据的时候，我们推导出另一个，然后根据推导出来的再推导回去进行优化，优化后再继续推导继续优化，如此循环协同推导。</li>
-<li>协同过滤的目标优化<br>推测用户喜好：给定$x^{(1)},\cdots,x^{(n_m)}$ ，估计$\theta^{(1)},\cdots,\theta^{(n_\mu)}$ ： $$\min_{(\theta^{(1)},\cdots,\theta^{(n_\mu)})}=\frac{1}{2}\sum_{j=1}^{n_\mu}\sum_{i:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_\mu}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}$$<br>推测商品内容：给定$\theta^{(1)},\cdots,\theta^{(n_\mu)}$ ，估计$x^{(1)},\cdots,x^{(n_m)}$ ： $$\min_{(x^{(1)},\cdots,x^{(n_m)})}=\frac{1}{2}\sum_{i=1}^{n_m}\sum_{j:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}{(x_k^{(i)})^2}$$<br>协同过滤：同时优化$x^{(1)},\cdots,x^{(n_m)}$ ，估计$\theta^{(1)},\cdots,\theta^{(n_\mu)}$： $$\min ; J(x^{(1)},\cdots,x^{(n_m)};\theta^{(1)},\cdots,\theta^{(n_\mu)})$$<br>即：<br>$$\min_{(x^{(1)},\cdots,x^{(n_m)};\theta^{(1)},\cdots,\theta^{(n_\mu)})}=\frac{1}{2}\sum_{(i,j):r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}{(x_k^{(i)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_u}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}$$<br>因为正则化的原因在这里面不再有之前的 $x_0=1$,$\theta_0=0$ 。</li>
-<li>协同过滤算法的步骤为：<br>随机初始化$x^{(1)},\cdots,x^{(n_m)},\theta^{(1)},\cdots,\theta^{(n_\mu)} $为一些较小值，与神经网络的参数初始化类似，为避免系统陷入僵死状态，不使用 0 值初始化。<br>通过梯度下降的算法计算出$J(x^{(1)},\cdots,x^{(n_m)},\theta^{(1)},\cdots,\theta^{(n_\mu)})$,参数更新式为： $$x^{(i)}<em>k=x^{(i)}<em>k-\alpha \left( \sum</em>{j:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})\theta^{(j)}_k+\lambda x^{(i)}_k \right)$$$$\theta^{(j)}_k=\theta^{(j)}_k-\alpha \left( \sum</em>{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})x^{(i)}_k+\lambda \theta^{(j)}_k \right)$$<br>如果用户的偏好向量为$\theta$，而商品的特征向量为 x ，则可以预测用户评价为 $\theta^Tx$ 。<br>因为协同过滤算法 $\theta$ 和 x 相互影响，因此，二者都没必要使用偏置 $\theta_0$ 和 $x_0$，即，$x \in \mathbb{R}^n$、 $\theta \in \mathbb{R}^n$ 。<h4 id="低秩分解（Low-Rank-Matrix-Factorization）"><a href="#低秩分解（Low-Rank-Matrix-Factorization）" class="headerlink" title="低秩分解（Low Rank Matrix Factorization）"></a>低秩分解（Low Rank Matrix Factorization）</h4>$Y = X\Theta^T$<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15933132737330.jpg?x-oss-process=style/blog" alt="-w712"></li>
+<li>目标优化<br>当用户给出他们喜欢的类型，即 $\theta^{(1)},\cdots,\theta^{(n_u)}$ ，我们可以由下列式子得出 $x^{(i)}$ ：<script type="math/tex; mode=display">\min_{(x^{(i)})}=\frac{1}{2}\sum_{j:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{k=1}^{n}{(x_k^{(i)})^2}</script>可出所有的 x 则为：<script type="math/tex; mode=display">\min_{(x^{(1)},\cdots,x^{(n_m)})}=\frac{1}{2}\sum_{i=1}^{n_m}\sum_{j:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}{(x_k^{(i)})^2}</script>只要我们得到 $\theta$ 或者 x ，都能互相推导出来。<br>协同过滤算法基本思想就是当我们得到其中一个数据的时候，我们推导出另一个，然后根据推导出来的再推导回去进行优化，优化后再继续推导继续优化，如此循环协同推导。</li>
+<li>协同过滤的目标优化<br>推测用户喜好：给定$x^{(1)},\cdots,x^{(n_m)}$ ，估计$\theta^{(1)},\cdots,\theta^{(n_\mu)}$ ： <script type="math/tex">\min_{(\theta^{(1)},\cdots,\theta^{(n_\mu)})}=\frac{1}{2}\sum_{j=1}^{n_\mu}\sum_{i:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_\mu}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}</script><br>推测商品内容：给定$\theta^{(1)},\cdots,\theta^{(n_\mu)}$ ，估计$x^{(1)},\cdots,x^{(n_m)}$ ： <script type="math/tex">\min_{(x^{(1)},\cdots,x^{(n_m)})}=\frac{1}{2}\sum_{i=1}^{n_m}\sum_{j:r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}{(x_k^{(i)})^2}</script><br>协同过滤：同时优化$x^{(1)},\cdots,x^{(n_m)}$ ，估计$\theta^{(1)},\cdots,\theta^{(n_\mu)}$： <script type="math/tex">\min \; J(x^{(1)},\cdots,x^{(n_m)};\theta^{(1)},\cdots,\theta^{(n_\mu)})</script><br>即：<script type="math/tex; mode=display">\min_{(x^{(1)},\cdots,x^{(n_m)};\theta^{(1)},\cdots,\theta^{(n_\mu)})}=\frac{1}{2}\sum_{(i,j):r(i,j)=1}^{}{((\theta^{(j)})^T(x^{(i)})-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{i=1}^{n_m}\sum_{k=1}^{n}{(x_k^{(i)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_u}\sum_{k=1}^{n}{(\theta_k^{(j)})^2}</script>因为正则化的原因在这里面不再有之前的 $x_0=1$,$\theta_0=0$ 。</li>
+<li>协同过滤算法的步骤为：<br>随机初始化$x^{(1)},\cdots,x^{(n_m)},\theta^{(1)},\cdots,\theta^{(n_\mu)} $为一些较小值，与神经网络的参数初始化类似，为避免系统陷入僵死状态，不使用 0 值初始化。<br>通过梯度下降的算法计算出$J(x^{(1)},\cdots,x^{(n_m)},\theta^{(1)},\cdots,\theta^{(n_\mu)})$,参数更新式为： <script type="math/tex">x^{(i)}_k=x^{(i)}_k-\alpha \left( \sum_{j:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})\theta^{(j)}_k+\lambda x^{(i)}_k \right)$$$$\theta^{(j)}_k=\theta^{(j)}_k-\alpha \left( \sum_{i:r(i,j)=1}((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})x^{(i)}_k+\lambda \theta^{(j)}_k \right)</script><br>如果用户的偏好向量为$\theta$，而商品的特征向量为 x ，则可以预测用户评价为 $\theta^Tx$ 。<br>因为协同过滤算法 $\theta$ 和 x 相互影响，因此，二者都没必要使用偏置 $\theta_0$ 和 $x_0$，即，$x \in \mathbb{R}^n$、 $\theta \in \mathbb{R}^n$ 。<h4 id="低秩分解（Low-Rank-Matrix-Factorization）"><a href="#低秩分解（Low-Rank-Matrix-Factorization）" class="headerlink" title="低秩分解（Low Rank Matrix Factorization）"></a>低秩分解（Low Rank Matrix Factorization）</h4>$Y = X\Theta^T$<br><img src="http://hao-blog.oss-cn-hangzhou.aliyuncs.com/2020/08/05/15933132737330.jpg?x-oss-process=style/blog" alt="-w712"></li>
 </ol>
 <h4 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h4><ol>
 <li>$\lambda$正则化，使$\theta$趋向0</li>
@@ -714,7 +730,7 @@
 <li>状态观测器</li>
 <li>卡尔曼滤波器</li>
 </ol>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1281,8 +1297,10 @@
 
 
 
+
 RL
 traditional control
+
 
 
 
@@ -1295,7 +1313,7 @@ plant + enviroment
 
 
 reward
-feedba
+feed
                         
                     </div>
                     <div class="publish-info">
@@ -1520,11 +1538,23 @@ x、y个数不一致的RNN序列样本分类问题音
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1538,7 +1568,7 @@ x、y个数不一致的RNN序列样本分类问题音
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

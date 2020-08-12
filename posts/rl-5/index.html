@@ -486,7 +486,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    950
+                    947
                 </div>
                 
 
@@ -540,8 +540,8 @@
 </ul>
 <h3 id="n-step-Sarsa"><a href="#n-step-Sarsa" class="headerlink" title="n-step Sarsa"></a>n-step Sarsa</h3><p>与TD（λ）类似，扩展q的视野</p>
 <p><img src="/img/15964411018416.jpg" alt="-w576"></p>
-<h2 id="Forward-view-Sarsa-lambda"><a href="#Forward-view-Sarsa-lambda" class="headerlink" title="Forward view Sarsa($\lambda$)"></a>Forward view Sarsa($\lambda$)</h2><p><img src="/img/15964499708276.jpg" alt="-w644"></p>
-<h2 id="Backward-view-Sarsa-lambda"><a href="#Backward-view-Sarsa-lambda" class="headerlink" title="Backward view Sarsa($\lambda$)"></a>Backward view Sarsa($\lambda$)</h2><p>在正向视角中，迭代一次Q值，需要完整的一次episode<br>为了解决这个问题，引入迹的概念，实现incremental update<br><img src="/img/15964503883163.jpg" alt="-w621"></p>
+<h2 id="Forward-view-Sarsa-λ"><a href="#Forward-view-Sarsa-λ" class="headerlink" title="Forward view Sarsa(λ)"></a>Forward view Sarsa(λ)</h2><p><img src="/img/15964499708276.jpg" alt="-w644"></p>
+<h2 id="Backward-view-Sarsa-λ"><a href="#Backward-view-Sarsa-λ" class="headerlink" title="Backward view Sarsa(λ)"></a>Backward view Sarsa(λ)</h2><p>在正向视角中，迭代一次Q值，需要完整的一次episode<br>为了解决这个问题，引入迹的概念，实现incremental update<br><img src="/img/15964503883163.jpg" alt="-w621"></p>
 <h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p><img src="/img/15965030748824.jpg" alt="-w529"></p>
 <p>Attention：迹E是属于episode的，切换episode后，E要归零</p>
 <h1 id="Off-policy-learning"><a href="#Off-policy-learning" class="headerlink" title="Off-policy learning"></a>Off-policy learning</h1><ul>
@@ -553,8 +553,13 @@
 <li>从一个策略中，学习到多个策略</li>
 </ul>
 </li>
-<li><p>采样不同分布<br>$$<br>\begin{aligned}<br>\mathbb{E}<em>{X \sim P}[f(X)] &amp;=\sum P(X) f(X) \<br>&amp;=\sum Q(X) \frac{P(X)}{Q(X)} f(X) \<br>&amp;=\mathbb{E}</em>{X \sim Q}\left[\frac{P(X)}{Q(X)} f(X)\right]<br>\end{aligned}<br>$$</p>
-</li>
+<li><p>采样不同分布</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mathbb{E}_{X \sim P}[f(X)] &=\sum P(X) f(X) \\
+&=\sum Q(X) \frac{P(X)}{Q(X)} f(X) \\
+&=\mathbb{E}_{X \sim Q}\left[\frac{P(X)}{Q(X)} f(X)\right]
+\end{aligned}</script></li>
 </ul>
 <h2 id="off-policy-MC-learning"><a href="#off-policy-MC-learning" class="headerlink" title="off-policy MC learning"></a>off-policy MC learning</h2><p>引入了概率缩放系数，判断两个策略动作概率函数<br><img src="/img/15965086023837.jpg" alt="-w484"></p>
 <ul>
@@ -578,14 +583,22 @@
 <li>下次动作用 $A_{t+1} ∼ μ(·|S_t)$</li>
 <li>动作服从策略 as $A′ ∼ π(·|S_t)$</li>
 </ul>
-<p>更新方程如下<br>$$<br>Q\left(S_{t}, A_{t}\right) \leftarrow Q\left(S_{t}, A_{t}\right)+\alpha\left(R_{t+1}+\gamma Q\left(S_{t+1}, A^{\prime}\right)-Q\left(S_{t}, A_{t}\right)\right)<br>$$</p>
-<h2 id="off-policy-control-with-Q-learning"><a href="#off-policy-control-with-Q-learning" class="headerlink" title="off-policy control with Q-learning"></a>off-policy control with Q-learning</h2><p>在学习过程中：</p>
+<p>更新方程如下</p>
+<script type="math/tex; mode=display">
+Q\left(S_{t}, A_{t}\right) \leftarrow Q\left(S_{t}, A_{t}\right)+\alpha\left(R_{t+1}+\gamma Q\left(S_{t+1}, A^{\prime}\right)-Q\left(S_{t}, A_{t}\right)\right)</script><h2 id="off-policy-control-with-Q-learning"><a href="#off-policy-control-with-Q-learning" class="headerlink" title="off-policy control with Q-learning"></a>off-policy control with Q-learning</h2><p>在学习过程中：</p>
 <ul>
 <li>Q值的Update Target 被优化，target policies是$\epsilon-greedy$的</li>
 <li>Actor 执行的策略$\pi$被优化，执行$\epsilon-greedy$</li>
 </ul>
-<p>采用下式更新策略：<br>$$<br>\pi\left(S_{t+1}\right)=\underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)<br>$$</p>
-<p>Q-learning target 简化为：<br>$$<br>\begin{aligned}<br>&amp; R_{t+1}+\gamma Q\left(S_{t+1}, A^{\prime}\right) \<br>=&amp; R_{t+1}+\gamma Q\left(S_{t+1}, \underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)\right) \<br>=&amp; R_{t+1}+\max <em>{a^{\prime}} \gamma Q\left(S</em>{t+1}, a^{\prime}\right)<br>\end{aligned}<br>$$<br><img src="/img/15965124141748.jpg" alt="-w535"></p>
+<p>采用下式更新策略：</p>
+<script type="math/tex; mode=display">
+\pi\left(S_{t+1}\right)=\underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)</script><p>Q-learning target 简化为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& R_{t+1}+\gamma Q\left(S_{t+1}, A^{\prime}\right) \\
+=& R_{t+1}+\gamma Q\left(S_{t+1}, \underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)\right) \\
+=& R_{t+1}+\max _{a^{\prime}} \gamma Q\left(S_{t+1}, a^{\prime}\right)
+\end{aligned}</script><p><img src="/img/15965124141748.jpg" alt="-w535"></p>
 <p>迭代使$Q(s,a) \rightarrow q_* (s,a)$<br>Attention：在迭代过程中，动作采用$\epsilon-greedy$策略，保证对位置环境的探索</p>
 <h3 id="算法流程-1"><a href="#算法流程-1" class="headerlink" title="算法流程"></a>算法流程</h3><p><img src="/img/15965124556612.jpg" alt="-w538"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="DP-TD的关系"><a href="#DP-TD的关系" class="headerlink" title="DP TD的关系"></a>DP TD的关系</h2><p><img src="/img/15965127185793.jpg" alt="-w619"><br><img src="/img/15965134695436.jpg" alt="-w633"></p>
@@ -601,7 +614,7 @@
 <li><p>SARSA：更新和执行都用$\epsilon-greedy$策略</p>
 </li>
 </ul>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1382,11 +1395,23 @@ for i in range(time_steps): env.render() action = poli
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1400,7 +1425,7 @@ for i in range(time_steps): env.render() action = poli
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

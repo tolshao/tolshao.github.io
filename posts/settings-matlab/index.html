@@ -516,15 +516,15 @@ plot(1:10);
 set(h,'Units','Inches');
 pos = get(h,'Position');
 set(h,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
-print(h,'filename','-dpdf','-r0')</code></pre>
-<ul>
+print(h,'filename','-dpdf','-r0')
+</code></pre><ul>
 <li>缺省参数默认值设定</li>
 </ul>
 <pre><code>function f(arg1, arg2, arg3)
 if ~exist('arg2', 'var')
     arg2 = arg2Default;
-end</code></pre>
-<ul>
+end
+</code></pre><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ckzhb/article/details/81105384">plot-legend多行设置</a></li>
 </ul>
 <pre><code>hg1 = legend('第一条');
@@ -534,15 +534,15 @@ set(hg1,'FontSize',12,'Location', 'SouthOutside','box','off');
 ah2 = axes('position',get(gca,'position'),'visible','off');
 hg2 = legend(ah2, [p2 p3], '第二条', '第三条');
 set(hg2,'FontSize',12,'Location', 'SouthOutside',...
-        'Orientation','horizontal','box','off');</code></pre>
-<p>Another way:<br><code>legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)</code></p>
+        'Orientation','horizontal','box','off');
+</code></pre><p>Another way:<br><code>legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)</code></p>
 <ul>
 <li>mac打开时闪退<br><code>/Applications/Polyspace/R2019b.app/bin/matlab -nosplash</code></li>
 <li>matlab-mex命令 10.15.4问题<br><code>https://www.mathworks.com/matlabcentral/answers/512901-mex-xcodebuild-error-sdk-macosx10-15-4-cannot-be-located/?s_tid=mlc_lp_leaf</code></li>
 </ul>
-<h2 id="绘制等高线"><a href="#绘制等高线" class="headerlink" title="绘制等高线"></a>绘制等高线</h2><pre><code>contour(u, v, z, [-0.5, -0.5], 'LineWidth', 2)</code></pre>
-<p>区间是zlim</p>
-<p><img src="/img/contact.jpg"></p>
+<h2 id="绘制等高线"><a href="#绘制等高线" class="headerlink" title="绘制等高线"></a>绘制等高线</h2><pre><code>contour(u, v, z, [-0.5, -0.5], 'LineWidth', 2)
+</code></pre><p>区间是zlim</p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1319,11 +1319,23 @@ data = np.arange(1,101).res
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1337,7 +1349,7 @@ data = np.arange(1,101).res
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

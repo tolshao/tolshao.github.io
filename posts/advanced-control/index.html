@@ -513,16 +513,16 @@
 <h3 id="二阶系统特性"><a href="#二阶系统特性" class="headerlink" title="二阶系统特性"></a>二阶系统特性</h3><p>$m\ddot x+B\dot x+kx=F$<br>$\ddot x+2\omega_n\xi \dot x+\omega_n^2x=\frac{F}{m}$</p>
 <p>阻尼比固有频率:$\omega_n\sqrt{1-\xi^2}$</p>
 <p>单位化：$u(t)=\frac{F}{\omega_n^2}$<br>$H(s) = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}$</p>
-<p><img src="/img/15744291457149.jpg"></p>
+<p><img src="/img/15744291457149.jpg" alt=""></p>
 <p>零极点图：<br>极点全部在左，系统稳定<br>虚轴长度代表<strong>振荡周期</strong><br>实轴长度代表<strong>衰减速度</strong><br>$\cos \theta$代表<strong>阻尼比</strong></p>
 <h2 id="SISO-system稳定性判据"><a href="#SISO-system稳定性判据" class="headerlink" title="SISO system稳定性判据"></a>SISO system稳定性判据</h2><p>特征多项式系数判断传递函数稳定性</p>
 <ol>
 <li>Hurwitz霍尔维兹判据：构建霍尔维兹行列式，全部为正</li>
 </ol>
 <p>$D1 = a_1$</p>
-<p>$D2 = \begin{pmatrix}<br>a_1&amp;a_3\<br>a_0&amp;a_2<br>\end{pmatrix}$</p>
-<p>$D3 = \begin{pmatrix}<br>a_{1}&amp; a_{3}&amp; a_{5}\<br>a_{0}&amp; a_{2}&amp; a_{4}\<br>0&amp; a_{1}&amp; a_{3}<br>\end{pmatrix}$</p>
-<ol start="2">
+<p>$D2 = \begin{pmatrix}<br>a_1&amp;a_3\\<br>a_0&amp;a_2<br>\end{pmatrix}$</p>
+<p>$D3 = \begin{pmatrix}<br>a_{1}&amp; a_{3}&amp; a_{5}\\<br>a_{0}&amp; a_{2}&amp; a_{4}\\<br>0&amp; a_{1}&amp; a_{3}<br>\end{pmatrix}$</p>
+<ol>
 <li>Lienard-Chipard林纳德-齐帕特判据：系数都大于零，奇数或偶数阶次行列式</li>
 <li>Routh劳斯判据：<br>求$e_{ss}$时顺序，1判断稳定性、2求E(s)，3应用终值定理$e_{ss} = \lim \limits_{s\rightarrow0}sE(s)$</li>
 <li>频率稳定判据：<br>H. Nyquist奈奎斯特判据，开环频率特性，判断闭环稳定性<br>$F(s) = 1 +G(s)H(s)$的p，极点，是开环传函极点<br>z零点，闭环传递函数的极点封闭曲线内$R=P-Z$</li>
@@ -533,10 +533,8 @@
 <li>bode图单位用dB：20log(Mo/Mi)，表征了能量</li>
 </ul>
 <ol>
-<li><p>幅值相应:magnitude response<br>$\frac{M_o}{M_i} = \left | G(j\omega)\right |$</p>
-</li>
-<li><p>幅角响应:Phase response<br>$\phi_o-\phi_i = \angle G(j\omega)$</p>
-</li>
+<li>幅值相应:magnitude response<br>$\frac{M_o}{M_i} = \left | G(j\omega)\right |$</li>
+<li>幅角响应:Phase response<br>$\phi_o-\phi_i = \angle G(j\omega)$</li>
 <li><p>带阻尼比的共振频率:<br>$\omega = \omega_n \sqrt{1-2\zeta^2}\$<br>此时的极值：$\frac{1}{2\zeta\sqrt{1-\zeta^2}}$</p>
 </li>
 <li><p>幅值裕度h：相位为-π时，幅值距0dB的差值<br>相位裕度$\gamma$:幅值为1（0dB）时，相位距-π的差<br>根据幅相图，(0,0)出发为开环，(-1,0)出发为闭环</p>
@@ -546,10 +544,7 @@
 </ol>
 <ul>
 <li>低频段$G(j\omega)$反映了系统的稳态精度<br>0dB/sec-&gt;稳态精度</li>
-<li>中频段：穿越0dB$\omega_c$<br>反映了系统的平稳性和快速性</li>
-</ul>
-<p>-20dB/sec开环积分，闭环一阶，快速性<br>-40dB/sec开环双积分，闭环二阶，零阻尼，频率段不宜过宽，穿越频率取-20斜率</p>
-<ul>
+<li>中频段：穿越0dB$\omega_c$<br>反映了系统的平稳性和快速性<br>-20dB/sec开环积分，闭环一阶，快速性<br>-40dB/sec开环双积分，闭环二阶，零阻尼，频率段不宜过宽，穿越频率取-20斜率</li>
 <li>高频段反映了系统对高频干扰抑制能力</li>
 </ul>
 <h2 id="系统矫正"><a href="#系统矫正" class="headerlink" title="系统矫正"></a>系统矫正</h2><h3 id="串联矫正"><a href="#串联矫正" class="headerlink" title="串联矫正"></a>串联矫正</h3><ol>
@@ -568,8 +563,8 @@
 <p><img src="/img/%E6%88%AA%E5%B1%8F2020-04-12%20%E4%B8%8B%E5%8D%883.14.24-1.png" alt="截屏2020-04-12 下午3.14.24"></p>
 <h3 id="非线性系统"><a href="#非线性系统" class="headerlink" title="非线性系统"></a>非线性系统</h3><p>叠加原理不适用<br>常规分类：<br>死区<br>饱和<br>间隙-滞环</p>
 <p>系统收敛：消耗系统能量<br>系统发散：从外界获取能量</p>
-<p>#相关词汇<br>$X_{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T_{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
-<h1 id="工程数学基础"><a href="#工程数学基础" class="headerlink" title="工程数学基础"></a>工程数学基础</h1><h2 id="1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化"><a href="#1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化" class="headerlink" title="1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化"></a>1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化</h2><p>特征值$\lambda$有$\lambda v=Av$<br>$\ | \lambda I-A\ | = 0$<br>特征值<br>解法：将$\lambda$代回$( \lambda I - A)* v = 0$<br>$\lambda_1 、\lambda_2$对应特征向量$v_1 、v_2$<br><strong>过渡矩阵</strong>：特征向量组成的矩阵<br>$P =<br>\begin {pmatrix} v_1&amp;v_2<br>\end {pmatrix}$<br>$AP=A[v_1  v_2] = [Av_1 Av_2]=[\lambda_1v_1 \lambda_2 v_2]=<br>\begin{bmatrix}<br>\lambda_1v_{11} &amp; \lambda_2v_{21}\<br>\lambda_1v_{12} &amp; \lambda_2v_{22}<br>\end{bmatrix}<br>=P\Lambda<br>$<br>所以有，单位向量矩阵P将A特征值对角化矩阵<br>$P^-1AP = \Lambda$</p>
+<h1 id="相关词汇"><a href="#相关词汇" class="headerlink" title="相关词汇"></a>相关词汇</h1><p>$X_{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T_{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
+<h1 id="工程数学基础"><a href="#工程数学基础" class="headerlink" title="工程数学基础"></a>工程数学基础</h1><h2 id="1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化"><a href="#1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化" class="headerlink" title="1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化"></a>1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化</h2><p>特征值$\lambda$有$\lambda v=Av$<br>$\ | \lambda I-A\ | = 0$<br>特征值<br>解法：将$\lambda$代回$( \lambda I - A)<em> v = 0$<br>$\lambda_1 、\lambda_2$对应特征向量$v_1 、v_2$<br><em>*过渡矩阵</em></em>：特征向量组成的矩阵<br>$P =<br>\begin {pmatrix} v_1&amp;v_2<br>\end {pmatrix}$<br>$AP=A[v_1  v_2] = [Av_1 Av_2]=[\lambda_1v_1 \lambda_2 v_2]=<br>\begin{bmatrix}<br>\lambda_1v_{11} &amp; \lambda_2v_{21}\\<br>\lambda_1v_{12} &amp; \lambda_2v_{22}<br>\end{bmatrix}<br>=P\Lambda<br>$<br>所以有，单位向量矩阵P将A特征值对角化矩阵<br>$P^-1AP = \Lambda$</p>
 <h2 id="2-线性化-Linearization"><a href="#2-线性化-Linearization" class="headerlink" title="2. 线性化 Linearization"></a>2. 线性化 Linearization</h2><p>非线性：$1/x,\sqrt{x},x^n等$</p>
 <ul>
 <li>用泰勒级数展开<br>在平衡点(Fixed point)$x_0$附近线性化</li>
@@ -585,14 +580,14 @@
 <h2 id="6-阈值选取"><a href="#6-阈值选取" class="headerlink" title="6. 阈值选取"></a>6. 阈值选取</h2><p>Normal Distribution正态分布、高斯分布<br>$X = (\mu,\sigma^2)$<br>漏检False Dismissal<br>误警False Alarm</p>
 <h1 id="Advanced控制理论"><a href="#Advanced控制理论" class="headerlink" title="Advanced控制理论"></a>Advanced控制理论</h1><p>状态空间：State-Space，包含输入、输出、状态，写成一阶微分方程的形式<br>$\dot x = A x + B u$<br>$y = Cx+Du$</p>
 <h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><h3 id="两种类型"><a href="#两种类型" class="headerlink" title="两种类型"></a>两种类型</h3><ol>
-<li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="/img/15753853291223.jpg"><br>$a , of,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
+<li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="/img/15753853291223.jpg" alt=""><br>$a \, of\,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
 </li>
-<li><p>渐进稳定性：<br>$\exists \delta(t_0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits_{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a , of,  \lambda_i &lt; 0$实部</p>
+<li><p>渐进稳定性：<br>$\exists \delta(t_0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits_{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a \, of\,  \lambda_i &lt; 0$实部</p>
 </li>
 </ol>
 <h3 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a>判别方法</h3><ol>
 <li>直接方法：解微分方程(Direct method)<br>求解λ的值，判断正负</li>
-<li>第二方法：(2nd method)<br>$(i)V(0) = 0$<br>$(ii) V(x) \geqslant  0 , in,  D-{0}$ PSD:postive semi definit<br>$(iii)\dot V(x) \leqslant 0 , in,  D-{0}$NSD:negative semi definit<br>$\Rightarrow x = 0$</li>
+<li>第二方法：(2nd method)<br>$(i)V(0) = 0$<br>$(ii) V(x) \geqslant  0 , in\,  D-{0}$ PSD:postive semi definit<br>$(iii)\dot V(x) \leqslant 0 , in\,  D-{0}$NSD:negative semi definit<br>$\Rightarrow x = 0$</li>
 </ol>
 <h3 id="3-不稳定"><a href="#3-不稳定" class="headerlink" title="3. 不稳定"></a>3. 不稳定</h3><p>存在至少一个特征值实部大于零</p>
 <h2 id="相图分析-phase-portrait"><a href="#相图分析-phase-portrait" class="headerlink" title="相图分析-phase-portrait"></a>相图分析-phase-portrait</h2><p>plot(x,$\dot x$)，通过x初值，分析点在轨迹上的移动，判断稳不稳定<br>matlab绘制实例</p>
@@ -600,9 +595,9 @@
 clear;cla;clc;
 [x,y]=meshgrid(linspace(-5,5));
 streamslice(x,y,0 * x + 2 * y,-3 * x + 0 * y );
-xlabel('x');ylabel('y');</code></pre>
-<p><img src="/img/15747442437226.jpg" alt="w400"></p>
-<p>特征值和相图的关系<br><img src="/img/15753593791413.jpg"></p>
+xlabel('x');ylabel('y');
+</code></pre><p><img src="/img/15747442437226.jpg" alt="w400"></p>
+<p>特征值和相图的关系<br><img src="/img/15753593791413.jpg" alt=""></p>
 <h2 id="齐次状态方程解-dot-x-A-x"><a href="#齐次状态方程解-dot-x-A-x" class="headerlink" title="齐次状态方程解$\dot x = A x$"></a>齐次状态方程解$\dot x = A x$</h2><p>$\dot x = a x\rightarrow x(t) = e^{at}x(0)$<br>同理，多元线性方程<br>$\dot x = a x\rightarrow x(t) = e^{At}x(0)$<br>其中，<strong>状态转移矩阵$\Phi(t)$解法</strong></p>
 <ul>
 <li>数值法：<br>$\Phi(t) = e^{At}=I+At+\frac{1}{2!}A^2t^2+…+\frac{1}{k!}A^kt^k$</li>
@@ -612,12 +607,17 @@ xlabel('x');ylabel('y');</code></pre>
 <h2 id="非齐次状态方程-dot-x-A-x-B-u"><a href="#非齐次状态方程-dot-x-A-x-B-u" class="headerlink" title="非齐次状态方程$\dot x = A x + B u$"></a>非齐次状态方程$\dot x = A x + B u$</h2><p>$x(t) = \Phi (t)x(0)+ \int_0^t\Phi(t-\tau)Bu(\tau)d\tau$<br>初始状态x(0)响应+输入项u(t)响应</p>
 <h2 id="线性系统可控性与可观测性"><a href="#线性系统可控性与可观测性" class="headerlink" title="线性系统可控性与可观测性"></a>线性系统可控性与可观测性</h2><p>可控性：$\forall x(0),x(t_f), \exists t_f &lt; +\infty , u[0,t_f], st. x(0)\rightarrow x(t_f)$<br>充要条件：</p>
 <ol>
-<li><p>$S = [b, Ab, A^2…, A^{n-1}b]$<br>理论可行，但是实际物理不一定<br>以离散系统为例证明：<br>$$<br>x_ 0 = 0\<br>x_1 = Ax_0 + Bu_0 = Bu_0\<br>x_2 = Ax_1 + Bu_1 = ABu_0 + B u_1\<br>x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\<br>$$<br>Matlab 求解，Co矩阵 “ctrb(A,B)”</p>
+<li><p>$S = [b\, Ab\, A^2…\, A^{n-1}b]$<br>理论可行，但是实际物理不一定<br>以离散系统为例证明：</p>
+<script type="math/tex; mode=display">
+x_ 0 = 0\\
+x_1 = Ax_0 + Bu_0 = Bu_0\\
+x_2 = Ax_1 + Bu_1 = ABu_0 + B u_1\\
+x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\\</script><p>Matlab 求解，Co矩阵 “ctrb(A,B)”</p>
 </li>
-<li><p>$rank[S] = n, det ,  S \neq 0$</p>
+<li><p>$rank[S] = n, det \,  S \neq 0$</p>
 </li>
 </ol>
-<p>可观性：$\forall t \in [t_0,t_f],已知y(t),u(t),可求x(t_0)$<br>$rank<br>\begin{bmatrix}<br>C\<br>CA\<br>CA^2\<br>…\<br>CA^{n-1}<br>\end{bmatrix}<br>=n<br>$</p>
+<p>可观性：$\forall t \in [t_0,t_f],已知y(t),u(t),可求x(t_0)$<br>$rank<br>\begin{bmatrix}<br>C\\<br>CA\\<br>CA^2\\<br>…\\<br>CA^{n-1}<br>\end{bmatrix}<br>=n<br>$</p>
 <h3 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h3><p>$f(\lambda) = \sum_{i=0}^{n}a_i\lambda ^i$<br>$f(A) = 0 \rightarrow A^n = \sum_{i=0}^{n-1}a_iA^i$</p>
 <p>求解$\left | \lambda I - A\right |$的特征多项式<br>将$\lambda = A $代入，得到递推公式，解算$A^n$</p>
 <h2 id="状态反馈与状态观测器"><a href="#状态反馈与状态观测器" class="headerlink" title="状态反馈与状态观测器"></a>状态反馈与状态观测器</h2><p>取$u=v-kx$，其中，v为参考输入，系统闭环矩阵由A变为A-Bk</p>
@@ -625,13 +625,13 @@ xlabel('x');ylabel('y');</code></pre>
 <li>不改变可控性，有可能改变可观性</li>
 <li>闭环特征值</li>
 </ol>
-<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><p><img src="/img/15755438743134.jpg"></p>
+<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><p><img src="/img/15755438743134.jpg" alt=""></p>
 <h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x_t^- = F_t x_{t-1} + B_t u_t$</p>
 <p>状态转移矩阵:$P_t^-=FP_{t-1}F^T+Q$</p>
-<p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\<br>\sigma_{12}&amp;\sigma_{22}\<br>\end{bmatrix}<br>$</p>
+<p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\\<br>\sigma_{12}&amp;\sigma_{22}\\<br>\end{bmatrix}<br>$</p>
 <p><img src="/img/15748205077671.jpg" alt="w400"></p>
 <p>卡尔曼方程≠状态观测器<br><img src="/img/15755459115506.jpg" alt="m180"></p>
-<p><img src="/img/15755450314782.jpg"><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="/img/15755448894756.jpg"><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
+<p><img src="/img/15755450314782.jpg" alt=""><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="/img/15755448894756.jpg" alt=""><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
 <p>概率函数相乘，多传感器信息融合</p>
 <h2 id="非线性控制理论"><a href="#非线性控制理论" class="headerlink" title="非线性控制理论"></a>非线性控制理论</h2><h3 id="ARC"><a href="#ARC" class="headerlink" title="ARC"></a>ARC</h3><p>Barbalat’s 引理 lemma</p>
 <ol>
@@ -639,7 +639,7 @@ xlabel('x');ylabel('y');</code></pre>
 <li>$\dot{V} \leq -g(t)$, where $g(t)\geq 0$</li>
 <li>$\dot{g}(t)\in L_{\infty}$, if $\dot{g}(t)$ is bounded the $g(t)$ is uniformly continous.<br>Then, $\lim_{t-&gt;\infty} g(t)=0$<br>Consquently, $\lim_{t-&gt;\infty} e = 0 (k\neq0)$</li>
 </ol>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1201,11 +1201,12 @@ xlabel('x');ylabel('y');</code></pre>
                     <div class="summary block-with-text">
                         
                             有用的工具
-[十分钟邮箱- BccTo.ME](goodness for free)
+十分钟邮箱- BccTo.ME
 
 有用的网站
         document.querySelectorAll('.github-emoji')
-          .forEach(
+          .forEach(el => {
+            i
                         
                     </div>
                     <div class="publish-info">
@@ -1418,11 +1419,23 @@ xlabel('x');ylabel('y');</code></pre>
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1436,7 +1449,7 @@ xlabel('x');ylabel('y');</code></pre>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

@@ -483,14 +483,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-11
+                    2020-08-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    695
+                    697
                 </div>
                 
 
@@ -514,7 +514,11 @@
             <div id="articleContent">
                 <h1 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h1><h2 id="v、q表的问题"><a href="#v、q表的问题" class="headerlink" title="v、q表的问题"></a>v、q表的问题</h2><ul>
 <li>解决离散化的s,a,导致q-table存储量、运算量大</li>
-<li>解决连续s、a的表示问题<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2>用带权重估计函数，估计v or q<br>$$<br>\begin{aligned}<br>\hat{v}(s, \mathbf{w}) &amp; \approx v_{\pi}(s) \<br>\text { or } \hat{q}(s, a, \mathbf{w}) &amp; \approx q_{\pi}(s, a)<br>\end{aligned}<br>$$<h2 id="函数估计器"><a href="#函数估计器" class="headerlink" title="函数估计器"></a>函数估计器</h2>可谓函数逼近，需要函数式可微分的</li>
+<li>解决连续s、a的表示问题<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2>用带权重估计函数，估计v or q<script type="math/tex; mode=display">
+\begin{aligned}
+\hat{v}(s, \mathbf{w}) & \approx v_{\pi}(s) \\
+\text { or } \hat{q}(s, a, \mathbf{w}) & \approx q_{\pi}(s, a)
+\end{aligned}</script><h2 id="函数估计器"><a href="#函数估计器" class="headerlink" title="函数估计器"></a>函数估计器</h2>可谓函数逼近，需要函数式可微分的</li>
 <li>线性组合</li>
 <li>神经网络</li>
 </ul>
@@ -559,10 +563,12 @@
 <li>Store transition (st,at,rt+1,st+1) in replay memory D </li>
 <li>Sample random mini-batch of transitions (s,a,r,s′) from D </li>
 <li>Compute Q-learning targets w.r.t. old, fixed parameters $w^− $</li>
-<li>Optimise MSE between Q-network and Q-learning targets<br>$$<br>\mathcal{L}<em>{i}\left(w</em>{i}\right)=\mathbb{E}<em>{s, a, r, s^{\prime}} \sim \mathcal{D}</em>{i}\left[\left(r+\gamma \max <em>{a^{\prime}} Q\left(s^{\prime}, a^{\prime} ; w</em>{i}^{-}\right)-Q\left(s, a ; w_{i}\right)\right)^{2}\right]<br>$$</li>
-<li>用SGD更新<br>伪算法：<br><img src="/img/15971441168183.jpg"></li>
+<li>Optimise MSE between Q-network and Q-learning targets</li>
 </ol>
-<p><strong>注意：</strong></p>
+<script type="math/tex; mode=display">
+\mathcal{L}_{i}\left(w_{i}\right)=\mathbb{E}_{s, a, r, s^{\prime}} \sim \mathcal{D}_{i}\left[\left(r+\gamma \max _{a^{\prime}} Q\left(s^{\prime}, a^{\prime} ; w_{i}^{-}\right)-Q\left(s, a ; w_{i}\right)\right)^{2}\right]</script><ol>
+<li>用SGD更新<br>伪算法：<br><img src="/img/15971441168183.jpg" alt=""><br><strong>注意：</strong></li>
+</ol>
 <ul>
 <li>Fixed Q-target $\theta$，每C steps 更新一次</li>
 <li>Experience Replay： minibatch 从 memory D 采样</li>
@@ -581,7 +587,7 @@
 </ul>
 <h2 id="LSP-直接求解"><a href="#LSP-直接求解" class="headerlink" title="LSP 直接求解"></a>LSP 直接求解</h2><p>平衡状态，梯度=0<br>求解方程，得到w值关于状态s和v真值的函数关系<br><img src="/img/15970717288619.jpg" alt="-w592"><br>However，真值<strong>不知道</strong><br>缺点是复杂度高，引入了矩阵的逆</p>
 <h3 id="Other-algorithms"><a href="#Other-algorithms" class="headerlink" title="Other algorithms"></a>Other algorithms</h3><p><img src="/img/15971205641184.jpg" alt="-w574"><br><img src="/img/15971205882497.jpg" alt="-w598"><br><img src="/img/15971207382795.jpg" alt="-w603"></p>
-<p><img src="/img/contact.jpg"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1365,11 +1371,23 @@
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1383,7 +1401,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             

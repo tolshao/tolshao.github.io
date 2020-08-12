@@ -511,12 +511,27 @@
                 <p>小跳最近在搭建一个数值仿真环境，由于需要用到python里面的一些库，所以不得不把simulink的模型搬过来，我们都知道在simulink里，仿真的时候设置仿真步长和微分方程求解器是必要的步骤。但是为什么要设置这个小跳却早已忘记了。</p>
 <p>一年级的时候搬砖搬多了，数分课也没好好上，回头一看，这么简单的东西，当时竟然整的稀里糊涂的。</p>
 <h1 id="为什么要用RK4"><a href="#为什么要用RK4" class="headerlink" title="为什么要用RK4"></a>为什么要用RK4</h1><p>先po一张图，直观感受一下仿真的误差。<br><img src="/img/15956439603281.jpg" alt="-w752"></p>
-<p>对于给定线性常微分方程<br>$$<br>\dot x = x<br>$$<br>易得，其解是<br>$$<br>x(t) = Ce^t<br>$$<br>RK4是龙格库塔法曲线，None是一阶解法$x(t+dt) = x(t)+\dot x dt$<br>可以看到，线性常微分方程误差尚且如此之大，那么推广到非线性微分方程，像这种形式<br>$$<br>\dot x = f(x,t) = tx^2 - \frac{x}{t}…<br>$$<br>那肯定误差直接起飞了。解析解求起来也挺麻烦，这里就不再引入分析了。</p>
+<p>对于给定线性常微分方程</p>
+<script type="math/tex; mode=display">
+\dot x = x</script><p>易得，其解是</p>
+<script type="math/tex; mode=display">
+x(t) = Ce^t</script><p>RK4是龙格库塔法曲线，None是一阶解法$x(t+dt) = x(t)+\dot x dt$<br>可以看到，线性常微分方程误差尚且如此之大，那么推广到非线性微分方程，像这种形式</p>
+<script type="math/tex; mode=display">
+\dot x = f(x,t) = tx^2 - \frac{x}{t}...</script><p>那肯定误差直接起飞了。解析解求起来也挺麻烦，这里就不再引入分析了。</p>
 <p>接下来把定义回顾一下，贴一下代码，有需自取，希望对大家有所帮助。</p>
 <h1 id="定义回顾"><a href="#定义回顾" class="headerlink" title="定义回顾"></a>定义回顾</h1><p>数值分析中，龙格－库塔法（Runge-Kutta methods）是用于非线性常微分方程的解的重要的一类隐式或显式迭代法。这些技术由数学家卡尔·龙格和马丁·威尔海姆·库塔于1900年左右发明。该方法主要是在已知方程导数和初值信息，利用计算机仿真时应用，省去求解微分方程的复杂过程。</p>
-<p>令初值问题表述如下。<br>$$<br>y’ = f(t,y), y(t_0) = y_0<br>$$<br>则，对于该问题的RK4由如下方程给出：<br>$$<br>y_{n+1}=y_{n}+\frac{h}{6}\left(k_{1}+2 k_{2}+2 k_{3}+k_{4}\right) \$$<br>其中<br>$$<br>\begin{matrix}<br>k_{1}=f\left(t_{n}, y_{n}\right) \<br>k_{2}=f\left(t_{n}+\frac{h}{2}, y_{n}+\frac{h}{2} k_{1}\right) \<br>k_{3}=f\left(t_{n}+\frac{h}{2}, y_{n}+\frac{h}{2} k_{2}\right) \<br>k_{4}=f\left(t_{n}+h, y_{n}+h k_{3}\right)\end{matrix}<br>$$</p>
-<p>式中，$h$为仿真步长，满足$h&lt;\epsilon_1 \rightarrow error&lt;\epsilon_2$</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><pre><code class="python">import numpy as np
+<p>令初值问题表述如下。</p>
+<script type="math/tex; mode=display">
+y' = f(t,y), y(t_0) = y_0</script><p>则，对于该问题的RK4由如下方程给出：</p>
+<script type="math/tex; mode=display">
+y_{n+1}=y_{n}+\frac{h}{6}\left(k_{1}+2 k_{2}+2 k_{3}+k_{4}\right) \\</script><p>其中</p>
+<script type="math/tex; mode=display">
+\begin{matrix}
+k_{1}=f\left(t_{n}, y_{n}\right) \\ 
+k_{2}=f\left(t_{n}+\frac{h}{2}, y_{n}+\frac{h}{2} k_{1}\right) \\
+k_{3}=f\left(t_{n}+\frac{h}{2}, y_{n}+\frac{h}{2} k_{2}\right) \\
+k_{4}=f\left(t_{n}+h, y_{n}+h k_{3}\right)\end{matrix}</script><p>式中，$h$为仿真步长，满足$h&lt;\epsilon_1 \rightarrow error&lt;\epsilon_2$</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><pre><code class="lang-python">import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sy
 
@@ -568,12 +583,13 @@ plt.plot(t_list,error_2, 'r--',label='Error_RK4')
 plt.plot(t_list,error_3, 'g--',label='Error_none')
 plt.legend()
 plt.xlabel('Time(s)')
-plt.show()</code></pre>
+plt.show()
+</code></pre>
 <h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1><p>这里推荐一个提高效率的工具Matplotlib cheat sheet</p>
-<p>对于一个经常画图的科研狗来说，这张图真是太太太太有必要了，因为时常遇到以下场景，不记得colormap名字，打开文档查一番，不记得线宽关键词，打开文档查一番，不记得marker名字，打开文档查一番。。。。。等等等等<br><img src="/img/15956450473625.jpg"></p>
+<p>对于一个经常画图的科研狗来说，这张图真是太太太太有必要了，因为时常遇到以下场景，不记得colormap名字，打开文档查一番，不记得线宽关键词，打开文档查一番，不记得marker名字，打开文档查一番。。。。。等等等等<br><img src="/img/15956450473625.jpg" alt=""></p>
 <p>所以，有了这张图，在平常画图的时候中遇到的95%需要查文档的问题都可以在这张图中找到答案。</p>
 <p>===<br>这个速查表，可以关注微信公众号“探物及理”后台回复“python画图”领取。</p>
-<p>===<br><img src="/img/contact.jpg"></p>
+<p>===<br><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1193,7 +1209,9 @@ plt.show()</code></pre>
                         
                             introductionv、q表的问题
 解决离散化的s,a,导致q-table存储量、运算量大
-解决连续s、a的表示问题solution用带权重估计函数，估计v or q$$\begin{aligned}\hat{v}(s, \mathbf
+解决连续s、a的表示问题solution用带权重估计函数，估计v or q
+\begin{aligned}
+\hat{v}(s, \mathbf
                         
                     </div>
                     <div class="publish-info">
@@ -1358,11 +1376,23 @@ plt.show()</code></pre>
 <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
     });
 </script>
 
-
+<!-- <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+<script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script> -->
 
     <footer class="page-footer bg-color">
     
@@ -1376,7 +1406,7 @@ plt.show()</code></pre>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.7k</span>&nbsp;字
+                class="white-color">33.9k</span>&nbsp;字
             
             
             
