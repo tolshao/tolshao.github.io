@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-12
                 </div>
                 
 
@@ -493,7 +493,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -508,10 +508,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="马尔科夫过程（Markov-Process，MP）"><a href="#马尔科夫过程（Markov-Process，MP）" class="headerlink" title="马尔科夫过程（Markov Process，MP）"></a>马尔科夫过程（Markov Process，MP）</h2><p>我们说一个state若满足 ，则其具有马尔可夫性，即该state完全包含了历史中的所有信息。马尔科夫过程是无记忆的随机过程，即随机状态序列 具有马尔可夫属性。</p>
+                <h1 id="马尔科夫过程（Markov-Process，MP）"><a href="#马尔科夫过程（Markov-Process，MP）" class="headerlink" title="马尔科夫过程（Markov Process，MP）"></a>马尔科夫过程（Markov Process，MP）</h1><p>我们说一个state若满足 ，则其具有马尔可夫性，即该state完全包含了历史中的所有信息。马尔科夫过程是无记忆的随机过程，即随机状态序列 具有马尔可夫属性。</p>
 <p>一个马尔科夫过程可以由一个元组组成$\langle\mathcal{S}, \mathcal{P}\rangle$</p>
 <p>$\mathcal{S}$为（有限）的状态（state）集；<br>$\mathcal{P}$为状态转移矩阵， $$<br>P_{s s^{\prime}}=\mathbb{P}\left(S_{t+1}=s^{\prime} \mid S_{t}=s\right)<br>$$ 。所谓状态转移矩阵就是描述了一个状态到另一个状态发生的概率，所以<strong><em>矩阵每一行元素之和为1</em></strong>。</p>
-<h2 id="马尔科夫过程（Markov-Reward-Process，MRP）"><a href="#马尔科夫过程（Markov-Reward-Process，MRP）" class="headerlink" title="马尔科夫过程（Markov Reward Process，MRP）"></a>马尔科夫过程（Markov Reward Process，MRP）</h2><p>在MP上加入了 奖励Reward 和 折扣系数$\gamma$<br><img src="/img/15961148196502.jpg" alt="-w460"></p>
+<h2 id="马尔科夫奖励过程（Markov-Reward-Process，MRP）"><a href="#马尔科夫奖励过程（Markov-Reward-Process，MRP）" class="headerlink" title="马尔科夫奖励过程（Markov Reward Process，MRP）"></a>马尔科夫奖励过程（Markov Reward Process，MRP）</h2><p>在MP上加入了 奖励Reward 和 折扣系数$\gamma$<br><img src="/img/15961148196502.jpg" alt="-w460"></p>
 <p>对于状态转移概率矩阵确定的情况，Value值可以显式计算得到<br><img src="/img/15961148266893.jpg" alt="-w238"></p>
 <p>对于MDP，并不适用，因为$\mathbb{P}$<strong>非线性</strong></p>
 <h3 id="解析解"><a href="#解析解" class="headerlink" title="解析解"></a>解析解</h3><p>对于理想的的MDP，且参数已知，其解析解可以直接逆运算得到<br>状态在策略下的value值，可以由一下的公式计算得到<br>$$<br>\begin{array}{c}<br>v_{\pi}=\mathcal{R}^{\pi}+\gamma \mathcal{P}^{\pi} v_{\pi} \<br>v_{\pi}=\left(I-\gamma \mathcal{P}^{\pi}\right)^{-1} \mathcal{R}^{\pi}<br>\end{array}<br>$$</p>
@@ -519,12 +519,27 @@
 <p>MDP由元组 $\langle\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma\rangle$ 定义。其中</p>
 <p>$\mathcal{S}$为（有限）的状态（state）集；<br>$\mathcal{A}$为有限的动作集；<br>$\mathcal{P}$为状态转移矩阵。所谓状态转移矩阵就是描述了一个状态到另一个状态发生的概率，所以矩阵每一行元素之和为1。[公式]<br>$\mathcal{R}$为回报函数（reward function), [公式]<br>$\gamma$为折扣因子，范围在[0,1]之间， 越大，说明agent看得越“远”。</p>
 <p>对于每一个$\pi$,$a\in A$<br>$$<br>\begin{aligned}<br>\mathcal{P}<em>{s, s^{\prime}}^{\pi} &amp;=\sum</em>{a \in \mathcal{A}} \pi(a \mid s) \mathcal{P}<em>{s s^{\prime}}^{a} \<br>\mathcal{R}</em>{s}^{\pi} &amp;=\sum_{a \in \mathcal{A}} \pi(a \mid s) \mathcal{R}_{s}^{a}<br>\end{aligned}<br>$$</p>
-<h2 id="值函数和动作值函数"><a href="#值函数和动作值函数" class="headerlink" title="值函数和动作值函数"></a>值函数和动作值函数</h2><p><img src="/img/15959184331156.jpg" alt="-w397"></p>
-<p>G值，从t时刻起，包括了未来，计算了折扣的总奖励：<br>$$<br>G_{t}=R_{t+1}+\gamma R_{t+2}+\ldots=\sum_{k=0}^{\infty} \gamma^{k} R_{t+k+1}<br>$$<br>值函数：在状态s，策略π下的值函数<br>$$<br>v_{\pi}(s)=\mathbb{E}<em>{\pi}\left[G</em>{t} \mid S_{t}=s\right]<br>$$<br>动作值函数（action-value function）：在状态s，执行动作a，遵循策略π，回报期望<br>$$<br>q_{\pi}(s, a)=\mathbb{E}<em>{\pi}\left[G</em>{t} \mid S_{t}=t, A_{t}=a\right]<br>$$</p>
-<h2 id="贝尔曼方程"><a href="#贝尔曼方程" class="headerlink" title="贝尔曼方程"></a>贝尔曼方程</h2><p>状态值函数可以分解为即刻回报+未来回报x折扣值<br>分解 -&gt; 迭代实现<br>$$<br>v_{\pi}(s)=\mathbb{E}<em>{\pi}\left[R</em>{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right]<br>$$</p>
+<h3 id="收获-Return"><a href="#收获-Return" class="headerlink" title="收获 Return"></a>收获 Return</h3><p>定义：收获$G_t$为在一个马尔科夫奖励链上从t时刻开始往后所有的奖励的有衰减的总和。也有翻译成“收益”或”回报”。<br>G值，从t时刻起，包括了<strong>未来</strong>，计算了<strong>折扣</strong>的总奖励：<br>$$<br>G_t = R_{t+1}+\gamma R_{t+2} + … = \sum^\infty_{k=0}\gamma^k R_{t+k+1}<br>$$</p>
+<ul>
+<li>考虑了未来的不确定性</li>
+<li>给与较近的未来更高权重</li>
+</ul>
+<h3 id="价值函数和动作值函数"><a href="#价值函数和动作值函数" class="headerlink" title="价值函数和动作值函数"></a>价值函数和动作值函数</h3><p><img src="/img/15959184331156.jpg" alt="-w397"></p>
+<ul>
+<li>价值函数：在状态s，策略π下的值函数<br>$$<br>v_{\pi}(s)=\mathbb{E}<em>{\pi}\left[G</em>{t} \mid S_{t}=s\right]<br>$$</li>
+<li>动作值函数（action-value function）：在状态s，执行动作a，遵循策略π，回报期望<br>$$<br>q_{\pi}(s, a)=\mathbb{E}<em>{\pi}\left[G</em>{t} \mid S_{t}=t, A_{t}=a\right]<br>$$</li>
+</ul>
+<h1 id="贝尔曼方程"><a href="#贝尔曼方程" class="headerlink" title="贝尔曼方程"></a>贝尔曼方程</h1><p>状态值函数可以分解为即刻回报+未来回报x折扣值<br>分解 -&gt; 迭代实现<br>$$<br>v_{\pi}(s)=\mathbb{E}<em>{\pi}\left[R</em>{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right]<br>$$</p>
 <p>动作值函数类似：<br>$$<br>q_{\pi}(s, a)=\mathbb{E}<em>{\pi}\left[R</em>{t+1}+\gamma q_{\pi}\left(S_{t+1}, A_{t+1}\right) \mid S_{t}=s, A_{t}=a\right]<br>$$<br>在每个状态，会存在多个备选动作；<br>每个动作，也可能会导致不一样的状态，因此存在下图。<br><img src="/img/15958154132177.jpg"></p>
 <p>$$<br>v_{\pi}(s)=\sum_{a \in \mathcal{A}} \pi(a \mid s) q_{\pi}(s, a) \ q_{\pi}(s, a)=\mathcal{R}<em>{s}^{a}+\gamma \sum</em>{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{\pi}\left(s^{\prime}\right) \<br>$$<br>于是<br>$$v_{\pi}(s)=\sum_{a \in \mathcal{A}} \pi(a \mid s)\left(\mathcal{R}<em>{s}^{a}+\gamma \sum</em>{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{\pi}\left(s^{\prime}\right)\right) \ q_{\pi}(s, a)=\mathcal{R}<em>{s}^{a}+\gamma \sum</em>{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} \sum</em>{a^{\prime} \in \mathcal{A}} \pi\left(a^{\prime} \mid s^{\prime}\right) q_{\pi}\left(s^{\prime}, a^{\prime}\right)<br>$$<br>描述了当前状态值函数和其后续状态值函数之间的关系，即状态值函数（动作值函数）等于瞬时回报的期望加上下一状态的（折扣）状态值函数（动作值函数）的期望。</p>
 <h2 id="贝尔曼最优方程"><a href="#贝尔曼最优方程" class="headerlink" title="贝尔曼最优方程"></a>贝尔曼最优方程</h2><p>学习的目的是优化一个策略π使得值函数v or q最大<br>$$<br>v_{<em>}(s)=\max <em>{\pi} v</em>{\pi}(s) $$<br>$$<br> q_{</em>}(s, a)=\max <em>{\pi} q</em>{\pi}(s, a) $$<br> 对于任意一个MDPs，存在一个$\pi_*$使得$ v_{\pi_{<em>}}(s)=v_{</em>}(s), \quad q_{\pi_{<em>}}(s, a)=q_{</em>}(s, a) $<br>可得，贝尔曼最优方程：<br>$$ v_{<em>}(s)=\max <em>{a} \mathcal{R}</em>{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{</em>}\left(s^{\prime}\right) $$<br>$$ q_{<em>}(s, a)=\mathcal{R}<em>{s}^{a}+\gamma \sum</em>{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} \max <em>{a^{\prime}} q</em>{</em>}\left(s^{\prime}, a^{\prime}\right)<br>$$</p>
+<h3 id="求解最优方程方法"><a href="#求解最优方程方法" class="headerlink" title="求解最优方程方法"></a>求解最优方程方法</h3><ul>
+<li>Value iteration</li>
+<li>Policy iteration</li>
+<li>Q-learning</li>
+<li>Sarsa</li>
+<li>等</li>
+</ul>
 <p><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1138,7 +1153,10 @@
                     <div class="summary block-with-text">
                         
                             概述强化学习是一门多学科交叉的技术
-与传统控制的关系：相似性：
+与传统控制的关系：
+相似性：
+
+
 
 
 RL
@@ -1155,7 +1173,7 @@ plant + enviroment
 
 
 reward
-feedback（
+feedba
                         
                     </div>
                     <div class="publish-info">
@@ -1334,7 +1352,7 @@ feedback（
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.5k</span>&nbsp;字
+                class="white-color">33.7k</span>&nbsp;字
             
             
             

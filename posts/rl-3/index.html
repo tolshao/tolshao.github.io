@@ -479,21 +479,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    623
+                    857
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -508,29 +508,53 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>适用于MDP模型参数已知</p>
+                <p>规划，适用于MDP模型参数<strong>已知</strong><br>学习，适用于Env未知或部分未知</p>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>动态规划分为两步，Prediction、Control</p>
 <ul>
-<li>（Prediction）Value:是对策略$\pi$的评价</li>
-<li>（Control）Policy $\pi$:是对Value的选择<h1 id="例"><a href="#例" class="headerlink" title="例"></a>例</h1>问题：每走一步，r = -1，走到出口可以停止<br>在随机策略下，迭代k，最使v收敛<br>得到$v^{\pi}(s)$<br><img src="/img/15959276754125.jpg" alt="-w395"><br>然后最简单的策略，greedy，往v值高的地方走。<br><img src="/img/15959300701562.jpg" alt="-w562"></li>
+<li>（Prediction）Value:是对策略$\pi$的评价<br>$$&lt;s,P^\pi,R^\pi,\gamma&gt;, \pi \rightarrow V_\pi$$</li>
+<li>（Control）Policy $\pi$:是对Value的选择<br>$$&lt;s,P^\pi,R^\pi,\gamma&gt;, V \rightarrow \pi $$</li>
 </ul>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="Policy-iteration：以greedy为例"><a href="#Policy-iteration：以greedy为例" class="headerlink" title="Policy iteration：以greedy为例"></a>Policy iteration：以greedy为例</h2><p>Find optim policy：</p>
-<p>$$<br>v_{\pi}(s)=\max <em>{a \in \mathcal{A}} q</em>{\pi}(s, a)<br>$$<br><strong>主动</strong>改变策略，策略改变之后进行评估<br>根据q值，从集合A中选a，更新策略$\pi$，使新q大于之前一步<br>$$<br>q_{\pi}\left(s, \pi^{\prime}(s)\right)=\max <em>{a \in \mathcal{A}} q</em>{\pi}(s, a) \geq q_{\pi}(s, \pi(s))=v_{\pi}(s)<br>$$<br>所以</p>
-<p>$$<br>\begin{aligned}<br>v_{\pi}(s) &amp; \leq q_{\pi}\left(s, \pi^{\prime}(s)\right)=\mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma q_{\pi}\left(S_{t+1}, \pi^{\prime}\left(S_{t+1}\right)\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma R_{t+2}+\gamma^{2} q_{\pi}\left(S_{t+2}, \pi^{\prime}\left(S_{t+2}\right)\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma R_{t+2}+\ldots \mid S_{t}=s\right]=v_{\pi^{\prime}}(s)<br>\end{aligned}<br>$$<br>迭代一次，对应一个时刻</p>
-<h2 id="Value-iteration：值迭代"><a href="#Value-iteration：值迭代" class="headerlink" title="Value iteration：值迭代"></a>Value iteration：值迭代</h2><p>Find optim value：</p>
-<p>$$<br>v_{<em>}(s)=\max <em>{a} \mathcal{R}</em>{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{</em>}\left(s^{\prime}\right)<br>$$</p>
-<p>根据值函数，选择策略</p>
-<h2 id="值迭代和policy迭代的区别"><a href="#值迭代和policy迭代的区别" class="headerlink" title="值迭代和policy迭代的区别"></a>值迭代和policy迭代的区别</h2><ul>
-<li><p>policy iteration每次迭代v(s)都会变大；而value iteration则不是。</p>
-</li>
-<li><p>在迭代过程中，因为policy iteration中是policy-&gt;value-&gt;policy，所以每个value function对应的policy都是有意义的，但是在value iteration迭代中，value function可能是没有意义的（不完整的）</p>
-</li>
+<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><ul>
+<li>prediction：迭代法<br>对所有状态s，应用贝尔曼公式<br>$$<br>v_{k+1}(s)=\sum_{a \in A} \pi(a \mid s)\left(R_{s}^{a}+\gamma \sum_{s^{\prime} \in S} P_{s s^{\prime}}^{a} v_{k}\left(s^{\prime}\right)\right)<br>$$</li>
 </ul>
-<h2 id="异步更新，提高效率"><a href="#异步更新，提高效率" class="headerlink" title="异步更新，提高效率"></a>异步更新，提高效率</h2><h3 id="三种值迭代方法"><a href="#三种值迭代方法" class="headerlink" title="三种值迭代方法"></a>三种值迭代方法</h3><p>常规的值迭代，要遍历过所有s之后，才进行一次迭代，因此存在old、new两个v(s)</p>
+<p>右边的$v_k$不确定，但是迭代下去，因为$R^a_s$确定，所以收敛到真值$v_\pi$</p>
 <ul>
-<li>in-place DP：用最新的值<br>只保存一个v(s)，遍历过用新值替换。收敛更快，更新顺序影响收敛性</li>
-<li>Prioritised sweeping：state的影响力<br>比较贝尔曼误差绝对值，大的更新，小的忽略</li>
-<li>Real-time DP：有用程度<br>遍历过的s才更新，没有涉及的不管</li>
+<li>Control：greedly，每次都选基于上次预测最好的那个a</li>
+</ul>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>问题：每走一步，r = -1，走到出口可以停止<br>在随机策略下，迭代k，最使v收敛<br>得到$v^{\pi}(s)$<br><img src="/img/15959276754125.jpg" alt="-w395"><br>然后最简单的策略，greedy，往v值高的地方走。<br><img src="/img/15959300701562.jpg" alt="-w562"></p>
+<h1 id="Policy-iteration：-O-mn-2"><a href="#Policy-iteration：-O-mn-2" class="headerlink" title="Policy iteration：$O(mn^2)$"></a>Policy iteration：$O(mn^2)$</h1><p>每一步，遍历动作A</p>
+<p>Find optim policy：<br>以Greedy为例，迭代：$\pi’ = greedy(v_{\pi})$<br>策略更新为：<br>$$<br>\pi^{\prime}(s)=\underset{a \in \mathcal{A}}{\operatorname{argmax}} q_{\pi}(s, a)<br>$$<br>值函数更新为：<br>$$<br>v_{\pi}(s)=\max <em>{a \in \mathcal{A}} q</em>{\pi}(s, a)<br>$$<br><strong>主动</strong>改变策略，策略改变之后进行评估<br>根据q值，从集合A中选a，更新策略$\pi$，使新q大于之前一步<br>$$<br>q_{\pi}\left(s, \pi^{\prime}(s)\right)=\max <em>{a \in \mathcal{A}} q</em>{\pi}(s, a) \geq q_{\pi}(s, \pi(s))=v_{\pi}(s)<br>$$</p>
+<p>证明：<br>$$<br>\begin{aligned}<br>v_{\pi}(s) &amp; \leq q_{\pi}\left(s, \pi^{\prime}(s)\right)=\mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma q_{\pi}\left(S_{t+1}, \pi^{\prime}\left(S_{t+1}\right)\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma R_{t+2}+\gamma^{2} q_{\pi}\left(S_{t+2}, \pi^{\prime}\left(S_{t+2}\right)\right) \mid S_{t}=s\right] \<br>&amp; \leq \mathbb{E}<em>{\pi^{\prime}}\left[R</em>{t+1}+\gamma R_{t+2}+\ldots \mid S_{t}=s\right]=v_{\pi^{\prime}}(s)<br>\end{aligned}<br>$$<br>所以保证了每次迭代，价值函数 与 策略 增长</p>
+<h1 id="Value-iteration：-O-m-2n-2"><a href="#Value-iteration：-O-m-2n-2" class="headerlink" title="Value iteration：$O(m^2n^2)$"></a>Value iteration：$O(m^2n^2)$</h1><p>每一步，遍历了状态S和动作A</p>
+<p>最优策略：</p>
+<ul>
+<li>当前状态s下，所有动作a产生回报的最大值</li>
+<li>采取动作a后，状态由s -&gt; s’的期望<br>公式：<br>$$<br>v_{<em>}(s)=\max <em>{a} \mathcal{R}</em>{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{</em>}\left(s^{\prime}\right)<br>$$</li>
+</ul>
+<p>根据值函数，选择策略</p>
+<h1 id="值迭代和policy迭代的区别"><a href="#值迭代和policy迭代的区别" class="headerlink" title="值迭代和policy迭代的区别"></a>值迭代和policy迭代的区别</h1><ul>
+<li>policy iteration每次迭代v(s)都会变大；而value iteration则不是。</li>
+<li>价值迭代不需要策略参与，依据MDP 模型，直接迭代，需要P矩阵、r 等<strong>已知</strong><ul>
+<li>policy iteration： policy-&gt;value-&gt;policy</li>
+<li>value iteration：value-&gt;value</li>
+</ul>
+</li>
+</ul>
+<h1 id="Trick"><a href="#Trick" class="headerlink" title="Trick:"></a>Trick:</h1><p>三种值迭代方法:<br>常规的值迭代，要遍历过所有s之后，才进行一次迭代，因此存在old、new两个v(s)</p>
+<ul>
+<li>in-place DP：新值直接替换旧值，只存储一个v(s)，<ul>
+<li>异步更新，提高效率</li>
+<li>缺点：更新顺序影响收敛性</li>
+</ul>
+</li>
+<li>Prioritised sweeping：state的影响力排序<ul>
+<li>比较贝尔曼误差绝对值，大的更新，小的忽略</li>
+</ul>
+</li>
+<li>Real-time DP：遍历过的才更新<ul>
+<li>省去了agent 未遍历的状态s，对于稀疏任务效率提升极大</li>
+</ul>
+</li>
 </ul>
 <p><img src="/img/contact.jpg"></p>
 <script>
@@ -1092,8 +1116,9 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
-对于Env来说，属于MP，但是不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知Prediction -&gt; ControlEvaluation 
+                            Introduction这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
+对于Env来说，不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知
+Prediction -&gt; ControlEvalu
                         
                     </div>
                     <div class="publish-info">
@@ -1324,7 +1349,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.5k</span>&nbsp;字
+                class="white-color">33.7k</span>&nbsp;字
             
             
             

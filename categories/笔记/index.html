@@ -373,11 +373,11 @@
                 
                 
                 
-                <a href="/categories/%E7%AC%94%E8%AE%B0/" title="笔记: 17">
+                <a href="/categories/%E7%AC%94%E8%AE%B0/" title="笔记: 18">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
                             style="background-color: #F9EBEA;">笔记
-                        <span class="tag-length">17</span>
+                        <span class="tag-length">18</span>
                     </span>
                 </a>
                 
@@ -410,6 +410,61 @@
 
     <article id="articles" class="container articles">
         <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/rl-6/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记6：值函数估计Value function Approximation">
+                            
+                            <span class="card-title">强化学习笔记6：值函数估计Value function Approximation</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                introductionv、q表的问题
+解决离散化的s,a,导致q-table存储量、运算量大
+解决连续s、a的表示问题solution用带权重估计函数，估计v or q$$\begin{aligned}\hat{v}(s, \mathbf
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">强化学习</span>
+                        </a>
+                        
+                        <a href="/tags/RL/">
+                            <span class="chip bg-color">RL</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%80%BC%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1/">
+                            <span class="chip bg-color">值函数估计</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -795,8 +850,9 @@ for i in range(time_steps): env.render() action = poli
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
-对于Env来说，属于MP，但是不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知Prediction -&gt; ControlEvaluation 
+                                Introduction这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
+对于Env来说，不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知
+Prediction -&gt; ControlEvalu
                             
                         </div>
                         <div class="publish-info">
@@ -901,11 +957,10 @@ Valid c
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                适用于MDP模型参数已知
+                                规划，适用于MDP模型参数已知学习，适用于Env未知或部分未知
 概述动态规划分为两步，Prediction、Control
 
-（Prediction）Value:是对策略$\pi$的评价
-（Control）Policy $\pi$:是对Value的选择例问题：每走一步，r = 
+（Prediction）Value:是对策略$\pi$的评价$$&lt;s,P^\pi,R^\pi,\gamma&
                             
                         </div>
                         <div class="publish-info">
@@ -1054,7 +1109,10 @@ Valid c
                         <div class="summary block-with-text">
                             
                                 概述强化学习是一门多学科交叉的技术
-与传统控制的关系：相似性：
+与传统控制的关系：
+相似性：
+
+
 
 
 RL
@@ -1071,7 +1129,7 @@ plant + enviroment
 
 
 reward
-feedback（
+feedba
                             
                         </div>
                         <div class="publish-info">
@@ -1342,7 +1400,7 @@ bib文件参考文献
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.5k</span>&nbsp;字
+                class="white-color">33.7k</span>&nbsp;字
             
             
             

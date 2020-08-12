@@ -479,21 +479,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -508,20 +508,36 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。</p>
-<p>对于Env来说，属于MP，但是不是参数已知的MDP<br>比如元组中a、s、P的关系不确定 or 未知<br>Prediction -&gt; Control<br>Evaluation -&gt; Optimization</p>
-<h1 id="蒙特卡洛法-Monte-Carlo-learning"><a href="#蒙特卡洛法-Monte-Carlo-learning" class="headerlink" title="蒙特卡洛法 Monte-Carlo learning"></a>蒙特卡洛法 Monte-Carlo learning</h1><p>适用于MDP参数<strong>未知</strong>，回合制更新</p>
-<p>基于大数定律：<br>$V(s) -&gt; V_\pi(s)$ as $N(s)-&gt;\infty$</p>
-<p>均值累计计算：<br>$$<br>\begin{aligned}<br>\mu_{k} &amp;=\frac{1}{k} \sum_{j=1}^{k} x_{j} \<br>&amp;=\frac{1}{k}\left(x_{k}+\sum_{j=1}^{k-1} x_{j}\right) \<br>&amp;=\frac{1}{k}\left(x_{k}+(k-1) \mu_{k-1}\right) \<br>&amp;=\mu_{k-1}+\frac{1}{k}\left(x_{k}-\mu_{k-1}\right)<br>\end{aligned}<br>$$<br>类似于PID的P 增益<br>改写计算方式，用$\alpha$代替$\frac{1}{N(s_t)}$<br>$V(S_t) \leftarrow V(S_t)+\alpha(G_t - V(S_t))$</p>
-<p>可以看到这里的$\alpha$和机器学习里面用的学习率是一个符号</p>
-<h1 id="差分法Temporal-Difference-learning"><a href="#差分法Temporal-Difference-learning" class="headerlink" title="差分法Temporal-Difference learning"></a>差分法Temporal-Difference learning</h1><p>引入时间t的概念</p>
+                <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。</p>
+<p>对于Env来说，不是参数已知的MDP<br>比如元组中a、s、P的关系不确定 or 未知</p>
+<p>Prediction -&gt; Control<br>Evaluation -&gt; Optimization</p>
+<h1 id="蒙特卡洛法-Monte-Carlo-learning"><a href="#蒙特卡洛法-Monte-Carlo-learning" class="headerlink" title="蒙特卡洛法 Monte-Carlo learning"></a>蒙特卡洛法 Monte-Carlo learning</h1><ul>
+<li>定义：在不清楚MDP状态转移及即时奖励的情况下，直接从经历完整的Episode来学习状态价值，通常情况下某状态的价值等于在多个Episode中以该状态算得到的所有收获的平均。</li>
+</ul>
+<p>适用于MDP参数<strong>未知</strong>，回合制更新，遍历了所有状态s</p>
+<p>MC是基于大数定律的：<br>当采样足够多时，就可以代表真值<br>$$ N(s)-&gt;\infty \Rightarrow V(s) -&gt; V_\pi(s)$$</p>
+<ul>
+<li>说明：<ul>
+<li>均值累计计算可以用$v = sum/N$</li>
+<li>也可以用累进更新 Incremental Mean<br>$$<br>\begin{aligned}<br>\mu_{k} &amp;=\frac{1}{k} \sum_{j=1}^{k} x_{j} \<br>&amp;=\frac{1}{k}\left(x_{k}+\sum_{j=1}^{k-1} x_{j}\right) \<br>&amp;=\frac{1}{k}\left(x_{k}+(k-1) \mu_{k-1}\right) \<br>&amp;=\mu_{k-1}+\frac{1}{k}\left(x_{k}-\mu_{k-1}\right)<br>\end{aligned}<br>$$</li>
+</ul>
+</li>
+</ul>
+<p>类似于PID的P 增益随着N增大，在逐步缩小<br>为了简化计算，改写方程，用$\alpha$代替$\frac{1}{N(s_t)}$<br>这样可以用固定步长来替代变步长$\frac{1}{k}$<br>$$V(S_t) \leftarrow V(S_t)+\alpha(G_t - V(S_t))$$<br>可以看做是，$v_{new} = v_{old} + \alpha(v_{target} - v_{old})$，括号里面是误差<br>可以看到这里的$\alpha$和机器学习里面用的学习率是一个符号</p>
+<h1 id="差分法Temporal-Difference-learning"><a href="#差分法Temporal-Difference-learning" class="headerlink" title="差分法Temporal-Difference learning"></a>差分法Temporal-Difference learning</h1><p>MC 在 episode遍历完之后，回合更新，效率低<br>TD 实现边走边更新</p>
+<p>引入时间t的概念</p>
 <ul>
 <li>直接从episodes 的经验学习</li>
 <li>model-free：<strong>不知道</strong>MDP的Transition转移和Reward回报</li>
 <li>Bootstrapping自举学习，从部分例子学习</li>
 </ul>
 <p>Goal：学习$v_{\pi}$ 的值，under policy $\pi$</p>
-<h2 id="时序分析法-TD-0）："><a href="#时序分析法-TD-0）：" class="headerlink" title="时序分析法 TD(0）："></a>时序分析法 TD(0）：</h2><p>$$<br>V\left(S_{t}\right) \leftarrow V\left(S_{t}\right)+\alpha\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)<br>$$<br>TD target 是 下一个时刻的$R_{t+1}+\gamma V\left(S_{t+1}\right)$</p>
+<h2 id="时序分析法-TD-0）："><a href="#时序分析法-TD-0）：" class="headerlink" title="时序分析法 TD(0）："></a>时序分析法 TD(0）：</h2><p>$$<br>V\left(S_{t}\right) \leftarrow V\left(S_{t}\right)+\alpha\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)<br>$$</p>
+<ul>
+<li>TD target 是 下一个时刻的$R_{t+1}+\gamma V\left(S_{t+1}\right)$</li>
+<li>TD误差：$\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)$</li>
+</ul>
+<p>Bootstrapping：根据episode表现来更新V值，自举（依靠自己努力获得）</p>
 <h2 id="与MC方法区别"><a href="#与MC方法区别" class="headerlink" title="与MC方法区别"></a>与MC方法区别</h2><table>
 <thead>
 <tr>
@@ -566,10 +582,11 @@
 <td>low</td>
 </tr>
 </tbody></table>
-<h3 id="对于最优估计"><a href="#对于最优估计" class="headerlink" title="对于最优估计"></a>对于最优估计</h3><ul>
+<h2 id="估计方法背后的理论"><a href="#估计方法背后的理论" class="headerlink" title="估计方法背后的理论"></a>估计方法背后的理论</h2><ul>
 <li>MC方法：最小化均方根MSE<br>$$<br>\sum_{k=1}^{K} \sum_{t=1}^{T_{k}}\left(G_{t}^{k}-V\left(s_{t}^{k}\right)\right)^{2}<br>$$</li>
 <li>TD（0）方法：<strong>最大似然估计</strong> max likelihood Markov model<br>Solution to the MDP $\langle\mathcal{S}, \mathcal{A}, \hat{\mathcal{P}}, \hat{\mathcal{R}}, \gamma\rangle$ that best fits the data<br>$$<br>\hat{\mathcal{P}}<em>{s, s^{\prime}}^{a} =\frac{1}{N(s, a)} \sum</em>{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}, s_{t+1}^{k}=s, a, s^{\prime}\right) $$<br>$$<br>\hat{\mathcal{R}}<em>{s}^{a} =\frac{1}{N(s, a)} \sum</em>{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}=s, a\right) r_{t}^{k}<br>$$</li>
 </ul>
+<p><img src="/img/15972187186144.jpg" alt="MC-TD收敛速度对比"></p>
 <h2 id="总结：DP、MC、TD"><a href="#总结：DP、MC、TD" class="headerlink" title="总结：DP、MC、TD"></a>总结：DP、MC、TD</h2><ul>
 <li>Bootstrapping自举：利用自己估计值update</li>
 <li>Sampling采样 ：更新样本期望</li>
@@ -596,13 +613,34 @@
 <td align="center">1</td>
 </tr>
 </tbody></table>
-<p>TD用了Markov特性，因此在MP过程高效<br>MC相反，统计规律，非MP过程更高效<br><img src="/img/15961728958158.jpg" alt="-w386"></p>
-<h1 id="TD-lambda-法"><a href="#TD-lambda-法" class="headerlink" title="TD($\lambda$)法"></a>TD($\lambda$)法</h1><p>扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC<br><img src="/img/15961732715990.jpg" alt="-w454"></p>
-<p>TD（N）推导<br><img src="/img/15961732821137.jpg" alt="-w508"></p>
+<ul>
+<li>TD用了Markov特性，因此在MP过程高效</li>
+<li>MC相反，统计规律，非MP过程同样有效</li>
+</ul>
+<p>MC: 采样，一次完整经历，用实际收获更新状态预估价值</p>
+<p><img src="/img/15972190302462.png" alt="MC-深度"></p>
+<p>TD：采样，经历可不完整，用喜爱状态的预估状态价值预估收获再更新预估价值<br><img src="/img/15972190329229.png" alt="TD-窄而浅"></p>
+<p>DP：没有采样，根据完整模型，依靠预估数据更新状态价值<br><img src="/img/15972190846702.png" alt="DP-宽度"></p>
+<p><img src="/img/15961728958158.jpg" alt="全尺度搜索、动态规划、MC、TD 对比"></p>
+<h1 id="TD-lambda-法"><a href="#TD-lambda-法" class="headerlink" title="TD($\lambda$)法"></a>TD($\lambda$)法</h1><p>视野（深度）影响TD算法的稳定性，但是视野去多深，不知道<br>因此，综合不同深度的视野，加权求和，即$TD(\lambda)$</p>
+<p>扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC<br><img src="/img/15961732715990.jpg"></p>
+<p>TD（N）推导<br><img src="/img/15961732821137.jpg" alt="TD（N）"><br><img src="/img/15972192509726.jpg" alt="不同深度TD效果对比"></p>
 <p>对于某个问题来说，没有那个N值是最优的<br>因此，用几何加权的方法来对视野做平均</p>
-<h2 id="Forward"><a href="#Forward" class="headerlink" title="Forward"></a>Forward</h2><p><img src="/img/15962140900575.jpg" alt="-w561"></p>
-<p>$\lambda$：对视野的平均<br>for iteration： t -&gt; t+1<br>update value function<br><img src="/img/15961782979683.jpg" alt="-w621"><br>引入权重概念，前面的重要，指数衰减<br><img src="/img/15961783140794.jpg" alt="-w533"></p>
-<h2 id="Backward"><a href="#Backward" class="headerlink" title="Backward"></a>Backward</h2><p>Credit assignment：<br>引入 Eligibility Traces：关于状态s的权重<br>当s重复出现，E值升高，不出现，指数下降<br>$E_{0}(s)=0$<br>$E_{t}(s)=\gamma \lambda E_{t-1}(s)+\mathbf{1}\left(S_{t}=s\right)$</p>
+<h2 id="Forward-前向视角认知-TD-lambda"><a href="#Forward-前向视角认知-TD-lambda" class="headerlink" title="Forward 前向视角认知 $TD(\lambda)$"></a>Forward 前向视角认知 $TD(\lambda)$</h2><ul>
+<li><p>例子：<br>老鼠在连续接受了3次响铃和1次亮灯信号后遭到了电击，那么在分析遭电击的原因时，到底是响铃的因素较重要还是亮灯的因素更重要呢？<br><img src="/img/15972196164084.png"></p>
+</li>
+<li><p>两个启发：</p>
+<ul>
+<li>出现频率高的状态</li>
+<li>出现频率低的状态</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/15962140900575.jpg" alt="-w561"></p>
+<p>$\lambda$：对视野的平均<br>for iteration： t -&gt; t+1<br>update value function</p>
+<p><img src="/img/15961782979683.jpg" alt="-w621"></p>
+<p>引入权重概念，前面的重要，指数衰减<br><img src="/img/15961783140794.jpg" alt="-w533"></p>
+<h2 id="Backward-反向认知TD-λ-：提供了单步更新的机制"><a href="#Backward-反向认知TD-λ-：提供了单步更新的机制" class="headerlink" title="Backward 反向认知TD(λ)：提供了单步更新的机制"></a>Backward 反向认知TD(λ)：提供了<strong>单步</strong>更新的机制</h2><p>Credit assignment：<br>引入 Eligibility Traces：状态s的权重，是一个时间序列<br>当s重复出现，E值升高，不出现，指数下降<br>$E_{0}(s)=0$<br>$E_{t}(s)=\gamma \lambda E_{t-1}(s)+\mathbf{1}\left(S_{t}=s\right)$</p>
 <p>Backward步骤：</p>
 <ul>
 <li>对每个状态s 创建 迹值</li>
@@ -611,15 +649,17 @@
 </ul>
 <p>$$<br>\begin{aligned}<br>\delta_{t} &amp;=R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right) \<br>V(s) &amp; \leftarrow V(s)+\alpha \delta_{t} E_{t}(s)<br>\end{aligned}<br>$$</p>
 <p><img src="/img/15962140598528.jpg" alt="-w426"></p>
-<p>$$<br>\sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)<br>$$<br>对于$\lambda \in [0,1]$，满足TD error = $\lambda-error$<br><img src="/img/15964228971321.jpg" alt="-w605"></p>
-<p>对于online 的updates来说，TD($\lambda$)前后向视图稍有不同，引入Exact online TD($\lambda$)</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/img/15964233494644.jpg" alt="-w627"></p>
+<p>$$<br>\sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)<br>$$</p>
+<p><img src="/img/15964228971321.jpg" alt="-w605"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="/img/15964233494644.jpg" alt="-w627"></p>
 <ul>
+<li>Offline update：TD(0) = TD($\lambda$) = TD(1)</li>
+<li>Online update： TD($\lambda$)前后向视图不一致，引入Exact online TD($\lambda$)可以解决这个问题</li>
 <li>TD(0) 向后看一步</li>
 <li>TD($\lambda$) 视野距离按$\lambda$指数衰减，叠加</li>
-<li>TD(1) 视野不按指数衰减<br>对于离线更新来说：<br>TD(0) = TD($\lambda$) = TD(1)</li>
+<li>TD(1) 视野不按指数衰减</li>
+<li>能在RL中被应用，看中了TD的自举特性</li>
 </ul>
-<p>对于在线更新，引入Exact online TD($\lambda$)</p>
 <p><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1239,11 +1279,10 @@ Valid c
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            适用于MDP模型参数已知
+                            规划，适用于MDP模型参数已知学习，适用于Env未知或部分未知
 概述动态规划分为两步，Prediction、Control
 
-（Prediction）Value:是对策略$\pi$的评价
-（Control）Policy $\pi$:是对Value的选择例问题：每走一步，r = 
+（Prediction）Value:是对策略$\pi$的评价$$&lt;s,P^\pi,R^\pi,\gamma&
                         
                     </div>
                     <div class="publish-info">
@@ -1422,7 +1461,7 @@ Valid c
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.5k</span>&nbsp;字
+                class="white-color">33.7k</span>&nbsp;字
             
             
             

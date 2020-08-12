@@ -479,21 +479,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    749
+                    950
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -516,35 +516,61 @@
 <p>策略、非策略学习：</p>
 <ul>
 <li>On-policy：动作采样来自policy $\pi$</li>
-<li>Off-policy：采样来自μ $\pi$</li>
+<li>Off-policy：采样来自采样μ 或 来自于其他策略$\pi$，</li>
 </ul>
-<h1 id="On-policy-MC-control"><a href="#On-policy-MC-control" class="headerlink" title="On-policy MC control"></a>On-policy MC control</h1><h2 id="model-free-policy-using-action-value-function"><a href="#model-free-policy-using-action-value-function" class="headerlink" title="model-free policy using action-value function"></a>model-free policy using action-value function</h2><p>贪婪策略梯度法如果用V(s)，需要MDP已知<br>用Q（s，a），不需要已知MDP<br><img src="/img/15964253150924.jpg" alt="-w542"></p>
-<p>为了避免局部最优，引入$\epsilon$，使$\pi$以小概率随机选择剩余动作，避免每次都选择已知较优动作</p>
-<h2 id="GLIE-MC-control"><a href="#GLIE-MC-control" class="headerlink" title="GLIE MC control"></a>GLIE MC control</h2><p>保证试验进行一定次数是，所有a-s状态都被访问到很多次<br><img src="/img/15964296154206.jpg" alt="-w514"><br><img src="/img/15964297028232.jpg" alt="-w505"></p>
-<h3 id="TD与MC-control-区别"><a href="#TD与MC-control-区别" class="headerlink" title="TD与MC control 区别"></a>TD与MC control 区别</h3><p><img src="/img/15965079350024.jpg" alt="-w509"></p>
-<h1 id="ON-policy-TD-learning"><a href="#ON-policy-TD-learning" class="headerlink" title="ON-policy TD learning"></a>ON-policy TD learning</h1><h2 id="Sasra（one-step）"><a href="#Sasra（one-step）" class="headerlink" title="Sasra（one-step）"></a>Sasra（one-step）</h2><p>由贝尔曼公式推导<br><img src="/img/15964411373536.jpg" alt="-w451"></p>
+<h1 id="On-policy-MC-control"><a href="#On-policy-MC-control" class="headerlink" title="On-policy MC control"></a>On-policy MC control</h1><p>贪婪策略梯度法如果用V(s)，需要MDP已知<br>对于已知MDP，可以通过策略迭代的方法，DP到最优策略<br><img src="/img/15972213696955.jpg" alt="-w536"></p>
+<p>要实现不基于模型的控制，需要满足两个条件：</p>
+<ul>
+<li>引入q(s,a)函数，而不是v(s)</li>
+<li>探索，避免局部最优，引入$\epsilon$，使$\pi$以小概率随机选择剩余动作，避免每次都选择已知较优动作</li>
+</ul>
+<h2 id="model-free-policy-using-action-value-function"><a href="#model-free-policy-using-action-value-function" class="headerlink" title="model-free policy using action-value function"></a>model-free policy using action-value function</h2><p>用Q（s，a），不需要已知MDP<br><img src="/img/15972213763038.jpg" alt="-w492"></p>
+<p>每个箭头对应一个段，Prediction一次，Control一次<br><img src="/img/15972215371325.jpg" alt="-w343"></p>
+<h2 id="GLIE-MC-control（Greedy-in-the-Limit-with-Infinite-Exploration）"><a href="#GLIE-MC-control（Greedy-in-the-Limit-with-Infinite-Exploration）" class="headerlink" title="GLIE MC control（Greedy in the Limit with Infinite Exploration）"></a>GLIE MC control（Greedy in the Limit with Infinite Exploration）</h2><p>保证试验进行一定次数是，所有a-s状态都被访问到很多次<br><img src="/img/15964296154206.jpg" alt="-w514"></p>
+<p>随实验次数进行，减小$\epsilon$值<br><img src="/img/15964297028232.jpg" alt="-w505"></p>
+<h1 id="ON-policy-TD-learning"><a href="#ON-policy-TD-learning" class="headerlink" title="ON-policy TD learning"></a>ON-policy TD learning</h1><ul>
+<li>TD与MC control 区别，希望引入TD的特性到on-policy learning<br><img src="/img/15965079350024.jpg" alt="-w509"></li>
+</ul>
+<h2 id="Sasra"><a href="#Sasra" class="headerlink" title="Sasra"></a>Sasra</h2><h3 id="Sasra（one-step）"><a href="#Sasra（one-step）" class="headerlink" title="Sasra（one-step）"></a>Sasra（one-step）</h3><p>由贝尔曼公式推导<br><img src="/img/15964411373536.jpg" alt="-w451"></p>
 <h3 id="算法实现过程"><a href="#算法实现过程" class="headerlink" title="算法实现过程"></a>算法实现过程</h3><p><img src="/img/15964401337385.jpg" alt="-w535"></p>
-<p>要保证Q值收敛，需要服从下列定理<br><img src="/img/15964405409905.jpg" alt="-w443"></p>
-<h2 id="n-step-Sarsa"><a href="#n-step-Sarsa" class="headerlink" title="n-step Sarsa"></a>n-step Sarsa</h2><p><img src="/img/15964411018416.jpg" alt="-w576"></p>
+<p>要保证Q值收敛，需要服从下列2个条件</p>
+<ul>
+<li>策略符合GLIE特性</li>
+<li>计算步长满足如图：<br><img src="/img/15964405409905.jpg" alt="-w443"></li>
+</ul>
+<h3 id="n-step-Sarsa"><a href="#n-step-Sarsa" class="headerlink" title="n-step Sarsa"></a>n-step Sarsa</h3><p>与TD（λ）类似，扩展q的视野</p>
+<p><img src="/img/15964411018416.jpg" alt="-w576"></p>
 <h2 id="Forward-view-Sarsa-lambda"><a href="#Forward-view-Sarsa-lambda" class="headerlink" title="Forward view Sarsa($\lambda$)"></a>Forward view Sarsa($\lambda$)</h2><p><img src="/img/15964499708276.jpg" alt="-w644"></p>
-<h2 id="Backward-view-Sarsa-lambda"><a href="#Backward-view-Sarsa-lambda" class="headerlink" title="Backward view Sarsa($\lambda$)"></a>Backward view Sarsa($\lambda$)</h2><p>在正向视角中，迭代一次Q值，需要完整的一次episode<br>为了解决这个问题，每次s改变时，就能迭代一次，引入迹的概念<br><img src="/img/15964503883163.jpg" alt="-w621"></p>
+<h2 id="Backward-view-Sarsa-lambda"><a href="#Backward-view-Sarsa-lambda" class="headerlink" title="Backward view Sarsa($\lambda$)"></a>Backward view Sarsa($\lambda$)</h2><p>在正向视角中，迭代一次Q值，需要完整的一次episode<br>为了解决这个问题，引入迹的概念，实现incremental update<br><img src="/img/15964503883163.jpg" alt="-w621"></p>
 <h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p><img src="/img/15965030748824.jpg" alt="-w529"></p>
-<h1 id="Off-policy-learning"><a href="#Off-policy-learning" class="headerlink" title="Off-policy learning"></a>Off-policy learning</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul>
+<p>Attention：迹E是属于episode的，切换episode后，E要归零</p>
+<h1 id="Off-policy-learning"><a href="#Off-policy-learning" class="headerlink" title="Off-policy learning"></a>Off-policy learning</h1><ul>
+<li><p>需求</p>
+<ul>
 <li>从人类和其他agents的表现中学习</li>
 <li>从old policies $\pi_1, \pi_2…$中学习</li>
 <li>从随机策略中，学习到最优策略</li>
 <li>从一个策略中，学习到多个策略</li>
 </ul>
-<h2 id="采样不同分布"><a href="#采样不同分布" class="headerlink" title="采样不同分布"></a>采样不同分布</h2><p>$$<br>\begin{aligned}<br>\mathbb{E}<em>{X \sim P}[f(X)] &amp;=\sum P(X) f(X) \<br>&amp;=\sum Q(X) \frac{P(X)}{Q(X)} f(X) \<br>&amp;=\mathbb{E}</em>{X \sim Q}\left[\frac{P(X)}{Q(X)} f(X)\right]<br>\end{aligned}<br>$$</p>
-<h2 id="off-policy-MC-learning"><a href="#off-policy-MC-learning" class="headerlink" title="off-policy MC learning"></a>off-policy MC learning</h2><p><img src="/img/15965086023837.jpg" alt="-w484"></p>
-<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+</li>
+<li><p>采样不同分布<br>$$<br>\begin{aligned}<br>\mathbb{E}<em>{X \sim P}[f(X)] &amp;=\sum P(X) f(X) \<br>&amp;=\sum Q(X) \frac{P(X)}{Q(X)} f(X) \<br>&amp;=\mathbb{E}</em>{X \sim Q}\left[\frac{P(X)}{Q(X)} f(X)\right]<br>\end{aligned}<br>$$</p>
+</li>
+</ul>
+<h2 id="off-policy-MC-learning"><a href="#off-policy-MC-learning" class="headerlink" title="off-policy MC learning"></a>off-policy MC learning</h2><p>引入了概率缩放系数，判断两个策略动作概率函数<br><img src="/img/15965086023837.jpg" alt="-w484"></p>
+<ul>
+<li>缺点：<ul>
 <li>方差会增加</li>
 <li>$\mu =0$无法计算</li>
 </ul>
+</li>
+</ul>
 <h2 id="off-policy-TD-learning"><a href="#off-policy-TD-learning" class="headerlink" title="off-policy TD learning"></a>off-policy TD learning</h2><p>利用期望分布的概念，在更新目标前x一个系数，对当前策略的置信度<br><img src="/img/15965088051921.jpg" alt="-w426"></p>
-<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><ul>
+<ul>
+<li>优点：<ul>
 <li>低方差</li>
 <li>单步策略需要相似</li>
+</ul>
+</li>
 </ul>
 <h2 id="Q-learning"><a href="#Q-learning" class="headerlink" title="Q-learning"></a>Q-learning</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
 <li>采用Q(s,a) instead of V(s)</li>
@@ -553,17 +579,28 @@
 <li>动作服从策略 as $A′ ∼ π(·|S_t)$</li>
 </ul>
 <p>更新方程如下<br>$$<br>Q\left(S_{t}, A_{t}\right) \leftarrow Q\left(S_{t}, A_{t}\right)+\alpha\left(R_{t+1}+\gamma Q\left(S_{t+1}, A^{\prime}\right)-Q\left(S_{t}, A_{t}\right)\right)<br>$$</p>
-<h2 id="off-policy-control-with-Q-learning"><a href="#off-policy-control-with-Q-learning" class="headerlink" title="off-policy control with Q-learning"></a>off-policy control with Q-learning</h2><ul>
-<li>同时优化 behaviour 和 target policies</li>
-<li>目标策略$\pi$ is greedy ：<br>$$<br>\pi\left(S_{t+1}\right)=\underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)<br>$$</li>
+<h2 id="off-policy-control-with-Q-learning"><a href="#off-policy-control-with-Q-learning" class="headerlink" title="off-policy control with Q-learning"></a>off-policy control with Q-learning</h2><p>在学习过程中：</p>
+<ul>
+<li>Q值的Update Target 被优化，target policies是$\epsilon-greedy$的</li>
+<li>Actor 执行的策略$\pi$被优化，执行$\epsilon-greedy$</li>
 </ul>
+<p>采用下式更新策略：<br>$$<br>\pi\left(S_{t+1}\right)=\underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)<br>$$</p>
 <p>Q-learning target 简化为：<br>$$<br>\begin{aligned}<br>&amp; R_{t+1}+\gamma Q\left(S_{t+1}, A^{\prime}\right) \<br>=&amp; R_{t+1}+\gamma Q\left(S_{t+1}, \underset{a^{\prime}}{\operatorname{argmax}} Q\left(S_{t+1}, a^{\prime}\right)\right) \<br>=&amp; R_{t+1}+\max <em>{a^{\prime}} \gamma Q\left(S</em>{t+1}, a^{\prime}\right)<br>\end{aligned}<br>$$<br><img src="/img/15965124141748.jpg" alt="-w535"></p>
-<p>迭代使$Q(s,a) \rightarrow q_* (s,a)$</p>
-<h2 id="算法流程-1"><a href="#算法流程-1" class="headerlink" title="算法流程"></a>算法流程</h2><p><img src="/img/15965124556612.jpg" alt="-w538"></p>
+<p>迭代使$Q(s,a) \rightarrow q_* (s,a)$<br>Attention：在迭代过程中，动作采用$\epsilon-greedy$策略，保证对位置环境的探索</p>
+<h3 id="算法流程-1"><a href="#算法流程-1" class="headerlink" title="算法流程"></a>算法流程</h3><p><img src="/img/15965124556612.jpg" alt="-w538"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="DP-TD的关系"><a href="#DP-TD的关系" class="headerlink" title="DP TD的关系"></a>DP TD的关系</h2><p><img src="/img/15965127185793.jpg" alt="-w619"><br><img src="/img/15965134695436.jpg" alt="-w633"></p>
 <h2 id="Q-learning-和-SARSA区别"><a href="#Q-learning-和-SARSA区别" class="headerlink" title="Q-learning 和 SARSA区别"></a>Q-learning 和 SARSA区别</h2><p><img src="/img/15965139448881.jpg" alt="-w711"></p>
-<p>区别在于：<br>Q-learning：update  q(s,a)用到的q(s’,a’)中的a’ 并没有实际执行，更新用greedy策略，执行还用$\epsilon-greedy$策略</p>
-<p>SARSA：更新和执行都用$\epsilon-greedy$策略</p>
+<p>区别在于：</p>
+<ul>
+<li><p>Q-learning：</p>
+<ul>
+<li>update： $greedy$策略，评估过程的A’没有实际执行</li>
+<li>control：$\epsilon-greedy$策略</li>
+</ul>
+</li>
+<li><p>SARSA：更新和执行都用$\epsilon-greedy$策略</p>
+</li>
+</ul>
 <p><img src="/img/contact.jpg"></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1363,7 +1400,7 @@ for i in range(time_steps): env.render() action = poli
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.5k</span>&nbsp;字
+                class="white-color">33.7k</span>&nbsp;字
             
             
             
