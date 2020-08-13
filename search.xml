@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo 进阶设置指南</title>
+      <link href="/posts/hexo-advanced/"/>
+      <url>/posts/hexo-advanced/</url>
+      
+        <content type="html"><![CDATA[<h1 id="让hexo渲染MathJax复杂公式-默认的渲染引擎复杂公式会报错"><a href="#让hexo渲染MathJax复杂公式-默认的渲染引擎复杂公式会报错" class="headerlink" title="让hexo渲染MathJax复杂公式(默认的渲染引擎复杂公式会报错)"></a>让hexo渲染MathJax复杂公式(默认的渲染引擎复杂公式会报错)</h1><h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>对复杂公式的支持不够好，简单公式可以显示，复杂编译错误，验证表明，问题不是mathjax.js导致，是默认hexo引擎编译导致html文本转义错误。<br><img src="/img/15972822338745.jpg" alt="-w192"><br><img src="/img/15972822421519.jpg" alt="-w894"></p><h3 id="Reason"><a href="#Reason" class="headerlink" title="Reason"></a>Reason</h3><p>Hexo默认使用”hexo-renderer-marked”引擎渲染网页，该引擎会把一些特殊的markdown符号转换为相应的html标签，比如在markdown语法中，下划线’_’代表斜体，会被渲染引擎处理为<code>&lt;em&gt;</code>标签</p><p>因为类Latex格式书写的数学公式下划线 ‘_’ 表示下标，有特殊的含义，如果被强制转换为<code>&lt;em&gt;</code>标签，那么MathJax引擎在渲染数学公式的时候就会出错。例如，<code>x_i</code>在开始被渲染的时候，处理为<code>x&lt;em&gt;i&lt;/em&gt;</code>，这样MathJax引擎就认为该公式有语法错误，因为不会渲染。</p><p>类似的语义冲突的符号还包括’*’, ‘{‘, ‘}’, ‘\’等。</p><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ul><li>更换默认的Hexo下 Markdown渲染引擎<br>marked -&gt; kramed</li></ul><pre><code class="lang-dash">npm uninstall hexo-renderer-marked --savenpm install hexo-renderer-kramed --save</code></pre><ul><li><p>更改hexo转义冲突<br>找到根目录<code>node_modules\kramed\lib\rules\inline.js</code></p><ul><li><p>修改11行，取消对<code>\,{,}</code>的转义escape</p><pre><code class="lang-dash">//  escape: /^\\([\\`*&amp;#123;&amp;#125;\[\]()#$+\-.!_&gt;])/,escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</code></pre></li><li><p>修改20行em</p><pre><code class="lang-dash">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</code></pre></li></ul></li><li><p>三连 <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</code>查看效果</p><h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2></li><li><p>如果出问题，在主题<code>_config.yml</code>下设置<code>mathjax</code>为<code>true</code></p></li><li>文章也要开启<code>mathjax</code></li></ul><pre><code class="lang-yml">---title: index.htmldate: 2016-12-28 21:01:30tags:mathjax: true--</code></pre><h2 id="其他解决办法"><a href="#其他解决办法" class="headerlink" title="其他解决办法"></a>其他解决办法</h2><ul><li>服务器端的渲染<ul><li><a href="https://math.now.sh/home">math.now.sh</a></li><li><a href="https://github.com/MakerGYT/markdown-it-latex2img">markdown-it-latex2img</a></li></ul></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客设置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>从0 -&gt; 1，拥有你的免费个人博客之“打个前站”</title>
       <link href="/posts/set-up-hexo/"/>
       <url>/posts/set-up-hexo/</url>

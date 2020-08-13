@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-10T02:38:37.850Z</updated>
+  <updated>2020-08-13T01:35:12.954Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 进阶设置指南</title>
+    <link href="https://tolshao.now.sh/posts/hexo-advanced/"/>
+    <id>https://tolshao.now.sh/posts/hexo-advanced/</id>
+    <published>2020-08-12T15:19:44.000Z</published>
+    <updated>2020-08-13T01:35:12.954Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;让hexo渲染MathJax复杂公式-默认的渲染引擎复杂公式会报错&quot;&gt;&lt;a href=&quot;#让hexo渲染MathJax复杂公式-默认的渲染引擎复杂公式会报错&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客设置" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2%E8%AE%BE%E7%BD%AE/"/>
+    
+    
+    <category term="hexo" scheme="https://tolshao.now.sh/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://tolshao.now.sh/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>从0 -&gt; 1，拥有你的免费个人博客之“打个前站”</title>
@@ -553,32 +580,6 @@
     
     
     <category term="科学写作" scheme="https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Small tricks</title>
-    <link href="https://tolshao.now.sh/posts/small-tricks/"/>
-    <id>https://tolshao.now.sh/posts/small-tricks/</id>
-    <published>2020-04-30T16:00:00.000Z</published>
-    <updated>2020-08-10T09:54:32.294Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;有用的工具&quot;&gt;&lt;a href=&quot;#有用的工具&quot; class=&quot;headerlink&quot; title=&quot;有用的工具&quot;&gt;&lt;/a&gt;有用的工具&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;goodness for free&quot;&gt;十分钟邮箱-</summary>
-        
-      
-    
-    
-    
-    
-    <category term="tricks" scheme="https://tolshao.now.sh/tags/tricks/"/>
-    
-    <category term="工具" scheme="https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
