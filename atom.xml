@@ -44,6 +44,36 @@
   </entry>
   
   <entry>
+    <title>强化学习笔记7：策略梯度 Policy Gradient</title>
+    <link href="https://tolshao.now.sh/posts/rl-7/"/>
+    <id>https://tolshao.now.sh/posts/rl-7/</id>
+    <published>2020-08-11T07:09:31.000Z</published>
+    <updated>2020-08-17T07:58:09.249Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前的策略优化，用的基本都是$\epsilon-greedly$的policy improve方法，这里介绍policy gradient法，不基于v、q函数&lt;/p&gt;
+&lt;h1 id=&quot;1-introduction&quot;&gt;&lt;a href=&quot;#1-introduction&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    
+    <category term="Policy gradient" scheme="https://tolshao.now.sh/tags/Policy-gradient/"/>
+    
+  </entry>
+  
+  <entry>
     <title>从0 -&gt; 1，拥有你的免费个人博客之“打个前站”</title>
     <link href="https://tolshao.now.sh/posts/set-up-hexo/"/>
     <id>https://tolshao.now.sh/posts/set-up-hexo/</id>
@@ -550,36 +580,6 @@
     <category term="sequence model" scheme="https://tolshao.now.sh/tags/sequence-model/"/>
     
     <category term="rnn" scheme="https://tolshao.now.sh/tags/rnn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>科学写作</title>
-    <link href="https://tolshao.now.sh/posts/paper-writting/"/>
-    <id>https://tolshao.now.sh/posts/paper-writting/</id>
-    <published>2020-05-03T07:09:31.000Z</published>
-    <updated>2020-08-07T11:45:29.398Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;创新点&quot;&gt;&lt;a href=&quot;#创新点&quot; class=&quot;headerlink&quot; title=&quot;创新点&quot;&gt;&lt;/a&gt;创新点&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;理论创新&lt;/li&gt;
-&lt;li&gt;结果创新&lt;/li&gt;
-&lt;li&gt;方法创新&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="科学写作" scheme="https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   

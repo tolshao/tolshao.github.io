@@ -1,4 +1,5 @@
 https://tolshao.now.sh/posts/hexo-advanced/
+https://tolshao.now.sh/posts/rl-7/
 https://tolshao.now.sh/posts/set-up-hexo/
 https://tolshao.now.sh/posts/ios-yellow-page/
 https://tolshao.now.sh/posts/rk4/
