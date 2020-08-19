@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
+    <lastmod>2020-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
+    <lastmod>2020-08-18</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/rl-7/</loc>
+    <lastmod>2020-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
     <lastmod>2020-08-17</lastmod>
   </url>
   <url>
@@ -10,10 +22,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/template/</loc>
-    <lastmod>2020-08-13</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
     <lastmod>2020-08-13</lastmod>
   </url>
   <url>
@@ -81,10 +89,6 @@
     <lastmod>2020-08-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
-    <lastmod>2020-08-09</lastmod>
-  </url>
-  <url>
     <loc>https://tolshao.now.sh/posts/sequence-model/</loc>
     <lastmod>2020-08-09</lastmod>
   </url>
@@ -102,10 +106,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/settings-matlab/</loc>
-    <lastmod>2020-08-09</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
     <lastmod>2020-08-09</lastmod>
   </url>
   <url>

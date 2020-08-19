@@ -483,14 +483,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-13
+                    2020-08-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    697
+                    807
                 </div>
                 
 
@@ -514,11 +514,15 @@
             <div id="articleContent">
                 <h1 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h1><h2 id="v、q表的问题"><a href="#v、q表的问题" class="headerlink" title="v、q表的问题"></a>v、q表的问题</h2><ul>
 <li>解决离散化的s,a,导致q-table存储量、运算量大</li>
-<li>解决连续s、a的表示问题<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2>用带权重估计函数，估计v or q<script type="math/tex; mode=display">
+<li>解决连续s、a的表示问题</li>
+</ul>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><p>用带权重估计函数，估计v or q</p>
+<script type="math/tex; mode=display">
 \begin{aligned}
 \hat{v}(s, \mathbf{w}) & \approx v_{\pi}(s) \\
 \text { or } \hat{q}(s, a, \mathbf{w}) & \approx q_{\pi}(s, a)
-\end{aligned}</script><h2 id="函数估计器"><a href="#函数估计器" class="headerlink" title="函数估计器"></a>函数估计器</h2>可谓函数逼近，需要函数式可微分的</li>
+\end{aligned}</script><h2 id="函数估计器"><a href="#函数估计器" class="headerlink" title="函数估计器"></a>函数估计器</h2><p>可谓函数逼近，需要函数式可微分的</p>
+<ul>
 <li>线性组合</li>
 <li>神经网络</li>
 </ul>
@@ -528,8 +532,9 @@
 <li>领域Nearest neighbour</li>
 <li>傅里叶/ 小波Fourier/ wavelet bases</li>
 </ul>
-<h1 id="incremental-methods"><a href="#incremental-methods" class="headerlink" title="incremental methods"></a>incremental methods</h1><h2 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h2><p>值函数估计：随机梯度下降法SGD<br><img src="/img/15965268722996.jpg" alt="-w523"></p>
-<h2 id="Table-lookup-是-GD的一种特例"><a href="#Table-lookup-是-GD的一种特例" class="headerlink" title="Table lookup 是 GD的一种特例"></a>Table lookup 是 GD的一种特例</h2><p><img src="/img/15965277694513.jpg" alt="-w290"></p>
+<h1 id="incremental-methods-递增方法"><a href="#incremental-methods-递增方法" class="headerlink" title="incremental methods 递增方法"></a>incremental methods 递增方法</h1><h2 id="Gradient-descent-梯度下降"><a href="#Gradient-descent-梯度下降" class="headerlink" title="Gradient descent 梯度下降"></a>Gradient descent 梯度下降</h2><p>值函数估计：随机梯度下降法SGD<br><img src="/img/15965268722996.jpg" alt="-w523"></p>
+<h2 id="Table-lookup-是-GD的一种特例"><a href="#Table-lookup-是-GD的一种特例" class="headerlink" title="Table lookup 是 GD的一种特例"></a>Table lookup 是 GD的一种特例</h2><p>类似于机器学习的分类问题，将状态值写成0、1向量</p>
+<p><img src="/img/15965277694513.jpg" alt="-w290"></p>
 <h2 id="Find-a-target-for-value-function-approximation"><a href="#Find-a-target-for-value-function-approximation" class="headerlink" title="Find a target for value function approximation"></a>Find a target for value function approximation</h2><p>把估计函数作为一个监督学习<br>目标是谁呢，通过MC、TD方法，设定目标<br><img src="/img/15965279560154.jpg" alt="-w439"></p>
 <h2 id="生成训练集"><a href="#生成训练集" class="headerlink" title="生成训练集"></a>生成训练集</h2><h3 id="For-linear-MC"><a href="#For-linear-MC" class="headerlink" title="For linear MC"></a>For linear MC</h3><p><img src="/img/15965286821264.jpg" alt="-w335"></p>
 <ul>
@@ -547,16 +552,30 @@
 </ul>
 <h1 id="Incremental-Control-Algorithms"><a href="#Incremental-Control-Algorithms" class="headerlink" title="Incremental Control Algorithms"></a>Incremental Control Algorithms</h1><p>用q函数，替代v函数<br><img src="/img/15970492924377.jpg" alt="-w492"></p>
 <p><img src="/img/15970496242583.jpg" alt="-w530"></p>
-<h2 id="不能保证收敛性"><a href="#不能保证收敛性" class="headerlink" title="不能保证收敛性"></a>不能保证收敛性</h2><ul>
+<h2 id="收敛性分析"><a href="#收敛性分析" class="headerlink" title="收敛性分析"></a>收敛性分析</h2><ul>
+<li><p>预测学习</p>
+<ul>
 <li>On-policy：一般边训练，边执行，(s,a)是当前policy产生的</li>
-<li>off-policy：离线训练，通过训练其他策略或者agent产生的(s,a)训练集<br><img src="/img/15970511491893.jpg" alt="-w527"><br>引入Gradient TD，完全满足贝尔曼方程，无差<br><img src="/img/15970539060941.jpg" alt="-w540"></li>
+<li>off-policy：离线训练，通过训练其他策略或者agent产生的(s,a)训练集</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/15970511491893.jpg" alt="-w527"><br>引入Gradient TD，完全满足贝尔曼方程，无差<br><img src="/img/15970539060941.jpg" alt="-w540"></p>
+<ul>
+<li>控制学习</li>
 </ul>
 <p><img src="/img/15970539922026.jpg" alt="-w503"></p>
+<p>（√）表示在最优值函数附近振荡</p>
 <h1 id="batch-methods"><a href="#batch-methods" class="headerlink" title="batch methods"></a>batch methods</h1><h2 id="For-least-squares-prediction"><a href="#For-least-squares-prediction" class="headerlink" title="For least squares prediction"></a>For least squares prediction</h2><p>LS定义，估计误差平方，求和<br><img src="/img/15970588911111.jpg" alt="-w495"></p>
-<p>baseline是已经训练的结果$(s,v_\pi)\in D$，再用SGD更新之<br><img src="/img/15970589362830.jpg" alt="-w526"><br>找到使LS最小的权重$w^\pi$</p>
+<p>相当于经历重现（experience replay）</p>
+<ul>
+<li>从history中sample一个batch</li>
+<li>用SGD更新参数w</li>
+</ul>
+<p><img src="/img/15970589362830.jpg" alt="-w526"><br>找到使LS最小的权重$w^\pi$</p>
 <h2 id="Experience-Replay-in-Deep-Q-Networks-DQN"><a href="#Experience-Replay-in-Deep-Q-Networks-DQN" class="headerlink" title="Experience Replay in Deep Q-Networks (DQN)"></a>Experience Replay in Deep Q-Networks (DQN)</h2><h3 id="Two-features"><a href="#Two-features" class="headerlink" title="Two features"></a>Two features</h3><ul>
-<li>Experience Relpay：minibatch的数据采样自memory-D</li>
-<li>Fixed Q-targets：$w^-$ 在一个更新batch内 ，保持不变，让更新过程更稳定<br><img src="/img/15970708646292.jpg" alt="-w610"></li>
+<li><strong>Experience Relpay</strong>：minibatch的数据采样自memory-D</li>
+<li><strong>Fixed Q-targets</strong>：$w^-$ 在一个更新batch内 ，保持不变，让更新过程更稳定<br><img src="/img/15970708646292.jpg" alt="-w610"></li>
 </ul>
 <h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><ol>
 <li>Take action at according to ε-greedy policy</li>
@@ -573,19 +592,28 @@
 <li>Fixed Q-target $\theta$，每C steps 更新一次</li>
 <li>Experience Replay： minibatch 从 memory D 采样</li>
 </ul>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="DQN-in-Atari"><a href="#DQN-in-Atari" class="headerlink" title="DQN in Atari"></a>DQN in Atari</h4><p>构成：</p>
+<p>Features：</p>
 <ul>
+<li>随机采样，打破了状态之间的联系</li>
+<li>冻结参数，增加了算法的<strong>稳定性</strong>，选q的网络参数回合制更新</li>
+</ul>
+<ul>
+<li>例子<br>DQN in Atari（构成）<ul>
 <li>input: state s （4 frames pictures）</li>
 <li>output: Q(s,a) </li>
 <li>CNN： mapping input(s) to output(Q)</li>
 </ul>
-<h2 id="LS-最小二乘法-总结"><a href="#LS-最小二乘法-总结" class="headerlink" title="LS 最小二乘法  总结"></a>LS 最小二乘法  总结</h2><ul>
+</li>
+</ul>
+<h3 id="LS-最小二乘法-总结"><a href="#LS-最小二乘法-总结" class="headerlink" title="LS 最小二乘法  总结"></a>LS 最小二乘法  总结</h3><ul>
 <li>Experience replay -&gt; LS solution</li>
 <li>迭代次数太多</li>
 <li>用线性估计$\hat v(s,w) = x(s)^Tw$</li>
 <li>直接求解LS</li>
 </ul>
-<h2 id="LSP-直接求解"><a href="#LSP-直接求解" class="headerlink" title="LSP 直接求解"></a>LSP 直接求解</h2><p>平衡状态，梯度=0<br>求解方程，得到w值关于状态s和v真值的函数关系<br><img src="/img/15970717288619.jpg" alt="-w592"><br>However，真值<strong>不知道</strong><br>缺点是复杂度高，引入了矩阵的逆</p>
+<h2 id="LSP-直接求解"><a href="#LSP-直接求解" class="headerlink" title="LSP 直接求解"></a>LSP 直接求解</h2><p>对于线性近似函数：</p>
+<script type="math/tex; mode=display">
+\hat v(s,w) = x(s)^T w</script><p>最终的平衡状态，梯度=0<br>求解方程，得到w值关于状态s和v真值的函数关系<br><img src="/img/15970717288619.jpg" alt="-w592"><br>However，真值<strong>不知道</strong><br>缺点是复杂度高，引入了矩阵的逆</p>
 <h3 id="Other-algorithms"><a href="#Other-algorithms" class="headerlink" title="Other algorithms"></a>Other algorithms</h3><p><img src="/img/15971205641184.jpg" alt="-w574"><br><img src="/img/15971205882497.jpg" alt="-w598"><br><img src="/img/15971207382795.jpg" alt="-w603"></p>
 <p><img src="/img/contact.jpg" alt=""></p>
 <script>
@@ -1362,7 +1390,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">35.8k</span>&nbsp;字
+                class="white-color">36.6k</span>&nbsp;字
             
             
             

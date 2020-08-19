@@ -479,14 +479,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-09
+                    2020-08-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    166
+                    255
                 </div>
                 
 
@@ -508,13 +508,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h1><p>Texpad live 编辑模式，即时编译<br>缺点：不支持高级packages，如cref<br>所以最后加</p>
+                <h1 id="Texpad-备忘"><a href="#Texpad-备忘" class="headerlink" title="Texpad 备忘"></a>Texpad 备忘</h1><h2 id="实时编译"><a href="#实时编译" class="headerlink" title="实时编译"></a>实时编译</h2><p>Texpad live 支持实时编译<br>缺点：不支持高级packages，如cref</p>
+<p>经过验证，下列包不支持实时编译</p>
 <pre><code>\crefname&amp;#123;figure&amp;#125;&amp;#123;Fig.&amp;#125;&amp;#123;Figs.&amp;#125;
 \crefname&amp;#123;table&amp;#125;&amp;#123;Table.&amp;#125;&amp;#123;Tables.&amp;#125;
 \crefname&amp;#123;appendix&amp;#125;&amp;#123;&amp;#125;&amp;#123;&amp;#125;
 \crefname&amp;#123;equation&amp;#125;&amp;#123;&amp;#125;&amp;#123;&amp;#125;
-</code></pre><p>强制ref，标签<br>\renewcommand{\Figurename}{Fig.}</p>
-<h2 id="投稿"><a href="#投稿" class="headerlink" title="投稿"></a>投稿</h2><p>一般要求单列，双倍间距（可以在cls文件里面调）</p>
+</code></pre><p>所以最后文档定型之后，调整格式的时候再添加</p>
+<h2 id="强制使用自定义图例标签，ref"><a href="#强制使用自定义图例标签，ref" class="headerlink" title="强制使用自定义图例标签，ref"></a>强制使用自定义图例标签，ref</h2><p>\renewcommand{\Figurename}{Fig.}</p>
+<h2 id="投稿latex模板自定义修改"><a href="#投稿latex模板自定义修改" class="headerlink" title="投稿latex模板自定义修改"></a>投稿latex模板自定义修改</h2><p>一般要求单列，双倍间距（可以在cls文件里面调）</p>
+<h1 id="Word公式转换"><a href="#Word公式转换" class="headerlink" title="Word公式转换"></a>Word公式转换</h1><p>mathtype支持latex公式和mathml公式的转换<br>Win10有BUG，默认报错找不到<code>.xml</code>文件<br>需要用管理员打开word，才能mathtype不报错</p>
 <p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1290,7 +1293,7 @@ set(h,'PaperPosi
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">35.8k</span>&nbsp;字
+                class="white-color">36.6k</span>&nbsp;字
             
             
             
