@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.now.sh/posts/free-img-bed/</loc>
+    
+    <lastmod>2020-08-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
     
     <lastmod>2020-08-18</lastmod>
@@ -354,6 +361,27 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/%E5%9B%BE%E5%BA%8A/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/Picgo/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/jsDelivr/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/ios/</loc>
     <lastmod>2020-08-19</lastmod>
     <changefreq>daily</changefreq>
@@ -424,20 +452,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/test/</loc>
-    <lastmod>2020-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/hello-world/</loc>
-    <lastmod>2020-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/Policy-gradient/</loc>
     <lastmod>2020-08-19</lastmod>
     <changefreq>daily</changefreq>
@@ -453,6 +467,20 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/rnn/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/test/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/hello-world/</loc>
     <lastmod>2020-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -494,13 +522,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/python/</loc>
-    <lastmod>2020-08-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/tricks/</loc>
     <lastmod>2020-08-19</lastmod>
     <changefreq>daily</changefreq>
@@ -509,6 +530,13 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-08-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/python/</loc>
     <lastmod>2020-08-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

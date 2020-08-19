@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-13T05:29:40.495Z</updated>
+  <updated>2020-08-19T10:54:38.968Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费图床:Github+Picgo+jsDelivr</title>
+    <link href="https://tolshao.now.sh/posts/free-img-bed/"/>
+    <id>https://tolshao.now.sh/posts/free-img-bed/</id>
+    <published>2020-08-19T10:35:50.000Z</published>
+    <updated>2020-08-19T10:54:38.968Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="图床" scheme="https://tolshao.now.sh/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="Picgo" scheme="https://tolshao.now.sh/tags/Picgo/"/>
+    
+    <category term="jsDelivr" scheme="https://tolshao.now.sh/tags/jsDelivr/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo 进阶设置指南</title>
@@ -549,37 +578,6 @@
     <category term="机器学习" scheme="https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="ML" scheme="https://tolshao.now.sh/tags/ML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RNN 序列模型 sequence model</title>
-    <link href="https://tolshao.now.sh/posts/sequence-model/"/>
-    <id>https://tolshao.now.sh/posts/sequence-model/</id>
-    <published>2020-06-25T07:09:31.000Z</published>
-    <updated>2020-08-09T10:12:12.844Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Sequence-model&quot;&gt;&lt;a href=&quot;#Sequence-model&quot; class=&quot;headerlink&quot; title=&quot;Sequence model&quot;&gt;&lt;/a&gt;Sequence</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
-    
-    <category term="sequence model" scheme="https://tolshao.now.sh/tags/sequence-model/"/>
-    
-    <category term="rnn" scheme="https://tolshao.now.sh/tags/rnn/"/>
     
   </entry>
   
