@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>解锁播放器的隐藏功能👀用过的都说好😎</title>
+      <link href="/posts/iina-potplayer/"/>
+      <url>/posts/iina-potplayer/</url>
+      
+        <content type="html"><![CDATA[<h1 id="动机🤔"><a href="#动机🤔" class="headerlink" title="动机🤔"></a>动机🤔</h1><ul><li><p>有时候想看视频，遭遇1-2min的广告，望而却步<br>“歪，我要看的视频也就3min好嘛？？？”<br><img src="/img/15979372311766.jpg" alt="-w832"></p></li><li><p>有时候你想看个新闻，却还要装个<code>Flash</code><br><img src="/img/15979364965955.jpg" alt="-w832"></p></li></ul><p>想起乔帮主说的话<br>“移动时代是低功耗设备、触摸屏界面和开放网络标准的时代，Flash 已经落伍。”<br>于是乎，mac和win 平台下，都有解😎</p><h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="Mac下，果断的下载IINA就好了"><a href="#Mac下，果断的下载IINA就好了" class="headerlink" title="Mac下，果断的下载IINA就好了"></a>Mac下，果断的下载<a href="https://iina.io">IINA</a>就好了</h2><p><img src="/img/15979281180872.jpg" alt="-w1091"><br>作为一款万能的视频播放器，IINA mac 版的界面精美，功能齐全，支持Touch Bar、兼容 MPV 脚本、几乎支持所有格式、网络播放等，有中文支持</p><p>字幕搜索下载、<code>youtube-dl</code>下载视频，常规的功能无需赘述，贴两张图，你会知道他都能干什么</p><ul><li><p>不用装Flash了，电池又能多刚一会儿<br><img src="/img/15979740819192.jpg" alt="-w752"></p></li><li><p>不用再看广告<br>想起了9年前的<code>Black Mirror S1E2</code>里面男主<code>Bing</code>被科技支配，跳广告还要付费的悲惨人生</p></li></ul><p><img src="/img/15979763639018.jpg" alt=""><br>什么，你这不是<code>youku</code> <code>腾讯</code>的资源，怎么贴了个<code>youtube</code>？？？<br>是这样的，小跳昨天明明还测试成功了，今天截图的时候碰巧失效，猜测这好比<code>魔</code>之于<code>道</code>， <code>矛</code>之于<code>盾</code>的关系，互相针对，如果不可用的话，改天没准就可以了，不是还有<code>佛</code>呢么😂，或者，关注微信公众号【探物及理】回复【播放器】，获取其他Solution</p><p>安装方法：二选其一</p><pre><code>https://iina.iobrew cask install iina</code></pre><p>使用说明：</p><ul><li>IINA提供了浏览器插件，即点即用<br><img src="/img/15979750696424.jpg" alt=""></li><li>配合<code>Alfred</code> 命令 <code>iina url</code>，即可解锁<br><img src="/img/15979751018447.jpg" alt=""></li></ul><h3 id="福利赠送"><a href="#福利赠送" class="headerlink" title="福利赠送"></a>福利赠送</h3><p>如果你是一个小语种学习者，抑或对他国人文、地理……感兴趣，小跳这里附送一个网站<br><img src="/img/15979769788203.jpg" alt="-w659"></p><p>收集了来自世界各地的8000多个公共IPTV频道。<br>互联网协议电视（IPTV）是通过互联网协议（IP）网络传送电视内容的方法。<br>简言之，就是电视节目从网上看，其他再多，我们也不用知道</p><p><strong>效果如下：</strong><br><img src="/img/15979755673388.jpg" alt=""></p><h2 id="Windows下，我有Potplayer"><a href="#Windows下，我有Potplayer" class="headerlink" title="Windows下，我有Potplayer"></a>Windows下，我有Potplayer</h2><p>作为用户最多的Windows，自然跟得上，<code>Potplayer</code>可以帮助你实现以上同样功能</p><ul><li><p>通过打开链接的方式，添加视频源<br><img src="/img/15979770839021.jpg" alt="-w516"></p></li><li><p>千余家电视直播已在你手，清晰度1080P起，美哉<br><img src="/img/15979770135801.jpg" alt=""></p></li></ul><p><img src="/img/contact.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IINA </tag>
+            
+            <tag> Potplayer </tag>
+            
+            <tag> iptv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>免费图床:Github+Picgo+jsDelivr</title>
       <link href="/posts/img-bed/"/>
       <url>/posts/img-bed/</url>
@@ -616,6 +645,12 @@
       
         <content type="html"><![CDATA[<h1 id="系统工具效率"><a href="#系统工具效率" class="headerlink" title="系统工具效率"></a>系统工具效率</h1><ul><li>Alfred<br>置顶，比spotlight高效，支持各种插件，没有上限</li><li>Appcleaner<br>mac卸载软件就靠它，一键拖入，彻底清理干净。想想CleanMyMac、Dr.Cleaner还收费，真是笑死人</li><li>istate menus<br>监控你的电脑，cpu、内存、网络、硬盘，你能想到的都有了</li><li>handshaker<br>老罗确实改变了世界，锤子出品必属精品，mac和手机连接的神器，有线和无线均可，Android和iPhone都可以用，itunes是个啥？？？</li><li>Duet<br>Mac下<code>mac os 10.15</code>有随航(Sidecar)，谁用这个，Windows可以用这个把ipad变为第二个屏幕，超好用，支持无线连接</li><li>Parallel Desktop<br>Mac下的虚拟机，比<code>vitural box</code> <code>VMware</code>好用太多</li><li>坚果云<br>最好用的网盘，已经入了4年个人专业版会员，用来多终端同步工作资料，不要太方便</li><li>休息一下<br>20min提醒你休息一下眼睛，坐办公室挺需要的</li><li>Anydesk<br>即开即用的轻量化远程协助工具，teamviewer还要注册账号</li><li>Etcher<br>U盘刻录工具，大佬都在用</li><li>Blackmagic Disk Speed Test<br>磁盘测速，mac下都用这个，baseline一样，参数对比才有意义</li><li>CleanMyMac<br>mac下的鲁大师，虽然mac不用怎么管理，也没中过病毒，硬盘小的话，可以用来清垃圾什么的</li><li>DaisyDisk<br>清理电脑磁盘必备，可视化做的很不错</li><li>Folx<br>挺好用的下载管理工具</li><li>Transmission<br>种子下载下载</li><li>μ torrent<br>种子下载工具</li><li>kaka<br>压缩包工具</li><li>Mosaic<br>比Magnet定制程度高，实现windows下<code>win + →</code>等功能</li></ul><h1 id="音视频工具"><a href="#音视频工具" class="headerlink" title="音视频工具"></a>音视频工具</h1><ul><li>Downie<br>它支持1000+网站视频下载，包括YouTube、B站等，而且可以设置4K分辨率下载，几乎无所不能，绝对的神器</li><li>Permute<br>通用格式转换软件，包括视频、音频，图片乃至pdf，不仅效率高，而且完美配合downie、iTunes，可以连接Downie使用</li><li>IINA<br>最好用的视频播放器，轻量、简洁、支持云播放、字幕在线搜索</li><li>Adobe Zii<br>Adobe全家桶都可以通过它来白嫖，再说就说多了</li><li>Picgo<br>支持多家图床(github、阿里、七牛、腾讯、smms、imgur等)的管理工具</li><li>Pixelmator Pro<br>mac下的Photoshop，300Mb，比ps轻量，功能足够且易用</li><li>VideoGif<br>功能如其名，快速视频转gif工具，支持简单的尺寸和时间轴编辑</li><li>PicGif<br>功能如其名，快速图片转gif工具，win下美图秀秀就挺好😂</li><li>imageOptim<br>快速压缩图片用，支持Terminal Command<code>imageoptim image_url</code></li><li>Inpaint<br>快速图片除背景</li><li>remove.bg<br>快速图片除背景</li><li>iShot<br>截长图工具，还有很多其他截图功能</li><li>sip<br>快速获取屏幕上颜色，输出可以是各种格式</li></ul><h1 id="阅读与写作"><a href="#阅读与写作" class="headerlink" title="阅读与写作"></a>阅读与写作</h1><ul><li>SCI hub<br>必须置顶，配合<code>google scholar</code>下文献效率提升100倍是有的</li><li>texpad<br>mac下<code>latex</code>写作工具，支持<code>live edit</code>模式，好用，谁用谁知道系列</li><li>Mweb<br>mac下<code>markdown</code>编辑器，个人感觉最好用，自带图床插件，发布<code>blog</code>效率不要太高</li><li>skim<br>最清凉的pdf预览工具，可以配合<code>atom</code> <code>vs code</code>实现latex的pdf预览，开大体积pdf超快</li><li>PDF Expert<br>Mac下的<code>adobe acrobat</code>，</li><li>caj viewer<br>知网文献打开必备，其实还有一个网址可以下载pdf版的知网文献，私信获取</li><li>Mendeley<br><code>Zotero</code>、<code>Endnote</code>也挺好，各有所长吧，习惯了一个就行<br>配合坚果云使用更佳，毕竟免费的云同步不挂代理，有点慢</li><li>Mathpix snipping tool<br>latex 公式 OCR 最强软件，准确率一流，识别完自动复制，多种样式任你挑选</li><li>copy translator<br>整合了<code>google</code> <code>baidu</code> <code>bing</code> 翻译的英文文献阅读工具</li><li>Reeder<br>RSS阅读管理工具，订阅阅读，不用看广告了</li><li>PDF Squeezer<br>pdf压缩工具，有一个网站也挺好用的</li><li>small pdf<br>就是上面说的那个网站，功能齐全，免费有次数限制</li></ul><h1 id="网络和代理"><a href="#网络和代理" class="headerlink" title="网络和代理"></a>网络和代理</h1><ul><li>Little Snitch Configuration<br>监控、管理电脑应用网络权限</li><li>shadowsocks R<br>经典的网络自由工具，</li><li>clash x<br>新一代网络自由工具，支持订阅管理，支持<code>ssr</code>、<code>V2-ray</code>协议，UI友好，我也在用</li></ul><h1 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h1><ul><li>draw.io<br>开源流程图，mac下的visio，轻量化，支持google drive、onedrive等，office插件支持</li><li>OmniGraffle<br>流程图高级编辑工具</li></ul><h1 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h1><ul><li>VS Code<br>轻量多语言IDE，定制性高，插件丰富，现在可以云开发了，NB</li><li>Pycharm<br>python高级IDE，比<code>VS Code</code>有点重，大项目会用这个吧</li><li>Kite<br>高级代码自动补全插件，支持<code>js</code>、<code>python</code>语言和<code>VS code</code>和 <code>pycharm</code>等IDE</li><li>Dash<br>代码文档查阅工具</li><li>CodeRunner<br>轻量化的IDE，所有语言都支持，NB</li><li>Sourcetrail<br><code>git</code>的 UI软件，个人感觉比官方的<code>github desktop</code>功能强大</li><li>pynsource<br><code>python</code>源码阅读工具，显示<code>uml</code>图，快速理解项目结构</li></ul><h1 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h1><ul><li>OpenEmu<br>小霸王玩过吧，任天堂系列的主机这里都支持</li><li>Dolphin<br>模拟器，同上</li><li>RetroArch<br>模拟器，同上，对手柄支持最好，fake PS 3手柄也可以</li><li>controller lite<br>快速测试你的手柄可用否</li></ul><h1 id="浏览器插件"><a href="#浏览器插件" class="headerlink" title="浏览器插件"></a>浏览器插件</h1><ul><li>Polyglot<br>safari翻译插件</li><li>AdBlock<br>safari广告屏蔽插件</li></ul><h1 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h1><ul><li>Grammarly<br>查重就别用<code>1改</code>什么的了，差距还是有一点的</li><li>欧路词典<br>词库专业，UI漂亮</li></ul><h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><ul><li><a href="goodness for free">十分钟邮箱- BccTo.ME</a></li><li>Fliqlo<br>颜值屏保，颜值一级</li></ul><p><img src="/img/contact.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
       
       
         <tags>

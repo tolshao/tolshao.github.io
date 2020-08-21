@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-20T04:41:59.467Z</updated>
+  <updated>2020-08-21T03:53:32.163Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>解锁播放器的隐藏功能👀用过的都说好😎</title>
+    <link href="https://tolshao.now.sh/posts/iina-potplayer/"/>
+    <id>https://tolshao.now.sh/posts/iina-potplayer/</id>
+    <published>2020-08-21T00:49:03.000Z</published>
+    <updated>2020-08-21T03:53:32.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;动机🤔&quot;&gt;&lt;a href=&quot;#动机🤔&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="IINA" scheme="https://tolshao.now.sh/tags/IINA/"/>
+    
+    <category term="Potplayer" scheme="https://tolshao.now.sh/tags/Potplayer/"/>
+    
+    <category term="iptv" scheme="https://tolshao.now.sh/tags/iptv/"/>
+    
+  </entry>
+  
+  <entry>
     <title>免费图床:Github+Picgo+jsDelivr</title>
     <link href="https://tolshao.now.sh/posts/img-bed/"/>
     <id>https://tolshao.now.sh/posts/img-bed/</id>
     <published>2020-08-19T10:35:50.000Z</published>
-    <updated>2020-08-20T04:41:59.467Z</updated>
+    <updated>2020-08-20T12:31:05.803Z</updated>
     
     
       
@@ -50,7 +79,7 @@
     <link href="https://tolshao.now.sh/posts/hexo-advanced/"/>
     <id>https://tolshao.now.sh/posts/hexo-advanced/</id>
     <published>2020-08-12T15:19:44.000Z</published>
-    <updated>2020-08-19T11:01:49.447Z</updated>
+    <updated>2020-08-20T12:31:05.802Z</updated>
     
     
       
@@ -77,7 +106,7 @@
     <link href="https://tolshao.now.sh/posts/rl-7/"/>
     <id>https://tolshao.now.sh/posts/rl-7/</id>
     <published>2020-08-11T07:09:31.000Z</published>
-    <updated>2020-08-18T09:12:27.916Z</updated>
+    <updated>2020-08-20T12:31:05.806Z</updated>
     
     
       
@@ -190,7 +219,7 @@
     <link href="https://tolshao.now.sh/posts/rl-6/"/>
     <id>https://tolshao.now.sh/posts/rl-6/</id>
     <published>2020-08-05T07:09:31.000Z</published>
-    <updated>2020-08-17T14:10:32.391Z</updated>
+    <updated>2020-08-20T12:31:05.805Z</updated>
     
     
       
@@ -551,33 +580,6 @@
     <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习-Coursera笔记</title>
-    <link href="https://tolshao.now.sh/posts/machine-learning/"/>
-    <id>https://tolshao.now.sh/posts/machine-learning/</id>
-    <published>2020-06-28T07:09:31.000Z</published>
-    <updated>2020-08-12T11:24:40.203Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;AI-gt-机器学习分类图&quot;&gt;&lt;a href=&quot;#AI-gt-机器学习分类图&quot; class=&quot;headerlink&quot; title=&quot;AI-&gt;机器学习分类图&quot;&gt;&lt;/a&gt;AI-&amp;gt;机器学习分类图&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="机器学习" scheme="https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="ML" scheme="https://tolshao.now.sh/tags/ML/"/>
     
   </entry>
   
