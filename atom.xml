@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-21T10:06:43.935Z</updated>
+  <updated>2020-08-21T10:23:10.763Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tolshao.now.sh/posts/iina-potplayer/"/>
     <id>https://tolshao.now.sh/posts/iina-potplayer/</id>
     <published>2020-08-21T00:49:03.000Z</published>
-    <updated>2020-08-21T10:06:43.935Z</updated>
+    <updated>2020-08-21T10:23:10.763Z</updated>
     
     
       
@@ -71,6 +71,37 @@
     <category term="Picgo" scheme="https://tolshao.now.sh/tags/Picgo/"/>
     
     <category term="jsDelivr" scheme="https://tolshao.now.sh/tags/jsDelivr/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>强化学习笔记8：整合学习和规划</title>
+    <link href="https://tolshao.now.sh/posts/rl-8/"/>
+    <id>https://tolshao.now.sh/posts/rl-8/</id>
+    <published>2020-08-17T08:05:59.000Z</published>
+    <updated>2020-08-23T10:34:19.591Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1、introduction&quot;&gt;&lt;a href=&quot;#1、introduction&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    
+    <category term="Learning" scheme="https://tolshao.now.sh/tags/Learning/"/>
+    
+    <category term="Planning" scheme="https://tolshao.now.sh/tags/Planning/"/>
     
   </entry>
   
@@ -542,33 +573,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;马尔科夫过程（Markov-Process，MP）&quot;&gt;&lt;a href=&quot;#马尔科夫过程（Markov-Process，MP）&quot; class=&quot;headerlink&quot; title=&quot;马尔科夫过程（Markov</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>强化学习笔记1：基本概念</title>
-    <link href="https://tolshao.now.sh/posts/rl-1/"/>
-    <id>https://tolshao.now.sh/posts/rl-1/</id>
-    <published>2020-07-01T07:09:31.000Z</published>
-    <updated>2020-08-14T09:09:14.184Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;强化学习是一门多学科交叉的技术&lt;br&gt;&lt;img</summary>
         
       
     

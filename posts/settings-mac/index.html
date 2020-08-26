@@ -483,14 +483,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-20
+                    2020-08-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
@@ -564,6 +564,11 @@ source .bash_profile
 open -e .bash_profile</code><br>这样会弹出一个“.bash_profile”文件.<br>打开文件后应该是空白的，在文件中添加：<br>export PATH=${PATH}:????</p>
 <p>其中????代表你电脑中adb文件的路径，本人的配置文件如下：<br><code>export PATH=${PATH}:~/Library/Android/sdk/platform-tools</code><br>添加完后，保存并关闭文件，至此，adb配置完毕。</p>
 <h2 id="前往网上邻居"><a href="#前往网上邻居" class="headerlink" title="前往网上邻居"></a>前往网上邻居</h2><p>finder目录<code>command+K</code><br><strong>One cloud</strong>:<br><code>smb://192.168.31.200</code></p>
+<h2 id="mac除了magicmouse外，蓝牙鼠标发飘，延迟的问题"><a href="#mac除了magicmouse外，蓝牙鼠标发飘，延迟的问题" class="headerlink" title="mac除了magicmouse外，蓝牙鼠标发飘，延迟的问题"></a>mac除了magicmouse外，蓝牙鼠标发飘，延迟的问题</h2><ol>
+<li>打开“系统偏好设定”，然后点击下面的“网络”图标，打开“网络”设定界面。在这里，一般会看到三个：wi-fi、蓝牙、Thunderbolt 网桥三个连接。</li>
+<li>在“网络”窗口的左下角，会看到三个图标：“+”、“-”，最后一个是齿轮。点击这个齿轮，选择“设定服务顺序”</li>
+<li>用鼠标点按住蓝牙PAN，往上拖到第一的位置，保存、应用。</li>
+</ol>
 <h2 id="Terminal-commands"><a href="#Terminal-commands" class="headerlink" title="Terminal commands"></a>Terminal commands</h2><p>图片本地压缩工具：<code>imageoptim aaa.jpg</code><br>开源软件安装：<code>brew install example</code><br>python库安装<code>pip3 install example</code><br>最后更新配置的环境变量<code>source .bash_profile</code></p>
 <p>同理：http代理设置如下：</p>
 <ul>
@@ -674,7 +679,10 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 <ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/gmr2453929471/article/details/78655834">更改字体</a></li>
 </ol>
-<h2 id="黑苹果安装"><a href="#黑苹果安装" class="headerlink" title="黑苹果安装"></a>黑苹果安装</h2><p>聪聪黑苹果一键安装工具</p>
+<h2 id="黑苹果安装"><a href="#黑苹果安装" class="headerlink" title="黑苹果安装"></a>黑苹果安装</h2><ul>
+<li>聪聪黑苹果一键安装工具</li>
+<li>clover停更了，现在用opencore</li>
+</ul>
 <h1 id="Something-interesting"><a href="#Something-interesting" class="headerlink" title="Something interesting"></a>Something interesting</h1><h2 id="US-fake信息"><a href="#US-fake信息" class="headerlink" title="US-fake信息"></a>US-fake信息</h2><p><a target="_blank" rel="noopener" href="https://www.fakenamegenerator.com/index.php#">https://www.fakenamegenerator.com/index.php#</a></p>
 <h2 id="mac手柄ps3-controller-on-windows"><a href="#mac手柄ps3-controller-on-windows" class="headerlink" title="mac手柄ps3 controller on windows"></a>mac手柄ps3 controller on windows</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=c0qXZHNj_P4">https://www.youtube.com/watch?v=c0qXZHNj_P4</a><br>第三方mac无线支持<br><a target="_blank" rel="noopener" href="https://gist.github.com/OlesenkoViktor/32c700e025bf4567db8feb1ed467f8ee">https://gist.github.com/OlesenkoViktor/32c700e025bf4567db8feb1ed467f8ee</a></p>
 <p>最后发现，先启动retroarch之后，手柄就可以在openemu等平台使用</p>
@@ -682,8 +690,9 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></p>
 <p>fastboot模式：<code>adb  reboot bootloader</code></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5ba1cf5869bc">mac_adb_安卓刷机</a></p>
-<p>[pixel_root教程] (<a target="_blank" rel="noopener" href="https://highonandroid.com/android-smartphones/how-to-root-android-p9-0-pixelpixel-xlpixel-2pixel-2xl/">https://highonandroid.com/android-smartphones/how-to-root-android-p9-0-pixelpixel-xlpixel-2pixel-2xl/</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://highonandroid.com/android-smartphones/how-to-root-android-p9-0-pixelpixel-xlpixel-2pixel-2xl/">pixel_root教程</a></p>
 <p><a target="_blank" rel="noopener" href="https://twrp.me">TWRP下载地址</a>：第三方recovery<br>root 管理器：magisk</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/90965580">安卓10root</a></p>
 <p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1455,7 +1464,7 @@ adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></p>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">39.2k</span>&nbsp;字
+                class="white-color">43.3k</span>&nbsp;字
             
             
             
