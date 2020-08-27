@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tolshao.now.sh/posts/img-bed/</loc>
+    
+    <lastmod>2020-08-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/posts/hexo-advanced/</loc>
+    
+    <lastmod>2020-08-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/posts/rl-9/</loc>
     
     <lastmod>2020-08-27</lastmod>
@@ -9,14 +23,28 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/posts/iina-potplayer/</loc>
+    <loc>https://tolshao.now.sh/posts/rl-8/</loc>
     
-    <lastmod>2020-08-26</lastmod>
+    <lastmod>2020-08-27</lastmod>
     
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-8/</loc>
+    <loc>https://tolshao.now.sh/posts/rl-7/</loc>
+    
+    <lastmod>2020-08-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-2/</loc>
+    
+    <lastmod>2020-08-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/posts/iina-potplayer/</loc>
     
     <lastmod>2020-08-26</lastmod>
     
@@ -51,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-7/</loc>
-    
-    <lastmod>2020-08-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
     
     <lastmod>2020-08-20</lastmod>
@@ -72,30 +93,9 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/posts/img-bed/</loc>
-    
-    <lastmod>2020-08-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/posts/hexo-advanced/</loc>
-    
-    <lastmod>2020-08-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/posts/rl-1/</loc>
     
     <lastmod>2020-08-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/posts/template/</loc>
-    
-    <lastmod>2020-08-13</lastmod>
     
   </url>
   
@@ -115,13 +115,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/posts/rl-3/</loc>
-    
-    <lastmod>2020-08-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-2/</loc>
     
     <lastmod>2020-08-12</lastmod>
     
@@ -298,6 +291,20 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/test/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/hello-world/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -424,27 +431,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/keras/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/tensorflow/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/ios/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -460,6 +446,27 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/iPhone/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/keras/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/tensorflow/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -557,27 +564,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/test/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/hello-world/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/matlab/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/Mac/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -593,6 +579,13 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/python/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/matlab/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

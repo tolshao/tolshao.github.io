@@ -29,4 +29,3 @@ https://tolshao.now.sh/posts/settings-mac/
 https://tolshao.now.sh/posts/settings-latex/
 https://tolshao.now.sh/posts/settings-matlab/
 https://tolshao.now.sh/posts/settings-python/
-https://tolshao.now.sh/posts/template/
