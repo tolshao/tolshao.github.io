@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-21T10:23:10.763Z</updated>
+  <updated>2020-08-27T06:45:46.398Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>强化学习笔记9：探索和利用 exploration and exploitation</title>
+    <link href="https://tolshao.now.sh/posts/rl-9/"/>
+    <id>https://tolshao.now.sh/posts/rl-9/</id>
+    <published>2020-08-23T10:35:12.000Z</published>
+    <updated>2020-08-27T06:45:46.398Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1、introduction&quot;&gt;&lt;a href=&quot;#1、introduction&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    
+    <category term="exploration" scheme="https://tolshao.now.sh/tags/exploration/"/>
+    
+    <category term="exploitation" scheme="https://tolshao.now.sh/tags/exploitation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>解锁播放器的隐藏功能👀用过的都说好😎</title>
     <link href="https://tolshao.now.sh/posts/iina-potplayer/"/>
     <id>https://tolshao.now.sh/posts/iina-potplayer/</id>
     <published>2020-08-21T00:49:03.000Z</published>
-    <updated>2020-08-21T10:23:10.763Z</updated>
+    <updated>2020-08-26T05:42:29.791Z</updated>
     
     
       
@@ -79,7 +110,7 @@
     <link href="https://tolshao.now.sh/posts/rl-8/"/>
     <id>https://tolshao.now.sh/posts/rl-8/</id>
     <published>2020-08-17T08:05:59.000Z</published>
-    <updated>2020-08-23T10:34:19.591Z</updated>
+    <updated>2020-08-26T05:41:07.078Z</updated>
     
     
       
@@ -557,33 +588,6 @@
     <category term="系统" scheme="https://tolshao.now.sh/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="MBSE" scheme="https://tolshao.now.sh/tags/MBSE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>强化学习笔记2：Markov decision process(MDP)</title>
-    <link href="https://tolshao.now.sh/posts/rl-2/"/>
-    <id>https://tolshao.now.sh/posts/rl-2/</id>
-    <published>2020-07-05T07:09:31.000Z</published>
-    <updated>2020-08-12T11:24:40.204Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;马尔科夫过程（Markov-Process，MP）&quot;&gt;&lt;a href=&quot;#马尔科夫过程（Markov-Process，MP）&quot; class=&quot;headerlink&quot; title=&quot;马尔科夫过程（Markov</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
     
   </entry>
   

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="强化学习笔记1：基本概念, BUAA ">
+    <meta name="keywords" content="强化学习笔记9：探索和利用 exploration and exploitation, BUAA ">
     <meta name="baidu-site-verification" content="7VRrwBpvaq" />
     <meta name="description" content="北京航空航天大学 | 张小跳">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>强化学习笔记1：基本概念 | Tolshao</title>
+    <title>强化学习笔记9：探索和利用 exploration and exploitation | Tolshao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,7 +326,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">强化学习笔记1：基本概念</h1>
+                    <h1 class="description center-align post-title">强化学习笔记9：探索和利用 exploration and exploitation</h1>
                 </div>
             </div>
         </div>
@@ -451,6 +451,14 @@
                                 <span class="chip bg-color">RL</span>
                             </a>
                         
+                            <a href="/tags/exploration/">
+                                <span class="chip bg-color">exploration</span>
+                            </a>
+                        
+                            <a href="/tags/exploitation/">
+                                <span class="chip bg-color">exploitation</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -472,28 +480,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-01
+                    2020-08-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-14
+                    2020-08-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    4.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    18 分
                 </div>
                 
 
@@ -508,83 +516,407 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>强化学习是一门多学科交叉的技术<br><img src="/img/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%885.35.46-1.png" alt="截屏2020-07-27 下午5.35.46"><br><img src="/img/15973090963916.jpg" alt=""></p>
-<h2 id="与传统控制的关系："><a href="#与传统控制的关系：" class="headerlink" title="与传统控制的关系："></a>与传统控制的关系：</h2><ul>
-<li>相似性：</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">RL</th>
-<th style="text-align:center">traditional control</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">agent</td>
-<td style="text-align:center">controller</td>
-</tr>
-<tr>
-<td style="text-align:center">env</td>
-<td style="text-align:center">plant + enviroment</td>
-</tr>
-<tr>
-<td style="text-align:center">reward</td>
-<td style="text-align:center">feedback（error signals）</td>
-</tr>
-<tr>
-<td style="text-align:center">value</td>
-<td style="text-align:center">optimize function</td>
-</tr>
-</tbody>
-</table>
-</div>
+                <h1 id="1、introduction"><a href="#1、introduction" class="headerlink" title="1、introduction"></a>1、introduction</h1><p>本章的主题是关于利用和探索的矛盾：</p>
 <ul>
-<li>不同点：<ul>
-<li>传统的控制：将任务分解成多个任务的串并联，设计（子）控制器</li>
-<li>机器学习：将控制器压缩成黑盒Black box<br><img src="/img/15953218263369.jpg" alt="-w1354"></li>
+<li>Exploitation：利用当前已知信息做决策</li>
+<li>Exploration：探索未知空间获取更多信息</li>
+</ul>
+<p>最佳的策略是用长期的眼光来看，放弃短期高回报<br>获取足够策略是让策略变成全局最优的必要条件</p>
+<p>几个基本的探索方法：<br>主要分三类：</p>
+<ol>
+<li>随机</li>
+<li>基于不确定性</li>
+<li>信息状态空间</li>
+</ol>
+<ul>
+<li><strong>朴素探索</strong>(Naive Exploration): 在贪婪搜索的基础上增加一个Ɛ以实现朴素探索；</li>
+<li><strong>乐观初始估计</strong>(Optimistic Initialization): 优先选择当前被认为是最高价值的行为，除非新信息的获取推翻了该行为具有最高价值这一认知；</li>
+<li><strong>不确定优先</strong>(Optimism in the Face of Uncertainty): 优先尝试不确定价值的行为；</li>
+<li><strong>概率匹配</strong>（Probability Matching): 根据当前估计的概率分布采样行为；</li>
+<li><strong>信息状态搜索</strong>(Information State Search): 将已探索的信息作为状态的一部分联合个体的状态组成新的状态，以新状态为基础进行前向探索。</li>
+<li><strong>状态动作探索</strong>State-action exploration：系统地探索状态和动作空间，类似于查表法</li>
+<li><strong>参数探索</strong>Parameter exploration：<ul>
+<li>动作选择遵照策略$\pi (A|S,u)$</li>
+<li>每隔一段时间，更新策略参数</li>
+<li>优点：连续的探索</li>
+<li>缺点：对状态/动作空间不直观</li>
 </ul>
 </li>
 </ul>
-<p>强化学习不同于 监督、非监督学习（与静态数据交互），与环境产生交互，产生最优结果的动作序列。</p>
-<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><p>RL组成要素Agent、Env<br><img src="/img/15972068404024.png" alt=""></p>
-<h2 id="Agent"><a href="#Agent" class="headerlink" title="Agent"></a>Agent</h2><p>组成要素：Policy、Value function、Model其中至少一个<br><img src="/img/15958481757170.jpg" alt="-w410"></p>
-<h3 id="策略-Policy-：observation-to-action的映射"><a href="#策略-Policy-：observation-to-action的映射" class="headerlink" title="策略(Policy)：observation to action的映射"></a>策略(Policy)：observation to action的映射</h3><ul>
-<li>固定策略：$a = \pi(s)$给定状态$s$，对应fixed的action $a$</li>
-<li>随机策略：当Agent处于某一个state的时候，它做的Action是不确定的，例如你可以选择study也可以选择game，也就是说你在某一个状态是以一定的概率去选择某一个action。也就是说，策略的选择是一个条件概率$\pi(a|s)$，这里的$\pi$与数序中的$\pi$没有任何关系，他只是代表一个函数而已（其实就是$f(a|s)$）。<script type="math/tex; mode=display">
-\pi(a \mid s)=P\left(A_{t}=a \mid S_{t}=s\right)</script>函数代表：在状态$s$时采取动作$a$的概率分布。</li>
-</ul>
-<p><img src="/img/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%887.07.57-1.png" alt="截屏2020-07-27 下午7.07.57"></p>
-<h3 id="价值-value-function-：未来奖励的预测（期望）"><a href="#价值-value-function-：未来奖励的预测（期望）" class="headerlink" title="价值(value function)：未来奖励的预测（期望）"></a>价值(value function)：未来奖励的预测（期望）</h3><p>前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R_{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R_{t+1}}$，那么他会不会影响$\mathcal{R_{t+2}},\mathcal{R_{t+3}}…$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：</p>
-<script type="math/tex; mode=display">
-v_{\pi}(s)=\mathbb{E}_{\pi}\left(R_{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+\ldots \mid S_{t}=s\right)</script><p>$v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。<br><img src="/img/15958481422216.png" alt="-w425"></p>
-<h2 id="模型Model："><a href="#模型Model：" class="headerlink" title="模型Model："></a>模型Model：</h2><p>对未知env的预测，包括状态s、奖励r</p>
-<h3 id="预测状态：s-gt-s’的概率"><a href="#预测状态：s-gt-s’的概率" class="headerlink" title="预测状态：s->s’的概率"></a>预测状态：s-&gt;s’的概率</h3><script type="math/tex; mode=display">
-\mathcal{P}_{s s^{\prime}}^{a} =\mathbb{P}  \left(S_{t+1}=s^{\prime} \mid S_{t}=s, A_{t}=a\right)</script><h3 id="预测奖励：R的期望"><a href="#预测奖励：R的期望" class="headerlink" title="预测奖励：R的期望"></a>预测奖励：R的期望</h3><script type="math/tex; mode=display">
-\mathcal{R}_{s}^{a} =\mathbb{E}
- R_{t+1} \left( \mid S_{t}=s, A_{t}=a\right)</script><h2 id="环境Env"><a href="#环境Env" class="headerlink" title="环境Env"></a>环境Env</h2><h3 id="完全可观测环境"><a href="#完全可观测环境" class="headerlink" title="完全可观测环境"></a>完全可观测环境</h3><p>个体观测=个体状态=环境状态<br>标准的<strong>MDP </strong></p>
-<h3 id="部分可观测环境"><a href="#部分可观测环境" class="headerlink" title="部分可观测环境"></a>部分可观测环境</h3><p>环境不完全可观测</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><ul>
-<li>Beliefs of environment state：用个体的经验，记录历史状态并创建概率分布函数<script type="math/tex; mode=display">
-S_{t}^{a}=\left(\mathbb{P}\left[S_{t}^{e}=s^{1}\right], \ldots, \mathbb{P}\left[S_{t}^{e}=s^{n}\right]\right)</script></li>
-<li>Recurrent neural network：用循环神经网络，表示为，上个状态和当前观测的函数<script type="math/tex; mode=display">
-S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
-</ul>
-<h1 id="概念区分"><a href="#概念区分" class="headerlink" title="概念区分"></a>概念区分</h1><h2 id="学习和规划-Learning-amp-Planning"><a href="#学习和规划-Learning-amp-Planning" class="headerlink" title="学习和规划 Learning &amp; Planning"></a>学习和规划 Learning &amp; Planning</h2><ul>
-<li>学习：环境初始时是<strong>未知</strong>的，个体不知道环境如何工作，个体通过与环境进行交互，逐渐改善其行为策略。</li>
-<li>规划: 环境如何工作对于个体是<strong>已知</strong>或<strong>近似已知</strong>的，个体并不与环境发生实际的交互，而是利用其构建的模型进行计算，在此基础上改善其行为策略。<br>一个常用的强化学习问题解决思路是，先学习环境如何工作，也就是了解环境工作的方式，即学习得到一个模型，然后利用这个模型进行规划。</li>
-</ul>
-<h2 id="预测和控制-Prediction-amp-Control"><a href="#预测和控制-Prediction-amp-Control" class="headerlink" title="预测和控制 Prediction &amp; Control"></a>预测和控制 Prediction &amp; Control</h2><p>在强化学习里，我们经常需要先解决关于预测（prediction）的问题，而后在此基础上解决关于控制（Control）的问题。</p>
+<h1 id="2、多臂赌博机-Multi-Armed-Bandits"><a href="#2、多臂赌博机-Multi-Armed-Bandits" class="headerlink" title="2、多臂赌博机 Multi-Armed Bandits"></a>2、多臂赌博机 Multi-Armed Bandits</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一个赌徒面前有N个老虎机,事先他不知道每台老虎机的真实盈利情况,他如何根据每次玩老虎机的结果来选择下次拉哪台或者是否停止赌博,来最大化自己的从头到尾的收益.<br><img src="/img/15984131897792.png" alt=""></p>
+<p>将MDP简化为$\langle \mathcal A,\mathcal R \rangle$</p>
 <ul>
-<li>预测：给定一个策略，<strong>评价</strong>未来。可以看成是求解在给定策略下的价值函数（value function）的过程。How well will I(an agent) do if I(the agent) follow a specific policy?</li>
-<li>控制：<strong>找到</strong>一个好的<strong>策略</strong>来最大化未来的奖励。</li>
+<li>动作空间A 已知</li>
+<li>奖励映射函数$\mathcal {R^a(r)} = \mathcal P [R=r|A=a]$ 未知</li>
+<li>目标是最大化累计奖励$\sum^t_{\tau=1} r_\tau$</li>
 </ul>
-<h2 id="探索和利用-Exploration-amp-Exploitation"><a href="#探索和利用-Exploration-amp-Exploitation" class="headerlink" title="探索和利用 Exploration &amp; Exploitation"></a>探索和利用 Exploration &amp; Exploitation</h2><p>试错的学习，个体需要从其与环境的交互中<strong>发现并执行</strong>一个好的策略，同时又不至于在<strong>试错</strong>的过程中丢失太多的奖励。探索和利用是个体进行决策时需要平衡的两个方面</p>
-<h3 id="探索率-epsilon"><a href="#探索率-epsilon" class="headerlink" title="探索率$\epsilon$"></a>探索率$\epsilon$</h3><p>怎么说的探索率呢？它主要是为了防止陷入局部最优。比如说目前在$s_1$状态下有两个$a_1,a_2$。我们通过计算出，发现执行$a_1$的动作比较好，但是为了防止陷入局部最优，我们会选择以$\epsilon$的概率来执行$a_2$，以$1-\epsilon$的概率来执行$a_1$。一般来说，$\epsilon$ 随着训练次数的增加而逐渐减小。</p>
-<h2 id="其他概念"><a href="#其他概念" class="headerlink" title="其他概念"></a>其他概念</h2><h3 id="gamma-奖励衰减因子"><a href="#gamma-奖励衰减因子" class="headerlink" title="$\gamma$奖励衰减因子"></a>$\gamma$奖励衰减因子</h3><p>在上面的价值函数中，有一个变量$\gamma$ ，即奖励衰减因子，在[0，1]之间。如果为0，则是贪婪法，即价值只由当前的奖励决定，如果是1，则所有的后续状态奖励和当前奖励一视同仁。一般来说取0到1之间的数。</p>
-<h3 id="环境的状态转化模型"><a href="#环境的状态转化模型" class="headerlink" title="环境的状态转化模型"></a>环境的状态转化模型</h3><p>由于在某个状态下，执行一定的action，能够达到新的一个状态$S_{t+1}$，但是$S_{t+1}$不一定是唯一的。环境的状态转化模型，可以理解为一个概率状态机，它是一个概率模型，即在状态$t$下采取动作$a$,转到下一个状态$s’$的概率，表示为$P^a_{ss’}$。</p>
-<p>具体在RL_2，MP 中讲解</p>
+<h3 id="后悔值-Regret"><a href="#后悔值-Regret" class="headerlink" title="后悔值 Regret"></a>后悔值 Regret</h3><ul>
+<li>动作价值函数<script type="math/tex; mode=display">Q(a)=\mathbb{E}[r \mid a]</script></li>
+<li>最优价值函数<script type="math/tex; mode=display">V^* = Q(a^*) = \underset{a\in A}{max}Q(a)</script></li>
+<li>后悔机会（one step）<script type="math/tex; mode=display">l_t = \mathcal E[V^* - Q(a_t)]</script></li>
+<li>后悔函数<script type="math/tex; mode=display">L_T = \mathcal E[\sum^t_{\tau = 1}V^* - Q(a_{a_\tau})]</script></li>
+<li>最大化总计奖励 = 最小化 total regret</li>
+</ul>
+<h4 id="total-Regret的表达方式"><a href="#total-Regret的表达方式" class="headerlink" title="total Regret的表达方式"></a>total Regret的表达方式</h4><ul>
+<li>$N_t(a)$是动作a的计数</li>
+<li>gap $\Delta_a$是当前动作价值函数和最优值的偏差</li>
+</ul>
+<p>将上页的后悔价值函数表示为 计数 和 gap 的乘积</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+L_{t} &=\mathbb{E}\left[\sum_{\tau=1}^{t} V^{*}-Q\left(a_{\tau}\right)\right] \\
+&=\sum_{a \in \mathcal{A}} \mathbb{E}\left[N_{t}(a)\right]\left(V^{*}-Q(a)\right) \\
+&=\sum_{a \in \mathcal{A}} \mathbb{E}\left[N_{t}(a)\right] \Delta_{a}
+\end{aligned}</script><p>好的算法让大gap对应的计数最小，但问题是，gaps未知？？？</p>
+<h3 id="线性和次线性的regret"><a href="#线性和次线性的regret" class="headerlink" title="线性和次线性的regret"></a>线性和次线性的regret</h3><p>因为总计后悔值，是累加计算，只要有gap，就会随着时间步增长</p>
+<ul>
+<li>曲线线性增长，表明<ul>
+<li>算法停止探索</li>
+<li>算法卡在局部最优</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/15983345403824.jpg" alt="-w449"></p>
+<h2 id="2-1-朴素探索-native-exploration"><a href="#2-1-朴素探索-native-exploration" class="headerlink" title="2.1 朴素探索 native exploration"></a>2.1 朴素探索 native exploration</h2><h3 id="greedy：卡在局部最优，总后悔线性增长"><a href="#greedy：卡在局部最优，总后悔线性增长" class="headerlink" title="greedy：卡在局部最优，总后悔线性增长"></a>greedy：卡在局部最优，总后悔线性增长</h3><ul>
+<li>算法目标是估计价值函数$\hat Q_t(a) \approx Q(a)$</li>
+<li><p>使用MC evaluation 估计价值函数，引入平均值的概念</p>
+<script type="math/tex; mode=display">\hat{Q}_{t}(a)=\frac{1}{N_{t}(a)} \sum_{t=1}^{T} r_{t} \mathbf{1}\left(a_{t}=a\right)</script></li>
+<li><p>选取最优动作</p>
+<script type="math/tex; mode=display">
+a^*_t = \underset{a\in A}{\operatorname {argmax}} \hat Q_t(a)</script></li>
+</ul>
+<p>Greedy 可能卡在永远次优动作，总regret随时间步线性增长</p>
+<h3 id="Solution：乐观初始化-Optimistic-initialisation"><a href="#Solution：乐观初始化-Optimistic-initialisation" class="headerlink" title="Solution：乐观初始化 Optimistic initialisation"></a><strong>Solution</strong>：乐观初始化 Optimistic initialisation</h3><p>理论上，还应该是total regret 线性增长，实际效果却很好，采用递归MC更新Q值</p>
+<script type="math/tex; mode=display">
+\hat{Q}_{t}\left(a_{t}\right)=\hat{Q}_{t-1}+\frac{1}{N_{t}\left(a_{t}\right)}\left(r_{t}-\hat{Q}_{t-1}\right)</script><p>操作步骤：</p>
+<ul>
+<li>将V值初始化为最大值，$Q(a)= r_{max}$</li>
+<li>act greedily<script type="math/tex; mode=display">A_t = \underset{a\in A}{\operatorname {argmax}} Q_t(a)</script></li>
+<li>鼓励探索未知values<br>但是仍未能避免不幸的采样导致卡在次优</li>
+</ul>
+<h3 id="epsilon-greedy-：小概率随机动作，累加后悔值，导致总后悔值随时间步线性增长"><a href="#epsilon-greedy-：小概率随机动作，累加后悔值，导致总后悔值随时间步线性增长" class="headerlink" title="$\epsilon-greedy$：小概率随机动作，累加后悔值，导致总后悔值随时间步线性增长"></a>$\epsilon-greedy$：小概率随机动作，累加后悔值，导致总后悔值随时间步线性增长</h3><ul>
+<li><p>特性：永远保持探索:</p>
+<ul>
+<li>概率（1-$\epsilon$）$A= \underset{a\in A}{argmax}Q(a)$</li>
+<li>概率（$\epsilon$）随机动作</li>
+</ul>
+</li>
+<li><p>$\epsilon$保证了最小的regret，满足</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+l_t \geq \frac{\epsilon}{A}\sum_{a\in A}\Delta_a</script><p>$\epsilon-greedy$ 仍然是线性总regret，因为会$\epsilon$随机采样到大gap</p>
+<h3 id="Solution：选择策略让-epsilon-递减"><a href="#Solution：选择策略让-epsilon-递减" class="headerlink" title="Solution：选择策略让$\epsilon$递减"></a><strong>Solution</strong>：选择策略让$\epsilon$递减</h3><p>核心思想：假设我们现在知道每一个行为的最优价值$V^*$，那么我们可以根据行为的价值计算出所有行为的$\Delta_a$ 。可设置为：如果一个行为的差距越小，则尝试该行为的机会越多；如果一个行为的差距越大，则尝试该行为的几率越小。数学表达如下：</p>
+<p>策略如下：</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+c>0 \\
+d=\min _{a \mid \Delta_{a}>0} \Delta_{i} \\
+\epsilon_{t}=\min \left\{1, \frac{c|\mathcal{A}|}{d^{2} t}\right\}
+\end{array}</script><p>小结：</p>
+<ul>
+<li>对数渐进regret</li>
+<li>$\epsilon$调整策略需要提前知道gap，<strong>不符合实际</strong></li>
+<li>对于任意多臂赌博机，都可找到次线性regret，不用R的信息</li>
+</ul>
+<h2 id="2-2-不确定性优先-optimism-in-the-face-of-uncertainty"><a href="#2-2-不确定性优先-optimism-in-the-face-of-uncertainty" class="headerlink" title="2.2 不确定性优先 optimism in the face of uncertainty"></a>2.2 不确定性优先 optimism in the face of uncertainty</h2><h3 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h3><h4 id="总后悔值下限-lower-bound"><a href="#总后悔值下限-lower-bound" class="headerlink" title="总后悔值下限 lower bound"></a>总后悔值下限 lower bound</h4><p>当有噪声干扰，或者表现具有相似性，无法从反馈信息直接判断动作好坏</p>
+<p>可以用$gap\Delta_a$， 和分布的相似程度KL散度 $KL(R^a||R^a*)$，来计算总后悔值的下限：</p>
+<ul>
+<li>差距越大，后悔值越大</li>
+<li>奖励分布的相似程度越高，后悔值约低</li>
+</ul>
+<p><strong>定理</strong>：（Lai and robbins）<br>存在一个总后悔值的下限，没有哪一个算法能够做得比这个下限更好<br>渐进总regret 至少是步数的<strong>对数</strong></p>
+<script type="math/tex; mode=display">\lim _{t \rightarrow \infty} L_{t} \geq \log t \sum_{a \mid \Delta_{a}>0} \frac{\Delta_{a}}{K L\left(\mathcal{R}^{a}|| \mathcal{R}^{a^{*}}\right)}</script><h4 id="置信上限-Upper-confidence-bound"><a href="#置信上限-Upper-confidence-bound" class="headerlink" title="置信上限 Upper confidence bound"></a>置信上限 Upper confidence bound</h4><p>为什么要分析置信上限，通过分析上限，可以将表现<strong>有潜力</strong>的动作选出<br>上限的选取，是基于概率的，选择要包容95%、99%的置信区间</p>
+<ul>
+<li>上限值$U_t(a)$ 以均值为基准，叠加在均值之上的</li>
+<li><p><img src="/img/15984959743685.jpg" alt=""></p>
+</li>
+<li><p>对每个动作价值函数，进行估计上限$\hat U_t(a)$</p>
+</li>
+<li>例如：$Q(a) \leq \hat Q_t(a) + \hat U_t(a)$ 具有高概率</li>
+<li>这取决于步的计数个数$N(a)$，采样到的个数越多，估计越准确<ul>
+<li>小的 $N(a)$对应 大的 $\hat U_t(a)$，估计不确定</li>
+<li>大的 $N(a)$对应 小的 $\hat U_t(a)$，估计<strong>准确</strong></li>
+</ul>
+</li>
+<li>按照置信上限 upper confidence bound（UCN）选取最优动作<script type="math/tex; mode=display">
+a_t = \underset{a\in A}{\operatorname {argmax}}\left(\hat Q_t(a) + \hat U_t(a)\right)</script></li>
+</ul>
+<p>小结：随仿真进行，提高置信度</p>
+<h4 id="霍夫丁不等式-Hoeffding’s-inequality"><a href="#霍夫丁不等式-Hoeffding’s-inequality" class="headerlink" title="霍夫丁不等式 Hoeffding’s inequality"></a>霍夫丁不等式 Hoeffding’s inequality</h4><p>提供了置信上限的计算方法，要求先对数据进行缩放，缩放到[0,1]<br><img src="/img/15983397722162.jpg" alt="-w422"></p>
+<p>将不等式应用到奖励赌博机中</p>
+<script type="math/tex; mode=display">\mathbb{P}\left[Q(a)>\hat{Q}_{t}(a)+U_{t}(a)\right] \leq e^{-2 N_{t}(a) U_{t}(a)^{2}}</script><h5 id="利用霍夫丁不等式计算UCB"><a href="#利用霍夫丁不等式计算UCB" class="headerlink" title="利用霍夫丁不等式计算UCB"></a>利用霍夫丁不等式计算UCB</h5><ul>
+<li>选择允许的概率 P</li>
+<li>计算上限值，$U_t(a)$<script type="math/tex; mode=display">
+\begin{aligned}
+e^{-2 N_{t}(a)} U_{t}(a)^{2} &=p \\
+U_{t}(a) &=\sqrt{\frac{-\log p}{2 N_{t}(a)}}
+\end{aligned}</script></li>
+</ul>
+<p>实际操作过程中，随着采样点增多，我们希望对Q的估计越来越确信，所以逐步减少p值<br>通过降低p，可以获取更多奖励，随着仿真进行，降低p值，e.g. $p = t^{-4}$</p>
+<script type="math/tex; mode=display">U_{t}(a)=\sqrt{\frac{2 \log t}{N_{t}(a)}}</script><h4 id="UCB1"><a href="#UCB1" class="headerlink" title="UCB1"></a>UCB1</h4><p>利用霍夫丁不等式，let $p = t^{-4}$<br>UCB1算法如下：</p>
+<script type="math/tex; mode=display">a_{t}=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q(a)+\sqrt{\frac{2 \log t}{N_{t}(a)}}</script><p>定理：<br>UCB算法趋向于对数渐进 总regret</p>
+<script type="math/tex; mode=display">\lim _{t \rightarrow \infty} L_{t} \leq 8 \log t \sum_{a \mid \Delta_{a}>0} \Delta_{a}</script><p>效果对比：<br><img src="/img/15983410378195.jpg" alt="-w843"></p>
+<ul>
+<li>小结：<ul>
+<li>如果$\epsilon-greedy$调参合适，表现更好，参数差就是灾难</li>
+<li>UCB不需要掌握任何信息也可以表现良好</li>
+</ul>
+</li>
+</ul>
+<p>UCB可以被应用到：</p>
+<ul>
+<li>伯恩斯坦 不等式</li>
+<li>经验伯恩斯坦 不等式</li>
+<li>切尔诺夫 不等式</li>
+<li>azuma 不等式</li>
+</ul>
+<h4 id="贝叶斯-Bayesian-bandits"><a href="#贝叶斯-Bayesian-bandits" class="headerlink" title="贝叶斯 Bayesian bandits"></a>贝叶斯 Bayesian bandits</h4><p>与多臂老虎机不同，贝叶斯老虎机中，我们期望通过episode 的经验构建动作-奖励概率函数 和 Q值函数，用<strong>后验估计来指导最优动作的选取</strong></p>
+<ul>
+<li>特性：<ul>
+<li>贝叶斯赌博机利用 已知的奖励经验，$p[R^a]$</li>
+<li>构建Q值的概率分布，使用参数w，$p[Q|w]$<ul>
+<li>e.g. Gaussians: $w = [\mu_1, \sigma^2,…]$ for each $a\in [1,k]$</li>
+</ul>
+</li>
+<li>计算奖励的后验分布 $p[R|h_t]$，使用奖励的历史信息</li>
+<li>使用后验去指导探索<ul>
+<li>UCB</li>
+<li>概率匹配（thompson sampling）</li>
+</ul>
+</li>
+<li>先验知识准确的条件下，表现会更好</li>
+</ul>
+</li>
+</ul>
+<h4 id="贝叶斯UCB"><a href="#贝叶斯UCB" class="headerlink" title="贝叶斯UCB"></a>贝叶斯UCB</h4><ul>
+<li><p>计算方法：</p>
+<ul>
+<li><p>假设奖励服从高斯分布$R_a(r) = N(r;\mu_a,\sigma^2_a)$<br><img src="/img/15983418636815.jpg" alt="-w400"></p>
+</li>
+<li><p>根据贝叶斯准则计算均值$\mu_a$ 和 方差 $\sigma^2_a$</p>
+<script type="math/tex; mode=display">p\left[\mu_{a}, \sigma_{a}^{2} \mid h_{t}\right] \propto p\left[\mu_{a}, \sigma_{a}^{2}\right] \prod_{t \mid a_{t}=a} \mathcal{N}\left(r_{t} ; \mu_{a}, \sigma_{a}^{2}\right)</script></li>
+<li><p>选择最大化标准差的$Q(a)$值</p>
+</li>
+</ul>
+</li>
+</ul>
+<script type="math/tex; mode=display">a_{t}=\underset{a\in A}{\operatorname {argmax}} \mu_{a}+c \sigma_{a} / \sqrt{N(a)}</script><h3 id="2-1-概率匹配"><a href="#2-1-概率匹配" class="headerlink" title="2.1 概率匹配"></a>2.1 概率匹配</h3><p>选择动作：按照最有动作的概率挑选动作</p>
+<script type="math/tex; mode=display">\pi\left(a \mid h_{t}\right)=\mathbb{P}\left[Q(a)>Q\left(a^{\prime}\right), \forall a^{\prime} \neq a \mid h_{t}\right]</script><p>按照纵坐标的大小去选</p>
+<p><img src="/img/15983423942782.jpg" alt="-w416"></p>
+<p>特点：</p>
+<ul>
+<li>面对不确定性时，概率匹配是最优的<ul>
+<li>不确定行动，可能获取最大值</li>
+</ul>
+</li>
+<li>无法得到解析的后验值</li>
+</ul>
+<h3 id="2-2-Thompson-Sampling"><a href="#2-2-Thompson-Sampling" class="headerlink" title="2.2 Thompson Sampling"></a>2.2 Thompson Sampling</h3><p>基于概率匹配的方法</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\pi\left(a \mid h_{t}\right) &=\mathbb{P}\left[Q(a)>Q\left(a^{\prime}\right), \forall a^{\prime} \neq a \mid h_{t}\right] \\
+&=\mathbb{E}_{\mathcal{R} \mid h_{t}}[\mathbf{1}(a=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q(a))]
+\end{aligned}</script><p>操作步骤：</p>
+<ol>
+<li>使用贝叶斯法则计算后验分布$p[R|h_t]$</li>
+<li>从后验分布中采样 R 值，根据奖励值期望，计算动作价值函数</li>
+<li>选取最优动作，即可最大化Q(a) as $a_t = \underset{a\in A}{\operatorname{argmax}}Q(a)$</li>
+</ol>
+<p>汤姆森采样，同样满足Lai robbins 下限</p>
+<p>采样在序列问题中，表现的很好，因为采样打破了序列的排列造成的干扰。</p>
+<h2 id="2-3-信息状态空间搜索-Information-state-search"><a href="#2-3-信息状态空间搜索-Information-state-search" class="headerlink" title="2.3 信息状态空间搜索 Information state search"></a>2.3 信息状态空间搜索 Information state search</h2><h3 id="Value-information"><a href="#Value-information" class="headerlink" title="Value information"></a>Value information</h3><p>Value 可以指导 动作性选择</p>
+<p>评价 value of information</p>
+<ul>
+<li>预算，获取信息的成本<ul>
+<li>如果次数少，基于目前的选择；选择机会多，倾向于探索</li>
+<li>长期的奖励 由于 即刻 奖励</li>
+</ul>
+</li>
+<li>在不确定的情况下，信息增益高，如果什么都知道了，不需要获取信息</li>
+<li>如果我们知道更多信息，就可以最优的平衡 利用 和 探索</li>
+</ul>
+<h3 id="信息状态空间-Information-state-space"><a href="#信息状态空间-Information-state-space" class="headerlink" title="信息状态空间 Information state space"></a>信息状态空间 Information state space</h3><p>信息状态空间包括了状态在内的历史信息，总结归纳出的信息，可以通过状态空间的信息预估奖励、下时刻的状态等</p>
+<ul>
+<li>每个时间步，都有信息状态$\tilde S = f(h_t)$，包括了历史信息的统计、摘要</li>
+<li>每次动作，生成新信息状态，对应概率是$\tilde {\mathcal P}^a_{\tilde S, \tilde S’}$</li>
+<li>每一步，都会计算概率分布，用先验估计的方法，预测下一步的状态和奖励</li>
+</ul>
+<p>定义<strong>增强MDP</strong> $\tilde {\mathcal M}$ as</p>
+<script type="math/tex; mode=display">\tilde{\mathcal M} = \langle \tilde S, A, \tilde P, R, \gamma \rangle</script><ul>
+<li>例子：伯努利老虎机<ul>
+<li>对于伯努利老虎机，汇报函数满足beta分布：$R^a = B(\mu_a)$</li>
+<li>e.g. 赢的概率是 $\mu_a$</li>
+<li>目标是找到最高的$\mu_a$</li>
+<li>信息状态空间是 $\tilde S = \langle \alpha, \beta \rangle$，相较于传统MDP的状态 S = 1 or 0<ul>
+<li>$\alpha_a$计数为奖励=0</li>
+<li>$\beta_a$计数为奖励=1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>这是一个infinite MDP，因为空间无限，但是可以用RL解决</p>
+<p>Solution for information state space bandits：</p>
+<ul>
+<li>无模型强化学习 model-free RL<ul>
+<li>Q-learning</li>
+</ul>
+</li>
+<li>基于模型的贝叶斯强化学习 Bayes model-based RL<ul>
+<li>Gittins indices（Bayes-adaptive RL）<br>找到关于先验分布的最优平衡点（利用 和 探索）</li>
+</ul>
+</li>
+</ul>
+<h4 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h4><p>beta 分布，根据计数，更新后验估计的分布函数</p>
+<ol>
+<li>从$beta(\alpha_a,\beta_a)$先验分布开始</li>
+<li>每一步选取动作，根据结果更新后验估计 for $\mathcal {R^a}$<ul>
+<li>$beta(\alpha_a+1,\beta_a)$ if r = 0;</li>
+<li>$beta(\alpha_a,\beta_a+1)$ if r = 1;</li>
+</ul>
+</li>
+<li>定义了状态转移函数$\tilde P$ for 贝叶斯自适应MDP</li>
+<li>信息空间对应$beta(\alpha_a,\beta_a)$</li>
+<li>每个状态转移 对应 一次贝叶斯模型更新</li>
+</ol>
+<p><img src="/img/15983559828012.jpg" alt="-w513"></p>
+<h3 id="Gittins-indices-for-贝叶斯老虎机"><a href="#Gittins-indices-for-贝叶斯老虎机" class="headerlink" title="Gittins indices for 贝叶斯老虎机"></a>Gittins indices for 贝叶斯老虎机</h3><p>贝叶斯自适应 MDP 可以用 动态规划 求解，被称作 【gittins index】<br>精确求解贝叶斯自适应MDP是非常棘手的，信息状态空间太大</p>
+<p>更高效的解决方法是：使用simulation-based search</p>
+<pre><code>- 对信息状态空间进行前向搜索
+- 从当前状态开始，用simulation的方法
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>随机探索<ul>
+<li>$\epsilon$-greedy</li>
+<li>softmax</li>
+<li>Gaussian noise</li>
+</ul>
+</li>
+<li>基于不确定性的最优<ul>
+<li>乐观初始化</li>
+<li>UCB upper confidence bound</li>
+<li>汤姆逊采样 thompson sampling</li>
+</ul>
+</li>
+<li>信息状态空间<ul>
+<li>Gittins indices</li>
+<li>贝叶斯自适应 MDPs</li>
+</ul>
+</li>
+</ul>
+<h1 id="3、语境老虎机-Contextual-Bandits"><a href="#3、语境老虎机-Contextual-Bandits" class="headerlink" title="3、语境老虎机 Contextual Bandits"></a>3、语境老虎机 Contextual Bandits</h1><h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><ul>
+<li>相较于传统老虎机，考虑tuple$\langle A,S,R\rangle$，考虑了状态</li>
+<li>状态分布未知，$S = \mathcal P[s]$</li>
+<li>奖励函数分布未知，$R_s^a(r) = \mathcal P [r|s,a]$</li>
+<li>在每一个时间步<ul>
+<li>env 产生状态变量 $s_t \in S$</li>
+<li>Agent 选择动作 $a_t\in A$</li>
+<li>环境产生奖励 $r_t \sim R_{s_t}^{a_t}$</li>
+</ul>
+</li>
+<li>目标：最大化累计奖励 $\sum^t_{\tau = 1}r_\tau$</li>
+</ul>
+<h2 id="线性-UCB"><a href="#线性-UCB" class="headerlink" title="线性 UCB"></a>线性 UCB</h2><h3 id="线性回归："><a href="#线性回归：" class="headerlink" title="线性回归："></a>线性回归：</h3><p>构建线性回归Q值 函数估计器，求解估计参数，在状态s下可以求得最优动作a<br><img src="/img/15983574142837.jpg" alt="-w546"></p>
+<h3 id="线性-UCB-1"><a href="#线性-UCB-1" class="headerlink" title="线性 UCB"></a>线性 UCB</h3><p>最小二乘回归，使用参数$\theta$，估计动作价值函数<br>同样，可以估计Q值的方差$\sigma^2_\theta (s,a)$</p>
+<ul>
+<li>不确定性，来源于参数估计的误差</li>
+</ul>
+<p>定义UCB as， $U_\theta (s,a) = c \sigma$</p>
+<ul>
+<li>表示UCB背离了均值 c个标准差</li>
+</ul>
+<h4 id="几何解释："><a href="#几何解释：" class="headerlink" title="几何解释："></a>几何解释：</h4><p><img src="/img/15983578783024.jpg" alt="-w566"></p>
+<h4 id="求解线性UCB"><a href="#求解线性UCB" class="headerlink" title="求解线性UCB"></a>求解线性UCB</h4><p><img src="/img/15983580085583.jpg" alt="-w559"></p>
+<h1 id="4、MDPs"><a href="#4、MDPs" class="headerlink" title="4、MDPs"></a>4、MDPs</h1><p>前述的利用/探索的规则，虽然是基于老虎机问题开发的，但是扩展到 full MDPs过程，同样有效</p>
+<ul>
+<li>原始探索 e.g. $\epsilon-greedy$</li>
+<li>乐观初始化</li>
+<li>基于不确定性的最优</li>
+<li>概率匹配</li>
+<li>信息状态空间搜索</li>
+</ul>
+<p>Agent，不根据最大的平均Q值来选择动作，根据概率分布推测的Q值上限来选择动作，不放过潜力股<br>但是，一般的Q值只是在某个策略下的Q值，最好能考虑策略的上限，然而这是非常难的</p>
+<h2 id="乐观初始化：-model-free-RL"><a href="#乐观初始化：-model-free-RL" class="headerlink" title="乐观初始化： model-free RL"></a>乐观初始化： model-free RL</h2><ul>
+<li>初始化Q值，为$\frac{r_{max}}{1-\gamma}$</li>
+<li>运行model-free RL算法<ul>
+<li>MC control</li>
+<li>Sarsa</li>
+<li>Q-learning</li>
+</ul>
+</li>
+<li>鼓励系统地探索<strong>状态</strong>和<strong>动作</strong></li>
+</ul>
+<h2 id="乐观初始化：-model-based-RL"><a href="#乐观初始化：-model-based-RL" class="headerlink" title="乐观初始化： model-based RL"></a>乐观初始化： model-based RL</h2><ul>
+<li>构建最优模型 for MDP</li>
+<li>初始化转移（i.e.过度到终止状态（with $r_{max}$）奖励）</li>
+<li>用规划算法求解 最优 MDP<ul>
+<li>policy iteration</li>
+<li>value iteration</li>
+<li>tree search</li>
+<li>。。。</li>
+</ul>
+</li>
+<li>鼓励系统地探索<strong>状态</strong>和<strong>动作</strong>空间</li>
+<li>e.g. RMax 算法 （Brafman and Tennenholtz）</li>
+</ul>
+<h2 id="UCB：model-free-RL"><a href="#UCB：model-free-RL" class="headerlink" title="UCB：model-free RL"></a>UCB：model-free RL</h2><ul>
+<li>最大化UCB on 价值函数(在策略$\pi$下)$Q^\pi(s,a)$<script type="math/tex; mode=display">
+a_{t}=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q\left(s_{t}, a\right)+U\left(s_{t}, a\right)</script><ul>
+<li>估计策略评估的不确定性，（简单）</li>
+<li>在策略提高的过程中，忽略不确定性</li>
+</ul>
+</li>
+<li>最大化UCB on 最优价值函数 $Q^*(s,a)$</li>
+</ul>
+<script type="math/tex; mode=display">
+a_{t}=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q\left(s_{t}, a\right)+U_{1}\left(s_{t}, a\right)+U_{2}\left(s_{t}, a\right)</script><pre><code>- 估计策略评估的不确定性$U_1(s_t,a)$，（简单）
+- **加上** 策略评估的不确定性$U_2(s_t,a)$，（复杂）
+</code></pre><h2 id="Bayesian-model-based-RL"><a href="#Bayesian-model-based-RL" class="headerlink" title="Bayesian model-based RL"></a>Bayesian model-based RL</h2><ul>
+<li>获取MDP 模型的后验估计</li>
+<li>估计转移 和 奖励 概率函数分布，$p[P,R|h_t]$<ul>
+<li>$h_t$是$s_1,a_1,…,s_t$等历史信息</li>
+</ul>
+</li>
+<li>用后验估计去指引探索<ul>
+<li>贝叶斯UCB</li>
+<li>概率匹配</li>
+</ul>
+</li>
+</ul>
+<h2 id="汤姆逊采样：model-based-RL"><a href="#汤姆逊采样：model-based-RL" class="headerlink" title="汤姆逊采样：model-based RL"></a>汤姆逊采样：model-based RL</h2><ul>
+<li>thompson sampling 采用概率匹配的方法<script type="math/tex; mode=display">
+\begin{aligned}
+\pi\left(s, a \mid h_{t}\right) &=\mathbb{P}\left[Q^{*}(s, a)>Q^{*}\left(s, a^{\prime}\right), \forall a^{\prime} \neq a \mid h_{t}\right] \\
+&=\mathbb{E}_{\mathcal{P}, \mathcal{R} \mid h_{t}}\left[\mathbf{1}\left(a=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q^{*}(s, a)\right)\right]
+\end{aligned}</script></li>
+<li>使用贝叶斯法则去计算后验估计$p[P,R|h_t]$</li>
+<li>从后验估计中采样MDP</li>
+<li>用规划方法求解最优价值函数$Q^*(s,a)$</li>
+<li>从采样的MDP中，选取最有动作，$a_t = \underset{a\in A}{\operatorname{argmax}}Q^*(s_t,a)$</li>
+</ul>
+<h2 id="Bayes-adaptive-MDPs"><a href="#Bayes-adaptive-MDPs" class="headerlink" title="Bayes adaptive MDPs"></a>Bayes adaptive MDPs</h2><h3 id="信息空间搜索-in-MDPs"><a href="#信息空间搜索-in-MDPs" class="headerlink" title="信息空间搜索 in MDPs"></a>信息空间搜索 in MDPs</h3><ul>
+<li>MDPs 可以被增强为 带有信息空间的MDPs</li>
+<li>增强后的空间表示为$\langle S,\tilde S \rangle$<ul>
+<li>S是MDP的原始状态</li>
+<li>$\tilde S$是静态的历史状态</li>
+</ul>
+</li>
+<li>每个动作造成一个转移<ul>
+<li>去新状态s’的概率$\mathcal P^a_{s,s’}$</li>
+<li>去新的信息空间$\tilde{s’}$</li>
+</ul>
+</li>
+<li>定义MDP$\tilde M$ 表示为</li>
+</ul>
+<script type="math/tex; mode=display">
+\tilde M = \langle \tilde S, A \tilde P , R , \gamma \rangle</script><h3 id="自适应贝叶斯-MDPs"><a href="#自适应贝叶斯-MDPs" class="headerlink" title="自适应贝叶斯 MDPs"></a>自适应贝叶斯 MDPs</h3><ul>
+<li>后验分布 for MDP model 是一个信息空间<script type="math/tex; mode=display">
+\tilde S_t = \mathcal P[\mathcal P, R|h_t]</script></li>
+<li>增强的MDP $\langle S, \tilde S \rangle$被叫做自适应贝叶斯MDP</li>
+<li>求解MDP，找出利用和 探索 之间的平衡（关于先验的）</li>
+<li>然而，带有历史信息的自适应贝叶斯MDP，规模通常超级巨大</li>
+<li>通常使用simulation-based search，即用采样的方法来学习</li>
+</ul>
 <p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -629,7 +961,7 @@ S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolshao.now.sh/posts/rl-1/">https://tolshao.now.sh/posts/rl-1/</a>
+                    <a href="https://tolshao.now.sh/posts/rl-9/">https://tolshao.now.sh/posts/rl-9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -673,6 +1005,14 @@ S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
                             
                                 <a href="/tags/RL/">
                                     <span class="chip bg-color">RL</span>
+                                </a>
+                            
+                                <a href="/tags/exploration/">
+                                    <span class="chip bg-color">exploration</span>
+                                </a>
+                            
+                                <a href="/tags/exploitation/">
+                                    <span class="chip bg-color">exploitation</span>
                                 </a>
                             
                         </div>
@@ -1104,82 +1444,33 @@ S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/rl-2/">
+                <a href="/posts/rl-9/">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记2：Markov decision process(MDP)">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记9：探索和利用 exploration and exploitation">
                         
-                        <span class="card-title">强化学习笔记2：Markov decision process(MDP)</span>
+                        <span class="card-title">强化学习笔记9：探索和利用 exploration and exploitation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            马尔科夫过程（Markov Process，MP）我们说一个state若满足 ，则其具有马尔可夫性，即该state完全包含了历史中的所有信息。马尔科夫过程是无记忆的随机过程，即随机状态序列 具有马尔可夫属性。
-一个马尔科夫过程可以由一个元组
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-05
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">强化学习</span>
-                    </a>
-                    
-                    <a href="/tags/RL/">
-                        <span class="chip bg-color">RL</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/machine-learning/">
-                    <div class="card-image">
-                        
-                        <img src="/img/15966359079445.jpg" class="responsive-img" alt="机器学习-Coursera笔记">
-                        
-                        <span class="card-title">机器学习-Coursera笔记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            AI-&gt;机器学习分类图
-矩阵补课特征值分解EVD，奇异值分解SVD$A$是矩阵$x_i$ 是单位特征向量$\lambda_i$是特征值$\Lambda$ 是矩阵特征值
-EVD特征值分解（The eigenvalue value dec
+                            1、introduction本章的主题是关于利用和探索的矛盾：
+
+Exploitation：利用当前已知信息做决策
+Exploration：探索未知空间获取更多信息
+
+最佳的策略是用长期的眼光来看，放弃短期高回报获取足够策略是让策略变成全局
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-23
                             </span>
                         <span class="publish-author">
                             
@@ -1193,15 +1484,86 @@ EVD特征值分解（The eigenvalue value dec
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/ML/">
-                        <span class="chip bg-color">ML</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
+                    </a>
+                    
+                    <a href="/tags/exploration/">
+                        <span class="chip bg-color">exploration</span>
+                    </a>
+                    
+                    <a href="/tags/exploitation/">
+                        <span class="chip bg-color">exploitation</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/iina-potplayer/">
+                    <div class="card-image">
+                        
+                        <img src="/img/15979281180872.jpg" class="responsive-img" alt="解锁播放器的隐藏功能👀用过的都说好😎">
+                        
+                        <span class="card-title">解锁播放器的隐藏功能👀用过的都说好😎</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            动机🤔
+有时候想看视频，遭遇1-2min的广告，望而却步“歪，我要看的视频也就3min好嘛？？？”
+
+有时候你想看个新闻，却还要装个Flash
+
+
+想起乔帮主说的话“移动时代是低功耗设备、触摸屏界面和开放网络标准的时代，Flash 已经落
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/IINA/">
+                        <span class="chip bg-color">IINA</span>
+                    </a>
+                    
+                    <a href="/tags/Potplayer/">
+                        <span class="chip bg-color">Potplayer</span>
+                    </a>
+                    
+                    <a href="/tags/iptv/">
+                        <span class="chip bg-color">iptv</span>
                     </a>
                     
                 </div>
