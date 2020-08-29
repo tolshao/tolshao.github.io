@@ -81,7 +81,7 @@
     <link href="https://tolshao.now.sh/posts/img-bed/"/>
     <id>https://tolshao.now.sh/posts/img-bed/</id>
     <published>2020-08-19T10:35:50.000Z</published>
-    <updated>2020-08-27T08:14:48.529Z</updated>
+    <updated>2020-08-27T08:31:00.879Z</updated>
     
     
       
@@ -94,7 +94,7 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="工具" scheme="https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="图床" scheme="https://tolshao.now.sh/tags/%E5%9B%BE%E5%BA%8A/"/>
@@ -141,7 +141,7 @@
     <link href="https://tolshao.now.sh/posts/hexo-advanced/"/>
     <id>https://tolshao.now.sh/posts/hexo-advanced/</id>
     <published>2020-08-12T15:19:44.000Z</published>
-    <updated>2020-08-27T07:58:02.204Z</updated>
+    <updated>2020-08-27T08:31:08.437Z</updated>
     
     
       
@@ -154,7 +154,7 @@
     
     
     
-    <category term="博客设置" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2%E8%AE%BE%E7%BD%AE/"/>
+    <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
     <category term="hexo" scheme="https://tolshao.now.sh/tags/hexo/"/>
@@ -198,7 +198,7 @@
     <link href="https://tolshao.now.sh/posts/set-up-hexo/"/>
     <id>https://tolshao.now.sh/posts/set-up-hexo/</id>
     <published>2020-08-07T16:00:00.000Z</published>
-    <updated>2020-08-10T02:38:37.850Z</updated>
+    <updated>2020-08-27T08:31:38.643Z</updated>
     
     
       
@@ -210,6 +210,8 @@
       
     
     
+    
+    <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
     <category term="test" scheme="https://tolshao.now.sh/tags/test/"/>
@@ -223,7 +225,7 @@
     <link href="https://tolshao.now.sh/posts/ios-yellow-page/"/>
     <id>https://tolshao.now.sh/posts/ios-yellow-page/</id>
     <published>2020-08-07T07:09:31.000Z</published>
-    <updated>2020-08-10T10:35:32.694Z</updated>
+    <updated>2020-08-27T08:32:03.401Z</updated>
     
     
       
@@ -237,7 +239,7 @@
     
     
     
-    <category term="收藏" scheme="https://tolshao.now.sh/categories/%E6%94%B6%E8%97%8F/"/>
+    <category term="工具" scheme="https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="ios" scheme="https://tolshao.now.sh/tags/ios/"/>
