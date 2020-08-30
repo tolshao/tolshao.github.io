@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-27T07:11:52.562Z</updated>
+  <updated>2020-08-29T13:44:43.109Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tolshao.now.sh/posts/rl-9/"/>
     <id>https://tolshao.now.sh/posts/rl-9/</id>
     <published>2020-08-23T10:35:12.000Z</published>
-    <updated>2020-08-27T07:11:52.562Z</updated>
+    <updated>2020-08-29T13:44:43.109Z</updated>
     
     
       
@@ -52,7 +52,7 @@
     <link href="https://tolshao.now.sh/posts/iina-potplayer/"/>
     <id>https://tolshao.now.sh/posts/iina-potplayer/</id>
     <published>2020-08-21T00:49:03.000Z</published>
-    <updated>2020-08-26T05:42:29.791Z</updated>
+    <updated>2020-08-29T13:44:43.104Z</updated>
     
     
       
@@ -81,7 +81,7 @@
     <link href="https://tolshao.now.sh/posts/img-bed/"/>
     <id>https://tolshao.now.sh/posts/img-bed/</id>
     <published>2020-08-19T10:35:50.000Z</published>
-    <updated>2020-08-27T08:31:00.879Z</updated>
+    <updated>2020-08-29T13:44:43.105Z</updated>
     
     
       
@@ -110,7 +110,7 @@
     <link href="https://tolshao.now.sh/posts/rl-8/"/>
     <id>https://tolshao.now.sh/posts/rl-8/</id>
     <published>2020-08-17T08:05:59.000Z</published>
-    <updated>2020-08-27T07:10:24.800Z</updated>
+    <updated>2020-08-29T13:44:43.108Z</updated>
     
     
       
@@ -141,7 +141,7 @@
     <link href="https://tolshao.now.sh/posts/hexo-advanced/"/>
     <id>https://tolshao.now.sh/posts/hexo-advanced/</id>
     <published>2020-08-12T15:19:44.000Z</published>
-    <updated>2020-08-27T08:31:08.437Z</updated>
+    <updated>2020-08-30T09:40:03.181Z</updated>
     
     
       
@@ -157,9 +157,9 @@
     <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="hexo" scheme="https://tolshao.now.sh/tags/hexo/"/>
-    
     <category term="blog" scheme="https://tolshao.now.sh/tags/blog/"/>
+    
+    <category term="hexo" scheme="https://tolshao.now.sh/tags/hexo/"/>
     
   </entry>
   
@@ -168,7 +168,7 @@
     <link href="https://tolshao.now.sh/posts/rl-7/"/>
     <id>https://tolshao.now.sh/posts/rl-7/</id>
     <published>2020-08-11T07:09:31.000Z</published>
-    <updated>2020-08-27T07:09:30.854Z</updated>
+    <updated>2020-08-29T13:44:43.108Z</updated>
     
     
       
@@ -195,10 +195,10 @@
   
   <entry>
     <title>从0 -&gt; 1，拥有你的免费个人博客之“打个前站”</title>
-    <link href="https://tolshao.now.sh/posts/set-up-hexo/"/>
-    <id>https://tolshao.now.sh/posts/set-up-hexo/</id>
+    <link href="https://tolshao.now.sh/posts/blog-setup/"/>
+    <id>https://tolshao.now.sh/posts/blog-setup/</id>
     <published>2020-08-07T16:00:00.000Z</published>
-    <updated>2020-08-27T08:31:38.643Z</updated>
+    <updated>2020-08-29T14:02:34.864Z</updated>
     
     
       
@@ -225,7 +225,7 @@
     <link href="https://tolshao.now.sh/posts/ios-yellow-page/"/>
     <id>https://tolshao.now.sh/posts/ios-yellow-page/</id>
     <published>2020-08-07T07:09:31.000Z</published>
-    <updated>2020-08-27T08:32:03.401Z</updated>
+    <updated>2020-08-29T13:44:43.106Z</updated>
     
     
       
