@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2020-08-29T13:44:43.109Z</updated>
+  <updated>2020-09-02T09:48:05.928Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>RL实践1——值迭代求解随机策略</title>
+    <link href="https://tolshao.now.sh/posts/rl-practice-1/"/>
+    <id>https://tolshao.now.sh/posts/rl-practice-1/</id>
+    <published>2020-09-02T09:27:13.000Z</published>
+    <updated>2020-09-02T09:48:05.928Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RL实践1——值迭代求解随机策略&quot;&gt;&lt;a href=&quot;#RL实践1——值迭代求解随机策略&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="强化学习实践" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/"/>
+    
+    
+    <category term="动态规划 dynamic programming" scheme="https://tolshao.now.sh/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-dynamic-programming/"/>
+    
+    <category term="强化学习实践" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>强化学习笔记9：探索和利用 exploration and exploitation</title>
     <link href="https://tolshao.now.sh/posts/rl-9/"/>
     <id>https://tolshao.now.sh/posts/rl-9/</id>
     <published>2020-08-23T10:35:12.000Z</published>
-    <updated>2020-08-29T13:44:43.109Z</updated>
+    <updated>2020-09-02T09:34:50.058Z</updated>
     
     
       
@@ -34,16 +61,14 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    <category term="探索 exploration" scheme="https://tolshao.now.sh/tags/%E6%8E%A2%E7%B4%A2-exploration/"/>
     
-    <category term="exploration" scheme="https://tolshao.now.sh/tags/exploration/"/>
-    
-    <category term="exploitation" scheme="https://tolshao.now.sh/tags/exploitation/"/>
+    <category term="利用 exploitation" scheme="https://tolshao.now.sh/tags/%E5%88%A9%E7%94%A8-exploitation/"/>
     
   </entry>
   
@@ -110,7 +135,7 @@
     <link href="https://tolshao.now.sh/posts/rl-8/"/>
     <id>https://tolshao.now.sh/posts/rl-8/</id>
     <published>2020-08-17T08:05:59.000Z</published>
-    <updated>2020-08-29T13:44:43.108Z</updated>
+    <updated>2020-09-02T09:34:19.717Z</updated>
     
     
       
@@ -123,16 +148,14 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    <category term="学习 Learning" scheme="https://tolshao.now.sh/tags/%E5%AD%A6%E4%B9%A0-Learning/"/>
     
-    <category term="Learning" scheme="https://tolshao.now.sh/tags/Learning/"/>
-    
-    <category term="Planning" scheme="https://tolshao.now.sh/tags/Planning/"/>
+    <category term="规划 Planning" scheme="https://tolshao.now.sh/tags/%E8%A7%84%E5%88%92-Planning/"/>
     
   </entry>
   
@@ -141,7 +164,7 @@
     <link href="https://tolshao.now.sh/posts/hexo-advanced/"/>
     <id>https://tolshao.now.sh/posts/hexo-advanced/</id>
     <published>2020-08-12T15:19:44.000Z</published>
-    <updated>2020-08-30T09:40:03.181Z</updated>
+    <updated>2020-09-02T09:39:55.693Z</updated>
     
     
       
@@ -157,9 +180,9 @@
     <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="blog" scheme="https://tolshao.now.sh/tags/blog/"/>
+    <category term="Blog" scheme="https://tolshao.now.sh/tags/Blog/"/>
     
-    <category term="hexo" scheme="https://tolshao.now.sh/tags/hexo/"/>
+    <category term="Hexo" scheme="https://tolshao.now.sh/tags/Hexo/"/>
     
   </entry>
   
@@ -168,7 +191,7 @@
     <link href="https://tolshao.now.sh/posts/rl-7/"/>
     <id>https://tolshao.now.sh/posts/rl-7/</id>
     <published>2020-08-11T07:09:31.000Z</published>
-    <updated>2020-08-29T13:44:43.108Z</updated>
+    <updated>2020-09-02T09:34:45.489Z</updated>
     
     
       
@@ -182,14 +205,12 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
-    
-    <category term="Policy gradient" scheme="https://tolshao.now.sh/tags/Policy-gradient/"/>
+    <category term="策略梯度 Policy gradient" scheme="https://tolshao.now.sh/tags/%E7%AD%96%E7%95%A5%E6%A2%AF%E5%BA%A6-Policy-gradient/"/>
     
   </entry>
   
@@ -198,7 +219,7 @@
     <link href="https://tolshao.now.sh/posts/blog-setup/"/>
     <id>https://tolshao.now.sh/posts/blog-setup/</id>
     <published>2020-08-07T16:00:00.000Z</published>
-    <updated>2020-08-29T14:02:34.864Z</updated>
+    <updated>2020-09-02T09:40:38.145Z</updated>
     
     
       
@@ -214,9 +235,7 @@
     <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="test" scheme="https://tolshao.now.sh/tags/test/"/>
-    
-    <category term="hello world" scheme="https://tolshao.now.sh/tags/hello-world/"/>
+    <category term="Blog" scheme="https://tolshao.now.sh/tags/Blog/"/>
     
   </entry>
   
@@ -255,7 +274,7 @@
     <link href="https://tolshao.now.sh/posts/rk4/"/>
     <id>https://tolshao.now.sh/posts/rk4/</id>
     <published>2020-08-05T07:09:31.000Z</published>
-    <updated>2020-08-10T10:20:44.636Z</updated>
+    <updated>2020-09-02T09:35:29.597Z</updated>
     
     
       
@@ -283,7 +302,7 @@
     <link href="https://tolshao.now.sh/posts/rl-6/"/>
     <id>https://tolshao.now.sh/posts/rl-6/</id>
     <published>2020-08-05T07:09:31.000Z</published>
-    <updated>2020-08-20T12:31:05.805Z</updated>
+    <updated>2020-09-02T09:34:42.371Z</updated>
     
     
       
@@ -296,14 +315,12 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
-    
-    <category term="值函数估计" scheme="https://tolshao.now.sh/tags/%E5%80%BC%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1/"/>
+    <category term="值函数估计 value function approximation" scheme="https://tolshao.now.sh/tags/%E5%80%BC%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1-value-function-approximation/"/>
     
   </entry>
   
@@ -312,7 +329,7 @@
     <link href="https://tolshao.now.sh/posts/keras-tensorflow/"/>
     <id>https://tolshao.now.sh/posts/keras-tensorflow/</id>
     <published>2020-08-03T07:09:31.000Z</published>
-    <updated>2020-08-09T10:12:12.826Z</updated>
+    <updated>2020-09-02T09:37:25.432Z</updated>
     
     
       
@@ -327,10 +344,10 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="机器学习笔记" scheme="https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="机器学习" scheme="https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="机器学习 ML" scheme="https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-ML/"/>
     
     <category term="keras" scheme="https://tolshao.now.sh/tags/keras/"/>
     
@@ -343,7 +360,7 @@
     <link href="https://tolshao.now.sh/posts/deep-learning-summary/"/>
     <id>https://tolshao.now.sh/posts/deep-learning-summary/</id>
     <published>2020-08-03T07:09:31.000Z</published>
-    <updated>2020-08-10T10:33:07.313Z</updated>
+    <updated>2020-09-02T09:35:17.813Z</updated>
     
     
       
@@ -356,7 +373,7 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="机器学习笔记" scheme="https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="深度学习" scheme="https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
@@ -370,7 +387,7 @@
     <link href="https://tolshao.now.sh/posts/rl-5/"/>
     <id>https://tolshao.now.sh/posts/rl-5/</id>
     <published>2020-08-01T07:09:31.000Z</published>
-    <updated>2020-08-12T15:29:28.861Z</updated>
+    <updated>2020-09-02T09:34:39.569Z</updated>
     
     
       
@@ -386,12 +403,12 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    <category term="无模型控制 model-free control" scheme="https://tolshao.now.sh/tags/%E6%97%A0%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6-model-free-control/"/>
     
   </entry>
   
@@ -400,7 +417,7 @@
     <link href="https://tolshao.now.sh/posts/gym-rl-env/"/>
     <id>https://tolshao.now.sh/posts/gym-rl-env/</id>
     <published>2020-07-25T07:09:31.000Z</published>
-    <updated>2020-08-09T10:12:12.825Z</updated>
+    <updated>2020-09-02T09:37:00.504Z</updated>
     
     
       
@@ -415,12 +432,10 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
     <category term="gym" scheme="https://tolshao.now.sh/tags/gym/"/>
     
@@ -431,7 +446,7 @@
     <link href="https://tolshao.now.sh/posts/deep-learning/"/>
     <id>https://tolshao.now.sh/posts/deep-learning/</id>
     <published>2020-07-23T07:09:31.000Z</published>
-    <updated>2020-08-10T10:24:58.259Z</updated>
+    <updated>2020-09-02T09:39:16.388Z</updated>
     
     
       
@@ -444,12 +459,12 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="机器学习笔记" scheme="https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="深度学习" scheme="https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习 DL" scheme="https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-DL/"/>
     
-    <category term="DL" scheme="https://tolshao.now.sh/tags/DL/"/>
+    <category term="机器学习 ML" scheme="https://tolshao.now.sh/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-ML/"/>
     
     <category term="Coursera" scheme="https://tolshao.now.sh/tags/Coursera/"/>
     
@@ -460,7 +475,7 @@
     <link href="https://tolshao.now.sh/posts/advance-control-2/"/>
     <id>https://tolshao.now.sh/posts/advance-control-2/</id>
     <published>2020-07-15T10:09:31.000Z</published>
-    <updated>2020-08-10T10:36:17.357Z</updated>
+    <updated>2020-09-02T09:38:51.856Z</updated>
     
     
       
@@ -473,7 +488,7 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="控制理论笔记" scheme="https://tolshao.now.sh/categories/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="高级控制理论" scheme="https://tolshao.now.sh/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/"/>
@@ -487,7 +502,7 @@
     <link href="https://tolshao.now.sh/posts/cnn/"/>
     <id>https://tolshao.now.sh/posts/cnn/</id>
     <published>2020-07-15T07:09:31.000Z</published>
-    <updated>2020-08-10T10:21:50.461Z</updated>
+    <updated>2020-09-02T09:35:07.441Z</updated>
     
     
       
@@ -500,7 +515,7 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="机器学习笔记" scheme="https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="深度学习" scheme="https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
@@ -516,7 +531,7 @@
     <link href="https://tolshao.now.sh/posts/rl-4/"/>
     <id>https://tolshao.now.sh/posts/rl-4/</id>
     <published>2020-07-15T07:09:31.000Z</published>
-    <updated>2020-08-12T11:24:40.206Z</updated>
+    <updated>2020-09-02T09:34:36.908Z</updated>
     
     
       
@@ -529,12 +544,12 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
+    <category term="无模型预测 model-free prediction" scheme="https://tolshao.now.sh/tags/%E6%97%A0%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B-model-free-prediction/"/>
     
   </entry>
   
@@ -543,7 +558,7 @@
     <link href="https://tolshao.now.sh/posts/rl-3/"/>
     <id>https://tolshao.now.sh/posts/rl-3/</id>
     <published>2020-07-10T07:09:31.000Z</published>
-    <updated>2020-08-12T11:24:40.205Z</updated>
+    <updated>2020-09-02T09:34:34.234Z</updated>
     
     
       
@@ -557,39 +572,12 @@
     
     
     
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="强化学习" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
     
-    <category term="RL" scheme="https://tolshao.now.sh/tags/RL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MBSE 基于模型的系统工程</title>
-    <link href="https://tolshao.now.sh/posts/mbse/"/>
-    <id>https://tolshao.now.sh/posts/mbse/</id>
-    <published>2020-07-08T07:09:31.000Z</published>
-    <updated>2020-08-09T10:12:12.829Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;MBSE&quot;&gt;&lt;a href=&quot;#MBSE&quot; class=&quot;headerlink&quot; title=&quot;MBSE&quot;&gt;&lt;/a&gt;MBSE&lt;/h1&gt;&lt;p&gt;根据国际系统工程协会（INCOSE）在 2007 年发布的《SE 愿景 2020》中的定义，MBSE</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="系统" scheme="https://tolshao.now.sh/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="MBSE" scheme="https://tolshao.now.sh/tags/MBSE/"/>
+    <category term="动态规划 dynamic programming" scheme="https://tolshao.now.sh/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-dynamic-programming/"/>
     
   </entry>
   
