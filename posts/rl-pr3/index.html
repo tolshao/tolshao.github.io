@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="卷积神经网络CNN（convolutional）, BUAA ">
+    <meta name="keywords" content="RL实践3——为Agent添加Policy, BUAA ">
     <meta name="baidu-site-verification" content="7VRrwBpvaq" />
     <meta name="description" content="BUAA | 张小跳">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>卷积神经网络CNN（convolutional） | Tolshao</title>
+    <title>RL实践3——为Agent添加Policy | Tolshao</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/img/15966353155178.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/robot.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">卷积神经网络CNN（convolutional）</h1>
+                    <h1 class="description center-align post-title">RL实践3——为Agent添加Policy</h1>
                 </div>
             </div>
         </div>
@@ -443,16 +443,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">深度学习</span>
+                            <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/">
+                                <span class="chip bg-color">强化学习 RL</span>
                             </a>
                         
-                            <a href="/tags/CNN/">
-                                <span class="chip bg-color">CNN</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">卷积神经网络</span>
+                            <a href="/tags/Sarsa/">
+                                <span class="chip bg-color">Sarsa</span>
                             </a>
                         
                     </div>
@@ -463,8 +459,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                机器学习笔记
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/" class="post-category">
+                                强化学习实践
                             </a>
                         
                     </div>
@@ -476,28 +472,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-15
+                    2020-09-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-02
+                    2020-09-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    731
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -512,118 +508,98 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="卷积神经网络CNN（convolutional）"><a href="#卷积神经网络CNN（convolutional）" class="headerlink" title="卷积神经网络CNN（convolutional）"></a>卷积神经网络CNN（convolutional）</h1><p>卷积运算：原图像*卷积核=新图像，经常用来做边缘检测<br>人造核：手动指定权重，改善效果<br><img src="/img/15941711725552.jpg" alt="-w615"></p>
-<p>指定核权重为变量，通过反向传播，学习卷积核的权重<br>补白和步幅决定了卷积后的</p>
-<h2 id="补白Padding"><a href="#补白Padding" class="headerlink" title="补白Padding"></a>补白Padding</h2><ul>
-<li>Valid convolution：p = 0<br>$n\times n * f\times f -&gt; (n-f+1)\times (n-f+1)$</li>
-<li>Same convolution：n = n<br>$(n+2p)\times (n+2p) * f\times f -&gt; n\times n$<br>得到填充边缘宽度$p = \frac{f-1}{2}$<br>所以一般卷积核大小是奇数<h2 id="步幅strides"><a href="#步幅strides" class="headerlink" title="步幅strides"></a>步幅strides</h2>s&gt;1，图像也变小<br><img src="/img/15941720564251.jpg" alt="-w600"></li>
-</ul>
-<h2 id="三维卷积"><a href="#三维卷积" class="headerlink" title="三维卷积"></a>三维卷积</h2><p>对于RGB三通道图像，nc个滤波器，卷积叠加，得到深度为nc的图像<br><img src="/img/15941727037025.jpg" alt="-w710"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/img/15941735838131.jpg" alt="-w697"></p>
-<h3 id="趋势：缩减图片尺度，增加深度"><a href="#趋势：缩减图片尺度，增加深度" class="headerlink" title="趋势：缩减图片尺度，增加深度"></a>趋势：缩减图片尺度，增加深度</h3><p><img src="/img/15941743777673.jpg" alt="-w693"></p>
-<h2 id="CNN分类"><a href="#CNN分类" class="headerlink" title="CNN分类"></a>CNN分类</h2><h3 id="卷积层Conv："><a href="#卷积层Conv：" class="headerlink" title="卷积层Conv："></a>卷积层Conv：</h3><p><img src="/img/15941767758613.jpg" alt="-w695"></p>
-<h3 id="池化层Pool：减少图片宽度，用卷积核进行特征提取"><a href="#池化层Pool：减少图片宽度，用卷积核进行特征提取" class="headerlink" title="池化层Pool：减少图片宽度，用卷积核进行特征提取"></a>池化层Pool：减少图片宽度，用卷积核进行特征提取</h3><p>欠<strong>采样</strong>（下采样），特征降维，压缩数据和参数，减小过拟合<br>只有超参数，没有参数<br>主要分类：</p>
+                <p>参考自知乎（叶强）</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>在实践2中，介绍了<code>gym</code>环境的定义和使用方法。<br>在实践1中，介绍了 动态规划DP 求解 价值函数<br>并没有形成一个策略Policy$\pi$来指导agent的动作选取，本节将利用SARSA（0）的学习方法，帮助agent学习到价值函数(表），指导$\epsilon$-greedy策略选取动作。</p>
+<h1 id="Agent的写法"><a href="#Agent的写法" class="headerlink" title="Agent的写法"></a>Agent的写法</h1><p>Agent的三要素是：价值函数、策略、模型<br>Sarsa（0）是不基于模型的控制，其动作选择策略是$\epsilon$-greedy，根据价值函数选择动作。</p>
+<p>对于一般问题，Agent包括如下功能</p>
 <ul>
-<li>最大池化</li>
-<li>平均池化</li>
+<li>对环境的引用</li>
+<li>自身变量：Q值，状态值的记忆</li>
+<li>策略方法</li>
+<li>动作执行方法</li>
+<li>学习方法：改进策略，这部分是关键</li>
 </ul>
-<p><img src="/img/15941793237584.jpg" alt="-w730"></p>
-<h3 id="全连接层Fc：一般用来输出"><a href="#全连接层Fc：一般用来输出" class="headerlink" title="全连接层Fc：一般用来输出"></a>全连接层Fc：一般用来输出</h3><p><img src="/img/15941799685961.jpg" alt="-w743"><br><img src="/img/15941799984582.jpg" alt="-w732"><br><img src="/img/15941803310656.jpg" alt="-w661"></p>
-<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>优势</li>
+<pre><code class="lang-python">class Agent():
+    def __init__(self, env: Env):
+        self.env = env      # 个体持有环境的引用
+        self.Q = &amp;#123;&amp;#125;         # 个体维护一张行为价值表Q
+        self.state = None   # 个体当前的观测，最好写成obs.
+
+    def performPolicy(self, state): pass # 执行一个策略
+
+    def act(self, a):       # 执行一个行为
+        return self.env.step(a)
+
+    def learning(self): pass   # 学习过程
+</code></pre>
+<h2 id="Agent方法"><a href="#Agent方法" class="headerlink" title="Agent方法"></a>Agent方法</h2><p>SARSA（0）的伪算法流程如下：<br><img src="/img/15991172298667.png" alt=""></p>
+<h2 id="核心方法：learning"><a href="#核心方法：learning" class="headerlink" title="核心方法：learning"></a>核心方法：learning</h2><pre><code class="lang-python">def learning(self, gamma, alpha, max_episode_num):
+    # self.Position_t_name, self.reward_t1 = self.observe(env)
+    total_time, time_in_episode, num_episode = 0, 0, 0
+    while num_episode &lt; max_episode_num: # 设置终止条件
+        self.state = self.env.reset()    # 环境初始化
+        s0 = self._get_state_name(self.state) # 获取个体对于观测的命名
+        self.env.render()                # 显示UI界面
+        a0 = self.performPolicy(s0, num_episode, use_epsilon = True)
+
+        time_in_episode = 0
+        is_done = False
+        while not is_done:               # 针对一个Episode内部
+            # a0 = self.performPolicy(s0, num_episode)
+            s1, r1, is_done, info = self.act(a0) # 执行行为
+            self.env.render()            # 更新UI界面
+            s1 = self._get_state_name(s1)# 获取个体对于新状态的命名
+            self._assert_state_in_Q(s1, randomized = True)
+            # 获得A'
+            a1 = self.performPolicy(s1, num_episode, use_epsilon=True)
+            old_q = self._get_Q(s0, a0)  
+            q_prime = self._get_Q(s1, a1)
+            td_target = r1 + gamma * q_prime  
+            #alpha = alpha / num_episode
+            new_q = old_q + alpha * (td_target - old_q)
+            self._set_Q(s0, a0, new_q)
+
+            if num_episode == max_episode_num: # 终端显示最后Episode的信息
+                print("t:&amp;#123;0:&gt;2&amp;#125;: s:&amp;#123;1&amp;#125;, a:&amp;#123;2:2&amp;#125;, s1:&amp;#123;3&amp;#125;".\
+                    format(time_in_episode, s0, a0, s1))
+
+            s0, a0 = s1, a1
+            time_in_episode += 1
+
+        print("Episode &amp;#123;0&amp;#125; takes &amp;#123;1&amp;#125; steps.".format(
+            num_episode, time_in_episode)) # 显示每一个Episode花费了多少步
+        total_time += time_in_episode
+        num_episode += 1
+    return
+</code></pre>
+<h2 id="策略方法：performPolicy"><a href="#策略方法：performPolicy" class="headerlink" title="策略方法：performPolicy"></a>策略方法：performPolicy</h2><p>通过改变<code>use_epsilon</code>参数，可以切换SARSA 和 Q-learning<br>相同在于：</p>
+<ul>
+<li>都用$\epsilon$-greedy策略进行了探索</li>
 </ul>
-<ol>
-<li>参数共享：将卷积核的参数共享给每组被卷积对象运算</li>
-<li>稀疏性联系：输出的值只与小部分输入相关<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3>CNN从前到后，维度缩减，参数增多</li>
-</ol>
-<h2 id="CNN案例"><a href="#CNN案例" class="headerlink" title="CNN案例"></a>CNN案例</h2><h3 id="经典CNN"><a href="#经典CNN" class="headerlink" title="经典CNN"></a>经典CNN</h3><ul>
-<li><p>LeNet-5（sigmoid激活，softmax分类）<br><img src="/img/15942602914708.jpg" alt="-w767"></p>
+<p>区别在于：</p>
+<ul>
+<li><p>Q-learning：更激进，最优更新</p>
+<ul>
+<li>update： $greedy$策略，评估过程的A’没有实际执行</li>
+<li>control：$\epsilon-greedy$策略</li>
+</ul>
 </li>
-<li><p>AlexNet</p>
-</li>
-</ul>
-<p><img src="/img/15942603354885.jpg" alt="-w772"></p>
-<ul>
-<li>VGGNet<br><img src="/img/15942604999932.jpg" alt="-w775"></li>
-</ul>
-<h3 id="残差网络"><a href="#残差网络" class="headerlink" title="残差网络"></a>残差网络</h3><p>传统的plain network存在梯度指数现象<br><img src="/img/15942710882961.png" alt="-w596"></p>
-<p>为了改善深度网络的梯度爆炸（消失）现象，使深度神经网训练可能</p>
-<ul>
-<li>Residual block<br><img src="/img/15942613601777.jpg" alt="-w777"></li>
-</ul>
-<p><img src="/img/15942613429827.jpg" alt="-w770"><br>维数不一致的问题，可以通过构建权重矩阵，填充0元素或者其他方法进行适配</p>
-<p><img src="/img/15942620573952.jpg" alt="-w723"></p>
-<h2 id="1x1-convolution"><a href="#1x1-convolution" class="headerlink" title="1x1 convolution"></a>1x1 convolution</h2><p>对image每个像素进行非线性函数映射，通过n个kernel，映射为n个特征，用于<strong>缩减图像特征深度</strong><br><img src="/img/15942632478404.jpg" alt="-w662"></p>
-<h3 id="用法，生成中间量，减少运算量"><a href="#用法，生成中间量，减少运算量" class="headerlink" title="用法，生成中间量，减少运算量"></a>用法，生成中间量，减少运算量</h3><p>直接5x5卷积<br><img src="/img/15942634806609.jpg" alt="-w576"><br>采用1x1卷积中间量，再用5x5卷积<br><img src="/img/15942635070290.jpg" alt="-w685"></p>
-<h2 id="Inception-network"><a href="#Inception-network" class="headerlink" title="Inception network"></a>Inception network</h2><h3 id="Main-idea"><a href="#Main-idea" class="headerlink" title="Main idea"></a>Main idea</h3><p><img src="/img/15942632298297.jpg" alt="-w667"></p>
-<h3 id="Inception-module"><a href="#Inception-module" class="headerlink" title="Inception module"></a>Inception module</h3><p><img src="/img/15942639201675.jpg" alt="-w678"></p>
-<h3 id="Inception-network-1"><a href="#Inception-network-1" class="headerlink" title="Inception network"></a>Inception network</h3><ul>
-<li>Inception module 的串联</li>
-<li>branches用于在中间预测结果，效果不差<br><img src="/img/15942640307997.jpg" alt="-w678"></li>
-</ul>
-<h2 id="Transfer-learning"><a href="#Transfer-learning" class="headerlink" title="Transfer learning"></a>Transfer learning</h2><p>步骤</p>
-<ol>
-<li>下载源码，模型，权重参数</li>
-<li>修改末层结构，softmax分类或者</li>
-<li>冻结前层参数</li>
-<li>训练自己模型</li>
-</ol>
-<h2 id="Data-Augmentation数据增强"><a href="#Data-Augmentation数据增强" class="headerlink" title="Data Augmentation数据增强"></a>Data Augmentation数据增强</h2><p>可以预先处理，<br>也可以与训练并行处理</p>
-<h3 id="1、形状"><a href="#1、形状" class="headerlink" title="1、形状"></a>1、形状</h3><ul>
-<li>镜像Mirroring</li>
-<li>随机裁剪Random Cropping</li>
-<li>旋转Rotation</li>
-<li>倾斜Shearing</li>
-<li>扭曲Local warping</li>
-</ul>
-<h3 id="2、色彩Color-shifting"><a href="#2、色彩Color-shifting" class="headerlink" title="2、色彩Color shifting"></a>2、色彩Color shifting</h3><ul>
-<li>增减RGB通道值，改变量随机</li>
-<li>PCA，干扰主要元素</li>
-</ul>
-<h1 id="目标检测"><a href="#目标检测" class="headerlink" title="目标检测"></a>目标检测</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>CV（computer vision）中，目标检测是并列与图像分类的一个重要应用<br>分类 -&gt; 分类+定位 = 目标检测 -&gt; 多目标检测<br><img src="/img/15942815091519.jpg" alt="-w788"></p>
-<ul>
-<li>输出和cost function构造<br>输出$Y = [p_c,b_x,b_y,b_h,b_w,c_1,c_2……]$<br>包含<strong>有没有</strong>物体、<strong>坐标</strong>和<strong>物体类别</strong></li>
-<li>cost function<br>当$p_c$=1，计算均方根误差<br>$p_c$= 0,其他的不计算</li>
-</ul>
-<h2 id="Landmark-Detection"><a href="#Landmark-Detection" class="headerlink" title="Landmark Detection"></a>Landmark Detection</h2><p>人脸特征标记<br>姿态特征标记<br>特征构建Y = $[是不是脸,b_x{1},b_y{1},……,b_x{n},b_{yn}]$</p>
-<h2 id="目标检测几种思路"><a href="#目标检测几种思路" class="headerlink" title="目标检测几种思路"></a>目标检测几种思路</h2><h3 id="Sliding-windows-detection"><a href="#Sliding-windows-detection" class="headerlink" title="Sliding windows detection"></a>Sliding windows detection</h3><ol>
-<li>滑窗获取图像</li>
-<li>传给Classification</li>
-<li>增大windows size 和 stride 重复1</li>
-</ol>
-<h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><ul>
-<li>小步长，计算量高</li>
-<li>大步长，计算粗略，精度差<h3 id="用卷积实现Turning-FC-layer-into-convolutional-layers"><a href="#用卷积实现Turning-FC-layer-into-convolutional-layers" class="headerlink" title="用卷积实现Turning FC layer into convolutional layers"></a>用卷积实现Turning FC layer into convolutional layers</h3>用1x1卷积实现权重线性组合<br><img src="/img/15942833041786.jpg" alt="-w670"></li>
-</ul>
-<p><img src="/img/15942837667651.jpg" alt="-w669"></p>
-<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>定位不精确</p>
-<h2 id="输出更精确的边界框——YOLO"><a href="#输出更精确的边界框——YOLO" class="headerlink" title="输出更精确的边界框——YOLO"></a>输出更精确的边界框——YOLO</h2><p>YOLO算法  you only look once<br>构造输出Y.shape = (h,w,l)<br>h是高度图像分割的个数<br>w是宽度图像分割的个数<br>l方向是物体定位信息$[p_c,b_x,b_y,b_h,b_w,c_1,c_2……]$<br><img src="/img/15942851221558.jpg" alt="-w668"></p>
-<h2 id="非极大值抑制"><a href="#非极大值抑制" class="headerlink" title="非极大值抑制"></a>非极大值抑制</h2><ol>
-<li>低于阈值，直接丢弃</li>
-<li>找出最大值</li>
-<li>与最大值重叠区域IoU&gt;0.5，丢弃。多目标检测的话，运行多次IoU算法</li>
-</ol>
-<p><img src="/img/15942863921030.jpg" alt="-w671"></p>
-<h2 id="Anchor-Boxes"><a href="#Anchor-Boxes" class="headerlink" title="Anchor Boxes"></a>Anchor Boxes</h2><p>重叠物体检测，重建Y<br>矮胖，瘦长<br><img src="/img/15942868946435.jpg" alt="-w673"></p>
-<h1 id="人脸识别——单样本学习"><a href="#人脸识别——单样本学习" class="headerlink" title="人脸识别——单样本学习"></a>人脸识别——单样本学习</h1><ul>
-<li><p>Verification验证<br>input： 图片 姓名 140311199402071213<br>output：是否对应</p>
-</li>
-<li><p>Recognition识别<br>n个人的数据库<br>input：图片<br>output：140311199402071213 of person（如果图片在库里）</p>
+<li><p>SARSA：更新和执行都用$\epsilon-greedy$策略</p>
 </li>
 </ul>
-<p>相似度函数$d(img1,img2)$，函数和照片没关系</p>
-<h2 id="孪生网络Siamese-network"><a href="#孪生网络Siamese-network" class="headerlink" title="孪生网络Siamese network"></a>孪生网络Siamese network</h2><p>核心思想：NN生成编码，比较不同样本编码的范数<br>CNN的参数相同，<br><img src="/img/15942958881883.jpg" alt="-w663"></p>
-<h3 id="三重损耗函数-Triple-loss"><a href="#三重损耗函数-Triple-loss" class="headerlink" title="三重损耗函数 Triple loss"></a>三重损耗函数 Triple loss</h3><p>防止NN输出退化解，布置小于0<br>$\alpha$ is margin<br><img src="/img/15942962863559.jpg" alt="-w662"></p>
-<h3 id="another相似性函数"><a href="#another相似性函数" class="headerlink" title="another相似性函数"></a>another相似性函数</h3><p><img src="/img/15943010618021.jpg" alt="-w413"></p>
-<p><img src="/img/15943009025922.jpg" alt="-w672"></p>
-<h1 id="风格转换Styler-transfer"><a href="#风格转换Styler-transfer" class="headerlink" title="风格转换Styler transfer"></a>风格转换Styler transfer</h1><p><img src="/img/15943016778419.jpg" alt="-w670"></p>
-<h2 id="可视化hidden-unit"><a href="#可视化hidden-unit" class="headerlink" title="可视化hidden unit"></a>可视化hidden unit</h2><p>浅层学习基本特征<br>深层学习宏观特征<br><img src="/img/15943015979608.jpg" alt="-w667"></p>
-<h2 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h2><p>Main idea: 和两张图片都很像<br>$J(G) = \alpha J_{content}(C,G) + \beta J_{style}(S,G)$</p>
-<p><img src="/img/15943018797577.jpg" alt="-w682"></p>
-<h3 id="content-cost-function"><a href="#content-cost-function" class="headerlink" title="content cost function"></a>content cost function</h3><p><img src="/img/15943020713953.jpg" alt="-w698"></p>
-<h3 id="Style-cost-function"><a href="#Style-cost-function" class="headerlink" title="Style cost function"></a>Style cost function</h3><p><img src="/img/15943023722812.jpg" alt="-w603"><br>$\lambda$ 是 l 层的权重<br><img src="/img/15943032075944.jpg" alt="-w468"></p>
-<h2 id="卷积1D和3D形式"><a href="#卷积1D和3D形式" class="headerlink" title="卷积1D和3D形式"></a>卷积1D和3D形式</h2><h3 id="1D形式"><a href="#1D形式" class="headerlink" title="1D形式"></a>1D形式</h3><p><img src="/img/15943038817548.jpg" alt="-w707"></p>
-<h3 id="3D形式"><a href="#3D形式" class="headerlink" title="3D形式"></a>3D形式</h3><p><img src="/img/15943041391653.jpg" alt="-w695"></p>
+<pre><code class="lang-python">def performPolicy(self, s, episode_num, use_epsilon):
+    epsilon = 1.00 / (episode_num+1)
+    Q_s = self.Q[s]
+    str_act = "unknown"
+    rand_value = random()
+    action = None
+    if use_epsilon and rand_value &lt; epsilon:  
+        action = self.env.action_space.sample()
+    else:
+        str_act = max(Q_s, key=Q_s.get)
+        action = int(str_act)
+    return action
+</code></pre>
 <p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -668,7 +644,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tolshao.now.sh/posts/cnn/">https://tolshao.now.sh/posts/cnn/</a>
+                    <a href="https://tolshao.now.sh/posts/rl-pr3/">https://tolshao.now.sh/posts/rl-pr3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -706,16 +682,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">深度学习</span>
+                                <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/">
+                                    <span class="chip bg-color">强化学习 RL</span>
                                 </a>
                             
-                                <a href="/tags/CNN/">
-                                    <span class="chip bg-color">CNN</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">卷积神经网络</span>
+                                <a href="/tags/Sarsa/">
+                                    <span class="chip bg-color">Sarsa</span>
                                 </a>
                             
                         </div>
@@ -1147,49 +1119,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/advance-control-2/">
+                <a href="/posts/rl-pr3/">
                     <div class="card-image">
                         
-                        <img src="/img/Advanced%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA-1.jpg" class="responsive-img" alt="控制理论笔记-2">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="RL实践3——为Agent添加Policy">
                         
-                        <span class="card-title">控制理论笔记-2</span>
+                        <span class="card-title">RL实践3——为Agent添加Policy</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            BiliBili_Dr_can 课程笔记
+                            利用SARSA（0）的学习方法，帮助agent学习到价值函数(表），指导$\epsilon$-greedy策略选取动作。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    控制理论笔记
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/" class="post-category">
+                                    强化学习实践
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">高级控制理论</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/">
+                        <span class="chip bg-color">强化学习 RL</span>
                     </a>
                     
-                    <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
-                        <span class="chip bg-color">经典控制理论</span>
+                    <a href="/tags/Sarsa/">
+                        <span class="chip bg-color">Sarsa</span>
                     </a>
                     
                 </div>
@@ -1203,32 +1177,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/rl-4/">
+                <a href="/posts/rl-pr2-gym/">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记4：无模型预测 model-free prediction">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="RL实践2——RL环境gym搭建">
                         
-                        <span class="card-title">强化学习笔记4：无模型预测 model-free prediction</span>
+                        <span class="card-title">RL实践2——RL环境gym搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Introduction这一章，解决的是用prediction的方法，来评估策略$\pi$的问题。
-对于Env来说，不是参数已知的MDP比如元组中a、s、P的关系不确定 or 未知
-Prediction -&gt; ControlEvalu
+                            对于强化学习算法的研究者，可以快速利用多种不同的环境验证迭代自己的算法有效性。对于强化学习应用的研究者，我们可以效仿gym中的接口，搭建自己的环境。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    强化学习笔记
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/" class="post-category">
+                                    强化学习实践
                                 </a>
                             
                             
@@ -1242,8 +1214,8 @@ Prediction -&gt; ControlEvalu
                         <span class="chip bg-color">强化学习 RL</span>
                     </a>
                     
-                    <a href="/tags/%E6%97%A0%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B-model-free-prediction/">
-                        <span class="chip bg-color">无模型预测 model-free prediction</span>
+                    <a href="/tags/gym/">
+                        <span class="chip bg-color">gym</span>
                     </a>
                     
                 </div>

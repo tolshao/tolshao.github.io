@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-03
+                    2020-09-04
                 </div>
                 
 
@@ -631,12 +631,13 @@ print(np.mean(t_all))
 </li>
 <li><p>action输入校验<br><code>self.action_space.contains(action)</code></p>
 </li>
-<li><p>action和observation空间定义<br>例子：<br><code>Discrete</code>: 0,1,2三个离散值</p>
+<li><p>action和observation空间定义</p>
+</li>
+</ul>
+<p>例子：<br><code>Discrete</code>: 0,1,2三个离散值</p>
 <pre><code class="lang-python">low = np.array([min_0,min_1],dtype=np.float32)
 high = np.array([max_0,max_1],dtype=np.float32)
 </code></pre>
-</li>
-</ul>
 <pre><code>self.action_space = spaces.Discrete(3)
 self.observation_space = spaces.Box(
 self.low, self.high, dtype=np.float32)
@@ -662,7 +663,7 @@ for i in range(nb_episodes):
 </code></pre><h1 id="添加自己写的环境到gym，方便调用"><a href="#添加自己写的环境到gym，方便调用" class="headerlink" title="添加自己写的环境到gym，方便调用"></a>添加自己写的环境到gym，方便调用</h1><h2 id="设置过程"><a href="#设置过程" class="headerlink" title="设置过程"></a>设置过程</h2><ol>
 <li>打开gym.envs目录：<code>/usr/local/lib/python3.7/site-packages/gym/envs</code></li>
 <li>将自己编写的myenv.py拷贝至一个<code>custom</code>目录</li>
-<li><code>envs/custom下__init__.py</code>添加<br><code>from gym.envs.custom.myenv import MyEnv</code><br>，将子文件夹的<code>.py</code>import到上层目录</li>
+<li><code>envs/custom</code>下<code>__init__.py</code>添加<br><code>from gym.envs.custom.myenv import MyEnv</code><br>，将子文件夹的<code>.py</code>import到上层目录</li>
 <li>env下<code>__init__.py</code>添加</li>
 </ol>
 <pre><code class="lang-python">register(
@@ -1205,33 +1206,28 @@ env.close()     # 关闭环境，一般涉及图像绘制的任务，此步为�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/rl-pr2-gym/">
+                <a href="/posts/rl-pr3/">
                     <div class="card-image">
                         
-                        <img src="/img/robot.jpg" class="responsive-img" alt="RL实践2——RL环境gym搭建">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="RL实践3——为Agent添加Policy">
                         
-                        <span class="card-title">RL实践2——RL环境gym搭建</span>
+                        <span class="card-title">RL实践3——为Agent添加Policy</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            RL回顾首先先来回顾一下强化学习问题中，环境Env 和 代理Agent 分别承担的角色和作用。
-RL组成要素是Agent、Env
-代理和环境 分别承担的作用
-
-Agent：由Policy 和 RL_Algorithm构成，这种对RL_alg
+                            利用SARSA（0）的学习方法，帮助agent学习到价值函数(表），指导$\epsilon$-greedy策略选取动作。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1244,7 +1240,6 @@ Agent：由Policy 和 RL_Algorithm构成，这种对RL_alg
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1252,8 +1247,8 @@ Agent：由Policy 和 RL_Algorithm构成，这种对RL_alg
                         <span class="chip bg-color">强化学习 RL</span>
                     </a>
                     
-                    <a href="/tags/gym/">
-                        <span class="chip bg-color">gym</span>
+                    <a href="/tags/Sarsa/">
+                        <span class="chip bg-color">Sarsa</span>
                     </a>
                     
                 </div>
@@ -1456,7 +1451,7 @@ Agent：由Policy 和 RL_Algorithm构成，这种对RL_alg
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">54.7k</span>&nbsp;字
+                class="white-color">50k</span>&nbsp;字
             
             
             
