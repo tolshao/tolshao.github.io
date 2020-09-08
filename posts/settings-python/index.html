@@ -416,14 +416,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-09-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    143
+                    326
                 </div>
                 
 
@@ -445,7 +445,39 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="python读取txt数据plot"><a href="#python读取txt数据plot" class="headerlink" title="python读取txt数据plot"></a>python读取txt数据plot</h2><h2 id="python保存data到excel"><a href="#python保存data到excel" class="headerlink" title="python保存data到excel"></a>python保存data到excel</h2><pre><code>import numpy as np
+                <h2 id="python读取txt数据plot"><a href="#python读取txt数据plot" class="headerlink" title="python读取txt数据plot"></a>python读取txt数据plot</h2><ul>
+<li>从txt获取数据</li>
+</ul>
+<pre><code class="lang-python">def get_txt_result(filename, sp=-1, ep=-1, debug=False):
+    fileReadObj = open(filename)
+    # 再读入后续的文件
+    fileLines = fileReadObj.readlines()  # 一次性读入所有的行
+
+    if sp &gt;= 0 and ep &gt; sp:
+        fileLines = fileLines[sp:ep]
+
+    mylist = fileLines[0].split("\t")  # 用""将字符分开
+    # print(mylist)
+    linecount = len(fileLines)
+    colcount = len(mylist)
+    data = np.zeros((linecount, colcount))
+    j = 0
+    for line in fileLines:
+        line = line.strip()  # 去掉字符串头尾的空格
+        mylist = line.split("\t")  # 用""将字符分开
+        i = 0
+        for x in mylist:
+            data[j][i] = float(x)
+            i = i + 1
+        j = j + 1
+    N = j
+
+    dT = 0.0001
+
+    time = np.linspace(start=0, stop=N * dT, num=N)
+    return time, data
+</code></pre>
+<h2 id="python保存data到excel"><a href="#python保存data到excel" class="headerlink" title="python保存data到excel"></a>python保存data到excel</h2><pre><code>import numpy as np
 import pandas as pd
 # prepare for data
 data = np.arange(1,101).reshape((10,10))
@@ -457,7 +489,23 @@ data_df.index = ['a','b','c','d','e','f','g','h','i','j']
 writer = pd.ExcelWriter('Save_Excel.xlsx')
 data_df.to_excel(writer,'page_1',float_format='%.5f') # float_format 控制精度
 writer.save()
-</code></pre><h2 id="python-Science-风格画图"><a href="#python-Science-风格画图" class="headerlink" title="python Science 风格画图"></a>python Science 风格画图</h2><p><img src="/img/contact.jpg" alt=""></p>
+</code></pre><h2 id="python-Science-风格画图"><a href="#python-Science-风格画图" class="headerlink" title="python Science 风格画图"></a>python Science 风格画图</h2><ul>
+<li><p>安装<code>pip install SciencePlots</code></p>
+</li>
+<li><p>使用</p>
+</li>
+</ul>
+<pre><code class="lang-python">import matplotlib.pyplot as plt
+import numpy as np
+plt.style.use('science')
+x = np.linspace(00,10,50)
+y = np.sin(x)
+y2 = np.cos(x)
+plt.plot(x,y)
+plt.plot(x,y2)
+plt.show()
+</code></pre>
+<p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1036,52 +1084,52 @@ set(h,'PaperPosi
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/settings-python/">
+                <a href="/posts/rl-matlab-youtube/">
                     <div class="card-image">
                         
-                        <img src="/img/15966336874885.jpg" class="responsive-img" alt="python-snippets">
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记11：Matlab &amp; RL">
                         
-                        <span class="card-title">python-snippets</span>
+                        <span class="card-title">强化学习笔记11：Matlab &amp; RL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python读取txt数据plotpython保存data到excelimport numpy as np
-import pandas as pd
-# prepare for data
-data = np.arange(1,101).res
+                            youtube上官方matlab下深度学习RL课程笔记，从工程师的角度宏观上概述了RL问题的所有关键点和注意点，系统看过RL教程后，过一遍，会提纲挈领
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
-                                    设置备忘
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/snippets/">
-                        <span class="chip bg-color">snippets</span>
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">强化学习</span>
                     </a>
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/RL/">
+                        <span class="chip bg-color">RL</span>
+                    </a>
+                    
+                    <a href="/tags/Matlab/">
+                        <span class="chip bg-color">Matlab</span>
                     </a>
                     
                 </div>
@@ -1232,7 +1280,7 @@ data = np.arange(1,101).res
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">50.5k</span>&nbsp;字
+                class="white-color">57.6k</span>&nbsp;字
             
             
             

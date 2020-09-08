@@ -1,0 +1,1726 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="强化学习笔记10：经典游戏示例 classic games, BUAA ">
+    <meta name="baidu-site-verification" content="7VRrwBpvaq" />
+    <meta name="description" content="BUAA | 张小跳">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174552769-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-174552769-1');
+</script>
+
+
+    <title>强化学习笔记10：经典游戏示例 classic games | Tolshao</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="Tolshao" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Tolshao</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Tolshao</div>
+        <div class="logo-desc">
+            
+            BUAA | 张小跳
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/robot.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">强化学习笔记10：经典游戏示例 classic games</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/">
+                                <span class="chip bg-color">强化学习 RL</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E7%A4%BA%E4%BE%8B/">
+                                <span class="chip bg-color">经典游戏示例</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                强化学习笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-08-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-09-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="1、前沿-state-of-art"><a href="#1、前沿-state-of-art" class="headerlink" title="1、前沿 state of art"></a>1、前沿 state of art</h1><h2 id="学习经典游戏的原因"><a href="#学习经典游戏的原因" class="headerlink" title="学习经典游戏的原因"></a>学习经典游戏的原因</h2><ul>
+<li>规则简单，细思又很深入</li>
+<li>历史悠久，已经被研究了几百年</li>
+<li>对IQ测试有意义</li>
+<li>是现实世界的问题的缩影</li>
+</ul>
+<p>已经有很多RL案例，战胜了人类，例如<br><img src="/img/15988436216244.jpg" alt=""></p>
+<h1 id="2、游戏理论-game-theory"><a href="#2、游戏理论-game-theory" class="headerlink" title="2、游戏理论 game theory"></a>2、游戏理论 game theory</h1><h2 id="游戏的最优性"><a href="#游戏的最优性" class="headerlink" title="游戏的最优性"></a>游戏的最优性</h2><p>对于石头剪刀布来说，最优策略，显然和对手agent策略相关，我们期望找到一种一致的策略策略，对所有对手都有效<br>什么是第i个玩家的最优策略$\pi$</p>
+<ul>
+<li><strong>最佳响应</strong> best response $\pi^i_*(\pi^{-i})$ 是针对其他agent的最优策略</li>
+<li><strong>纳什平衡点</strong> Nash equilibrium是针对所有对手的联合策略<script type="math/tex; mode=display">
+\pi^i = \pi^i_*(\pi^{-i})</script></li>
+</ul>
+<p>对于agent来说的最优策略，是一种general 的 策略，对大多数情况，都适用一致的策略去action.</p>
+<h2 id="单agent-自驱动-强化学习"><a href="#单agent-自驱动-强化学习" class="headerlink" title="单agent 自驱动 强化学习"></a>单agent 自驱动 强化学习</h2><ul>
+<li>最佳响应 是 单代理RL问题的解决方案<ul>
+<li>其他玩家 变成环境的一部分</li>
+<li>将游戏 抽象为MDP</li>
+<li>最佳策略是 最佳响应</li>
+</ul>
+</li>
+<li>纳什平衡点 在 自学习RL问题中是 不动点<ul>
+<li>学习的经验是 代理玩游戏产生的<script type="math/tex; mode=display">a_{1} \sim \pi^{1}, a_{2} \sim \pi^{2}, \ldots</script></li>
+<li>每个代理学习针对其他玩家的最佳响应</li>
+<li>代理的策略决定了其他代理的环境</li>
+<li>所有的代理适应其他代理</li>
+</ul>
+</li>
+</ul>
+<h2 id="二人零和博弈游戏"><a href="#二人零和博弈游戏" class="headerlink" title="二人零和博弈游戏"></a>二人零和博弈游戏</h2><p>收益来自其他agent，一方受益，意味着其他亏损</p>
+<script type="math/tex; mode=display">R^1 + R^2 = 0</script><p>methods for finding 纳什平衡点</p>
+<ul>
+<li>Game tree search （i.e. planning）</li>
+<li>自驱动RL</li>
+</ul>
+<h2 id="perfect-and-imperfect-information-games"><a href="#perfect-and-imperfect-information-games" class="headerlink" title="perfect and imperfect information games"></a>perfect and imperfect information games</h2><ul>
+<li>完美信息或者 马尔科夫游戏是  <strong>完全可观的</strong><ul>
+<li>象棋</li>
+<li>围棋</li>
+<li>跳棋</li>
+<li>五子棋</li>
+</ul>
+</li>
+<li>不完全信息游戏是<strong>部分</strong>可观的<ul>
+<li>扑克</li>
+<li>拼图</li>
+</ul>
+</li>
+</ul>
+<h1 id="3、最小、最大搜索"><a href="#3、最小、最大搜索" class="headerlink" title="3、最小、最大搜索"></a>3、最小、最大搜索</h1><h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><ul>
+<li><p>价值函数定义了策略$\pi$下的价值</p>
+<script type="math/tex; mode=display">
+v\pi(s) = \mathcal E_\pi [G_t|S_t= s]</script></li>
+<li><p>最小、最大化价值函数，是在降低其他代理表现的同时，最大化自己的价值</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+v_{*}(s)=\max _{\pi^{1}} \min _{\pi^{2}} v_{\pi}(s)</script><ul>
+<li><p>最小、最大搜索存在纳什平衡点</p>
+</li>
+<li><p>通过深度优先树搜索，找到极值</p>
+</li>
+</ul>
+<p><img src="/img/15988568758900.jpg" alt=""><br>从下往上找：<br>一步找max，一步找min<br>缺点是，运算量指数增长，不能求解整个树的分支<br>Solution：</p>
+<ul>
+<li>用值函数估计器，估计叶节点</li>
+<li>根据节点值，限制搜索深度</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="二进制-线性组合-值函数"><a href="#二进制-线性组合-值函数" class="headerlink" title="二进制 线性组合 值函数"></a>二进制 线性组合 值函数</h3><ul>
+<li>每 个状态特征，只有0、1</li>
+<li>每个特征对应权重 w</li>
+<li>线性组合</li>
+</ul>
+<p><img src="/img/15988595984971.jpg" alt=""></p>
+<h3 id="深蓝-Deep-blue，并不是真正的学习，手动权重"><a href="#深蓝-Deep-blue，并不是真正的学习，手动权重" class="headerlink" title="深蓝 Deep blue，并不是真正的学习，手动权重"></a>深蓝 Deep blue，并不是真正的学习，手动权重</h3><ul>
+<li>知识 Knowledge<ul>
+<li>8k个手动特征</li>
+<li>二进制线性组合价值函数</li>
+<li>人工个调参 权重</li>
+</ul>
+</li>
+<li>搜索 Search<ul>
+<li>高性能平行字母搜索</li>
+<li>40步预测</li>
+<li>每秒 </li>
+</ul>
+</li>
+<li>结果 Results<ul>
+<li>击败了世界冠军</li>
+</ul>
+</li>
+</ul>
+<h3 id="Chinook"><a href="#Chinook" class="headerlink" title="Chinook"></a>Chinook</h3><ul>
+<li>知识 Knowledge<ul>
+<li>二进制线性组合价值函数</li>
+<li>21个经验权重（位置、流动性）</li>
+<li>四象限</li>
+</ul>
+</li>
+<li>搜索 Search<ul>
+<li>高性能平行字母搜索</li>
+<li>逆向搜索<ul>
+<li>从赢的位置从后向前搜索</li>
+<li>存储所有决胜点位置在 lookup 表中</li>
+<li>在最后n步，表现完美</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>结果 Results<ul>
+<li>击败了世界冠军</li>
+</ul>
+</li>
+</ul>
+<h1 id="4、自驱动强化学习-self-play-reinforcement-learning"><a href="#4、自驱动强化学习-self-play-reinforcement-learning" class="headerlink" title="4、自驱动强化学习 self-play reinforcement learning"></a>4、自驱动强化学习 self-play reinforcement learning</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>应用 Value-based RL，完成游戏自学</p>
+<ul>
+<li><p>MC 向$G_t$更新</p>
+<script type="math/tex; mode=display">\Delta \mathbf{w}=\alpha\left(G_{t}-v\left(S_{t}, \mathbf{w}\right)\right) \nabla_{\mathbf{w}} v\left(S_{t}, \mathbf{w}\right)</script></li>
+<li><p>TD（0）向$v(s_t +1)$更新</p>
+<script type="math/tex; mode=display">\Delta \mathbf{w}=\alpha\left(v\left(S_{t+1}, \mathbf{w}\right)-v\left(S_{t}, \mathbf{w}\right)\right) \nabla_{\mathbf{w}} v\left(S_{t}, \mathbf{w}\right)</script></li>
+<li><p>TD（$\lambda$）向$\lambda$-return $G_t^\lambda$更新</p>
+<script type="math/tex; mode=display">\Delta \mathbf{w}=\alpha\left(G_{t}^{\lambda}-v\left(S_{t}, \mathbf{w}\right)\right) \nabla_{\mathbf{w}} v\left(S_{t}, \mathbf{w}\right)</script></li>
+</ul>
+<h2 id="策略提升-Policy-improvement"><a href="#策略提升-Policy-improvement" class="headerlink" title="策略提升 Policy improvement"></a>策略提升 Policy improvement</h2><p>规则的定义决定了<strong>后继者</strong>的状态 $succ(s,a)$</p>
+<p>对于确定性的游戏，估计价值函数是足够的</p>
+<script type="math/tex; mode=display">
+q_*(s,a) = v_*(succ(s,a))</script><p>同样采用最小最大优化</p>
+<script type="math/tex; mode=display">A_{t}=\underset{a}{\operatorname{argmax}} v_{*}\left(\operatorname{succ}\left(S_{t}, a\right)\right) 
+\ for\  white\\
+ A_{t}=\underset{a}{\operatorname{argmin}} v_{*}\left(\operatorname{succ}\left(S_{t}, a\right)\right) 
+\ for\  black</script><h3 id="Self-play-TD-in-Othello：-logistello"><a href="#Self-play-TD-in-Othello：-logistello" class="headerlink" title="Self-play TD in Othello： logistello"></a>Self-play TD in Othello： logistello</h3><p><img src="/img/15988757317734.jpg" alt=""></p>
+<p>使用了策略迭代的方法：</p>
+<ul>
+<li>用2个代理进行对抗</li>
+<li>用MC 评估 策略</li>
+<li>Greedy 策略优化</li>
+</ul>
+<p>6：0战胜世界冠军</p>
+<h2 id="TD-Gammon-非线性价值函数估计"><a href="#TD-Gammon-非线性价值函数估计" class="headerlink" title="TD Gammon: 非线性价值函数估计"></a>TD Gammon: 非线性价值函数估计</h2><p><img src="/img/15988766455259.jpg" alt=""></p>
+<h3 id="自学习-TD-在西洋双陆棋-Backgammon"><a href="#自学习-TD-在西洋双陆棋-Backgammon" class="headerlink" title="自学习 TD 在西洋双陆棋 Backgammon"></a>自学习 TD 在西洋双陆棋 Backgammon</h3><ol>
+<li>权重随机初始化</li>
+<li>自学习训练</li>
+<li>使用非线性TD 学习算法<script type="math/tex; mode=display">\begin{aligned}
+\delta_{t} &=v\left(S_{t+1}, \mathbf{w}\right)-v\left(S_{t}, \mathbf{w}\right) \\
+\Delta \mathbf{w} &=\alpha \delta_{t} \nabla_{\mathbf{w}} v\left(S_{t}, \mathbf{w}\right)
+\end{aligned}</script></li>
+<li>Greedy 策略优化</li>
+</ol>
+<p>TD gammon 的几个层级：</p>
+<ul>
+<li>zero 专家经验</li>
+<li>人造特征</li>
+<li>n层极小极大搜索</li>
+</ul>
+<p>隐藏层个数、 训练代数，直接影响模型表现<br><img src="/img/15988796994616.jpg" alt=""></p>
+<h1 id="5、联合强化学习和最大化搜索"><a href="#5、联合强化学习和最大化搜索" class="headerlink" title="5、联合强化学习和最大化搜索"></a>5、联合强化学习和最大化搜索</h1><h2 id="简单-TD-Simple-TD"><a href="#简单-TD-Simple-TD" class="headerlink" title="简单 TD Simple TD"></a>简单 TD Simple TD</h2><p>TD：向继承者的方向更新价值函数</p>
+<p><img src="/img/15988798436692.jpg" alt=""></p>
+<p>分为两步</p>
+<ul>
+<li>用TD learning 学习价值函数</li>
+<li>用价值函数 进行 最小最大搜索</li>
+</ul>
+<script type="math/tex; mode=display">v_{+}\left(S_{t}, \mathbf{w}\right)=\operatorname{minimax}_{s \in \text {leaves}\left(S_{t}\right)} v(s, \mathbf{w})</script><p>在有些情景表现优异，有些糟糕</p>
+<h2 id="TD-root"><a href="#TD-root" class="headerlink" title="TD root"></a>TD root</h2><p>TD root：从继承者 <strong>搜索值</strong>更新 <strong>价值函数</strong><br><img src="/img/15988802345558.jpg" alt=""></p>
+<ul>
+<li>搜索值 根据 根节点计算得到<script type="math/tex; mode=display">v_{+}\left(S_{t}, \mathbf{w}\right)=\underset{s \in \text { leaves }}{\operatorname{minimax}} \left(S_{t}\right) v(s, \mathbf{w})</script></li>
+<li>从下一个状态的 搜索值 备份 值函数<script type="math/tex; mode=display">v\left(S_{t}, \mathbf{w}\right) \leftarrow v_{+}\left(S_{t+1}, \mathbf{w}\right)=v\left(l_{+}\left(S_{t+1}\right), \mathbf{w}\right)</script></li>
+<li>$I_+(s)$是 从状态s 进行极小极大搜索后 的 <strong>叶</strong>节点值</li>
+</ul>
+<h2 id="TD-leaf"><a href="#TD-leaf" class="headerlink" title="TD leaf"></a>TD leaf</h2><p>TD leaf：从继承者的 <strong>搜索值</strong> 更新 <strong>搜索值</strong><br><img src="/img/15990406257991.jpg" alt=""></p>
+<ul>
+<li>搜索值 由当前和 下一个状态计算得到</li>
+</ul>
+<p>这个公式无法显示</p>
+<pre><code>v_&amp;#123;+&amp;#125;\left(S_&amp;#123;t&amp;#125;, \mathbf&amp;#123;w&amp;#125;\right)=\underset&amp;#123;&amp;#123;s \in \text &amp;#123; leaves &amp;#125;\left(S_&amp;#123;t&amp;#125;\right)&amp;#125;&amp;#125;&amp;#123;\rm&amp;#123;minimax&amp;#125;&amp;#125; v(s, \mathbf&amp;#123;w&amp;#125;)\\
+v_&amp;#123;+&amp;#125;\left(S_&amp;#123;t+1&amp;#125;, \mathbf&amp;#123;w&amp;#125;\right)=\underset&amp;#123;&amp;#123;s \in \text &amp;#123; leaves &amp;#125;\left(S_&amp;#123;t+1&amp;#125;\right)&amp;#125;&amp;#125;&amp;#123;\rm&amp;#123;minimax&amp;#125;&amp;#125; v(s, \mathbf&amp;#123;w&amp;#125;)
+</code></pre><p><img src="/img/MommyTalk1599040691831.jpg" alt="MommyTalk1599040691831"></p>
+<ul>
+<li>t时刻的搜索值 由 t+1时刻的搜索值备份得到<script type="math/tex; mode=display">
+\begin{aligned}
+v_{+}\left(S_{t}, \mathbf{w}\right) & \leftarrow v_{+}\left(S_{t+1}, \mathbf{w}\right) \\
+\Longrightarrow v\left(l_{+}\left(S_{t}\right), \mathbf{w}\right) & \leftarrow v\left(l_{+}\left(S_{t+1}\right), \mathbf{w}\right)
+\end{aligned}</script></li>
+</ul>
+<h3 id="examples："><a href="#examples：" class="headerlink" title="examples："></a>examples：</h3><h4 id="TD-leaf-in-chess：-knightcap"><a href="#TD-leaf-in-chess：-knightcap" class="headerlink" title="TD leaf in chess： knightcap"></a>TD leaf in chess： knightcap</h4><ul>
+<li>learning<ul>
+<li>训练专家对手</li>
+<li>使用TD leaf 学习权重</li>
+</ul>
+</li>
+<li>搜索<ul>
+<li>alpha-beta search </li>
+</ul>
+</li>
+<li>Results<ul>
+<li>master level 完成少数的游戏之后</li>
+<li>不够高效 in 自学习</li>
+<li>不够高效，受初始权重影响较大</li>
+</ul>
+</li>
+</ul>
+<h4 id="TD-leaf-in-Checkers：-Chinook"><a href="#TD-leaf-in-Checkers：-Chinook" class="headerlink" title="TD leaf in Checkers： Chinook"></a>TD leaf in Checkers： Chinook</h4><ul>
+<li>初始的chinook采用手动调优的权重</li>
+<li>后来的版本自训练</li>
+<li>采用Td leaf 调整权重<ul>
+<li>固定了专家</li>
+</ul>
+</li>
+<li>自学习权重的表现 ＞ 人工调优权重的表现</li>
+<li>超过人类水平</li>
+</ul>
+<h2 id="TreeStrap"><a href="#TreeStrap" class="headerlink" title="TreeStrap"></a>TreeStrap</h2><ul>
+<li>TreeStrap：用深层的<strong>搜索值</strong> 更新 浅层的 <strong>搜索值</strong></li>
+</ul>
+<p><img src="/img/15989616364756.jpg" alt=""></p>
+<ul>
+<li>在所有节点 计算 极小、极大搜索</li>
+<li>价值从搜索值备份得到，在同一个step，对所有节点</li>
+</ul>
+<script type="math/tex; mode=display">\begin{aligned}
+v\left(s, \mathbf{w}\right) & \leftarrow v_{+}\left(s, \mathbf{w}\right) \\
+\Longrightarrow v\left( s, \mathbf{w}\right) & \leftarrow v\left(l_{+}\left(s \right), \mathbf{w}\right)
+\end{aligned}</script><h3 id="Treestrap-in-chess-：meep"><a href="#Treestrap-in-chess-：meep" class="headerlink" title="Treestrap in chess ：meep"></a>Treestrap in chess ：meep</h3><ul>
+<li>2k个特征，二进制线性组合价值函数</li>
+<li>随机初始权重</li>
+<li>权重调节方式：Treestrap</li>
+<li>自驱动学习过程表现高效：利用率高</li>
+<li>随机权重情况下表现良好</li>
+</ul>
+<h2 id="Simulation-based-Search"><a href="#Simulation-based-Search" class="headerlink" title="Simulation-based Search"></a>Simulation-based Search</h2><ul>
+<li>自驱动RL 可以替代 搜索</li>
+<li>基于仿真的游戏从根节点 $s_t$开始</li>
+<li>应用RL 到 仿真经验<ul>
+<li>MC control $\Rightarrow$ MC tree search</li>
+<li>最高效的变体算法是 UCT 算法<ul>
+<li>使用置信上界UCB 来平衡探索和利用</li>
+</ul>
+</li>
+<li>自驱动 UCT 收敛于 极小极大价值函数</li>
+<li>在完美信息游戏、不完美信息游戏均表现良好</li>
+</ul>
+</li>
+</ul>
+<h2 id="MCTS蒙特卡洛树搜索-表现in-games"><a href="#MCTS蒙特卡洛树搜索-表现in-games" class="headerlink" title="MCTS蒙特卡洛树搜索 表现in games"></a>MCTS蒙特卡洛树搜索 表现in games</h2><p><img src="/img/15989661936191.jpg" alt=""></p>
+<h3 id="简单蒙特卡洛搜索-in-Maven（拼字游戏）"><a href="#简单蒙特卡洛搜索-in-Maven（拼字游戏）" class="headerlink" title="简单蒙特卡洛搜索 in Maven（拼字游戏）"></a>简单蒙特卡洛搜索 in Maven（拼字游戏）</h3><p><img src="/img/15989726953505.jpg" alt="-w336"></p>
+<ul>
+<li><p>学习 价值函数</p>
+<ul>
+<li>二进制价值函数</li>
+<li>MC policy iteration</li>
+</ul>
+</li>
+<li><p>搜索 价值函数，</p>
+<ul>
+<li>搜索n步</li>
+<li>使用学到的价值函数评价 当前状态</li>
+<li>x</li>
+<li>选择高分动作</li>
+<li>特定的endgame 用$B^*$</li>
+</ul>
+</li>
+</ul>
+<h1 id="6、在非完整信息中的强化学习"><a href="#6、在非完整信息中的强化学习" class="headerlink" title="6、在非完整信息中的强化学习"></a>6、在<strong>非</strong>完整信息中的强化学习</h1><h2 id="Game-tree-search-在不完美信息游戏中"><a href="#Game-tree-search-在不完美信息游戏中" class="headerlink" title="Game tree search 在不完美信息游戏中"></a>Game tree search 在不完美信息游戏中</h2><p><img src="/img/15990142381702.jpg" alt=""></p>
+<p>真实的状态可能共享相同的信息状态空间</p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><ul>
+<li>Iterative forward-search mehtods<ul>
+<li>e.g. 反事实的 后悔值最小化</li>
+</ul>
+</li>
+<li>自驱动RL</li>
+<li>e.g. smooth UCT</li>
+</ul>
+<h3 id="Smooth-UCT-search"><a href="#Smooth-UCT-search" class="headerlink" title="Smooth UCT search"></a>Smooth UCT search</h3><ul>
+<li>应用 MCTS 到 信息状态游戏树</li>
+<li>UCT的变种，由博弈论的虚拟play启发<ul>
+<li>代理agent根据对手的平均行为作出 动作 并 学习</li>
+</ul>
+</li>
+<li><p>从节点的动作计数中 提取 平均策略</p>
+<script type="math/tex; mode=display">\pi_{a v g}(a \mid s)=\frac{N(s, a)}{N(s)}</script></li>
+<li><p>对每个节点，根据UCT概率选择动作</p>
+<script type="math/tex; mode=display">A \sim\left\{\begin{array}{ll}
+\text { UCT }(S), & \text { with probability } \eta \\
+\pi_{\text {avg}}(\cdot \mid S), & \text { with probability } 1-\eta
+\end{array}\right.</script></li>
+<li><p>经验</p>
+<ul>
+<li>Naive MCTS 发散</li>
+<li>Smooth UCT 收敛到纳什平衡点</li>
+</ul>
+</li>
+</ul>
+<h1 id="7、结论"><a href="#7、结论" class="headerlink" title="7、结论"></a>7、结论</h1><p><img src="/img/15989735334405.jpg" alt="-w621"></p>
+<p><img src="/img/contact.jpg" alt=""></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Tolshao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://tolshao.now.sh/posts/rl-10/">https://tolshao.now.sh/posts/rl-10/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Tolshao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/">
+                                    <span class="chip bg-color">强化学习 RL</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E7%A4%BA%E4%BE%8B/">
+                                    <span class="chip bg-color">经典游戏示例</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,weibo,twitter,facebook,google,qq,qzone,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        -o-transform: scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img"
+                            alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img"
+                            alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '95yBDkVN1yK5DfgeKyR5sgiL-gzGzoHsz',
+        appKey: 'tW5Tkk9gPYoRu2LFDLBNv7lP',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/rl-pr-1-dp/">
+                    <div class="card-image">
+                        
+                        <img src="/img/robot.jpg" class="responsive-img" alt="RL实践1——动态规划值迭代">
+                        
+                        <span class="card-title">RL实践1——动态规划值迭代</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用 动态规划 值迭代 求解格子世界中的随机策略价值函数
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/" class="post-category">
+                                    强化学习实践
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-dynamic-programming/">
+                        <span class="chip bg-color">动态规划 dynamic programming</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/">
+                        <span class="chip bg-color">强化学习实践</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/rl-9/">
+                    <div class="card-image">
+                        
+                        <img src="/img/robot.jpg" class="responsive-img" alt="强化学习笔记9：探索和利用 exploration and exploitation">
+                        
+                        <span class="card-title">强化学习笔记9：探索和利用 exploration and exploitation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1、introduction本章的主题是关于利用和探索的矛盾：
+
+Exploitation：利用当前已知信息做决策
+Exploration：探索未知空间获取更多信息
+
+最佳的策略是用长期的眼光来看，放弃短期高回报获取足够策略是让策略变成全局
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    强化学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/">
+                        <span class="chip bg-color">强化学习 RL</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%A2%E7%B4%A2-exploration/">
+                        <span class="chip bg-color">探索 exploration</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%A9%E7%94%A8-exploitation/">
+                        <span class="chip bg-color">利用 exploitation</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('200')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Tolshao<br />'
+            + '文章作者: Tolshao<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] }
+    });
+</script>
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Tolshao</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">57.6k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "7";
+                    var startDate = "25";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+<a href="mailto:zhanghao3440@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我"
+    data-position="top" data-delay="50">
+    <i class="fas fa-envelope-open"></i>
+</a>
+
+
+
+<a href="https://github.com/tolshao" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+    data-position="top" data-delay="50">
+    <i class="fab fa-github"></i>
+</a>
+
+
+
+<a href="https://weibo.com/3214268465/" class="tooltipped" target="_blank"
+    data-tooltip="关注我的微博: https://weibo.com/3214268465/" data-position="top" data-delay="50">
+    <i class="fab fa-weibo"></i>
+</a>
+
+
+
+<a href="https://www.zhihu.com/people/zhang-hao-45-99-41" class="tooltipped" target="_blank"
+    data-tooltip="关注我的知乎: https://www.zhihu.com/people/zhang-hao-45-99-41" data-position="top" data-delay="50">
+    <i class="fab fa-zhihu1">知</i>
+</a>
+
+
+
+
+
+<a href="https://www.facebook.com/profile.php?id=100024678741559" class="tooltipped" target="_blank"
+    data-tooltip="关注我的Facebook: https://www.facebook.com/profile.php?id=100024678741559" data-position="top" data-delay="50">
+    <i class="fab fa-facebook-f"></i>
+</a>
+
+
+
+
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top"
+    data-delay="50">
+    <i class="fas fa-rss"></i>
+</a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "df58ba90"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

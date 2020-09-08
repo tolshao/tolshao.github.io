@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tolshao.now.sh/posts/rl-matlab-youtube/</loc>
+    <lastmod>2020-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-pr3/</loc>
+    <lastmod>2020-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/settings-python/</loc>
+    <lastmod>2020-09-07</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/mac-app/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
@@ -22,10 +34,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/rl-pr-1-dp/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-pr3/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
@@ -117,16 +125,16 @@
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
+    <loc>https://tolshao.now.sh/posts/rl-10/</loc>
+    <lastmod>2020-09-05</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/img-bed/</loc>
     <lastmod>2020-08-29</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/iina-potplayer/</loc>
     <lastmod>2020-08-29</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-python/</loc>
-    <lastmod>2020-08-10</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/settings-matlab/</loc>
