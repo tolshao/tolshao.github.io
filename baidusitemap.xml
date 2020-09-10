@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-gym-start/</loc>
+    <lastmod>2020-09-08</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/rl-matlab-youtube/</loc>
+    <lastmod>2020-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-10/</loc>
     <lastmod>2020-09-08</lastmod>
   </url>
   <url>
@@ -21,15 +33,11 @@
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
+    <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/sequence-model/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
@@ -122,10 +130,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/cnn/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-10/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>

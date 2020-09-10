@@ -1,3 +1,5 @@
+https://tolshao.now.sh/posts/rl-gym-start/
+https://tolshao.now.sh/posts/rl-matlab-youtube/
 https://tolshao.now.sh/posts/rl-pr3/
 https://tolshao.now.sh/posts/rl-pr2-gym/
 https://tolshao.now.sh/posts/rl-pr-1-dp/
@@ -32,4 +34,3 @@ https://tolshao.now.sh/posts/settings-mac/
 https://tolshao.now.sh/posts/settings-latex/
 https://tolshao.now.sh/posts/settings-matlab/
 https://tolshao.now.sh/posts/settings-python/
-https://tolshao.now.sh/posts/rl-matlab-youtube/
