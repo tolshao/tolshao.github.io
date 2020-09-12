@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tolshao.now.sh/posts/rl-pr-1-dp/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/rl-gym-start/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-pr3/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-8/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-7/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-4/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-5/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-3/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/advance-control-2/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/settings-python/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/paper-writting/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/advanced-control/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-2/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-10/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-pr2-gym/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-9/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/ios-yellow-page/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/deep-learning/</loc>
+    <lastmod>2020-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/machine-learning/</loc>
     <lastmod>2020-09-12</lastmod>
   </url>
   <url>
@@ -11,18 +87,6 @@
   <url>
     <loc>https://tolshao.now.sh/posts/rl-matlab-youtube/</loc>
     <lastmod>2020-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-10/</loc>
-    <lastmod>2020-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-pr3/</loc>
-    <lastmod>2020-09-08</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-python/</loc>
-    <lastmod>2020-09-07</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/mac-app/</loc>
@@ -41,51 +105,7 @@
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-pr-1-dp/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-pr2-gym/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-9/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-8/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-7/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-5/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-4/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-3/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-2/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
     <loc>https://tolshao.now.sh/posts/rl-1/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/paper-writting/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
@@ -93,15 +113,7 @@
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/machine-learning/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
     <loc>https://tolshao.now.sh/posts/keras-tensorflow/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/ios-yellow-page/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
@@ -110,18 +122,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/deep-learning-summary/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/deep-learning/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/advance-control-2/</loc>
-    <lastmod>2020-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/advanced-control/</loc>
     <lastmod>2020-09-05</lastmod>
   </url>
   <url>
