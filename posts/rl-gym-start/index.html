@@ -416,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-08
+                    2020-09-12
                 </div>
                 
 
@@ -471,8 +471,8 @@ env.close()
 <p>它看起来应该像这样：</p>
 <p><img src="/img/cartpole.gif" alt="cartpole"></p>
 <p>通常，我们会在允许球杆离开屏幕之前结束模拟。以后再说。现在，即使此环境已经返回<code>done = True</code>，也请忽略有关调用<code>step()</code>的警告。</p>
-<p>如果您希望看到其他运行环境，请尝试将上面的<code>CartPole-v0</code>替换为<code>MountainCar-v0</code>，<code>MsPacman-v0</code>(需要Atari依赖项)或<code>Hopper-v1</code>(需要MuJoCo依赖项)。所有环境均来自<code>Env</code>基类。</p>
-<p>请注意，如果您缺少任何依赖项，则应该收到一条有用的错误消息，告诉您所缺少的内容。 (让我们知道依赖项是否给您带来麻烦，而没有明确的修复说明。)安装缺少的依赖项通常非常简单。您还需要Hopper-v1的MuJoCo许可证。</p>
+<p>如果您希望看到其他运行环境，请尝试将上面的<code>CartPole-v0</code>替换为<code>MountainCar-v0</code>，<code>MsPacman-v0</code>(需要Atari依赖项)或<code>Hopper-v1</code>(需要<code>MuJoCo</code>依赖项)。所有环境均来自<code>Env</code>基类。</p>
+<p>请注意，如果您缺少任何依赖项，则应该收到一条有用的错误消息，告诉您所缺少的内容。 (让我们知道依赖项是否给您带来麻烦，而没有明确的修复说明。)安装缺少的依赖项通常非常简单。您还需要<code>Hopper-v1</code>的<code>MuJoCo</code>许可证。</p>
 <h2 id="观察结果"><a href="#观察结果" class="headerlink" title="观察结果"></a>观察结果</h2><p>如果我们想做的比每步都采取随机行动要好，那么最好是真正了解我们的行动对环境有何影响。</p>
 <p>环境的<code>step</code>函数恰好返回了我们所需要的。实际上，<code>step</code>返回四个值。这些是：</p>
 <ul>
