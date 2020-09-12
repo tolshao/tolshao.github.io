@@ -1058,15 +1058,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            适用于：
-
-MDP model 未知：经验的采样可以获取
-MDP model 已知：无法使用（e.g.原子级动力学），采样可以使用
-
-策略、非策略学习：
-
-On-policy：动作采样来自policy $\pi$
-Off-policy：采样
+                            完成了不基于模型的策略评估之后，可以采取$\epsilon$-greedy等方法进行动作选取，根据状态信息进行动作选取并执行，就实现了不基于模型的控制
                         
                     </div>
                     <div class="publish-info">
