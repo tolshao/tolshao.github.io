@@ -312,6 +312,13 @@
 
   
   <url>
+    <loc>https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
@@ -487,7 +494,14 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/</loc>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/Paper/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -502,20 +516,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/MBSE/</loc>
-    <lastmod>2020-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/</loc>
-    <lastmod>2020-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Paper/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -727,7 +727,14 @@
 
   
   <url>
-    <loc>https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -735,6 +742,13 @@
   
   <url>
     <loc>https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -755,13 +769,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2020-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
@@ -770,13 +777,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/</loc>
-    <lastmod>2020-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2020-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
