@@ -424,21 +424,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-10-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -481,7 +481,7 @@ sudo xattr -r -d com.apple.quarantine /Applications/Sketch.app/</code></p>
 source .bash_profile
 </code></pre></li>
 </ul>
-<h3 id="咳血上网"><a href="#咳血上网" class="headerlink" title="咳血上网"></a>咳血上网</h3><ul>
+<h2 id="咳血上网"><a href="#咳血上网" class="headerlink" title="咳血上网"></a>咳血上网</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://zcssr.me/auth/login">HJF-ZCSSR订阅购买网站</a></li>
 <li>订阅地址：<ul>
 <li>ssr订阅：<code>https://n55.pw/link/PgKooWdckjZl5hf⑧</code></li>
@@ -494,6 +494,43 @@ source .bash_profile
 </ul>
 </li>
 </ul>
+<h2 id="iTerm2"><a href="#iTerm2" class="headerlink" title="iTerm2"></a>iTerm2</h2><p>配置免密登录ssh</p>
+<ul>
+<li><ol>
+<li>创建脚本文件如下</li>
+</ol>
+</li>
+</ul>
+<pre><code class="lang-bash">#!/usr/bin/expect
+
+set ip [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+
+set timeout 10
+spawn ssh $user@$ip
+expect &amp;#123;
+        "*yes/no" &amp;#123;send "yes\r";exp_continue&amp;#125;
+        "*password:" &amp;#123;send "$password\r"&amp;#125;
+&amp;#125;
+interact
+</code></pre>
+<p>上述三个argv是变量传参的接口</p>
+<ul>
+<li><ol>
+<li>配置iterm2的profile</li>
+</ol>
+</li>
+</ul>
+<p>在配置iterm2（iTerm2 -&gt; Preferences -&gt; Profiles）</p>
+<p><img src="/img/16023214284111.png" alt=""></p>
+<ul>
+<li><ol>
+<li>在profiles选项卡选择对应配置文件登录</li>
+</ol>
+</li>
+</ul>
+<p><img src="/img/16023214488409.png" alt=""></p>
 <h2 id="hosts修改"><a href="#hosts修改" class="headerlink" title="hosts修改"></a>hosts修改</h2><p>shift+command+G<br>前往<br><code>/private/etc/</code></p>
 <h2 id="Mac系统插件推荐"><a href="#Mac系统插件推荐" class="headerlink" title="Mac系统插件推荐"></a>Mac系统插件推荐</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/lmk123/oh-my-wechat">Oh my way!微信插件</a></li>
@@ -1290,7 +1327,7 @@ adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></p>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.2k</span>&nbsp;字
+                class="white-color">60.6k</span>&nbsp;字
             
             
             

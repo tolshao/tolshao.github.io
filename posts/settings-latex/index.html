@@ -416,21 +416,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-10-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    254
+                    554
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -454,7 +454,48 @@
 </code></pre><p>所以最后文档定型之后，调整格式的时候再添加</p>
 <h2 id="强制使用自定义图例标签，ref"><a href="#强制使用自定义图例标签，ref" class="headerlink" title="强制使用自定义图例标签，ref"></a>强制使用自定义图例标签，ref</h2><p>\renewcommand{\Figurename}{Fig.}</p>
 <h2 id="投稿latex模板自定义修改"><a href="#投稿latex模板自定义修改" class="headerlink" title="投稿latex模板自定义修改"></a>投稿latex模板自定义修改</h2><p>一般要求单列，双倍间距（可以在cls文件里面调）</p>
+<h2 id="实时预览中文"><a href="#实时预览中文" class="headerlink" title="实时预览中文"></a>实时预览中文</h2><p>使用包CJK</p>
+<pre><code class="lang-latex">\documentclass&amp;#123;article&amp;#125;
+\usepackage&amp;#123;CJKutf8&amp;#125;
+\begin&amp;#123;document&amp;#125;
+\begin&amp;#123;CJK&amp;#125;&amp;#123;UTF8&amp;#125;&amp;#123;gbsn&amp;#125;
+这是一个CJK例子,使用了UTF-8编码和gbsn字体。
+\end&amp;#123;CJK&amp;#125;
+\end&amp;#123;document&amp;#125;
+</code></pre>
+<p>另外两种方法</p>
+<ul>
+<li><code>ctex</code></li>
+</ul>
+<pre><code class="lang-latex">\documentclass[UTF8]&amp;#123;ctexart&amp;#125;
+\begin&amp;#123;document&amp;#125;
+这是一个CTEX的utf-8编码例子，&amp;#123;\kaishu 这里是楷体显示&amp;#125;，&amp;#123;\songti 这里是宋体显示&amp;#125;，&amp;#123;\heiti 这里是黑体显示&amp;#125;，&amp;#123;\fangsong 这里是仿宋显示&amp;#125;。
+\end&amp;#123;document&amp;#125;
+</code></pre>
+<ul>
+<li><code>xeCJK</code>只支持<code>xelatex</code>包，不能实时预览</li>
+</ul>
+<pre><code class="lang-latex">\documentclass&amp;#123;article&amp;#125;
+\usepackage&amp;#123;xeCJK&amp;#125;
+\setCJKmainfont&amp;#123;SimSun&amp;#125;
+\begin&amp;#123;document&amp;#125;
+中文 \LaTeX 示例。
+\end&amp;#123;document&amp;#125;
+</code></pre>
+<h2 id="长公式跨双栏显示"><a href="#长公式跨双栏显示" class="headerlink" title="长公式跨双栏显示"></a>长公式跨双栏显示</h2><ul>
+<li>使用<code>cuted</code>包的<code>strip</code>环境</li>
+<li>更改strip默认行距，<code>\stripsep -3pt plus 3pt minus 2pt</code></li>
+</ul>
+<pre><code class="lang-latex">\begin&amp;#123;strip&amp;#125;
+\begin&amp;#123;equation&amp;#125;
+\label&amp;#123;haha&amp;#125;
+a&amp;=b+c=b+c=b+c=b+c=b+c=b+c\\
+&amp;=b+c=b+c=b+c=b+c=b+c=b+c
+\end&amp;#123;equation&amp;#125;
+\end&amp;#123;strip&amp;#125;
+</code></pre>
 <h1 id="Word公式转换"><a href="#Word公式转换" class="headerlink" title="Word公式转换"></a>Word公式转换</h1><p>mathtype支持latex公式和mathml公式的转换<br>Win10有BUG，默认报错找不到<code>.xml</code>文件<br>需要用管理员打开word，才能mathtype不报错</p>
+<h1 id="latex公式编辑器"><a href="#latex公式编辑器" class="headerlink" title="latex公式编辑器"></a>latex公式编辑器</h1><p><a target="_blank" rel="noopener" href="https://www.latexlive.com/##">latex公式编辑器</a></p>
 <p><img src="/img/contact.jpg" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1101,7 +1142,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.2k</span>&nbsp;字
+                class="white-color">60.6k</span>&nbsp;字
             
             
             
