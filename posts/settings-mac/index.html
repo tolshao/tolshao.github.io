@@ -424,21 +424,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2020-11-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -459,6 +459,10 @@
 <li><p>bootcamp蓝牙鼠标连不上<br>重置SMC，关机，control➕option➕shift➕电源for10s，再开机</p>
 </li>
 </ul>
+<h2 id="Mac两个bin目录"><a href="#Mac两个bin目录" class="headerlink" title="Mac两个bin目录"></a>Mac两个bin目录</h2><p>相同点</p>
+<p>/usr/bin和/usr/local/bin都是用来存储终端命令二进制文件或者命令的软链接<br>这两个bin目录都是已经包含在环境变量里的目录，程序放在里面或者链接到里面命令就可以在终端里直接执行。</p>
+<p>不同点</p>
+<p>Mac的/usr/bin目录是不允许增删文件的，/usr/local/bin增删文件来实现在终端里直接运行，只需要有管理员权限。</p>
 <h2 id="Terminal——终端"><a href="#Terminal——终端" class="headerlink" title="Terminal——终端"></a>Terminal——终端</h2><ul>
 <li>系统允许任何来源安装包<br>sudo spctl —master-disable</li>
 <li>使其变为可执行脚本<br><code>chmod u+x filename</code> </li>
@@ -480,6 +484,12 @@ sudo xattr -r -d com.apple.quarantine /Applications/Sketch.app/</code></p>
 ```cd ~/
 source .bash_profile
 </code></pre></li>
+</ul>
+<ul>
+<li><p>系统环境变量<br>修改<code>~/.bash_profile</code></p>
+</li>
+<li><p>添加软链接，对终端等命令皆有效<br>把后者链接到前者，<a target="_blank" rel="noopener" href="https://www.omegaxyz.com/2020/02/05/mac-pip-config/">详细参考</a><br><code>ln -s /Library/Frameworks/Python.framework/Versions/3.x/bin/pip /usr/local/bin/pip3</code></p>
+</li>
 </ul>
 <h2 id="咳血上网"><a href="#咳血上网" class="headerlink" title="咳血上网"></a>咳血上网</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://zcssr.me/auth/login">HJF-ZCSSR订阅购买网站</a></li>
@@ -632,8 +642,12 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 <h2 id="Finder"><a href="#Finder" class="headerlink" title="Finder"></a>Finder</h2><ul>
 <li>显示隐藏文件：shift + Command + . </li>
 </ul>
-<h2 id="ntfs原生挂载"><a href="#ntfs原生挂载" class="headerlink" title="ntfs原生挂载"></a>ntfs原生挂载</h2><p>terminal：<br><code>sudo nano /etc/fstab</code><br><code>LABEL=Elements\040SE none ntfs rw,auto,nobrowse</code><br>\040代表空格<br>ctrl + x 保存，y确定</p>
-<h1 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h1><h2 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h2><ol>
+<h2 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h2><h3 id="ntfs原生挂载"><a href="#ntfs原生挂载" class="headerlink" title="ntfs原生挂载"></a>ntfs原生挂载</h3><p>terminal：<br><code>sudo nano /etc/fstab</code><br><code>LABEL=Elements\040SE none ntfs rw,auto,nobrowse</code><br>\040代表空格<br>ctrl + x 保存，y确定</p>
+<h3 id="外接硬盘无法挂载"><a href="#外接硬盘无法挂载" class="headerlink" title="外接硬盘无法挂载"></a>外接硬盘无法挂载</h3><p>需要先进行检查修复</p>
+<pre><code>diskutil list
+diskutil repairVolume /dev/disk4
+diskutil mount /dev/disk4
+</code></pre><h1 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h1><h2 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h2><ol>
 <li>文献不引用编译会报错，修正方法，clean过程文件，重新编译</li>
 <li><a target="_blank" rel="noopener" href="http://www.latexstudio.net/archives/12260.html">mac vs code 改编译器</a></li>
 <li><a target="_blank" rel="noopener" href="http://www.latexstudio.net/archives/12321.html">mac vs_code skim_pdf_viewer设置</a></li>
@@ -1327,7 +1341,7 @@ adb -d shell sh /data/data/me.piebridge.brevent/brevent.sh</code></p>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.6k</span>&nbsp;字
+                class="white-color">60.9k</span>&nbsp;字
             
             
             

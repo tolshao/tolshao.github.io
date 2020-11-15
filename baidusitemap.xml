@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
+    <lastmod>2020-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-7/</loc>
+    <lastmod>2020-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
+    <lastmod>2020-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/mac-app/</loc>
+    <lastmod>2020-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
     <lastmod>2020-10-25</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/paper-writting/</loc>
     <lastmod>2020-10-14</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
-    <lastmod>2020-10-10</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/mac-app/</loc>
-    <lastmod>2020-10-08</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/settings-python/</loc>
@@ -65,19 +73,11 @@
     <lastmod>2020-09-12</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-7/</loc>
-    <lastmod>2020-09-12</lastmod>
-  </url>
-  <url>
     <loc>https://tolshao.now.sh/posts/ios-yellow-page/</loc>
     <lastmod>2020-09-12</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/rk4/</loc>
-    <lastmod>2020-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/rl-6/</loc>
     <lastmod>2020-09-12</lastmod>
   </url>
   <url>
