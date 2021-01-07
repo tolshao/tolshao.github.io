@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>mac开启HiDPI</title>
+      <link href="/posts/mac-kai-qi-hidpi/"/>
+      <url>/posts/mac-kai-qi-hidpi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是HiDPI"><a href="#什么是HiDPI" class="headerlink" title="什么是HiDPI"></a>什么是HiDPI</h1><ul><li>全名：<code>High Dots Per Inch</code></li></ul><blockquote><p>它使用横纵 2 个物理像素也就是 4 个物理像素来显示 1 个像素区域，结果就是图像的细节得到翻倍、更清晰、边缘更平滑。</p><p>拿 13 寸的 MacBook Pro 举例，它的屏幕物理分辨率是 2560 x 1600，所以原生的 HiDPI 分辨率就是 1280x800。更高的一档 1440x900 HiDPI 缩放分辨率，则是虚拟出一个 2880x1800 的分辨率，再进行软缩放输入。所以你能发现苹果的电脑总是有很高的分辨率。</p><p>好了，既然你的屏幕是 1080p，本身就没有那么多像素去合成 HiDPI，如果以原生的显示计算，你这屏幕的 1080p 分辨率应该是 960x540，这么低的分辨率你是没法用的。</p><p>这个脚本的功能就是虚拟出比你的屏幕物理分辨率更高的假分辨率……如果你要开启 1080p 的 HiDPI 分辨率，就虚拟一个 3840 x 2160 的假分辨率，然后 macOS 会使用 4 个像素来显示 1 个像素区域，也就是和你物理分辨率一样的 1080p 分辨率。</p></blockquote><ul><li>on-off 对比图<br><img src="/img/hidpi-on.png" alt="hidpi-on"></li></ul><p><img src="/img/hidpi-off.png" alt="hidpi-off"><br>原来一直觉得字体辣眼睛，不是显示器的锅</p><h1 id="为什么要手动开启hidpi"><a href="#为什么要手动开启hidpi" class="headerlink" title="为什么要手动开启hidpi"></a>为什么要<strong>手动</strong>开启hidpi</h1><p>不只是黑苹果需要开启hidpi，白苹果外接非4k显示屏的时候默认也是不开启hidpi的，显示效果不佳，颗粒感严重</p><h1 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h1><ul><li>靠第三方软件<ul><li>SwitchResX（收费）<br><img src="/img/16099873336577.png" alt="SwitchResX"></li><li>RDM（Retina Display Manager），免费<br><img src="/img/16099896834987.png" alt="-w337"><br><a href="http://avi.alkalay.net/software/RDM/">下载链接</a></li></ul></li></ul><h2 id="原生：修改系统配置文件"><a href="#原生：修改系统配置文件" class="headerlink" title="原生：修改系统配置文件"></a>原生：修改系统配置文件</h2><ul><li><p>见<a href="https://sspai.com/post/57549">少数派教程</a></p></li><li><p>并附有懒人版，一键bash脚本操作搞定</p><pre><code class="lang-bash">sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"</code></pre></li><li>脚本运行过程如下：<br><img src="/img/%E8%84%9A%E6%9C%AC.png" alt="操作过程"></li></ul><p>如果成功的话，在系统显示器配置页面可以见到分辨率调整选项<br><img src="/img/16099901559419.jpg" alt="显示器分辨率调整页面"></p><p>如果需要更多选项，可以按<code>option</code>单击<code>缩放</code>选项<br><img src="/img/16099902334267.jpg" alt="Advanced"><br>从中选择一个支持hidpi的分辨率，让你的眼睛舒服一些吧。</p><h1 id="针对不同系统版本的说明"><a href="#针对不同系统版本的说明" class="headerlink" title="针对不同系统版本的说明"></a>针对不同系统版本的说明</h1><ul><li><p>系统在10.15之前的，配置文件放在<code>/System</code>下，按照教程开启<code>SIP(System Integrity Protection)</code>可以完成系统配置文件的修改</p></li><li><p>系统从big sur开始，将原生系统配置文件锁死在<br><code>/System/Library/Displays/Contents/Resources/Overrides/</code><br>开启<code>SIP</code>后仍无法修改。<br>可以通过在<code>/Library/Displays/Contents/Resources/Overrides/</code>下放置对应配置文件，系统自动完成优先调用</p></li></ul><p><img src="/img/contact.jpg" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> settings </tag>
+            
+            <tag> HiDPI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Getting Started with gym</title>
       <link href="/posts/rl-gym-start/"/>
       <url>/posts/rl-gym-start/</url>

@@ -1,3 +1,4 @@
+https://tolshao.now.sh/posts/mac-kai-qi-hidpi/
 https://tolshao.now.sh/posts/rl-gym-start/
 https://tolshao.now.sh/posts/rl-matlab-youtube/
 https://tolshao.now.sh/posts/rl-pr3/
