@@ -319,27 +319,6 @@
 
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/RL/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/settings/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
@@ -515,6 +494,20 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/settings/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/HiDPI/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
@@ -550,13 +543,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
@@ -565,6 +551,20 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E7%A4%BA%E4%BE%8B/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/RL/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -648,6 +648,20 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B-sequence-model/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-RNN/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/Snippets/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
@@ -662,14 +676,14 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B-sequence-model/</loc>
+    <loc>https://tolshao.now.sh/tags/python/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-RNN/</loc>
+    <loc>https://tolshao.now.sh/tags/snippets/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -698,20 +712,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/matlab/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/snippets/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/python/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -748,7 +748,7 @@
 
   
   <url>
-    <loc>https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -756,27 +756,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/categories/%E8%AE%BE%E7%BD%AE/</loc>
-    <lastmod>2021-01-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -797,6 +776,20 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/categories/%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
@@ -805,6 +798,13 @@
   
   <url>
     <loc>https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2021-01-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
