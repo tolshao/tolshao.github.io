@@ -416,21 +416,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2021-02-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    13 分
                 </div>
                 
 
@@ -562,7 +562,38 @@ x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\\</script><p>Matlab 求解，Co矩�
 <li>不改变可控性，有可能改变可观性</li>
 <li>闭环特征值</li>
 </ol>
-<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><p><img src="/img/15755438743134.jpg" alt=""></p>
+<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><h3 id="平凡观测器"><a href="#平凡观测器" class="headerlink" title="平凡观测器"></a>平凡观测器</h3><p>对于系统</p>
+<script type="math/tex; mode=display">\tag{1}
+\dot x = Ax+Bu\\
+y = Cx + Du</script><p>观测器形式（模拟器）：$\dot {\hat x }=A\hat x +Bu$<br>定义$e=x-\hat x$<br>，有$\dot e = \dot x - \dot {\hat x }=A(x-\hat x)=Ae$<br>结论：没有消除误差的能力，估计误差模型收敛性依赖于系统矩阵$A$，若$\det(A)=0$，则观测器误差不能收敛。</p>
+<h3 id="完全Luenberger观测器"><a href="#完全Luenberger观测器" class="headerlink" title="完全Luenberger观测器"></a>完全Luenberger观测器</h3><p>观测器分为，模拟器，修正器部分，通过输出<code>y</code>的信息来修正观测器的收敛性。</p>
+<script type="math/tex; mode=display">\tag{1}
+\dot x = Ax+Bu\\
+y = Cx + Du</script><script type="math/tex; mode=display">\tag{2}
+\dot {\hat x} = A\hat x + Bu + L (y - \hat y)</script><script type="math/tex; mode=display">\tag{3}
+\dot {\hat y} = C \dot x+ Du</script><p>将$(3)$代入$(1)$</p>
+<script type="math/tex; mode=display">\tag{4}
+\dot {\hat x} = (A-LC)\hat x + (B-LD)u + Ly</script><p>定义$e = x - \hat x$，求解$\dot e$，联立$(1)$和$(4)$</p>
+<script type="math/tex; mode=display">\tag{5}
+\dot e = Ax+Bu-(A-LC)\hat x -(B-LD)u-Ly</script><p>将$(1)$代入$(5)$</p>
+<script type="math/tex; mode=display">\tag{6}
+\dot e = (A-LC)e</script><h4 id="测量噪声的影响"><a href="#测量噪声的影响" class="headerlink" title="测量噪声的影响"></a>测量噪声的影响</h4><p>考虑测量噪声</p>
+<script type="math/tex; mode=display">y(t) = Cx(t) +  r(t)</script><p>系统的观测误差动态为</p>
+<script type="math/tex; mode=display">\dot e (t) = (A-LC)e(t)-Lr(t)</script><p>结论：观测器特征值太大，增益矩阵$L$过大，对测量误差r(t)有放大作用。</p>
+<h3 id="分离原理"><a href="#分离原理" class="headerlink" title="分离原理"></a>分离原理</h3><p>分别对系统</p>
+<ul>
+<li>设计观测器<ul>
+<li><script type="math/tex; mode=display">\dot {\hat x} = A\hat x + Bu + L (y - \hat y)\\\hat y = C\hat x</script></li>
+</ul>
+</li>
+<li>设计控制率<ul>
+<li>$u = -K\hat x + Sw$</li>
+</ul>
+</li>
+<li>对分别设计的观测器和控制器构建扩展状态方程<script type="math/tex; mode=display">\underbrace{\left[\begin{array}{c}\dot{\mathbf{x}} \\ \dot{\mathbf{e}}\end{array}\right]}_{\dot{\mathbf{x}}_{e}}=\underbrace{\left[\begin{array}{cc}\mathbf{A}-\mathbf{B K} & \mathbf{B K} \\ \mathbf{0} & \mathbf{A}-\mathbf{L} \mathbf{C}\end{array}\right]}_{\mathbf{A}_{e}} \underbrace{\left[\begin{array}{c}\mathbf{x} \\ \mathbf{e}\end{array}\right]}_{\mathbf{x}_{e}}+\underbrace{\left[\begin{array}{c}\mathbf{B S} \\ \mathbf{0}\end{array}\right]}_{\mathbf{B}_{e}} \mathbf{w}</script></li>
+</ul>
+<p>合成的系统可以描述为$\dot X_e = A_e X + B_e u$<br>评估扩展动态系统的矩阵$A_e$等于观测器和控制率矩阵的矩阵特征值相乘<br>有$\det(\lambda L - A_e) = \det(\lambda L - A+BK) \det(\lambda L-A+LC)$<br>表明：带有控制率和观测器的系统，可以先独立设计，在最后合成</p>
+<p><img src="/img/15755438743134.jpg" alt=""></p>
 <h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x_t^- = F_t x_{t-1} + B_t u_t$</p>
 <p>状态转移矩阵:$P_t^-=FP_{t-1}F^T+Q$</p>
 <p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\\<br>\sigma_{12}&amp;\sigma_{22}\\<br>\end{bmatrix}<br>$</p>
@@ -1005,16 +1036,16 @@ x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\\</script><p>Matlab 求解，Co矩�
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
+                    </a>
+                    
                     <a href="/tags/trick/">
                         <span class="chip bg-color">trick</span>
                     </a>
                     
                     <a href="/tags/App/">
                         <span class="chip bg-color">App</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">工具</span>
                     </a>
                     
                 </div>
@@ -1226,7 +1257,7 @@ x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\\</script><p>Matlab 求解，Co矩�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">61.6k</span>&nbsp;字
+                class="white-color">62.2k</span>&nbsp;字
             
             
             

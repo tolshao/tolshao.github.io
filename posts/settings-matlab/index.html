@@ -380,12 +380,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/snippets/">
-                                <span class="chip bg-color">snippets</span>
-                            </a>
-                        
                             <a href="/tags/matlab/">
                                 <span class="chip bg-color">matlab</span>
+                            </a>
+                        
+                            <a href="/tags/snippets/">
+                                <span class="chip bg-color">snippets</span>
                             </a>
                         
                     </div>
@@ -416,14 +416,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2021-03-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    271
+                    279
                 </div>
                 
 
@@ -464,14 +464,13 @@ end
 </code></pre><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ckzhb/article/details/81105384">plot-legend多行设置</a></li>
 </ul>
-<pre><code>hg1 = legend('第一条');
-set(hg1,'FontSize',12,'Location', 'SouthOutside','box','off');  
+<pre><code>lgd1 = legend('第一条');
+set(lgd1,'FontSize',12,'Location', 'SouthOutside','box','off','Fontname','times new roman');  
 %注：将legend放在图外面时，Legend 1不能通过鼠标移动，只能通过代码调整位置 
 % ============= Legend 2 :
-ah2 = axes('position',get(gca,'position'),'visible','off');
-hg2 = legend(ah2, [p2 p3], '第二条', '第三条');
-set(hg2,'FontSize',12,'Location', 'SouthOutside',...
-        'Orientation','horizontal','box','off');
+ax2 = axes('position',get(gca,'position'),'visible','off');
+lgd2 = legend(ax2, [p2 p3], '第二条', '第三条');
+set(lgd2,'FontSize',12,'Location', 'SouthOutside','Orientation','horizontal','box','off','Fontname','times new roman');
 </code></pre><p>Another way:<br><code>legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)</code></p>
 <ul>
 <li>mac打开时闪退<br><code>/Applications/Polyspace/R2019b.app/bin/matlab -nosplash</code></li>
@@ -561,12 +560,12 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/snippets/">
-                                    <span class="chip bg-color">snippets</span>
-                                </a>
-                            
                                 <a href="/tags/matlab/">
                                     <span class="chip bg-color">matlab</span>
+                                </a>
+                            
+                                <a href="/tags/snippets/">
+                                    <span class="chip bg-color">snippets</span>
                                 </a>
                             
                         </div>
@@ -960,12 +959,12 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
                     <a href="/tags/snippets/">
                         <span class="chip bg-color">snippets</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -1117,7 +1116,7 @@ set(hg2,'FontSize',12,'Location', 'SouthOutside',...
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">61.6k</span>&nbsp;字
+                class="white-color">62.2k</span>&nbsp;字
             
             
             

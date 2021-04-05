@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://tolshao.now.sh/posts/settings-matlab/</loc>
+    <lastmod>2021-03-18</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
+    <lastmod>2021-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/advanced-control/</loc>
+    <lastmod>2021-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
+    <lastmod>2021-01-21</lastmod>
+  </url>
+  <url>
     <loc>https://tolshao.now.sh/posts/mac-kai-qi-hidpi/</loc>
     <lastmod>2021-01-07</lastmod>
   </url>
@@ -11,14 +27,6 @@
   <url>
     <loc>https://tolshao.now.sh/posts/mac-app/</loc>
     <lastmod>2021-01-06</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
-    <lastmod>2020-12-11</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-latex/</loc>
-    <lastmod>2020-11-23</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/rl-7/</loc>
@@ -134,14 +142,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/machine-learning/</loc>
-    <lastmod>2020-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/advanced-control/</loc>
-    <lastmod>2020-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-matlab/</loc>
     <lastmod>2020-09-12</lastmod>
   </url>
   <url>
