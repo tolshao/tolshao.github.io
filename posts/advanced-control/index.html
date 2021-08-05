@@ -1,0 +1,1719 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="控制理论笔记, BUAA ">
+    <meta name="description" content="BUAA | 张小跳">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174552769-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-174552769-1');
+</script>
+
+
+    <title>控制理论笔记 | Tolshao</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/css/my.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="Tolshao" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Tolshao</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Tolshao</div>
+        <div class="logo-desc">
+            
+            BUAA | 张小跳
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/img/controltheory.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">控制理论笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">高级控制理论</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                <span class="chip bg-color">经典控制理论</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA%E7%AC%94%E8%AE%B0/" class="post-category">
+                                控制理论笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-04-05
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-10
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="经典控制理论"><a href="#经典控制理论" class="headerlink" title="经典控制理论"></a>经典控制理论</h1><h2 id="动态系统建模"><a href="#动态系统建模" class="headerlink" title="动态系统建模"></a>动态系统建模</h2><p>通过配置系统输入u(t)，使u(s)G(s)的极点使系统满足一定特性</p>
+<h3 id="一阶系统特性"><a href="#一阶系统特性" class="headerlink" title="一阶系统特性"></a>一阶系统特性</h3><p>$G(s) = \frac{a}{s+a}$<br>$\frac{1}{a}$是时间常数$\tau$，对应上升为0.63<br>$4\tau$对应阶跃响应0.98</p>
+<h3 id="二阶系统特性"><a href="#二阶系统特性" class="headerlink" title="二阶系统特性"></a>二阶系统特性</h3><p>$m\ddot x+B\dot x+kx=F$<br>$\ddot x+2\omega_n\xi \dot x+\omega_n^2x=\frac{F}{m}$</p>
+<p>阻尼比固有频率:$\omega_n\sqrt{1-\xi^2}$</p>
+<p>单位化：$u(t)=\frac{F}{\omega_n^2}$<br>$H(s) = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}$</p>
+<p><img src="/img/15744291457149.jpg" alt=""></p>
+<p>零极点图：<br>极点全部在左，系统稳定<br>虚轴长度代表<strong>振荡周期</strong><br>实轴长度代表<strong>衰减速度</strong><br>$\cos \theta$代表<strong>阻尼比</strong></p>
+<h2 id="SISO-system稳定性判据"><a href="#SISO-system稳定性判据" class="headerlink" title="SISO system稳定性判据"></a>SISO system稳定性判据</h2><p>特征多项式系数判断传递函数稳定性</p>
+<ol>
+<li>Hurwitz霍尔维兹判据：构建霍尔维兹行列式，全部为正</li>
+</ol>
+<p>$D1 = a_1$</p>
+<p>$D2 = \begin{pmatrix}<br>a_1&amp;a_3\\<br>a_0&amp;a_2<br>\end{pmatrix}$</p>
+<p>$D3 = \begin{pmatrix}<br>a_{1}&amp; a_{3}&amp; a_{5}\\<br>a_{0}&amp; a_{2}&amp; a_{4}\\<br>0&amp; a_{1}&amp; a_{3}<br>\end{pmatrix}$</p>
+<ol>
+<li>Lienard-Chipard林纳德-齐帕特判据：系数都大于零，奇数或偶数阶次行列式</li>
+<li>Routh劳斯判据：<br>求$e_{ss}$时顺序，1判断稳定性、2求E(s)，3应用终值定理$e_{ss} = \lim \limits_{s\rightarrow0}sE(s)$</li>
+<li>频率稳定判据：<br>H. Nyquist奈奎斯特判据，开环频率特性，判断闭环稳定性<br>$F(s) = 1 +G(s)H(s)$的p，极点，是开环传函极点<br>z零点，闭环传递函数的极点封闭曲线内$R=P-Z$</li>
+</ol>
+<h2 id="频率特性"><a href="#频率特性" class="headerlink" title="频率特性"></a>频率特性</h2><ul>
+<li>只适用于线性定常模型，否则不能拉式变换</li>
+<li>稳定条件下使用</li>
+<li>bode图单位用dB：20log(Mo/Mi)，表征了能量</li>
+</ul>
+<ol>
+<li>幅值相应:magnitude response<br>$\frac{M_o}{M_i} = \left | G(j\omega)\right |$</li>
+<li>幅角响应:Phase response<br>$\phi_o-\phi_i = \angle G(j\omega)$</li>
+<li><p>带阻尼比的共振频率:<br>$\omega = \omega_n \sqrt{1-2\zeta^2}\$<br>此时的极值：$\frac{1}{2\zeta\sqrt{1-\zeta^2}}$</p>
+</li>
+<li><p>幅值裕度h：相位为-π时，幅值距0dB的差值<br>相位裕度$\gamma$:幅值为1（0dB）时，相位距-π的差<br>根据幅相图，(0,0)出发为开环，(-1,0)出发为闭环</p>
+</li>
+<li><p>不同频段信息</p>
+</li>
+</ol>
+<ul>
+<li>低频段$G(j\omega)$反映了系统的稳态精度<br>0dB/sec-&gt;稳态精度</li>
+<li>中频段：穿越0dB$\omega_c$<br>反映了系统的平稳性和快速性<br>-20dB/sec开环积分，闭环一阶，快速性<br>-40dB/sec开环双积分，闭环二阶，零阻尼，频率段不宜过宽，穿越频率取-20斜率</li>
+<li>高频段反映了系统对高频干扰抑制能力</li>
+</ul>
+<h2 id="系统矫正"><a href="#系统矫正" class="headerlink" title="系统矫正"></a>系统矫正</h2><h3 id="串联矫正"><a href="#串联矫正" class="headerlink" title="串联矫正"></a>串联矫正</h3><ol>
+<li><p>超前矫正<br>$G_c(s)=\frac{1+aTs}{1+Ts},a&gt;1$</p>
+</li>
+<li><p>滞后矫正<br>$G_c(s)=\frac{1+bTs}{1+Ts},b&lt;1$</p>
+</li>
+<li><p>滞后超前矫正<br>两个合起来</p>
+</li>
+<li><p>PID矫正器</p>
+</li>
+<li><p>复合矫正<br>前置矫正：指令-&gt;Gc(s)-&gt;误差，一般补偿分母s，开环前向增益1<br>干扰前置补偿：干扰测量-&gt;Gc(s)-&gt;误差，误差-&gt;干扰端传函$Gs^{-1}$</p>
+</li>
+</ol>
+<h2 id="根轨迹"><a href="#根轨迹" class="headerlink" title="根轨迹"></a>根轨迹</h2><p>（开环-&gt;闭环稳定性）:分析G(s)的N、P，看闭环系统稳定性<br>开环传递函数中开环增益K从0-无穷时，闭环特征根的移动轨迹<br>单位负反馈闭环传递函数<br>$\phi(s) = \frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}$<br>G(s)是一个 </p>
+<p><img src="/img/%E6%88%AA%E5%B1%8F2020-04-12%20%E4%B8%8B%E5%8D%883.14.24-1.png" alt="截屏2020-04-12 下午3.14.24"></p>
+<h3 id="非线性系统"><a href="#非线性系统" class="headerlink" title="非线性系统"></a>非线性系统</h3><p>叠加原理不适用<br>常规分类：<br>死区<br>饱和<br>间隙-滞环</p>
+<p>系统收敛：消耗系统能量<br>系统发散：从外界获取能量</p>
+<h1 id="相关词汇"><a href="#相关词汇" class="headerlink" title="相关词汇"></a>相关词汇</h1><p>$X_{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T_{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
+<h1 id="工程数学基础"><a href="#工程数学基础" class="headerlink" title="工程数学基础"></a>工程数学基础</h1><h2 id="1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化"><a href="#1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化" class="headerlink" title="1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化"></a>1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化</h2><p>特征值$\lambda$有$\lambda v=Av$<br>$\ | \lambda I-A\ | = 0$<br>特征值<br>解法：将$\lambda$代回$( \lambda I - A)<em> v = 0$<br>$\lambda_1 、\lambda_2$对应特征向量$v_1 、v_2$<br><em>*过渡矩阵</em></em>：特征向量组成的矩阵<br>$P =<br>\begin {pmatrix} v_1&amp;v_2<br>\end {pmatrix}$<br>$AP=A[v_1  v_2] = [Av_1 Av_2]=[\lambda_1v_1 \lambda_2 v_2]=<br>\begin{bmatrix}<br>\lambda_1v_{11} &amp; \lambda_2v_{21}\\<br>\lambda_1v_{12} &amp; \lambda_2v_{22}<br>\end{bmatrix}<br>=P\Lambda<br>$<br>所以有，单位向量矩阵P将A特征值对角化矩阵<br>$P^-1AP = \Lambda$</p>
+<h2 id="2-线性化-Linearization"><a href="#2-线性化-Linearization" class="headerlink" title="2. 线性化 Linearization"></a>2. 线性化 Linearization</h2><p>非线性：$1/x,\sqrt{x},x^n等$</p>
+<ul>
+<li>用泰勒级数展开<br>在平衡点(Fixed point)$x_0$附近线性化</li>
+</ul>
+<ol>
+<li>令导数项为0，求得平衡点x的值$x=x_0$</li>
+<li>把$x_\sigma = x_0 + x_d$代入$f(x_\sigma)=f(x_0)+f’(x_0)(x_\sigma-x_0)$</li>
+<li>把$x = x_\sigma$代入微分方程<br>将$\sigma$的x用x_0和x_d替换，然后<br>得到了关于x_d的线性化微分方程<br>$\dot x = A x + b u$求A的雅可比矩阵<br>行是函数，列为对变量的偏导；<br>求平衡点，代入偏导雅可比矩阵；<br>展开得到线性化后的微分方程</li>
+</ol>
+<h2 id="3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）"><a href="#3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）" class="headerlink" title="3. 卷积与LTI冲激响应（LTI：linear time invariant system）"></a>3. 卷积与LTI冲激响应（LTI：linear time invariant system）</h2><p>卷积：$x(t) = f(t)*h(t)=\int_0^t f(\tau)h(t-\tau)d\tau$<br>$f(t)$=输入<br>$h(t)$=单位冲激响应<br>$L_{卷积}$=L乘积</p>
+<h2 id="4-欧拉公式Euler’s-Formula"><a href="#4-欧拉公式Euler’s-Formula" class="headerlink" title="4. 欧拉公式Euler’s Formula"></a>4. 欧拉公式Euler’s Formula</h2><p>$e^{i\theta}=\cos(\theta)+i\sin(\theta)$</p>
+<h2 id="5-复数Complex-Number"><a href="#5-复数Complex-Number" class="headerlink" title="5. 复数Complex Number"></a>5. 复数Complex Number</h2><p> $\sin(x) = C\rightarrow x = \pi/2+2k\pi + \ln(C\pm\sqrt{C^2-1})i$<br>$Z = a + b i $<br>$Re(Z) =a $<br>$Im(Z)=b $<br>$\left | Z \right | = \sqrt{a^2+b^2}$<br>$Z = \left | Z \right | \cdot (\cos\theta+i\sin\theta)= \left | Z \right | \cdot e^{i\theta}$<br>$Z_1 \cdot Z_2 = \left | Z_1 \right | \left | Z_2 \right | e^{\theta_1+\theta_2}$<br>$Z+\bar Z = 2a$<br>$Z- \bar Z = 2bi$</p>
+<h2 id="6-阈值选取"><a href="#6-阈值选取" class="headerlink" title="6. 阈值选取"></a>6. 阈值选取</h2><p>Normal Distribution正态分布、高斯分布<br>$X = (\mu,\sigma^2)$<br>漏检False Dismissal<br>误警False Alarm</p>
+<h1 id="Advanced控制理论"><a href="#Advanced控制理论" class="headerlink" title="Advanced控制理论"></a>Advanced控制理论</h1><p>状态空间：State-Space，包含输入、输出、状态，写成一阶微分方程的形式<br>$\dot x = A x + B u$<br>$y = Cx+Du$</p>
+<h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><h3 id="两种类型"><a href="#两种类型" class="headerlink" title="两种类型"></a>两种类型</h3><ol>
+<li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="/img/15753853291223.jpg" alt=""><br>$a \, of\,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
+</li>
+<li><p>渐进稳定性：<br>$\exists \delta(t_0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits_{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a \, of\,  \lambda_i &lt; 0$实部</p>
+</li>
+</ol>
+<h3 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a>判别方法</h3><ol>
+<li>直接方法：解微分方程(Direct method)<br>求解λ的值，判断正负</li>
+<li>第二方法：(2nd method)<br>$(i)V(0) = 0$<br>$(ii) V(x) \geqslant  0 , in\,  D-{0}$ PSD:postive semi definit<br>$(iii)\dot V(x) \leqslant 0 , in\,  D-{0}$NSD:negative semi definit<br>$\Rightarrow x = 0$</li>
+</ol>
+<h3 id="3-不稳定"><a href="#3-不稳定" class="headerlink" title="3. 不稳定"></a>3. 不稳定</h3><p>存在至少一个特征值实部大于零</p>
+<h2 id="相图分析-phase-portrait"><a href="#相图分析-phase-portrait" class="headerlink" title="相图分析-phase-portrait"></a>相图分析-phase-portrait</h2><p>plot(x,$\dot x$)，通过x初值，分析点在轨迹上的移动，判断稳不稳定<br>matlab绘制实例</p>
+<pre class="line-numbers language-none"><code class="language-none">% 画解微分方程组的相图
+clear;cla;clc;
+[x,y]&#x3D;meshgrid(linspace(-5,5));
+streamslice(x,y,0 * x + 2 * y,-3 * x + 0 * y );
+xlabel(&#39;x&#39;);ylabel(&#39;y&#39;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/img/15747442437226.jpg" alt="w400"></p>
+<p>特征值和相图的关系<br><img src="/img/15753593791413.jpg" alt=""></p>
+<h2 id="齐次状态方程解-dot-x-A-x"><a href="#齐次状态方程解-dot-x-A-x" class="headerlink" title="齐次状态方程解$\dot x = A x$"></a>齐次状态方程解$\dot x = A x$</h2><p>$\dot x = a x\rightarrow x(t) = e^{at}x(0)$<br>同理，多元线性方程<br>$\dot x = a x\rightarrow x(t) = e^{At}x(0)$<br>其中，<strong>状态转移矩阵$\Phi(t)$解法</strong></p>
+<ul>
+<li>数值法：<br>$\Phi(t) = e^{At}=I+At+\frac{1}{2!}A^2t^2+…+\frac{1}{k!}A^kt^k$</li>
+<li>解析法：<br>$\Phi(t) = L^{-1}[sI-A]^{-1}$</li>
+</ul>
+<p>性质：<br>$\Phi(0) = I$<br>$x(t) = \Phi(t-t_0)x(t_0)$<br>$\Phi ^{-1}(t) = \Phi(-t)$</p>
+<h2 id="非齐次状态方程-dot-x-A-x-B-u"><a href="#非齐次状态方程-dot-x-A-x-B-u" class="headerlink" title="非齐次状态方程$\dot x = A x + B u$"></a>非齐次状态方程$\dot x = A x + B u$</h2><p>$x(t) = \Phi (t)x(0)+ \int_0^t\Phi(t-\tau)Bu(\tau)d\tau$<br>初始状态x(0)响应+输入项u(t)响应</p>
+<h2 id="线性系统可控性与可观测性"><a href="#线性系统可控性与可观测性" class="headerlink" title="线性系统可控性与可观测性"></a>线性系统可控性与可观测性</h2><p>可控性：$\forall x(0),x(t_f), \exists t_f &lt; +\infty , u[0,t_f], st. x(0)\rightarrow x(t_f)$<br>充要条件：</p>
+<ol>
+<li><p>$S = [b\, Ab\, A^2…\, A^{n-1}b]$<br>理论可行，但是实际物理不一定<br>以离散系统为例证明：</p>
+<script type="math/tex; mode=display">
+x_ 0 = 0\\
+x_1 = Ax_0 + Bu_0 = Bu_0\\
+x_2 = Ax_1 + Bu_1 = ABu_0 + B u_1\\
+x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\\</script><p>Matlab 求解，Co矩阵 “ctrb(A,B)”</p>
+</li>
+<li><p>$rank[S] = n, det \,  S \neq 0$</p>
+</li>
+</ol>
+<p>可观性：$\forall t \in [t_0,t_f],已知y(t),u(t),可求x(t_0)$<br>$rank<br>\begin{bmatrix}<br>C\\<br>CA\\<br>CA^2\\<br>…\\<br>CA^{n-1}<br>\end{bmatrix}<br>=n<br>$</p>
+<h3 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h3><p>$f(\lambda) = \sum_{i=0}^{n}a_i\lambda ^i$<br>$f(A) = 0 \rightarrow A^n = \sum_{i=0}^{n-1}a_iA^i$</p>
+<p>求解$\left | \lambda I - A\right |$的特征多项式<br>将$\lambda = A $代入，得到递推公式，解算$A^n$</p>
+<h2 id="状态反馈与状态观测器"><a href="#状态反馈与状态观测器" class="headerlink" title="状态反馈与状态观测器"></a>状态反馈与状态观测器</h2><p>取$u=v-kx$，其中，v为参考输入，系统闭环矩阵由A变为A-Bk</p>
+<ol>
+<li>不改变可控性，有可能改变可观性</li>
+<li>闭环特征值</li>
+</ol>
+<h2 id="状态观测器"><a href="#状态观测器" class="headerlink" title="状态观测器"></a>状态观测器</h2><h3 id="平凡观测器"><a href="#平凡观测器" class="headerlink" title="平凡观测器"></a>平凡观测器</h3><p>对于系统</p>
+<script type="math/tex; mode=display">\tag{1}
+\dot x = Ax+Bu\\
+y = Cx + Du</script><p>观测器形式（模拟器）：$\dot {\hat x }=A\hat x +Bu$<br>定义$e=x-\hat x$<br>，有$\dot e = \dot x - \dot {\hat x }=A(x-\hat x)=Ae$<br>结论：没有消除误差的能力，估计误差模型收敛性依赖于系统矩阵$A$，若$\det(A)=0$，则观测器误差不能收敛。</p>
+<h3 id="完全Luenberger观测器"><a href="#完全Luenberger观测器" class="headerlink" title="完全Luenberger观测器"></a>完全Luenberger观测器</h3><p>观测器分为，模拟器，修正器部分，通过输出<code>y</code>的信息来修正观测器的收敛性。</p>
+<script type="math/tex; mode=display">\tag{1}
+\dot x = Ax+Bu\\
+y = Cx + Du</script><script type="math/tex; mode=display">\tag{2}
+\dot {\hat x} = A\hat x + Bu + L (y - \hat y)</script><script type="math/tex; mode=display">\tag{3}
+\dot {\hat y} = C \dot x+ Du</script><p>将$(3)$代入$(1)$</p>
+<script type="math/tex; mode=display">\tag{4}
+\dot {\hat x} = (A-LC)\hat x + (B-LD)u + Ly</script><p>定义$e = x - \hat x$，求解$\dot e$，联立$(1)$和$(4)$</p>
+<script type="math/tex; mode=display">\tag{5}
+\dot e = Ax+Bu-(A-LC)\hat x -(B-LD)u-Ly</script><p>将$(1)$代入$(5)$</p>
+<script type="math/tex; mode=display">\tag{6}
+\dot e = (A-LC)e</script><h4 id="测量噪声的影响"><a href="#测量噪声的影响" class="headerlink" title="测量噪声的影响"></a>测量噪声的影响</h4><p>考虑测量噪声</p>
+<script type="math/tex; mode=display">y(t) = Cx(t) +  r(t)</script><p>系统的观测误差动态为</p>
+<script type="math/tex; mode=display">\dot e (t) = (A-LC)e(t)-Lr(t)</script><p>结论：观测器特征值太大，增益矩阵$L$过大，对测量误差r(t)有放大作用。</p>
+<h3 id="分离原理"><a href="#分离原理" class="headerlink" title="分离原理"></a>分离原理</h3><p>分别对系统</p>
+<ul>
+<li>设计观测器<ul>
+<li><script type="math/tex; mode=display">\dot {\hat x} = A\hat x + Bu + L (y - \hat y)\\\hat y = C\hat x</script></li>
+</ul>
+</li>
+<li>设计控制率<ul>
+<li>$u = -K\hat x + Sw$</li>
+</ul>
+</li>
+<li>对分别设计的观测器和控制器构建扩展状态方程<script type="math/tex; mode=display">\underbrace{\left[\begin{array}{c}\dot{\mathbf{x}} \\ \dot{\mathbf{e}}\end{array}\right]}_{\dot{\mathbf{x}}_{e}}=\underbrace{\left[\begin{array}{cc}\mathbf{A}-\mathbf{B K} & \mathbf{B K} \\ \mathbf{0} & \mathbf{A}-\mathbf{L} \mathbf{C}\end{array}\right]}_{\mathbf{A}_{e}} \underbrace{\left[\begin{array}{c}\mathbf{x} \\ \mathbf{e}\end{array}\right]}_{\mathbf{x}_{e}}+\underbrace{\left[\begin{array}{c}\mathbf{B S} \\ \mathbf{0}\end{array}\right]}_{\mathbf{B}_{e}} \mathbf{w}</script></li>
+</ul>
+<p>合成的系统可以描述为$\dot X_e = A_e X + B_e u$<br>评估扩展动态系统的矩阵$A_e$等于观测器和控制率矩阵的矩阵特征值相乘<br>有$\det(\lambda L - A_e) = \det(\lambda L - A+BK) \det(\lambda L-A+LC)$<br>表明：带有控制率和观测器的系统，可以先独立设计，在最后合成</p>
+<p><img src="/img/15755438743134.jpg" alt=""></p>
+<h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x_t^- = F_t x_{t-1} + B_t u_t$</p>
+<p>状态转移矩阵:$P_t^-=FP_{t-1}F^T+Q$</p>
+<p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\\<br>\sigma_{12}&amp;\sigma_{22}\\<br>\end{bmatrix}<br>$</p>
+<p><img src="/img/15748205077671.jpg" alt="w400"></p>
+<p>卡尔曼方程≠状态观测器<br><img src="/img/15755459115506.jpg" alt="m180"></p>
+<p><img src="/img/15755450314782.jpg" alt=""><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="/img/15755448894756.jpg" alt=""><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
+<p>概率函数相乘，多传感器信息融合</p>
+<h2 id="非线性控制理论"><a href="#非线性控制理论" class="headerlink" title="非线性控制理论"></a>非线性控制理论</h2><h3 id="ARC"><a href="#ARC" class="headerlink" title="ARC"></a>ARC</h3><p>Barbalat’s 引理 lemma</p>
+<ol>
+<li>$V\geq0$</li>
+<li>$\dot{V} \leq -g(t)$, where $g(t)\geq 0$</li>
+<li>$\dot{g}(t)\in L_{\infty}$, if $\dot{g}(t)$ is bounded the $g(t)$ is uniformly continous.<br>Then, $\lim_{t-&gt;\infty} g(t)=0$<br>Consquently, $\lim_{t-&gt;\infty} e = 0 (k\neq0)$</li>
+</ol>
+<p><img src="/img/contact.jpg" alt=""></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Tolshao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://tolshao.now.sh/posts/advanced-control/">https://tolshao.now.sh/posts/advanced-control/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Tolshao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">高级控制理论</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BB%8F%E5%85%B8%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
+                                    <span class="chip bg-color">经典控制理论</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,weibo,twitter,facebook,qq,qzone,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'OnJFSzNbgXvyq7HpceznyJCs-MdYXbMMI',
+        appKey: 'GOdpDzgEWXAY04EmNVLIc3pr',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'monsterid',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/mac-app/">
+                    <div class="card-image">
+                        
+                        <img src="/img/15979248968193.jpg" class="responsive-img" alt="Mac必备软件推荐，让你效率起飞🚀">
+                        
+                        <span class="card-title">Mac必备软件推荐，让你效率起飞🚀</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Mac2021装机必备，让你的效率提高20倍，系统、多媒体、写作都在这儿了
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
+                    </a>
+                    
+                    <a href="/tags/trick/">
+                        <span class="chip bg-color">trick</span>
+                    </a>
+                    
+                    <a href="/tags/App/">
+                        <span class="chip bg-color">App</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/settings-mac/">
+                    <div class="card-image">
+                        
+                        <img src="/img/15966334903790.jpg" class="responsive-img" alt="Mac设置">
+                        
+                        <span class="card-title">Mac设置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            记录备忘mac系统、软件的设置
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BE%E7%BD%AE%E5%A4%87%E5%BF%98/" class="post-category">
+                                    设置备忘
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/App/">
+                        <span class="chip bg-color">App</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">系统</span>
+                    </a>
+                    
+                    <a href="/tags/Mac/">
+                        <span class="chip bg-color">Mac</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">
+                        <span class="chip bg-color">黑苹果</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('300')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Tolshao<br />'
+            + '文章作者: Tolshao<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Tolshao</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">60.2k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2020";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/tolshao" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:zhanghao3440@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/profile.php?id=100024678741559" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/profile.php?id=100024678741559" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="https://weibo.com/3214268465/" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/3214268465/" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/zhang-hao-45-99-41" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/zhang-hao-45-99-41" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/tolshao/tolshao.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
