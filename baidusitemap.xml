@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tolshao.now.sh/posts/rk4/</loc>
-    <lastmod>2021-08-03</lastmod>
+    <loc>https://tolshao.now.sh/posts/mac-app/</loc>
+    <lastmod>2021-08-21</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/mac-app/</loc>
+    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
+    <lastmod>2021-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/rk4/</loc>
     <lastmod>2021-08-03</lastmod>
   </url>
   <url>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/rl-matlab-youtube/</loc>
-    <lastmod>2021-06-10</lastmod>
-  </url>
-  <url>
-    <loc>https://tolshao.now.sh/posts/settings-mac/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
@@ -77,19 +77,19 @@
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/rl-2/</loc>
-    <lastmod>2021-06-10</lastmod>
-  </url>
-  <url>
     <loc>https://tolshao.now.sh/posts/rl-3/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/paper-writting/</loc>
+    <loc>https://tolshao.now.sh/posts/rl-2/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
     <loc>https://tolshao.now.sh/posts/rl-1/</loc>
+    <lastmod>2021-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://tolshao.now.sh/posts/paper-writting/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
@@ -117,11 +117,11 @@
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/hexo-advanced/</loc>
+    <loc>https://tolshao.now.sh/posts/iina-potplayer/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/iina-potplayer/</loc>
+    <loc>https://tolshao.now.sh/posts/hexo-advanced/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
@@ -129,11 +129,11 @@
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/deep-learning/</loc>
+    <loc>https://tolshao.now.sh/posts/blog-setup/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
-    <loc>https://tolshao.now.sh/posts/blog-setup/</loc>
+    <loc>https://tolshao.now.sh/posts/deep-learning/</loc>
     <lastmod>2021-06-10</lastmod>
   </url>
   <url>
