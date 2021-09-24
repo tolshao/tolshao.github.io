@@ -420,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-10
+                    2021-09-22
                 </div>
                 
 
@@ -548,10 +548,10 @@ a^*_t = \underset{a\in A}{\operatorname {argmax}} \hat Q_t(a)</script></li>
 </ul>
 </li>
 <li><p>$\epsilon$保证了最小的regret，满足</p>
-</li>
-</ul>
 <script type="math/tex; mode=display">
 l_t \geq \frac{\epsilon}{A}\sum_{a\in A}\Delta_a</script><p>$\epsilon-greedy$ 仍然是线性总regret，因为会$\epsilon$随机采样到大gap</p>
+</li>
+</ul>
 <h3 id="Solution：选择策略让-epsilon-递减"><a href="#Solution：选择策略让-epsilon-递减" class="headerlink" title="Solution：选择策略让$\epsilon$递减"></a><strong>Solution</strong>：选择策略让$\epsilon$递减</h3><p>核心思想：假设我们现在知道每一个行为的最优价值$V^*$，那么我们可以根据行为的价值计算出所有行为的$\Delta_a$ 。可设置为：如果一个行为的差距越小，则尝试该行为的机会越多；如果一个行为的差距越大，则尝试该行为的几率越小。数学表达如下：</p>
 <p>策略如下：</p>
 <script type="math/tex; mode=display">
@@ -852,10 +852,8 @@ a_{t}=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q\left(s_{t}, a\right)
 <li>去新的信息空间$\tilde{s’}$</li>
 </ul>
 </li>
-<li>定义MDP$\tilde M$ 表示为</li>
-</ul>
-<script type="math/tex; mode=display">
-\tilde M = \langle \tilde S, A \tilde P , R , \gamma \rangle</script><h3 id="自适应贝叶斯-MDPs"><a href="#自适应贝叶斯-MDPs" class="headerlink" title="自适应贝叶斯 MDPs"></a>自适应贝叶斯 MDPs</h3><ul>
+<li>定义MDP$\tilde M$ 表示为<script type="math/tex; mode=display">
+\tilde M = \langle \tilde S, A \tilde P , R , \gamma \rangle</script><h3 id="自适应贝叶斯-MDPs"><a href="#自适应贝叶斯-MDPs" class="headerlink" title="自适应贝叶斯 MDPs"></a>自适应贝叶斯 MDPs</h3></li>
 <li>后验分布 for MDP model 是一个信息空间<script type="math/tex; mode=display">
 \tilde S_t = \mathcal P[\mathcal P, R|h_t]</script></li>
 <li>增强的MDP $\langle S, \tilde S \rangle$被叫做自适应贝叶斯MDP</li>
@@ -1668,7 +1666,7 @@ a_{t}=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q\left(s_{t}, a\right)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">60.3k</span>
+                        class="white-color">61k</span>
             
             
             
