@@ -6,7 +6,7 @@
   <link href="https://tolshao.now.sh/atom.xml" rel="self"/>
   
   <link href="https://tolshao.now.sh/"/>
-  <updated>2021-09-24T10:12:40.287Z</updated>
+  <updated>2021-09-25T07:15:18.180Z</updated>
   <id>https://tolshao.now.sh/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://tolshao.now.sh/posts/python-zhu-ti-fen-xiang/"/>
     <id>https://tolshao.now.sh/posts/python-zhu-ti-fen-xiang/</id>
     <published>2021-09-24T07:00:07.000Z</published>
-    <updated>2021-09-24T10:12:40.287Z</updated>
+    <updated>2021-09-25T07:15:18.180Z</updated>
     
     
       
@@ -37,9 +37,9 @@
     <category term="分享" scheme="https://tolshao.now.sh/categories/%E5%88%86%E4%BA%AB/"/>
     
     
-    <category term="工具" scheme="https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/"/>
-    
     <category term="tricks" scheme="https://tolshao.now.sh/tags/tricks/"/>
+    
+    <category term="工具" scheme="https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -372,9 +372,9 @@
     <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="Blog" scheme="https://tolshao.now.sh/tags/Blog/"/>
-    
     <category term="Hexo" scheme="https://tolshao.now.sh/tags/Hexo/"/>
+    
+    <category term="Blog" scheme="https://tolshao.now.sh/tags/Blog/"/>
     
   </entry>
   
@@ -517,6 +517,33 @@
   </entry>
   
   <entry>
+    <title>深度学习22张精炼图笔记总结</title>
+    <link href="https://tolshao.now.sh/posts/deep-learning-summary/"/>
+    <id>https://tolshao.now.sh/posts/deep-learning-summary/</id>
+    <published>2020-08-03T07:09:31.000Z</published>
+    <updated>2021-09-22T08:15:26.699Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;深度学习精炼图笔记总结&quot;&gt;&lt;a href=&quot;#深度学习精炼图笔记总结&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习笔记" scheme="https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="深度学习" scheme="https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="DL" scheme="https://tolshao.now.sh/tags/DL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Keras &amp; Tensorflow 笔记</title>
     <link href="https://tolshao.now.sh/posts/keras-tensorflow/"/>
     <id>https://tolshao.now.sh/posts/keras-tensorflow/</id>
@@ -544,33 +571,6 @@
     <category term="keras" scheme="https://tolshao.now.sh/tags/keras/"/>
     
     <category term="tensorflow" scheme="https://tolshao.now.sh/tags/tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习22张精炼图笔记总结</title>
-    <link href="https://tolshao.now.sh/posts/deep-learning-summary/"/>
-    <id>https://tolshao.now.sh/posts/deep-learning-summary/</id>
-    <published>2020-08-03T07:09:31.000Z</published>
-    <updated>2021-09-22T08:15:26.699Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;深度学习精炼图笔记总结&quot;&gt;&lt;a href=&quot;#深度学习精炼图笔记总结&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="机器学习笔记" scheme="https://tolshao.now.sh/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="深度学习" scheme="https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="DL" scheme="https://tolshao.now.sh/tags/DL/"/>
     
   </entry>
   
