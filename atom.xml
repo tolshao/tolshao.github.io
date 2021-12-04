@@ -372,9 +372,9 @@
     <category term="博客" scheme="https://tolshao.now.sh/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="Hexo" scheme="https://tolshao.now.sh/tags/Hexo/"/>
-    
     <category term="Blog" scheme="https://tolshao.now.sh/tags/Blog/"/>
+    
+    <category term="Hexo" scheme="https://tolshao.now.sh/tags/Hexo/"/>
     
   </entry>
   
