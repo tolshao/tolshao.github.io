@@ -326,6 +326,13 @@
 
   
   <url>
+    <loc>https://tolshao.now.sh/tags/RL/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/tricks/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
@@ -334,13 +341,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/RL/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -403,6 +403,27 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/IINA/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/Potplayer/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/iptv/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-DL/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
@@ -418,20 +439,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/Coursera/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Blog/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/DL/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -459,41 +466,6 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/IINA/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Potplayer/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/iptv/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/trick/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/App/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tolshao.now.sh/tags/ios/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
@@ -515,7 +487,49 @@
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/DL/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/trick/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/App/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tolshao.now.sh/tags/Hexo/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/Blog/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/Paper/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -537,20 +551,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/MBSE/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/%E7%A7%91%E5%AD%A6%E5%86%99%E4%BD%9C/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Paper/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -592,7 +592,7 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-dynamic-programming/</loc>
+    <loc>https://tolshao.now.sh/tags/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B-MDP/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -613,35 +613,7 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E7%AD%96%E7%95%A5%E6%A2%AF%E5%BA%A6-Policy-gradient/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B-MDP/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/%E5%AD%A6%E4%B9%A0-Learning/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/%E8%A7%84%E5%88%92-Planning/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Matlab/</loc>
+    <loc>https://tolshao.now.sh/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-dynamic-programming/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -649,6 +621,27 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/%E6%97%A0%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B-model-free-prediction/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/%E7%AD%96%E7%95%A5%E6%A2%AF%E5%BA%A6-Policy-gradient/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/gym/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/Matlab/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -676,14 +669,14 @@
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/gym/</loc>
+    <loc>https://tolshao.now.sh/tags/Snippets/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>https://tolshao.now.sh/tags/Latex/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -698,20 +691,6 @@
   
   <url>
     <loc>https://tolshao.now.sh/tags/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-RNN/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Snippets/</loc>
-    <lastmod>2021-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tolshao.now.sh/tags/Latex/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -759,17 +738,38 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
+    <loc>https://tolshao.now.sh/tags/%E5%AD%A6%E4%B9%A0-Learning/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/tags/%E8%A7%84%E5%88%92-Planning/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://tolshao.now.sh/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tolshao.now.sh/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
