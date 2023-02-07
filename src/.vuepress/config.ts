@@ -4,7 +4,7 @@ import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 
 export default defineUserConfig({
-  base: "/blog/",
+  base: "/",
 
   locales: {
     "/": {
