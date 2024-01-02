@@ -462,33 +462,6 @@
   </entry>
   
   <entry>
-    <title>强化学习笔记6：值函数估计Value function Approximation</title>
-    <link href="https://tolshao.now.sh/posts/rl-6/"/>
-    <id>https://tolshao.now.sh/posts/rl-6/</id>
-    <published>2020-08-05T07:09:31.000Z</published>
-    <updated>2023-01-17T03:50:07.501Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;introduction&quot;&gt;&lt;a href=&quot;#introduction&quot; class=&quot;headerlink&quot; title=&quot;introduction&quot;&gt;&lt;/a&gt;introduction&lt;/h1&gt;&lt;h2 id=&quot;v、q表的问题&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
-    
-    <category term="值函数估计 value function approximation" scheme="https://tolshao.now.sh/tags/%E5%80%BC%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1-value-function-approximation/"/>
-    
-  </entry>
-  
-  <entry>
     <title>为什么数值仿真里要用RK4（龙格库塔法）</title>
     <link href="https://tolshao.now.sh/posts/rk4/"/>
     <id>https://tolshao.now.sh/posts/rk4/</id>
@@ -513,6 +486,33 @@
     <category term="RK4" scheme="https://tolshao.now.sh/tags/RK4/"/>
     
     <category term="数值仿真" scheme="https://tolshao.now.sh/tags/%E6%95%B0%E5%80%BC%E4%BB%BF%E7%9C%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>强化学习笔记6：值函数估计Value function Approximation</title>
+    <link href="https://tolshao.now.sh/posts/rl-6/"/>
+    <id>https://tolshao.now.sh/posts/rl-6/</id>
+    <published>2020-08-05T07:09:31.000Z</published>
+    <updated>2023-01-17T03:50:07.501Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;introduction&quot;&gt;&lt;a href=&quot;#introduction&quot; class=&quot;headerlink&quot; title=&quot;introduction&quot;&gt;&lt;/a&gt;introduction&lt;/h1&gt;&lt;h2 id=&quot;v、q表的问题&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="强化学习笔记" scheme="https://tolshao.now.sh/categories/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="强化学习 RL" scheme="https://tolshao.now.sh/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-RL/"/>
+    
+    <category term="值函数估计 value function approximation" scheme="https://tolshao.now.sh/tags/%E5%80%BC%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1-value-function-approximation/"/>
     
   </entry>
   
