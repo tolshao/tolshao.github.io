@@ -470,11 +470,11 @@
 <li>Hurwitz霍尔维兹判据：构建霍尔维兹行列式，全部为正</li>
 </ol>
 <p>$D1 = a_1$</p>
-<p>$D2 = \begin{pmatrix}<br>a_1&amp;a_3\\<br>a_0&amp;a_2<br>\end{pmatrix}$</p>
-<p>$D3 = \begin{pmatrix}<br>a_{1}&amp; a_{3}&amp; a_{5}\\<br>a_{0}&amp; a_{2}&amp; a_{4}\\<br>0&amp; a_{1}&amp; a_{3}<br>\end{pmatrix}$</p>
+<p>$D2 = \begin{pmatrix}<br>a_1&amp;a_3\<br>a_0&amp;a_2<br>\end{pmatrix}$</p>
+<p>$D3 = \begin{pmatrix}<br>a<em>{1}&amp; a</em>{3}&amp; a<em>{5}\<br>a</em>{0}&amp; a<em>{2}&amp; a</em>{4}\<br>0&amp; a<em>{1}&amp; a</em>{3}<br>\end{pmatrix}$</p>
 <ol>
 <li>Lienard-Chipard林纳德-齐帕特判据：系数都大于零，奇数或偶数阶次行列式</li>
-<li>Routh劳斯判据：<br>求$e_{ss}$时顺序，1判断稳定性、2求E(s)，3应用终值定理$e_{ss} = \lim \limits_{s\rightarrow0}sE(s)$</li>
+<li>Routh劳斯判据：<br>求$e<em>{ss}$时顺序，1判断稳定性、2求E(s)，3应用终值定理$e</em>{ss} = \lim \limits_{s\rightarrow0}sE(s)$</li>
 <li>频率稳定判据：<br>H. Nyquist奈奎斯特判据，开环频率特性，判断闭环稳定性<br>$F(s) = 1 +G(s)H(s)$的p，极点，是开环传函极点<br>z零点，闭环传递函数的极点封闭曲线内$R=P-Z$</li>
 </ol>
 <h2 id="频率特性"><a href="#频率特性" class="headerlink" title="频率特性"></a>频率特性</h2><ul>
@@ -513,18 +513,18 @@
 <p><img src="/img/%E6%88%AA%E5%B1%8F2020-04-12%20%E4%B8%8B%E5%8D%883.14.24-1.png" alt="截屏2020-04-12 下午3.14.24"></p>
 <h3 id="非线性系统"><a href="#非线性系统" class="headerlink" title="非线性系统"></a>非线性系统</h3><p>叠加原理不适用<br>常规分类：<br>死区<br>饱和<br>间隙-滞环</p>
 <p>系统收敛：消耗系统能量<br>系统发散：从外界获取能量</p>
-<h1 id="相关词汇"><a href="#相关词汇" class="headerlink" title="相关词汇"></a>相关词汇</h1><p>$X_{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T_{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
-<h1 id="工程数学基础"><a href="#工程数学基础" class="headerlink" title="工程数学基础"></a>工程数学基础</h1><h2 id="1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化"><a href="#1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化" class="headerlink" title="1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化"></a>1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化</h2><p>特征值$\lambda$有$\lambda v=Av$<br>$\ | \lambda I-A\ | = 0$<br>特征值<br>解法：将$\lambda$代回$( \lambda I - A)<em> v = 0$<br>$\lambda_1 、\lambda_2$对应特征向量$v_1 、v_2$<br><em>*过渡矩阵</em></em>：特征向量组成的矩阵<br>$P =<br>\begin {pmatrix} v_1&amp;v_2<br>\end {pmatrix}$<br>$AP=A[v_1  v_2] = [Av_1 Av_2]=[\lambda_1v_1 \lambda_2 v_2]=<br>\begin{bmatrix}<br>\lambda_1v_{11} &amp; \lambda_2v_{21}\\<br>\lambda_1v_{12} &amp; \lambda_2v_{22}<br>\end{bmatrix}<br>=P\Lambda<br>$<br>所以有，单位向量矩阵P将A特征值对角化矩阵<br>$P^-1AP = \Lambda$</p>
+<h1 id="相关词汇"><a href="#相关词汇" class="headerlink" title="相关词汇"></a>相关词汇</h1><p>$X<em>{ss}(t)$:ss-steady state<br>$T_s$Delay time<br>$T_r$Rise time<br>$M_p$Max Overshoot<br>$T</em>{ss}$Setting time调节时间<br>BIBO:输入稳定，输出稳定bounded input-bounded output<br>Real:实轴<br>Im：虚轴<br>Proportional：比例<br>Integral：积分<br>Differential：微分<br>bounded input-bounded output：稳定性<br>$\forall$for all ：任意<br>$\exists$ at least one ：存在<br>$\left | \cdot  \right |$norm：范数</p>
+<h1 id="工程数学基础"><a href="#工程数学基础" class="headerlink" title="工程数学基础"></a>工程数学基础</h1><h2 id="1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化"><a href="#1-特征值-特征向量-过渡矩阵-rightarrow-矩阵对角化" class="headerlink" title="1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化"></a>1. 特征值,特征向量,过渡矩阵$\rightarrow$矩阵对角化</h2><p>特征值$\lambda$有$\lambda v=Av$<br>$\ | \lambda I-A\ | = 0$<br>特征值<br>解法：将$\lambda$代回$( \lambda I - A)<em> v = 0$<br>$\lambda_1 、\lambda_2$对应特征向量$v_1 、v_2$<br><em>*过渡矩阵</em></em>：特征向量组成的矩阵<br>$P =<br>\begin {pmatrix} v<em>1&amp;v_2<br>\end {pmatrix}$<br>$AP=A[v_1  v_2] = [Av_1 Av_2]=[\lambda_1v_1 \lambda_2 v_2]=<br>\begin{bmatrix}<br>\lambda_1v</em>{11} &amp; \lambda<em>2v</em>{21}\<br>\lambda<em>1v</em>{12} &amp; \lambda<em>2v</em>{22}<br>\end{bmatrix}<br>=P\Lambda<br>$<br>所以有，单位向量矩阵P将A特征值对角化矩阵<br>$P^-1AP = \Lambda$</p>
 <h2 id="2-线性化-Linearization"><a href="#2-线性化-Linearization" class="headerlink" title="2. 线性化 Linearization"></a>2. 线性化 Linearization</h2><p>非线性：$1/x,\sqrt{x},x^n等$</p>
 <ul>
 <li>用泰勒级数展开<br>在平衡点(Fixed point)$x_0$附近线性化</li>
 </ul>
 <ol>
 <li>令导数项为0，求得平衡点x的值$x=x_0$</li>
-<li>把$x_\sigma = x_0 + x_d$代入$f(x_\sigma)=f(x_0)+f’(x_0)(x_\sigma-x_0)$</li>
+<li>把$x<em>\sigma = x_0 + x_d$代入$f(x</em>\sigma)=f(x<em>0)+f’(x_0)(x</em>\sigma-x_0)$</li>
 <li>把$x = x_\sigma$代入微分方程<br>将$\sigma$的x用x_0和x_d替换，然后<br>得到了关于x_d的线性化微分方程<br>$\dot x = A x + b u$求A的雅可比矩阵<br>行是函数，列为对变量的偏导；<br>求平衡点，代入偏导雅可比矩阵；<br>展开得到线性化后的微分方程</li>
 </ol>
-<h2 id="3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）"><a href="#3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）" class="headerlink" title="3. 卷积与LTI冲激响应（LTI：linear time invariant system）"></a>3. 卷积与LTI冲激响应（LTI：linear time invariant system）</h2><p>卷积：$x(t) = f(t)*h(t)=\int_0^t f(\tau)h(t-\tau)d\tau$<br>$f(t)$=输入<br>$h(t)$=单位冲激响应<br>$L_{卷积}$=L乘积</p>
+<h2 id="3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）"><a href="#3-卷积与LTI冲激响应（LTI：linear-time-invariant-system）" class="headerlink" title="3. 卷积与LTI冲激响应（LTI：linear time invariant system）"></a>3. 卷积与LTI冲激响应（LTI：linear time invariant system）</h2><p>卷积：$x(t) = f(t)*h(t)=\int<em>0^t f(\tau)h(t-\tau)d\tau$<br>$f(t)$=输入<br>$h(t)$=单位冲激响应<br>$L</em>{卷积}$=L乘积</p>
 <h2 id="4-欧拉公式Euler’s-Formula"><a href="#4-欧拉公式Euler’s-Formula" class="headerlink" title="4. 欧拉公式Euler’s Formula"></a>4. 欧拉公式Euler’s Formula</h2><p>$e^{i\theta}=\cos(\theta)+i\sin(\theta)$</p>
 <h2 id="5-复数Complex-Number"><a href="#5-复数Complex-Number" class="headerlink" title="5. 复数Complex Number"></a>5. 复数Complex Number</h2><p> $\sin(x) = C\rightarrow x = \pi/2+2k\pi + \ln(C\pm\sqrt{C^2-1})i$<br>$Z = a + b i $<br>$Re(Z) =a $<br>$Im(Z)=b $<br>$\left | Z \right | = \sqrt{a^2+b^2}$<br>$Z = \left | Z \right | \cdot (\cos\theta+i\sin\theta)= \left | Z \right | \cdot e^{i\theta}$<br>$Z_1 \cdot Z_2 = \left | Z_1 \right | \left | Z_2 \right | e^{\theta_1+\theta_2}$<br>$Z+\bar Z = 2a$<br>$Z- \bar Z = 2bi$</p>
 <h2 id="6-阈值选取"><a href="#6-阈值选取" class="headerlink" title="6. 阈值选取"></a>6. 阈值选取</h2><p>Normal Distribution正态分布、高斯分布<br>$X = (\mu,\sigma^2)$<br>漏检False Dismissal<br>误警False Alarm</p>
@@ -532,7 +532,7 @@
 <h2 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h2><h3 id="两种类型"><a href="#两种类型" class="headerlink" title="两种类型"></a>两种类型</h3><ol>
 <li><p>Lyapunov稳定性：有界<br>$\forall t_0, \forall \epsilon &gt;0, \exists \delta (t_0, \epsilon):\left | x(t_0)\right |&lt;\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left | x(t) \right | &lt; \epsilon$<img src="/img/15753853291223.jpg" alt=""><br>$a \, of\,  \lambda_i \leqslant 0$实部<br>判断方法：</p>
 </li>
-<li><p>渐进稳定性：<br>$\exists \delta(t_0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits_{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a \, of\,  \lambda_i &lt; 0$实部</p>
+<li><p>渐进稳定性：<br>$\exists \delta(t<em>0)&gt;0: \left |x(t_0)\right |&lt;\delta(t_0) \Rightarrow<br>\lim \limits</em>{t \rightarrow \infty }<br>\left | x(t)\right | = 0<br>$<br>$a \, of\,  \lambda_i &lt; 0$实部</p>
 </li>
 </ol>
 <h3 id="判别方法"><a href="#判别方法" class="headerlink" title="判别方法"></a>判别方法</h3><ol>
@@ -567,8 +567,8 @@ x_3 = Ax_2 + Bu_2 = A^2Bu_0 + AB u_1 + B u_2\\</script><p>Matlab 求解，Co矩�
 <li><p>$rank[S] = n, det \,  S \neq 0$</p>
 </li>
 </ol>
-<p>可观性：$\forall t \in [t_0,t_f],已知y(t),u(t),可求x(t_0)$<br>$rank<br>\begin{bmatrix}<br>C\\<br>CA\\<br>CA^2\\<br>…\\<br>CA^{n-1}<br>\end{bmatrix}<br>=n<br>$</p>
-<h3 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h3><p>$f(\lambda) = \sum_{i=0}^{n}a_i\lambda ^i$<br>$f(A) = 0 \rightarrow A^n = \sum_{i=0}^{n-1}a_iA^i$</p>
+<p>可观性：$\forall t \in [t_0,t_f],已知y(t),u(t),可求x(t_0)$<br>$rank<br>\begin{bmatrix}<br>C\<br>CA\<br>CA^2\<br>…\<br>CA^{n-1}<br>\end{bmatrix}<br>=n<br>$</p>
+<h3 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h3><p>$f(\lambda) = \sum<em>{i=0}^{n}a_i\lambda ^i$<br>$f(A) = 0 \rightarrow A^n = \sum</em>{i=0}^{n-1}a_iA^i$</p>
 <p>求解$\left | \lambda I - A\right |$的特征多项式<br>将$\lambda = A $代入，得到递推公式，解算$A^n$</p>
 <h2 id="状态反馈与状态观测器"><a href="#状态反馈与状态观测器" class="headerlink" title="状态反馈与状态观测器"></a>状态反馈与状态观测器</h2><p>取$u=v-kx$，其中，v为参考输入，系统闭环矩阵由A变为A-Bk</p>
 <ol>
@@ -607,9 +607,9 @@ y = Cx + Du</script><script type="math/tex; mode=display">\tag{2}
 </ul>
 <p>合成的系统可以描述为$\dot X_e = A_e X + B_e u$<br>评估扩展动态系统的矩阵$A_e$等于观测器和控制率矩阵的矩阵特征值相乘<br>有$\det(\lambda L - A_e) = \det(\lambda L - A+BK) \det(\lambda L-A+LC)$<br>表明：带有控制率和观测器的系统，可以先独立设计，在最后合成</p>
 <p><img src="/img/15755438743134.jpg" alt=""></p>
-<h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x_t^- = F_t x_{t-1} + B_t u_t$</p>
-<p>状态转移矩阵:$P_t^-=FP_{t-1}F^T+Q$</p>
-<p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma_{11}&amp;\sigma_{12}\\<br>\sigma_{12}&amp;\sigma_{22}\\<br>\end{bmatrix}<br>$</p>
+<h1 id="Kalman滤波器原理以及在matalb中的实现"><a href="#Kalman滤波器原理以及在matalb中的实现" class="headerlink" title="Kalman滤波器原理以及在matalb中的实现"></a>Kalman滤波器原理以及在matalb中的实现</h1><p>状态转移矩阵：<br>这里要改一下，改成估计量<br>$x<em>t^- = F_t x</em>{t-1} + B_t u_t$</p>
+<p>状态转移矩阵:$P<em>t^-=FP</em>{t-1}F^T+Q$</p>
+<p>协方差矩阵:<br>$<br>\begin{bmatrix}<br>\sigma<em>{11}&amp;\sigma</em>{12}\<br>\sigma<em>{12}&amp;\sigma</em>{22}\<br>\end{bmatrix}<br>$</p>
 <p><img src="/img/15748205077671.jpg" alt="w400"></p>
 <p>卡尔曼方程≠状态观测器<br><img src="/img/15755459115506.jpg" alt="m180"></p>
 <p><img src="/img/15755450314782.jpg" alt=""><br>以小车为例，讲卡尔曼滤波最优状态估计<br><img src="/img/15755448894756.jpg" alt=""><br>在上图中，P是观测值$\hat x$的方差<br>R是观测器中，来自预估值的比例</p>
@@ -618,7 +618,7 @@ y = Cx + Du</script><script type="math/tex; mode=display">\tag{2}
 <ol>
 <li>$V\geq0$</li>
 <li>$\dot{V} \leq -g(t)$, where $g(t)\geq 0$</li>
-<li>$\dot{g}(t)\in L_{\infty}$, if $\dot{g}(t)$ is bounded the $g(t)$ is uniformly continous.<br>Then, $\lim_{t-&gt;\infty} g(t)=0$<br>Consquently, $\lim_{t-&gt;\infty} e = 0 (k\neq0)$</li>
+<li>$\dot{g}(t)\in L<em>{\infty}$, if $\dot{g}(t)$ is bounded the $g(t)$ is uniformly continous.<br>Then, $\lim</em>{t-&gt;\infty} g(t)=0$<br>Consquently, $\lim_{t-&gt;\infty} e = 0 (k\neq0)$</li>
 </ol>
 <p><img src="/img/contact.jpg" alt=""></p>
 
@@ -1420,7 +1420,7 @@ y = Cx + Du</script><script type="math/tex; mode=display">\tag{2}
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2023</span>
+                <span id="year">2020-2024</span>
             
             <span id="year">2020</span>
             <a href="/about" target="_blank">Tolshao</a>

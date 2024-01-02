@@ -420,7 +420,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2023-01-17
                 </div>
                 
 
@@ -492,7 +492,7 @@
 </ul>
 <h2 id="模型，我们要做什么"><a href="#模型，我们要做什么" class="headerlink" title="模型，我们要做什么"></a>模型，我们要做什么</h2><ul>
 <li>MDP模型包括$\langle\mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}\rangle$</li>
-<li>假设状态空间$\mathcal{S}$、动作空间$\mathcal{A}$已知<br>我们期望构建一个模型 $\mathcal{M} = \langle \mathcal{P}_{\eta}, \mathcal{R}_{\eta} \rangle$ 来表示状态转移概率P和奖励R<script type="math/tex; mode=display">
+<li>假设状态空间$\mathcal{S}$、动作空间$\mathcal{A}$已知<br>我们期望构建一个模型 $\mathcal{M} = \langle \mathcal{P}<em>{\eta}, \mathcal{R}</em>{\eta} \rangle$ 来表示状态转移概率P和奖励R<script type="math/tex; mode=display">
 \begin{array}{l}
 S_{t+1} \sim \mathcal{P}_{\eta}\left(S_{t+1} \mid S_{t}, A_{t}\right) \\
 R_{t+1}=\mathcal{R}_{\eta}\left(R_{t+1} \mid S_{t}, A_{t}\right)
@@ -501,7 +501,7 @@ R_{t+1}=\mathcal{R}_{\eta}\left(R_{t+1} \mid S_{t}, A_{t}\right)
 <p>假设状态转移和 奖励 无关</p>
 <script type="math/tex; mode=display">
 \mathbb{P}\left[S_{t+1}, R_{t+1} \mid S_{t}, A_{t}\right]=\mathbb{P}\left[S_{t+1} \mid S_{t}, A_{t}\right] \mathbb{P}\left[R_{t+1} \mid S_{t}, A_{t}\right]</script><h2 id="Model-learning"><a href="#Model-learning" class="headerlink" title="Model learning"></a>Model learning</h2><ul>
-<li>Goal：构建一个模型model $\mathcal{M} = \{S_1, A_1, R_2 …m S_T\}$ </li>
+<li>Goal：构建一个模型model $\mathcal{M} = {S_1, A_1, R_2 …m S_T}$ </li>
 <li>构建<strong>监督学习</strong>问题，根据状态和动作，估计奖励和下一时刻的状态<script type="math/tex; mode=display">
 \begin{aligned}
 S_{1}, A_{1} & \rightarrow R_{2}, S_{2} \\
@@ -530,13 +530,13 @@ S_{T-1}, A_{T-1} & \rightarrow R_{T}, S_{T}
 \hat{\mathcal{R}}_{s}^{a} &=\frac{1}{N(s, a)} \sum_{t=1}^{T} 1\left(S_{t}, A_{t}=s, a\right) R_{t}
 \end{aligned}</script><p>特点：</p>
 <ul>
-<li>每一步都需要记录，格式：$\langle S_t, A_t, R_{t+1}, S_{t+1} \rangle$ </li>
+<li>每一步都需要记录，格式：$\langle S<em>t, A_t, R</em>{t+1}, S_{t+1} \rangle$ </li>
 <li>随机采样$\langle s,a,\cdot,\cdot \rangle$，进行模型估计</li>
 </ul>
 <p><img src="/img/15979160045155.jpg" alt="-w526"></p>
 <h2 id="Planning-with-a-model"><a href="#Planning-with-a-model" class="headerlink" title="Planning with a model"></a>Planning with a model</h2><ul>
-<li>根据已知模型$\mathcal M_\eta = \langle \mathcal{P_\eta},\mathcal{R_\eta}\rangle$</li>
-<li>Solbe the MDP $\langle S, A, \mathcal{P_\eta},\mathcal{R_\eta}\rangle$ </li>
+<li>根据已知模型$\mathcal M<em>\eta = \langle \mathcal{P</em>\eta},\mathcal{R_\eta}\rangle$</li>
+<li>Solbe the MDP $\langle S, A, \mathcal{P<em>\eta},\mathcal{R</em>\eta}\rangle$ </li>
 <li>使用规划方法<ul>
 <li>值迭代</li>
 <li>策略迭代</li>
@@ -570,8 +570,8 @@ S_{T-1}, A_{T-1} & \rightarrow R_{T}, S_{T}
 <li>Env 真实MDP</li>
 <li>Model 估计MDP</li>
 </ul>
-<p>实际经历： $S^{\prime} \sim P_{s, s^{\prime}}^{a}, \quad R=R_{s}^{a}$</p>
-<p>模拟经历：$S^{\prime} \sim P_{\eta}\left(S^{\prime} \mid S, A\right), \quad R=R_{\eta}(R \mid S, A)$</p>
+<p>实际经历： $S^{\prime} \sim P<em>{s, s^{\prime}}^{a}, \quad R=R</em>{s}^{a}$</p>
+<p>模拟经历：$S^{\prime} \sim P<em>{\eta}\left(S^{\prime} \mid S, A\right), \quad R=R</em>{\eta}(R \mid S, A)$</p>
 <h2 id="集成学习和规划-Dyna"><a href="#集成学习和规划-Dyna" class="headerlink" title="- 集成学习和规划 Dyna"></a>- 集成<strong>学习</strong>和<strong>规划</strong> <strong>Dyna</strong></h2><h3 id="Dyna"><a href="#Dyna" class="headerlink" title="Dyna"></a>Dyna</h3><p>Dyna是并列、综合与model-free、model-based的学习方法</p>
 <ul>
 <li>Model-free RL<ul>
@@ -1523,7 +1523,7 @@ S_{T-1}, A_{T-1} & \rightarrow R_{T}, S_{T}
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2023</span>
+                <span id="year">2020-2024</span>
             
             <span id="year">2020</span>
             <a href="/about" target="_blank">Tolshao</a>

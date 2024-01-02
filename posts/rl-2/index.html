@@ -416,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2023-01-17
                 </div>
                 
 
@@ -460,7 +460,7 @@
             <div id="articleContent">
                 <h1 id="马尔科夫过程（Markov-Process，MP）"><a href="#马尔科夫过程（Markov-Process，MP）" class="headerlink" title="马尔科夫过程（Markov Process，MP）"></a>马尔科夫过程（Markov Process，MP）</h1><p>我们说一个state若满足 ，则其具有马尔可夫性，即该state完全包含了历史中的所有信息。马尔科夫过程是无记忆的随机过程，即随机状态序列 具有马尔可夫属性。</p>
 <p>一个马尔科夫过程可以由一个元组组成$\langle\mathcal{S}, \mathcal{P}\rangle$</p>
-<p>$\mathcal{S}$为（有限）的状态（state）集；<br>$\mathcal{P}$为状态转移矩阵， $$<br>P_{s s^{\prime}}=\mathbb{P}\left(S_{t+1}=s^{\prime} \mid S_{t}=s\right)</p>
+<p>$\mathcal{S}$为（有限）的状态（state）集；<br>$\mathcal{P}$为状态转移矩阵， $$<br>P<em>{s s^{\prime}}=\mathbb{P}\left(S</em>{t+1}=s^{\prime} \mid S_{t}=s\right)</p>
 <script type="math/tex; mode=display">。所谓状态转移矩阵就是描述了一个状态到另一个状态发生的概率，所以**_矩阵每一行元素之和为1_**。
 
 ## 马尔科夫奖励过程（Markov Reward Process，MRP）
@@ -475,7 +475,7 @@
 
 ### 解析解
 对于理想的的MDP，且参数已知，其解析解可以直接逆运算得到
-状态在策略下的value值，可以由一下的公式计算得到</script><p>\begin{array}{c}<br>v_{\pi}=\mathcal{R}^{\pi}+\gamma \mathcal{P}^{\pi} v_{\pi} \\<br>v_{\pi}=\left(I-\gamma \mathcal{P}^{\pi}\right)^{-1} \mathcal{R}^{\pi}<br>\end{array}</p>
+状态在策略下的value值，可以由一下的公式计算得到</script><p>\begin{array}{c}<br>v<em>{\pi}=\mathcal{R}^{\pi}+\gamma \mathcal{P}^{\pi} v</em>{\pi} \<br>v_{\pi}=\left(I-\gamma \mathcal{P}^{\pi}\right)^{-1} \mathcal{R}^{\pi}<br>\end{array}</p>
 <script type="math/tex; mode=display">
 
 
@@ -491,11 +491,11 @@ $\mathcal{P}$为状态转移矩阵。所谓状态转移矩阵就是描述了一�
 $\mathcal{R}$为回报函数（reward function), [公式]
 $\gamma$为折扣因子，范围在[0,1]之间， 越大，说明agent看得越“远”。
 
-对于每一个$\pi$,$a\in A$</script><p>\begin{aligned}<br>\mathcal{P}_{s, s^{\prime}}^{\pi} &amp;=\sum_{a \in \mathcal{A}} \pi(a \mid s) \mathcal{P}_{s s^{\prime}}^{a} \\<br>\mathcal{R}_{s}^{\pi} &amp;=\sum_{a \in \mathcal{A}} \pi(a \mid s) \mathcal{R}_{s}^{a}<br>\end{aligned}</p>
+对于每一个$\pi$,$a\in A$</script><p>\begin{aligned}<br>\mathcal{P}<em>{s, s^{\prime}}^{\pi} &amp;=\sum</em>{a \in \mathcal{A}} \pi(a \mid s) \mathcal{P}<em>{s s^{\prime}}^{a} \<br>\mathcal{R}</em>{s}^{\pi} &amp;=\sum<em>{a \in \mathcal{A}} \pi(a \mid s) \mathcal{R}</em>{s}^{a}<br>\end{aligned}</p>
 <script type="math/tex; mode=display">
 ### 收获 Return
 定义：收获$G_t$为在一个马尔科夫奖励链上从t时刻开始往后所有的奖励的有衰减的总和。也有翻译成“收益”或"回报"。
-G值，从t时刻起，包括了**未来**，计算了**折扣**的总奖励：</script><p>G_t = R_{t+1}+\gamma R_{t+2} + … = \sum^\infty_{k=0}\gamma^k R_{t+k+1}</p>
+G值，从t时刻起，包括了**未来**，计算了**折扣**的总奖励：</script><p>G<em>t = R</em>{t+1}+\gamma R<em>{t+2} + … = \sum^\infty</em>{k=0}\gamma^k R_{t+k+1}</p>
 <script type="math/tex; mode=display">
 
 - 考虑了未来的不确定性
@@ -505,28 +505,28 @@ G值，从t时刻起，包括了**未来**，计算了**折扣**的总奖励：<
 ![-w397](/img/15959184331156.jpg)
 
 
-- 价值函数：在状态s，策略π下的值函数</script><p>v_{\pi}(s)=\mathbb{E}_{\pi}\left[G_{t} \mid S_{t}=s\right]</p>
+- 价值函数：在状态s，策略π下的值函数</script><p>v<em>{\pi}(s)=\mathbb{E}</em>{\pi}\left[G<em>{t} \mid S</em>{t}=s\right]</p>
 <script type="math/tex; mode=display">
-- 动作值函数（action-value function）：在状态s，执行动作a，遵循策略π，回报期望</script><p>q_{\pi}(s, a)=\mathbb{E}_{\pi}\left[G_{t} \mid S_{t}=t, A_{t}=a\right]</p>
+- 动作值函数（action-value function）：在状态s，执行动作a，遵循策略π，回报期望</script><p>q<em>{\pi}(s, a)=\mathbb{E}</em>{\pi}\left[G<em>{t} \mid S</em>{t}=t, A_{t}=a\right]</p>
 <script type="math/tex; mode=display">
 
 # 贝尔曼方程
 状态值函数可以分解为即刻回报+未来回报x折扣值
-分解 -> 迭代实现</script><p>v_{\pi}(s)=\mathbb{E}_{\pi}\left[R_{t+1}+\gamma v_{\pi}\left(S_{t+1}\right) \mid S_{t}=s\right]</p>
+分解 -> 迭代实现</script><p>v<em>{\pi}(s)=\mathbb{E}</em>{\pi}\left[R<em>{t+1}+\gamma v</em>{\pi}\left(S<em>{t+1}\right) \mid S</em>{t}=s\right]</p>
 <script type="math/tex; mode=display">
 
-动作值函数类似：</script><p>q_{\pi}(s, a)=\mathbb{E}_{\pi}\left[R_{t+1}+\gamma q_{\pi}\left(S_{t+1}, A_{t+1}\right) \mid S_{t}=s, A_{t}=a\right]</p>
+动作值函数类似：</script><p>q<em>{\pi}(s, a)=\mathbb{E}</em>{\pi}\left[R<em>{t+1}+\gamma q</em>{\pi}\left(S<em>{t+1}, A</em>{t+1}\right) \mid S<em>{t}=s, A</em>{t}=a\right]</p>
 <script type="math/tex; mode=display">
 在每个状态，会存在多个备选动作；
 每个动作，也可能会导致不一样的状态，因此存在下图。
-![](/img/15958154132177.jpg)</script><p>v_{\pi}(s)=\sum_{a \in \mathcal{A}} \pi(a \mid s) q_{\pi}(s, a) \\ q_{\pi}(s, a)=\mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} v_{\pi}\left(s^{\prime}\right) \\ </p>
+![](/img/15958154132177.jpg)</script><p>v<em>{\pi}(s)=\sum</em>{a \in \mathcal{A}} \pi(a \mid s) q<em>{\pi}(s, a) \ q</em>{\pi}(s, a)=\mathcal{R}<em>{s}^{a}+\gamma \sum</em>{s^{\prime} \in \mathcal{S}} \mathcal{P}<em>{s s^{\prime}}^{a} v</em>{\pi}\left(s^{\prime}\right) \ </p>
 <script type="math/tex; mode=display">
 于是
 $$v_{\pi}(s)=\sum_{a \in \mathcal{A}} \pi(a \mid s)\left(\mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} v_{\pi}\left(s^{\prime}\right)\right) \\ q_{\pi}(s, a)=\mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} \sum_{a^{\prime} \in \mathcal{A}} \pi\left(a^{\prime} \mid s^{\prime}\right) q_{\pi}\left(s^{\prime}, a^{\prime}\right)</script><p>描述了当前状态值函数和其后续状态值函数之间的关系，即状态值函数（动作值函数）等于瞬时回报的期望加上下一状态的（折扣）状态值函数（动作值函数）的期望。</p>
 <h2 id="贝尔曼最优方程"><a href="#贝尔曼最优方程" class="headerlink" title="贝尔曼最优方程"></a>贝尔曼最优方程</h2><p>学习的目的是优化一个策略π使得值函数v or q最大</p>
 <script type="math/tex; mode=display">
 v_{*}(s)=\max _{\pi} v_{\pi}(s)</script><script type="math/tex; mode=display">
- q_{*}(s, a)=\max _{\pi} q_{\pi}(s, a)</script><p> 对于任意一个MDPs，存在一个$\pi_<em>$使得$ v_{\pi_{</em>}}(s)=v_{<em>}(s), \quad q_{\pi_{</em>}}(s, a)=q_{*}(s, a) $<br>可得，贝尔曼最优方程：</p>
+ q_{*}(s, a)=\max _{\pi} q_{\pi}(s, a)</script><p> 对于任意一个MDPs，存在一个$\pi<em>*$使得$ v</em>{\pi<em>{*}}(s)=v</em>{<em>}(s), \quad q<em>{\pi</em>{</em>}}(s, a)=q_{*}(s, a) $<br>可得，贝尔曼最优方程：</p>
 <script type="math/tex; mode=display">v_{*}(s)=\max _{a} \mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} v_{*}\left(s^{\prime}\right)</script><script type="math/tex; mode=display">q_{*}(s, a)=\mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} \max _{a^{\prime}} q_{*}\left(s^{\prime}, a^{\prime}\right)</script><h3 id="求解最优方程方法"><a href="#求解最优方程方法" class="headerlink" title="求解最优方程方法"></a>求解最优方程方法</h3><ul>
 <li>Value iteration</li>
 <li>Policy iteration</li>
@@ -1322,7 +1322,7 @@ v_{*}(s)=\max _{\pi} v_{\pi}(s)</script><script type="math/tex; mode=display">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2023</span>
+                <span id="year">2020-2024</span>
             
             <span id="year">2020</span>
             <a href="/about" target="_blank">Tolshao</a>

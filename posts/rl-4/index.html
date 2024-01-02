@@ -416,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2023-01-17
                 </div>
                 
 
@@ -480,7 +480,7 @@
 </li>
 </ul>
 <p>类似于PID的P 增益随着N增大，在逐步缩小<br>为了简化计算，改写方程，用$\alpha$代替$\frac{1}{N(s_t)}$<br>这样可以用固定步长来替代变步长$\frac{1}{k}$</p>
-<script type="math/tex; mode=display">V(S_t) \leftarrow V(S_t)+\alpha(G_t - V(S_t))</script><p>可以看做是，$v_{new} = v_{old} + \alpha(v_{target} - v_{old})$，括号里面是误差<br>可以看到这里的$\alpha$和机器学习里面用的学习率是一个符号</p>
+<script type="math/tex; mode=display">V(S_t) \leftarrow V(S_t)+\alpha(G_t - V(S_t))</script><p>可以看做是，$v<em>{new} = v</em>{old} + \alpha(v<em>{target} - v</em>{old})$，括号里面是误差<br>可以看到这里的$\alpha$和机器学习里面用的学习率是一个符号</p>
 <h1 id="差分法Temporal-Difference-learning"><a href="#差分法Temporal-Difference-learning" class="headerlink" title="差分法Temporal-Difference learning"></a>差分法Temporal-Difference learning</h1><p>MC 在 episode遍历完之后，回合更新，效率低<br>TD 实现边走边更新</p>
 <p>引入时间t的概念</p>
 <ul>
@@ -491,8 +491,8 @@
 <p>Goal：学习$v_{\pi}$ 的值，under policy $\pi$</p>
 <h2 id="时序分析法-TD-0）："><a href="#时序分析法-TD-0）：" class="headerlink" title="时序分析法 TD(0）："></a>时序分析法 TD(0）：</h2><script type="math/tex; mode=display">
 V\left(S_{t}\right) \leftarrow V\left(S_{t}\right)+\alpha\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)</script><ul>
-<li>TD target 是 下一个时刻的$R_{t+1}+\gamma V\left(S_{t+1}\right)$</li>
-<li>TD误差：$\left(R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right)\right)$</li>
+<li>TD target 是 下一个时刻的$R<em>{t+1}+\gamma V\left(S</em>{t+1}\right)$</li>
+<li>TD误差：$\left(R<em>{t+1}+\gamma V\left(S</em>{t+1}\right)-V\left(S_{t}\right)\right)$</li>
 </ul>
 <p>Bootstrapping：根据episode表现来更新V值，自举（依靠自己努力获得）</p>
 <h2 id="与MC方法区别"><a href="#与MC方法区别" class="headerlink" title="与MC方法区别"></a>与MC方法区别</h2><div class="table-container">
@@ -608,7 +608,7 @@ V\left(S_{t}\right) \leftarrow V\left(S_{t}\right)+\alpha\left(R_{t+1}+\gamma V\
 <p>$\lambda$：对视野的平均<br>for iteration： t -&gt; t+1<br>update value function</p>
 <p><img src="/img/15961782979683.jpg" alt="-w621"></p>
 <p>引入权重概念，前面的重要，指数衰减<br><img src="/img/15961783140794.jpg" alt="-w533"></p>
-<h2 id="Backward-反向认知TD-λ-：提供了单步更新的机制"><a href="#Backward-反向认知TD-λ-：提供了单步更新的机制" class="headerlink" title="Backward 反向认知TD(λ)：提供了单步更新的机制"></a>Backward 反向认知TD(λ)：提供了<strong>单步</strong>更新的机制</h2><p>Credit assignment：<br>引入 Eligibility Traces：状态s的权重，是一个时间序列<br>当s重复出现，E值升高，不出现，指数下降<br>$E_{0}(s)=0$<br>$E_{t}(s)=\gamma \lambda E_{t-1}(s)+\mathbf{1}\left(S_{t}=s\right)$</p>
+<h2 id="Backward-反向认知TD-λ-：提供了单步更新的机制"><a href="#Backward-反向认知TD-λ-：提供了单步更新的机制" class="headerlink" title="Backward 反向认知TD(λ)：提供了单步更新的机制"></a>Backward 反向认知TD(λ)：提供了<strong>单步</strong>更新的机制</h2><p>Credit assignment：<br>引入 Eligibility Traces：状态s的权重，是一个时间序列<br>当s重复出现，E值升高，不出现，指数下降<br>$E<em>{0}(s)=0$<br>$E</em>{t}(s)=\gamma \lambda E<em>{t-1}(s)+\mathbf{1}\left(S</em>{t}=s\right)$</p>
 <p>Backward步骤：</p>
 <ul>
 <li>对每个状态s 创建 迹值</li>
@@ -1423,7 +1423,7 @@ V(s) & \leftarrow V(s)+\alpha \delta_{t} E_{t}(s)
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2023</span>
+                <span id="year">2020-2024</span>
             
             <span id="year">2020</span>
             <a href="/about" target="_blank">Tolshao</a>

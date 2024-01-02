@@ -416,7 +416,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2023-01-17
                 </div>
                 
 
@@ -506,7 +506,7 @@
 \pi(a \mid s)=P\left(A_{t}=a \mid S_{t}=s\right)</script>函数代表：在状态$s$时采取动作$a$的概率分布。</li>
 </ul>
 <p><img src="/img/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%887.07.57-1.png" alt="截屏2020-07-27 下午7.07.57"></p>
-<h3 id="价值-value-function-：未来奖励的预测（期望）"><a href="#价值-value-function-：未来奖励的预测（期望）" class="headerlink" title="价值(value function)：未来奖励的预测（期望）"></a>价值(value function)：未来奖励的预测（期望）</h3><p>前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R_{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R_{t+1}}$，那么他会不会影响$\mathcal{R_{t+2}},\mathcal{R_{t+3}}…$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：</p>
+<h3 id="价值-value-function-：未来奖励的预测（期望）"><a href="#价值-value-function-：未来奖励的预测（期望）" class="headerlink" title="价值(value function)：未来奖励的预测（期望）"></a>价值(value function)：未来奖励的预测（期望）</h3><p>前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R<em>{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R</em>{t+1}}$，那么他会不会影响$\mathcal{R<em>{t+2}},\mathcal{R</em>{t+3}}…$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：</p>
 <script type="math/tex; mode=display">
 v_{\pi}(s)=\mathbb{E}_{\pi}\left(R_{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+\ldots \mid S_{t}=s\right)</script><p>$v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。<br><img src="/img/15958481422216.png" alt="-w425"></p>
 <h2 id="模型Model："><a href="#模型Model：" class="headerlink" title="模型Model："></a>模型Model：</h2><p>对未知env的预测，包括状态s、奖励r</p>
@@ -533,7 +533,7 @@ S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
 <h2 id="探索和利用-Exploration-amp-Exploitation"><a href="#探索和利用-Exploration-amp-Exploitation" class="headerlink" title="探索和利用 Exploration &amp; Exploitation"></a>探索和利用 Exploration &amp; Exploitation</h2><p>试错的学习，个体需要从其与环境的交互中<strong>发现并执行</strong>一个好的策略，同时又不至于在<strong>试错</strong>的过程中丢失太多的奖励。探索和利用是个体进行决策时需要平衡的两个方面</p>
 <h3 id="探索率-epsilon"><a href="#探索率-epsilon" class="headerlink" title="探索率$\epsilon$"></a>探索率$\epsilon$</h3><p>怎么说的探索率呢？它主要是为了防止陷入局部最优。比如说目前在$s_1$状态下有两个$a_1,a_2$。我们通过计算出，发现执行$a_1$的动作比较好，但是为了防止陷入局部最优，我们会选择以$\epsilon$的概率来执行$a_2$，以$1-\epsilon$的概率来执行$a_1$。一般来说，$\epsilon$ 随着训练次数的增加而逐渐减小。</p>
 <h2 id="其他概念"><a href="#其他概念" class="headerlink" title="其他概念"></a>其他概念</h2><h3 id="gamma-奖励衰减因子"><a href="#gamma-奖励衰减因子" class="headerlink" title="$\gamma$奖励衰减因子"></a>$\gamma$奖励衰减因子</h3><p>在上面的价值函数中，有一个变量$\gamma$ ，即奖励衰减因子，在[0，1]之间。如果为0，则是贪婪法，即价值只由当前的奖励决定，如果是1，则所有的后续状态奖励和当前奖励一视同仁。一般来说取0到1之间的数。</p>
-<h3 id="环境的状态转化模型"><a href="#环境的状态转化模型" class="headerlink" title="环境的状态转化模型"></a>环境的状态转化模型</h3><p>由于在某个状态下，执行一定的action，能够达到新的一个状态$S_{t+1}$，但是$S_{t+1}$不一定是唯一的。环境的状态转化模型，可以理解为一个概率状态机，它是一个概率模型，即在状态$t$下采取动作$a$,转到下一个状态$s’$的概率，表示为$P^a_{ss’}$。</p>
+<h3 id="环境的状态转化模型"><a href="#环境的状态转化模型" class="headerlink" title="环境的状态转化模型"></a>环境的状态转化模型</h3><p>由于在某个状态下，执行一定的action，能够达到新的一个状态$S<em>{t+1}$，但是$S</em>{t+1}$不一定是唯一的。环境的状态转化模型，可以理解为一个概率状态机，它是一个概率模型，即在状态$t$下采取动作$a$,转到下一个状态$s’$的概率，表示为$P^a_{ss’}$。</p>
 <p>具体在RL_2，MP 中讲解</p>
 <p><img src="/img/contact.jpg" alt=""></p>
 
@@ -1323,7 +1323,7 @@ S_{t}^{a}=\sigma\left(S_{t-1}^{a} W_{s}+O_{t} W_{o}\right)</script></li>
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2023</span>
+                <span id="year">2020-2024</span>
             
             <span id="year">2020</span>
             <a href="/about" target="_blank">Tolshao</a>
