@@ -1,12 +1,10 @@
 ---
-title: mac开启HiDPI
-categories: 设置
-tags:
-  - settings
-  - HiDPI
-id: "47501"
-date: 2021-01-07
-cover: "/assets/images/mac开启hidpi_cover.png"
+title: "mac开启HiDPI"
+date: "2021-01-07"
+categories: "设置"
+tags: ["settings", "HiDPI"]
+id: "56592"
+cover: "/img/hidpi.png"
 top: false
 ---
 
@@ -22,9 +20,9 @@ top: false
 > 这个脚本的功能就是虚拟出比你的屏幕物理分辨率更高的假分辨率……如果你要开启 1080p 的 HiDPI 分辨率，就虚拟一个 3840 x 2160 的假分辨率，然后 macOS 会使用 4 个像素来显示 1 个像素区域，也就是和你物理分辨率一样的 1080p 分辨率。
 
 - on-off 对比图
-![hidpi-on](/assets/images/hidpi-on.png)
+![hidpi-on](/img/hidpi-on.png)
 
-![hidpi-off](/assets/images/hidpi-off.png)
+![hidpi-off](/img/hidpi-off.png)
 原来一直觉得字体辣眼睛，不是显示器的锅
 
 # 为什么要**手动**开启hidpi
@@ -35,9 +33,9 @@ top: false
 # 操作方法
 -  靠第三方软件
     - SwitchResX（收费）
-    ![SwitchResX](/assets/images/16099873336577.png)
+    ![SwitchResX](/img/16099873336577.png)
     - RDM（Retina Display Manager），免费
-    ![-w337](/assets/images/16099896834987.png)
+    ![-w337](/img/16099896834987.png)
     [下载链接](http://avi.alkalay.net/software/RDM/)
 
 ## 原生：修改系统配置文件
@@ -48,14 +46,14 @@ top: false
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"
 ```
 - 脚本运行过程如下：
-![操作过程](/assets/images/%E8%84%9A%E6%9C%AC.png)
+![操作过程](/img/%E8%84%9A%E6%9C%AC.png)
 
 
 如果成功的话，在系统显示器配置页面可以见到分辨率调整选项
-![显示器分辨率调整页面](/assets/images/16099901559419.jpg)
+![显示器分辨率调整页面](/img/16099901559419.jpg)
 
 如果需要更多选项，可以按`option`单击`缩放`选项
-![Advanced](/assets/images/16099902334267.jpg)
+![Advanced](/img/16099902334267.jpg)
 从中选择一个支持hidpi的分辨率，让你的眼睛舒服一些吧。
 
 # 针对不同系统版本的说明
@@ -68,4 +66,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master
 
 
 
-![](/assets/images/contact.jpg)
+![](/img/contact.jpg)
