@@ -8,6 +8,7 @@ id: "17905"
 date: 2020-06-28
 cover: "/assets/images/machine_learning_cover.jpg"
 top: false
+recommend: false
 ---
 
 # AI->机器学习分类图

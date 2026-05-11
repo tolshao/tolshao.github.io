@@ -7,6 +7,8 @@ tags:
 id: "61469"
 date: 2021-09-24
 top: false
+cover: "/assets/images/pythonsnippet.jpg"
+recommend: false
 ---
 
 # Python-Latex主题分享

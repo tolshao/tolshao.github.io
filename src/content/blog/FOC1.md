@@ -8,6 +8,7 @@ id: "29935"
 date: 2026-01-21
 cover: "/assets/images/FOC1_cover.png"
 top: false
+recommend: false
 ---
 
 # FOC 就是把交流当直流使？老列带你捅破这层窗户纸

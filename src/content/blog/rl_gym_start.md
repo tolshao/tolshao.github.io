@@ -8,6 +8,7 @@ id: "40502"
 date: 2020-09-08
 cover: "/assets/images/rl_gym_start_cover.jpg"
 top: false
+recommend: false
 ---
 
 # gym入门

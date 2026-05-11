@@ -8,6 +8,7 @@ id: "5666"
 date: 2020-09-08
 cover: "/assets/images/rl_matlab_youtube_cover.jpg"
 top: false
+recommend: false
 ---
 
 这里有很多形象的图，方便理解强化学习的公式[知乎白话强化学习](https://zhuanlan.zhihu.com/p/111869532)，有空了可以来看

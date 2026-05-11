@@ -9,6 +9,7 @@ id: "46319"
 date: 2020-07-23
 cover: "/assets/images/deep_learning_cover.jpg"
 top: false
+recommend: false
 ---
 
 # AI->机器学习分类图

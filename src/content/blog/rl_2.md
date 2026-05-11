@@ -8,6 +8,7 @@ id: "8136"
 date: 2020-07-05
 cover: "/assets/images/rl_2_cover.jpg"
 top: false
+recommend: false
 ---
 
 # 马尔科夫过程（Markov Process，MP）

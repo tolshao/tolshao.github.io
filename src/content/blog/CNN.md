@@ -4,8 +4,9 @@ date: "2020-07-15"
 categories: "机器学习笔记"
 tags: ["深度学习", "CNN", "卷积神经网络"]
 id: "71093"
-cover: "/img/15966353155178.jpg"
+cover: "/assets/images/default_cover.jpg"
 top: false
+recommend: false
 ---
 
 

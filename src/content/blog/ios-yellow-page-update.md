@@ -4,8 +4,9 @@ date: "2025-07-24"
 categories: "工具"
 tags: ["ios", "黄页", "iPhone", "CardDAV"]
 id: "52045"
-cover: "/img/yellowpage.jpg"
+cover: "/assets/images/yellowpage.jpg"
 top: false
+recommend: false
 ---
 
 <p align="center">

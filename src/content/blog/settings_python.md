@@ -8,6 +8,7 @@ id: "28408"
 date: 2020-01-01
 cover: "/assets/images/settings_python_cover.jpg"
 top: false
+recommend: false
 ---
 
 ## python读取txt数据plot

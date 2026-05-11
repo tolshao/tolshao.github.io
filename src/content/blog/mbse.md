@@ -8,6 +8,7 @@ id: "19122"
 date: 2020-07-08
 cover: "/assets/images/mbse_cover.jpg"
 top: false
+recommend: false
 ---
 
 # MBSE

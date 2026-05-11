@@ -8,6 +8,7 @@ id: "64459"
 date: 2020-03-18
 cover: "/assets/images/settings_latex_cover.jpg"
 top: false
+recommend: false
 ---
 
 # Texpad实时编译注意

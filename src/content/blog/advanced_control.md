@@ -8,6 +8,7 @@ id: "28407"
 date: 2020-04-05
 cover: "/assets/images/advanced_control_cover.jpg"
 top: false
+recommend: false
 ---
 
 # 经典控制理论

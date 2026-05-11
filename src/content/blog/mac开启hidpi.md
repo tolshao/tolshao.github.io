@@ -4,8 +4,9 @@ date: "2021-01-07"
 categories: "设置"
 tags: ["settings", "HiDPI"]
 id: "56592"
-cover: "/img/hidpi.png"
+cover: "/assets/images/hidpi-on.png"
 top: false
+recommend: false
 ---
 
 # 什么是HiDPI

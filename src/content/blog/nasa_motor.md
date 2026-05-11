@@ -7,6 +7,8 @@ tags:
 id: "11711"
 date: 2026-01-23
 top: true
+cover: "/assets/images/image-20260123151600956.png"
+recommend: false
 ---
 
 关键词： #电机设计 #NASA #永磁同步电机

@@ -8,6 +8,7 @@ id: "16787"
 date: 2020-07-10
 cover: "/assets/images/rl_3_cover.jpg"
 top: false
+recommend: false
 ---
 
 规划，适用于MDP模型参数**已知**

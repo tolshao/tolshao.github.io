@@ -8,6 +8,7 @@ id: "33814"
 date: 2020-08-11
 cover: "/assets/images/rl_7_cover.jpg"
 top: false
+recommend: false
 ---
 
 之前的策略优化，用的基本都是$\epsilon$-greedy的policy improve方法，这里介绍policy gradient法，不基于v、q函数

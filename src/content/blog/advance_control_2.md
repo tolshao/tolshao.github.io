@@ -8,6 +8,7 @@ id: "22875"
 date: 2020-07-15
 cover: "/assets/images/advance_control_2_cover.jpg"
 top: false
+recommend: false
 ---
 
 # 高级控制理论

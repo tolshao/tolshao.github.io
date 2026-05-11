@@ -8,6 +8,7 @@ id: "41268"
 date: 2020-08-03
 cover: "/assets/images/deep_learning_summary_cover.jpg"
 top: false
+recommend: false
 ---
 
 # 深度学习精炼图笔记总结

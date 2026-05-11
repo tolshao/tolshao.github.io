@@ -8,6 +8,7 @@ id: "60230"
 date: 2020-06-25
 cover: "/assets/images/sequence_model_cover.jpg"
 top: false
+recommend: false
 ---
 
 # Sequence model

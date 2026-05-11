@@ -9,6 +9,7 @@ id: "46547"
 date: 2020-08-03
 cover: "/assets/images/keras_tensorflow_cover.jpg"
 top: false
+recommend: false
 ---
 
 Keras是一个高层神经网络API，Keras由纯Python编写而成并基于Tensorflow、Theano以及CNTK后端。Keras为支持快速实验而生，能够把你的idea迅速转换为结果，如果你有如下需求，请选择Keras：

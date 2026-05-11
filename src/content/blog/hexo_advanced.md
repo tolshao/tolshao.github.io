@@ -4,8 +4,9 @@ date: "2020-08-12"
 categories: "博客"
 tags: ["Hexo", "Blog"]
 id: "6809"
-cover: "/img/blogyourlife.jpg"
+cover: "/assets/images/hexo_advanced_cover.jpg"
 top: false
+recommend: false
 ---
 
 # 让hexo渲染MathJax复杂公式(默认的渲染引擎复杂公式会报错)

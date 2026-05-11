@@ -8,6 +8,7 @@ id: "24680"
 date: 2020-09-02
 cover: "/assets/images/rl_pr_1_DP_cover.jpg"
 top: false
+recommend: false
 ---
 
 # RL实践1——值迭代求解随机策略
