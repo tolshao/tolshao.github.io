@@ -6,7 +6,7 @@ export default {
   // 网站副标题
   Subtitle: '探物及理',
   // 网站描述
-  Description: 'BUAA | 张小跳 - 记录学习与生活的技术博客',
+  Description: ' 张小跳 - 记录学习与生活的技术博客',
   // 网站作者
   Author: 'Tolshao',
   // 作者头像
@@ -14,16 +14,17 @@ export default {
   // 网站座右铭
   Motto: '探物及理',
   // Cover 网站缩略图
-  Cover: '/assets/images/banner/default-cover.webp',
+  Cover: '/assets/images/favicon.webp',
   // 网站侧边栏公告 (不填写即不开启)
-  Tips: '',
+  Tips: '<p>欢迎光临我的博客 🎉</p><p>这里会分享我的日常和学习中的收集、整理及总结，希望能对你有所帮助:) 💖</p>',
   // 首页打字机文案列表
   TypeWriteList: [
     '探物及理',
     'Explore the world, understand the principles.',
+    '如果生活不够美好，说明你还不够热爱',
   ],
   // 网站创建时间
-  CreateTime: '2016-09-01',
+  CreateTime: '2019-09-01',
   // 顶部 Banner 配置
   HomeBanner: {
     enable: true,
@@ -32,7 +33,7 @@ export default {
     // 其他页面高度
     PageHeight: '28.88rem',
     // 背景 - 使用内置默认
-    background: '',
+    background: "url('/assets/images/home-banner.webp') no-repeat center 60%/cover",
   },
   // 博客主题配置
   Theme: {
@@ -95,7 +96,7 @@ export default {
     }
   },
   // Han Analytics 统计
-  HanAnalytics: { enable: false, server: '', siteId: '' },
+  HanAnalytics: { enable: true, server: 'https://blog.tolshao.xyz', siteId: 'Hello-Tolshao' },
   // Google 广告
   GoogleAds: {
     ad_Client: '',
@@ -104,8 +105,8 @@ export default {
   },
   // 文章内赞赏码
   Reward: {
-    AliPay: '',
-    WeChat: ''
+    // AliPay: '/assets/images/alipay.png',
+    // WeChat: '/assets/images/wechat.png'
   },
   // 访问网页 自动推送到搜索引擎
   SeoPush: {

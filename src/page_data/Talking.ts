@@ -4,7 +4,7 @@ export default {
     {
       date: "2026-05-11 15:32:16",
       tags: ["博客", "Astro", "迁移"],
-      content: "博客由 Hexo 迁移至 Astro，所有文章和图片已就位。与蹊跷皮一点 🐾"
+      content: "博客由 Hexo 迁移至 Astro，所有文章和图片已就位。🐾"
     },
     {
       date: "2026-05-11 12:00:00",
