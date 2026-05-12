@@ -43,7 +43,8 @@ y' = f(t,y), y(t_0) = y_0
 $$
 则，对于该问题的RK4由如下方程给出：
 $$
-y_{n+1}=y_{n}+\frac{h}{6}\left(k_{1}+2 k_{2}+2 k_{3}+k_{4}\right) \\$$
+y_{n+1}=y_{n}+\ frac{h}{6}\left(k_{1}+2 k_{2}+2 k_{3}+k_{4}\right) \\
+$$
 其中
 $$
 \begin{matrix}

@@ -103,7 +103,8 @@ Greedy 可能卡在永远次优动作，总regret随时间步线性增长
 ### **Solution**：乐观初始化 Optimistic initialisation 
 理论上，还应该是total regret 线性增长，实际效果却很好，采用递归MC更新Q值
 $$
-\hat{Q}_{t}\left(a_{t}\right)=\hat{Q}_{t-1}+\frac{1}{N_{t}\left(a_{t}\right)}\left(r_{t}-\hat{Q}_{t-1}\right)$$
+\hat{Q}_{t}\left(a_{t}\right)=\hat{Q}_{t-1}+\frac{1}{N_{t}\left(a_{t}\right)}\left(r_{t}-\hat{Q}_{t-1}\right)
+$$
 操作步骤：
 - 将V值初始化为最大值，$Q(a)= r_{max}$
 - act greedily

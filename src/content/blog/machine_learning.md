@@ -265,7 +265,8 @@ $$min_{\theta} C[\sum_{i=1}^{m}{y^{(i)}}cost_1(\theta^Tx^{(i)})+(1-y^{(i)})cost_
 $$h_{\theta}(x)=\left\{\begin{matrix}
 1,\;\;if\; \theta^{T}x\geqslant 0\\ 
 0,\;\;otherwise
-\end{matrix}\right.$$
+\end{matrix}\right.
+$$
 
 
 ![-w889]((/assets/images/15925640229783.jpg))
