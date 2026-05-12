@@ -15,7 +15,10 @@ const blog = defineCollection({
 		cover: z.string().optional(),
 		recommend: z.boolean().optional(),
 		hide: z.boolean().optional(),
-		top: z.boolean().optional()
+	    top: z.boolean().optional(),
+		// 字数统计（由 remark-note 插件自动计算写入）
+		reading_time: z.number().optional(),
+		article_word_count: z.number().optional(),
 	}),
 });
 

@@ -3,9 +3,30 @@ import { visit } from 'unist-util-visit';
 import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
 
+// 预处理文本：移除 LaTeX 公式内容，防止其干扰字数统计
+function stripLatexForWordCount(text: string): string {
+  // Remove display math \[ ... \] and $$, \begin{}...\end{}
+  let t = text.replace(/\\\[[\s\S]*?\\\]/g, ' ');
+  t = t.replace(/\$\$[\s\S]*?\$\$/g, ' ');
+  t = t.replace(/\\begin\{[^}]+\}[\s\S]*?\\end\{[^}]+\}/g, ' ');
+  // Remove inline math $...$
+  t = t.replace(/\$[^$\n]+\$/g, ' ');
+  // Normalize whitespace
+  t = t.replace(/\s+/g, ' ').trim();
+  return t;
+}
+
 // 处理标签
 const remarkNote = () => {
   return (tree: any, { data: astroData }: any) => {
+    // 文章字数统计（单独遍历，避免嵌套 visit）
+    // 先预处理移除 LaTeX 公式，再统计字数，避免 $ \ \ 等字符干扰
+    const textOnPage = stripLatexForWordCount(toString(tree));
+    const readingTime = getReadingTime(textOnPage);
+    console.log("[DEBUG] words:", readingTime.words, "min:", readingTime.minutes, "fm:", JSON.stringify(astroData.astro.frontmatter));
+    astroData.astro.frontmatter.reading_time = readingTime.minutes;
+    astroData.astro.frontmatter.article_word_count = readingTime.words;
+
     visit(tree, (node) => {
       const { type, name, attributes } = node;
       // 处理组件
@@ -27,11 +48,6 @@ const remarkNote = () => {
         }
         // 设置 class
         hProperties.class = `vh-node vh-${name}${attributes.type ? ` ${name}-${attributes.type}` : ''}`;
-        // 文章字数统计
-        const textOnPage = toString(tree);
-        const readingTime = getReadingTime(textOnPage);
-        astroData.astro.frontmatter.reading_time = readingTime.minutes
-        astroData.astro.frontmatter.article_word_count = readingTime.words
       }
     });
   };
@@ -68,4 +84,4 @@ const addClassNames = () => {
   };
 }
 
-export { remarkNote, addClassNames } 
+export { remarkNote, addClassNames }
