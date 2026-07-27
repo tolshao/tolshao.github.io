@@ -7,7 +7,8 @@ tags:
   - tensorflow
 id: "46547"
 date: 2020-08-03
-cover: "/assets/images/keras_tensorflow_cover.jpg"
+cover: "../image/keras_tensorflow/keras_tensorflow_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -59,18 +60,18 @@ fit和predict函数有返回值的，最好用一个变量来接住，方便查�
 
 ### 命令行打印：keras自带的summary函数
 `model.summary()`
-![-w582]((/assets/images/15954994831618.jpg))
+![-w582]((../image/keras_tensorflow/15954994831618.jpg))
 ### 调用库，打印保存图片
 使用方法：
 ```python
 Keras.utils.plot_model plot_model(model,to_file='a.png')
 ```
 结果如下，还可以保存为pdf等格式
-![-w425]((/assets/images/15955035723718.jpg))
+![-w425]((../image/keras_tensorflow/15955035723718.jpg))
 
 ### [PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet)绘制latex风格的网络图
 例图：
-![-w456]((/assets/images/15955111765714.jpg))
+![-w456]((../image/keras_tensorflow/15955111765714.jpg))
 
 使用方法：
 1. 下载github源文件，安装pycore库，将目录中的python包，拷贝至`/usr/local/lib/python3.7/site-packages/pycore/`
@@ -91,12 +92,12 @@ model.fig(巴拉巴拉, callbacks = [函数])
 * TensorBoard
 * Mandb：callbacks=[WandbLogger()]，需要提前进行wandb初始化并在config中定义需要log的变量。
 Tensorboard作者没有去尝试，这里就先贴一张Wandb的可视化结果：
-![-w1436]((/assets/images/15955742598518.jpg))
+![-w1436]((../image/keras_tensorflow/15955742598518.jpg))
 
 
 ### Netron软件
 下载安装，导入keras模型.h5即可食用，也支持tf、pytorch等多种模型，界面如下
-![-w866]((/assets/images/15954993270061.jpg))
+![-w866]((../image/keras_tensorflow/15954993270061.jpg))
 ### 超参数调节
 超参数就是模型权重以外的其他参数，比如层种类，层深度、宽度，优化器类型、学习率大小等等，它们都影响着模型的表现和上限，超参数一动，就是一个新的模型了。但是超参数却没有像构建神经网络一样有可遵照的理论指导，一直以来都是从业人员的难点。
 虽然网上已经有很多关于超参数调节的帖子，但大多都为经验之谈，是研究人员在实践中摸索、发现并总结的。就像控制理论里最简单PID调节一样，三个参数就能调的人头大，有些模型遵照经验去调还可能不work。
@@ -105,9 +106,9 @@ Tensorboard作者没有去尝试，这里就先贴一张Wandb的可视化结果�
 
 #### [keras tunner](https://blog.csdn.net/wmq104/article/details/105740497)
 根据验证集的表现自动优化超参数
-![]((/assets/images/15955749309209.jpg))
+![]((../image/keras_tensorflow/15955749309209.jpg))
 
-![]((/assets/images/15955749728608.jpg))
+![]((../image/keras_tensorflow/15955749728608.jpg))
 
 
 #### keras-lr-finder
@@ -127,7 +128,7 @@ lr_finder.find(x_train, y_train, start_lr=0.0001, end_lr=1, batch_size=512, epoc
 # Plot the loss, ignore 20 batches in the beginning and 5 in the end
 lr_finder.plot_loss(n_skip_beginning=20, n_skip_end=5)
 ```
-![]((/assets/images/15948027436905.png))
+![]((../image/keras_tensorflow/15948027436905.png))
 
 
 ```
@@ -138,7 +139,7 @@ lr_finder.plot_loss(n_skip_beginning=20, n_skip_end=5)
 lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.01, 0.01))
 ```
 
-![]((/assets/images/15948027304867.png))
+![]((../image/keras_tensorflow/15948027304867.png))
 
 #### [利用scikit-learn交互网格搜索超参数](https://blog.csdn.net/happytofly/article/details/80124813)
 
@@ -155,4 +156,4 @@ lr_finder.plot_loss_change(sma=20, n_skip_beginning=20, n_skip_end=5, y_lim=(-0.
 * 实数，不用tf. 或者 K. 函数库运算，报错“张量”
 * 张量一定用内置函数，python支持@ + - 等操作，但是偶尔报错
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

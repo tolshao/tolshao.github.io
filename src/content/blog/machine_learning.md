@@ -6,13 +6,14 @@ tags:
   - Coursera
 id: "17905"
 date: 2020-06-28
-cover: "/assets/images/machine_learning_cover.jpg"
+cover: "../image/machine_learning/machine_learning_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
 
 # AI->机器学习分类图
-![-w669]((/assets/images/15936818055208.jpg))
+![-w669]((../image/15936818055208.jpg))
 
 # 矩阵补课
 ## 特征值分解EVD，奇异值分解SVD
@@ -22,28 +23,28 @@ $\lambda_i$是特征值
 $\Lambda$ 是矩阵特征值
 ### EVD特征值分解（The eigenvalue value decomposition）
 针对方阵，特征值
-![-w397]((/assets/images/15921997636239.jpg))
+![-w397]((../image/machine_learning/15921997636239.jpg))
 $A = U\Lambda U^{-1} = U\Lambda U^T$
 进行矩阵运算时，Ax，先对x分解$x =aU^T= a_1 x_1+...a_mx_m$
-![-w366]((/assets/images/15922013862028.jpg))
+![-w366]((../image/machine_learning/15922013862028.jpg))
 
 则$U\Lambda U^T x = U\Lambda U^T U a^T = U\Lambda a^T$
-![-w698]((/assets/images/15922013786257.jpg))
+![-w698]((../image/machine_learning/15922013786257.jpg))
 
 $U\Lambda a^T = U(\lambda a)^T$
-![-w712]((/assets/images/15922013718111.jpg))
+![-w712]((../image/machine_learning/15922013718111.jpg))
 效果如下，将向量在单位特征向量上，伸长为$\lambda$倍
-![-w554]((/assets/images/15922016553419.jpg))
+![-w554]((../image/machine_learning/15922016553419.jpg))
 ### SVD奇异值分解（Singularly Valuable Decomposition）
 矩阵A，mxn维，将n维的向量映射到m维空间中,k<=m
 正交基，$(v_1,v_2...v_n)$
-![-w624]((/assets/images/15922032144227.jpg))
+![-w624]((../image/machine_learning/15922032144227.jpg))
 $A^T A = \lambda_j$
-![-w730]((/assets/images/15922033896848.jpg))
-![-w722]((/assets/images/15922036689443.jpg))
-![-w725]((/assets/images/15922038887667.jpg))
+![-w730]((../image/machine_learning/15922033896848.jpg))
+![-w722]((../image/machine_learning/15922036689443.jpg))
+![-w725]((../image/machine_learning/15922038887667.jpg))
 ### 应用
-![-w697]((/assets/images/15922052033790.jpg))
+![-w697]((../image/machine_learning/15922052033790.jpg))
 
 存储领域，选取u，v正交基矩阵，计算奇异值矩阵，使奇异值矩阵尽量集中，即可取到
 
@@ -66,32 +67,32 @@ P：概率
 ## 2、Linear regression线型回归
 ### Cost funciton-代价函数
 
-![-w444]((/assets/images/15922084781269.jpg))
+![-w444]((../image/machine_learning/15922084781269.jpg))
 矩阵表达
 $J(\theta) = \frac{1}{2m}(X\theta-Y)^T(X\theta-Y)$
 * 梯度下降法（Gradient Descent）
 $\theta_{i+1} =\theta_i - \alpha\nabla J(\theta) $
 $\frac{\partial J(\theta)}{\partial\theta} = \frac{1}{m}X^T(X\theta-Y)$
 推导过程
-![-w787]((/assets/images/15923078000390.jpg))
-![-w607]((/assets/images/15923078144953.jpg))
+![-w787]((../image/machine_learning/15923078000390.jpg))
+![-w607]((../image/machine_learning/15923078144953.jpg))
 
 
 * 正规方程法（Normal Equation）
-![-w601]((/assets/images/15922203884161.jpg))
+![-w601]((../image/machine_learning/15922203884161.jpg))
 图中公式，theta的维是n，不是m
 另一种理解方式
 相当于求解$Y = X\theta$
-![-w714]((/assets/images/15922219982331.jpg))
+![-w714]((../image/machine_learning/15922219982331.jpg))
 
 b相当于y，a相当于x组成的矩阵，
-![-w189]((/assets/images/15922210683035.jpg))
+![-w189]((../image/machine_learning/15922210683035.jpg))
 求导过程
-![-w598]((/assets/images/15922218251765.jpg))
+![-w598]((../image/machine_learning/15922218251765.jpg))
 
 ### 线性代数回顾
 矩阵、向量使用规范
-![-w860]((/assets/images/15922243037001.jpg))
+![-w860]((../image/machine_learning/15922243037001.jpg))
 
 
 ### 加速梯度下降方法，让$x_i$尺度一致
@@ -101,14 +102,14 @@ b相当于y，a相当于x组成的矩阵，
 $x_i = \frac{x_i - \mu_i}{s_i}$,其中$\mu_i$是input的平均值，$s_i$是取值的范围，或者标准偏差
 
 ### 回归问题方法选择
-![-w869]((/assets/images/15922433025100.jpg))
+![-w869]((../image/machine_learning/15922433025100.jpg))
 正规方程法行不通：
 * $X^TX$不可逆
 1. 元素中有redundant features,linearly dependent
 2. 过多的features，导致input维度n>m
 
 ### 回归问题的矩阵表达
-![-w650]((/assets/images/15922713533207.jpg))
+![-w650]((../image/machine_learning/15922713533207.jpg))
 
 ## 3、Logistic Regression逻辑回归
 分类classification
@@ -123,10 +124,10 @@ h(z)代表着一个边界，将值分为>0和<0
 不能选择最小二乘法，因为目标是一个非凸函数
 凸函数才能最好利用梯度下降法
 所以对于，y-0，1的分类问题，改写cost function为
-![-w375]((/assets/images/15923134620258.jpg))
+![-w375]((../image/machine_learning/15923134620258.jpg))
 进一步改写为一个式子
-![-w696]((/assets/images/15923135710044.jpg))
-![-w902]((/assets/images/15923571866503.jpg))
+![-w696]((../image/machine_learning/15923135710044.jpg))
+![-w902]((../image/machine_learning/15923571866503.jpg))
 
 推导过程中，利用了sigmoid的求导法则
 $\sigma'(x) = \sigma(x)(1-\sigma(x))$
@@ -171,15 +172,15 @@ X 特征矩阵
 * 手动减少无关特征
 * 模型选择算法，自动选择相关变量
 2、 regularization 正则化
-![-w452]((/assets/images/15923657698696.jpg))
+![-w452]((../image/machine_learning/15923657698696.jpg))
 正则化参数，使特征拟合参数减小权重
 
 #### 线性回归正则化
-![-w784]((/assets/images/15923660929388.jpg))
+![-w784]((../image/machine_learning/15923660929388.jpg))
 **对于逻辑回归正则化，式子一样**
 
 ## 4、神经网络——Nonlinear Hypotheses
-![-w591]((/assets/images/15923834646377.jpg))
+![-w591]((../image/machine_learning/15923834646377.jpg))
 输入层、隐藏层、输出层
 g 激活函数$\in[0,1]$：
 h 输出函数
@@ -187,7 +188,7 @@ h 输出函数
 * 逻辑函数，sigmoid，无限可微
 * 斜坡函数
 * 高斯函数
-![-w709]((/assets/images/15923839870398.jpg))
+![-w709]((../image/machine_learning/15923839870398.jpg))
 ### multiclass classification 
 输出层y不是一个数字，[1;0;0;0] [0;1;0;0]instead
 ### Forward propagation
@@ -196,14 +197,14 @@ $a^{(j+1)} = g(\Theta ^ {(j})a^{(j)})$
 ### Backpropagation
 Cost function
 **符号约定**
-![-w788]((/assets/images/15923869999391.jpg))
+![-w788]((../image/machine_learning/15923869999391.jpg))
 [传播计算推导](https://github.com/halfrost/Halfrost-Field/blob/master/contents/Machine_Learning/Neural_Networks_Learning.ipynb)
 ### BP神经网络——算法步骤
-![-w822]((/assets/images/15923952253210.jpg))
-![-w536]((/assets/images/15924600046523.jpg))
+![-w822]((../image/machine_learning/15923952253210.jpg))
+![-w536]((../image/machine_learning/15924600046523.jpg))
 
 **调用函数的时候 unroll矩阵->Vector**
-![-w702]((/assets/images/15924602839093.jpg))
+![-w702]((../image/machine_learning/15924602839093.jpg))
 
 gradient check
 引入 $\epsilon$，数值计算，缺点太慢，只用于编程时的校验
@@ -220,20 +221,20 @@ $\Theta$初始化
 * 训练多个模型，在测试集中找到表现最优
 * 偏差和方差（Bias/ Variance）
 关于 模型种类
-![-w335]((/assets/images/15925327225783.jpg))
+![-w335]((../image/machine_learning/15925327225783.jpg))
 关于 正则化参数
-![-w808]((/assets/images/15925342959750.jpg))
+![-w808]((../image/machine_learning/15925342959750.jpg))
 
 ## 学习曲线
-![-w400]((/assets/images/15925410355870.jpg))
+![-w400]((../image/machine_learning/15925410355870.jpg))
 
 High bias
-![-w732]((/assets/images/15925413495753.jpg))
+![-w732]((../image/machine_learning/15925413495753.jpg))
 
 High Variance
-![-w696]((/assets/images/15925414621124.jpg))
+![-w696]((../image/machine_learning/15925414621124.jpg))
 
-![-w537]((/assets/images/15925415469599.jpg))
+![-w537]((../image/machine_learning/15925415469599.jpg))
 
 ## 6.2 设计神经网络
 1. **快速部署**、设计简单网络
@@ -242,13 +243,13 @@ High Variance
 
 ### 误差度量 for skewed classes 偏斜类
 precision/recall
-![-w789]((/assets/images/15925459953399.jpg))
+![-w789]((../image/machine_learning/15925459953399.jpg))
 针对最后一级h(x)，
 防止错判，阈值提高，设定逻辑判断阈值0.9  instead of 0.5
 防止漏过1，阈值放低
 
 #### 综合评定标准
-![-w779]((/assets/images/15925496319235.jpg))
+![-w779]((../image/machine_learning/15925496319235.jpg))
 
 ## 7、支持向量机SVM（support vector machine）
 ### 7.1 SVM 大间距分类器（Large Margin Classification）
@@ -257,7 +258,7 @@ precision/recall
 支持向量机的代价函数为：
 $$min_{\theta} C[\sum_{i=1}^{m}{y^{(i)}}cost_1(\theta^Tx^{(i)})+(1-y^{(i)})cost_0(\theta^Tx^{(i)})]+\frac{1}{2}\sum_{j=1}^{n}{\theta_j^2}$$
 
-![-w578](/assets/images/15970703768252.jpg)
+![-w578](../image/machine_learning/15970703768252.jpg)
 
 
 有别于逻辑回归假设函数输出的是概率，支持向量机它是直接预测 y 的值是0还是
@@ -269,10 +270,10 @@ $$h_{\theta}(x)=\left\{\begin{matrix}
 $$
 
 
-![-w889]((/assets/images/15925640229783.jpg))
+![-w889]((../image/machine_learning/15925640229783.jpg))
 最小化$\theta$的模，相当于最大化样本在$\theta$上的投影长度，图中直观表现为，绿色边界在$\theta$方向上距离样本距离最远。
-![-w549]((/assets/images/15925718971038.jpg))
-![-w587]((/assets/images/15925719456841.jpg))
+![-w549]((../image/machine_learning/15925718971038.jpg))
+![-w587]((../image/machine_learning/15925719456841.jpg))
 
 ## 7.2 kernels核函数
 核函数满足$κ(xi·xj)=φ(xi)T·φ(xj)$
@@ -358,7 +359,7 @@ $$\frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)} \right \|^2$$
 $$\frac{\min \frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)}-x^{(i)}_{approx} \right \|^2}{\frac{1}{m}\sum_{j=1}^{m}\left \| x^{(i)} \right \|^2} \leqslant \epsilon $$
 其中， $\epsilon $ 的取值可以为 0.01,0.05,0.10,⋯，假设  $\epsilon = 0.01 $ ，我们就说“特征间 99% 的差异性得到保留”。
 **看$\Sigma$矩阵的二范数占比就知道**
-![-w710]((/assets/images/15928009747208.jpg))
+![-w710]((../image/machine_learning/15928009747208.jpg))
 
 ### PCA-point
 
@@ -395,7 +396,7 @@ F1 Score
 我们还有一个参数 $\varepsilon$ ，这个 $\varepsilon$ 是我们用来决定什么时候把一个样本当做是异常样本的阈值。我们应该试用多个不同的 $\varepsilon$ 值，选取一个使得 F 值最大的那个 $\varepsilon$ 。
 
 ### 异常检测与逻辑回归的区别
-![-w790]((/assets/images/15928075440417.jpg))
+![-w790]((../image/machine_learning/15928075440417.jpg))
 
 异常检测数据特点是：
 1. 数据偏斜，y=1数据量极少
@@ -404,7 +405,7 @@ F1 Score
 ### 多元高斯函数
 其概率模型为： $$p(x;\mu,\Sigma)=\frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}}exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$$
 （其中 $|\Sigma|$ 是 $\Sigma$ 的行列式，$\mu$ 表示样本均值，$\Sigma$ 表示样本协方差矩阵。）。
-![-w740]((/assets/images/15930031190056.jpg))
+![-w740]((../image/machine_learning/15930031190056.jpg))
 其中$\Sigma$参数估计：
 $$\mu=\frac{1}{m}\sum_{i=1}^{m}{x^{(i)}}$$$$\Sigma=\frac{1}{m}\sum_{i=1}^{m}{(x^{(i)}-\mu)(x^{(i)}-\mu)^T}$$
 ### 算法流程-多元高斯分布异常检测
@@ -478,14 +479,14 @@ $$\min_{(x^{(1)},\cdots,x^{(n_m)};\theta^{(1)},\cdots,\theta^{(n_\mu)})}=\frac{1
 因为协同过滤算法 $\theta$ 和 x 相互影响，因此，二者都没必要使用偏置 $\theta_0$ 和 $x_0$，即，$x \in \mathbb{R}^n$、 $\theta \in \mathbb{R}^n$ 。
 #### 低秩分解（Low Rank Matrix Factorization）
 $Y = X\Theta^T$
-![-w712]((/assets/images/15933132737330.jpg))
+![-w712]((../image/machine_learning/15933132737330.jpg))
 
 
 #### 正则化
 1. $\lambda$正则化，使$\theta$趋向0
 2. 平均值正则化(mean normalization)
 将平均值作为0点，让Y偏置
-![-w704]((/assets/images/15933144020810.jpg))
+![-w704]((../image/machine_learning/15933144020810.jpg))
 
 
 ## 10、大数据集——提升运算速度
@@ -501,7 +502,7 @@ $Y = X\Theta^T$
 * 随着迭代次数，减小α
 
 ### Mini-Batch Gradient Descent
-![-w672]((/assets/images/15933256124873.jpg))
+![-w672]((../image/machine_learning/15933256124873.jpg))
 矢量化->并行计算，提高效率
 
 
@@ -510,12 +511,12 @@ $Y = X\Theta^T$
 
 
 ### Map reduce and data parallelism
-![-w728]((/assets/images/15933397359609.jpg))
+![-w728]((../image/machine_learning/15933397359609.jpg))
 代数计算库自动implement
 
 
 ## 12、Photo OCR pipeline
-![-w684]((/assets/images/15933522420345.jpg))
+![-w684]((../image/machine_learning/15933522420345.jpg))
 
 1. 文本检测
 2. 特征分割
@@ -528,7 +529,7 @@ $Y = X\Theta^T$
 
 检测到特征，相邻互联
 #### 特征分割
-![-w656]((/assets/images/15933520905301.jpg))
+![-w656]((../image/machine_learning/15933520905301.jpg))
 
 ### 获取数据，人造数据
 1. 加背景噪音
@@ -538,11 +539,11 @@ $Y = X\Theta^T$
 加入高斯噪声没用
 
 ### 大量数据获取建议
-![-w667]((/assets/images/15933538670382.jpg))
+![-w667]((../image/machine_learning/15933538670382.jpg))
 
 ### Ceiling analysis上限分析
 找到提升最大的Module
-![-w725]((/assets/images/15933549643205.jpg))
+![-w725]((../image/machine_learning/15933549643205.jpg))
 
 
 
@@ -569,8 +570,8 @@ $Y = X\Theta^T$
 
 ## 处理微分的手段
 1. 微分+一阶惯性环节，$tf = s/(T_s s +1)$
-2. TD微分跟踪器![-w635]((/assets/images/15892146432096.jpg))
+2. TD微分跟踪器![-w635]((../image/machine_learning/15892146432096.jpg))
 3. 状态观测器
 4. 卡尔曼滤波器
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

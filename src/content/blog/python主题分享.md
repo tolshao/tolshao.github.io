@@ -6,8 +6,9 @@ tags:
   - 工具
 id: "61469"
 date: 2021-09-24
+typora-root-url: ../
 top: false
-cover: "/assets/images/pythonsnippet.jpg"
+cover: "../image/python主题分享/pythonsnippet.jpg"
 recommend: false
 ---
 
@@ -17,7 +18,7 @@ recommend: false
 
 - Life is short, you need Python——Bruce Eckel
 
-  <img src="/assets/images/image-20210924174440602.png" alt="人生苦短，我用Python" style="zoom:100%;" />
+  <img src="../image/python主题分享/image-20210924174440602.png" alt="人生苦短，我用Python" style="zoom:100%;" />
 
 #### 优点
 
@@ -46,15 +47,15 @@ recommend: false
 
 - `GUI`界面交互，下一步 -> 同意 -> 下一步 -> 取消“捆绑软件”选钩 -> 完成
 
-<img src="/assets/images/image-20210924160110700.png" alt="传统软件安装方式" style="zoom:50%;" />
+<img src="../image/python主题分享/image-20210924160110700.png" alt="传统软件安装方式" style="zoom:50%;" />
 
 - 沙盒应用，即开即用
 
-<img src="/assets/images/image-20210924160039138.png" alt="沙盒应用安装方式" style="zoom:25%;" />
+<img src="../image/python主题分享/image-20210924160039138.png" alt="沙盒应用安装方式" style="zoom:25%;" />
 
 - 代码式
 
-  <img src="/assets/images/image-20210924151522040.png" alt="代码安装方式" style="zoom:30%;" />
+  <img src="../image/python主题分享/image-20210924151522040.png" alt="代码安装方式" style="zoom:30%;" />
 
 ```bash
 # mac
@@ -102,17 +103,17 @@ choco install -y git wechat raidrive clash-for-windows netease-cloudmusic everyt
 
 没有良好的版本控制，一个新的Word文件，再接着改，改到一定程度，再“另存为
 
-<img src="/assets/images/image-20210924161745854.png" alt="错乱的word版本" style="zoom:60%;" />
+<img src="../image/python主题分享/image-20210924161745854.png" alt="错乱的word版本" style="zoom:60%;" />
 
 文件夹变成了这样
 
-<img src="/assets/images/image-20210924161658163.png" alt="错乱的文件夹目录" style="zoom:50%;" />
+<img src="../image/python主题分享/image-20210924161658163.png" alt="错乱的文件夹目录" style="zoom:50%;" />
 
 #### `Git`的效果
 
 使用了git，有这样一个`log`日志
 
-<img src="/assets/images/image-20210924161829019.png" alt="git日志形式" style="zoom:67%;" />
+<img src="../image/python主题分享/image-20210924161829019.png" alt="git日志形式" style="zoom:67%;" />
 
 
 
@@ -120,7 +121,7 @@ Git-gui客户端`Source`介绍
 
 - 一图抵百语
 
-<img src="/assets/images/image-20210924163449459.png" alt="source软件界面" style="zoom:30%;" />
+<img src="../image/python主题分享/image-20210924163449459.png" alt="source软件界面" style="zoom:30%;" />
 
 ### python入门
 
@@ -142,7 +143,7 @@ Git-gui客户端`Source`介绍
   - print - log
   - 没有公式、图片等信息
 
-<img src="/assets/images/image-20210924174817756.png" alt="传统的log形式" style="zoom:30%;" />
+<img src="../image/python主题分享/image-20210924174817756.png" alt="传统的log形式" style="zoom:30%;" />
 
 - 富文本式的数据交互，matlab也可以实现，`实时脚本mlx`
 
@@ -151,7 +152,7 @@ Git-gui客户端`Source`介绍
 - `jupyter notebook`
 - `jupyter-lab`
 
-![jupyter-lab界面](/assets/images/image-20210924174701096.png)
+![jupyter-lab界面](../image/python主题分享/image-20210924174701096.png)
 
 使用matplotlib库
 
@@ -165,7 +166,7 @@ plt.show()
 
 官方样本库
 
-<img src="/assets/images/16322933796539.jpg" alt="matplotlib样本库" style="zoom:30%;" />
+<img src="../image/python主题分享/16322933796539.jpg" alt="matplotlib样本库" style="zoom:30%;" />
 
 ### 参考资料
 
@@ -175,15 +176,15 @@ plt.show()
 
 - [论文学术style](https://github.com/garrettj403/SciencePlots)
 
-  <img src="/assets/images/fig1.jpg" alt="学术style" style="zoom:30%;" />
+  <img src="../image/python主题分享/fig1.jpg" alt="学术style" style="zoom:30%;" />
 
 - [手写汇报style](https://github.com/cutecharts/cutecharts.py)
 
-  <img src="/assets/images/16322931692182.png" alt="手写style" style="zoom:52%;" />
+  <img src="../image/python主题分享/16322931692182.png" alt="手写style" style="zoom:52%;" />
 
 - [Matplotlib-Animation](https://matplotlib.org/stable/api/animation_api.html)
 
-  <img src="/assets/images/16322956547712.gif" alt="python画图制作动画" style="zoom:50%;" />
+  <img src="../image/python主题分享/16322956547712.gif" alt="python画图制作动画" style="zoom:50%;" />
 
 - [C++环境`Python-Style`画图](https://github.com/lava/matplotlib-cpp)
 
@@ -212,7 +213,7 @@ int main() {
 
 - mac：`texpad`
 
-  <img src="/assets/images/image-20210924173315499.png" alt="texpad界面" style="zoom:30%;" />
+  <img src="../image/python主题分享/image-20210924173315499.png" alt="texpad界面" style="zoom:30%;" />
 
 - windows
 
@@ -221,7 +222,7 @@ int main() {
 
 - web：[Overleaf](https://www.overleaf.com/)
 
-  <img src="/assets/images/image-20210924173215633.png" alt="Overleaf界面" style="zoom:37%;" />
+  <img src="../image/python主题分享/image-20210924173215633.png" alt="Overleaf界面" style="zoom:37%;" />
 
 ### 语法
 
@@ -273,11 +274,11 @@ int main() {
 
 以上资源服务器部分在国外，访问网速慢，甚至443，所以偶尔需要借助
 
-<img src="/assets/images/image-20210924165854805.png" style="zoom:80%;" />
+<img src="../image/python主题分享/image-20210924165854805.png" style="zoom:80%;" />
 
 速度客观
 
-<img src="/assets/images/16322949326340.png" alt="vpn测速" style="zoom:30%;" />
+<img src="../image/python主题分享/16322949326340.png" alt="vpn测速" style="zoom:30%;" />
 
 - [邀请链接1](https://zcssr.com/auth/register?code=SYGh)
 
@@ -289,4 +290,4 @@ int main() {
 
   
 
-  ![](/assets/images/contact.jpg)
+  ![](../image/contact.jpg)

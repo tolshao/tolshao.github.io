@@ -6,7 +6,8 @@ tags:
   - 动态规划 dynamic programming
 id: "24680"
 date: 2020-09-02
-cover: "/assets/images/rl_pr_1_DP_cover.jpg"
+cover: "../image/rl_pr_1_DP/rl_pr_1_DP_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---

@@ -6,7 +6,8 @@ tags:
   - 马尔科夫决策过程 MDP
 id: "8136"
 date: 2020-07-05
-cover: "/assets/images/rl_2_cover.jpg"
+cover: "../image/rl_2/rl_2_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -25,10 +26,10 @@ $$ 。所谓状态转移矩阵就是描述了一个状态到另一个状态发�
 ## 马尔科夫奖励过程（Markov Reward Process，MRP）
 
 在MP上加入了 奖励Reward 和 折扣系数$\gamma$
-![-w460](/assets/images/15961148196502.jpg)
+![-w460](../image/rl_2/15961148196502.jpg)
 
 对于状态转移概率矩阵确定的情况，Value值可以显式计算得到
-![-w238](/assets/images/15961148266893.jpg)
+![-w238](../image/rl_2/15961148266893.jpg)
 
 对于MDP，并不适用，因为$\mathbb{P}$**非线性**
 
@@ -73,7 +74,7 @@ $$
 - 给与较近的未来更高权重
 
 ### 价值函数和动作值函数
-![-w397](/assets/images/15959184331156.jpg)
+![-w397](../image/rl_2/15959184331156.jpg)
 
 
 - 价值函数：在状态s，策略π下的值函数
@@ -98,7 +99,7 @@ q_{\pi}(s, a)=\mathbb{E}_{\pi}\left[R_{t+1}+\gamma q_{\pi}\left(S_{t+1}, A_{t+1}
 $$
 在每个状态，会存在多个备选动作；
 每个动作，也可能会导致不一样的状态，因此存在下图。
-![](/assets/images/15958154132177.jpg)
+![](../image/rl_2/15958154132177.jpg)
 
 $$
 v_{\pi}(s)=\sum_{a \in \mathcal{A}} \pi(a \mid s) q_{\pi}(s, a) \\ q_{\pi}(s, a)=\mathcal{R}_{s}^{a}+\gamma \sum_{s^{\prime} \in \mathcal{S}} \mathcal{P}_{s s^{\prime}}^{a} v_{\pi}\left(s^{\prime}\right) \\ 
@@ -128,4 +129,4 @@ $$
 - Sarsa
 - 等
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

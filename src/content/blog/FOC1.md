@@ -5,8 +5,9 @@ tags:
   - tricks
   - tutorial
 id: "29935"
-date: 2026-01-21
-cover: "/assets/images/FOC1_cover.png"
+date: 2026-04-10
+cover: "../image/FOC1/FOC1_cover.png"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -41,7 +42,7 @@ recommend: false
 
 你看，转子在转，为了保证受力方向不变，每转半圈，碳刷就会物理接触到换向器的不同触点，强行把电流方向掉个头。虽然简单，但这玩意儿会有火花、会磨损，还有那滋滋滋的噪音。⚙️
 
-![机械换向 vs 电桥换向](/assets/images/image-20260121180143404.png)
+![机械换向 vs 电桥换向](../image/FOC1/image-20260121180143404.png)
 
 （图片仅供示意，细节之处不足还请见谅）
 
@@ -61,7 +62,7 @@ recommend: false
 
   对，你没看错，BLDC也可以使用FOC去控制，特性是能优化一些的，现在主流BLDC也都用FOC了。
 
-![IGBT驱动对比](/assets/images/image-20260202093646799.png)
+![IGBT驱动对比](../image/FOC1/image-20260202093646799.png)
 
 
 
@@ -90,17 +91,17 @@ FOC的代价是啥呢？
 
 这就是前面说的“电子换向器”。通常是三个桥臂，每个桥臂有两个开关。FOC 的本质，就是给这三个桥臂下达指令：上管开还是下管开？开多久？
 
-![image-20260121180551512](/assets/images/image-20260121180551512.png)
+![image-20260121180551512](../image/FOC1/image-20260121180551512.png)
 
 
 
 #### 2. FOC架构
 
-![Gemini_Generated_Image_mevauumevauumeva](/assets/images/Gemini_Generated_Image_mevauumevauumeva.png)
+![Gemini_Generated_Image_mevauumevauumeva](../image/FOC1/Gemini_Generated_Image_mevauumevauumeva.png)
 
 此处加个私货，测试一下最近新养🦞的skill
 
-![Gemini_Generated_Image_b2fx54b2fx54b2fx](/assets/images/Gemini_Generated_Image_b2fx54b2fx54b2fx.png)
+![Gemini_Generated_Image_b2fx54b2fx54b2fx](../image/FOC1/Gemini_Generated_Image_b2fx54b2fx54b2fx.png)
 
 
 
@@ -108,7 +109,7 @@ FOC的代价是啥呢？
 
 我们的电机是三相电（a,b,c），这三根线互成 120 度，互相拉扯，分析起来太麻烦。Clarke 变换就是把这三个人打架，简化成两个人在平面直角坐标系里打架——也就是 α−β 坐标系。 **注意：** 此时这两个分量虽然只有两个了，但它们还是**正弦波**，还是在变化的交流电。
 
-![image-20260121181152309](/assets/images/image.psd.png)
+![image-20260121181152309](../image/FOC1/image.psd.png)
 
 
 
@@ -116,11 +117,11 @@ FOC的代价是啥呢？
 
 这是 FOC 的灵魂一刀！即使变成了 $α$−$β$，它是静止坐标系，电流波形还是在正弦波动，控制起来PID根本跟不上 Park 变换做了一件极其天才的事：**它跳到了旋转的转子上看世界！** 想象一下，旋转木马（转子）在转，如果你站在地上看，木马是忽远忽近的（交流电）；但如果你跳上木马（旋转坐标系 d−q），你会发现木马相对于你是静止不动的（直流电）！ 通过这一步，复杂的交流电机控制，瞬间变成了简单的**直流电机控制**。$I_d$ 和 $I_q$成了两个常数，咱们终于可以用简单的 PI 控制器来搞定它们了。
 
-![image-20260202123034354](/assets/images/image-20260202123034354.png)
+![image-20260202123034354](../image/FOC1/image-20260202123034354.png)
 
 好吧，下面这个更严谨一些😄
 
-![park变换](/assets/images/park变换.png)
+![park变换](../image/FOC1/park变换.png)
 
 #### 4. SVPWM (空间矢量脉宽调制)
 

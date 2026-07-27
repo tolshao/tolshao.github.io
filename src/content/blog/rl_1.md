@@ -6,15 +6,16 @@ tags:
   - RL
 id: "35925"
 date: 2020-07-01
-cover: "/assets/images/rl_1_cover.jpg"
+cover: "../image/rl_1/rl_1_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
 
 # 概述
 强化学习是一门多学科交叉的技术
-![截屏2020-07-27 下午5.35.46](/assets/images/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%885.35.46-1.png)
-![](/assets/images/15973090963916.jpg)
+![截屏2020-07-27 下午5.35.46](../image/rl_1/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%885.35.46-1.png)
+![](../image/15973090963916.jpg)
 
 
 ## 与传统控制的关系：
@@ -32,17 +33,17 @@ recommend: false
 - 不同点：
  - 传统的控制：将任务分解成多个任务的串并联，设计（子）控制器
  - 机器学习：将控制器压缩成黑盒Black box
-![-w1354](/assets/images/15953218263369.jpg)
+![-w1354](../image/rl_1/15953218263369.jpg)
 
 强化学习不同于 监督、非监督学习（与静态数据交互），与环境产生交互，产生最优结果的动作序列。
 
 # 基础概念
 RL组成要素Agent、Env
-![](/assets/images/15972068404024.png)
+![](../image/15972068404024.png)
 
 ## Agent
 组成要素：Policy、Value function、Model其中至少一个
-![-w410](/assets/images/15958481757170.jpg)
+![-w410](../image/15958481757170.jpg)
 
 
 
@@ -54,7 +55,7 @@ $$
 $$
 函数代表：在状态$s$时采取动作$a$的概率分布。
 
-![截屏2020-07-27 下午7.07.57](/assets/images/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%887.07.57-1.png)
+![截屏2020-07-27 下午7.07.57](../image/rl_1/%E6%88%AA%E5%B1%8F2020-07-27%20%E4%B8%8B%E5%8D%887.07.57-1.png)
 
 ### 价值(value function)：未来奖励的预测（期望）
 前面我们说到过奖励，当Agent在$t$时刻执行某个动作时，会得到一个$\mathcal{R_{t+1}}$。我们可以想一下蝴蝶效应，这个Action会影响$\mathcal{R_{t+1}}$，那么他会不会影响$\mathcal{R_{t+2}},\mathcal{R_{t+3}}...$呢？很可能会的，比如说在电游中，你所做的某个选择肯定会对接下来的游戏产生影响，这个影响可以深远，也可以没那么深渊（对，我说的就是隐形守护者，mmp），因此状态价值函数可以表示为：
@@ -63,7 +64,7 @@ v_{\pi}(s)=\mathbb{E}_{\pi}\left(R_{t+1}+\gamma R_{t+2}+\gamma^{2} R_{t+3}+\ldot
 $$
 
 $v_{\pi}(s)$与策略函数$\pi$有关，可以理解为当Agent以策略$\pi$运行时，状态$s$的价值是多少。也就是在此状态下，我能够得到多少回报。
-![-w425](/assets/images/15958481422216.png)
+![-w425](../image/rl_1/15958481422216.png)
 
 
 ## 模型Model：
@@ -127,4 +128,4 @@ $$
 具体在RL_2，MP 中讲解
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

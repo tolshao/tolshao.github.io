@@ -7,7 +7,8 @@ tags:
   - iPhone
 id: "11709"
 date: 2020-08-07
-cover: "/assets/images/ios_yellow_page_cover.jpg"
+cover: "../image/ios_yellow_page/ios_yellow_page_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -23,22 +24,22 @@ recommend: false
 
 【百度百科】定义：黄页是国际通用按企业性质和产品类别编排的工商企业电话号码簿，以刊登企业名称、地址、电话号码为主体内容，相当于一个城市或地区的工商企业的户口本，国际惯例用黄色纸张印制，故称黄页。黄页，起源于北美洲，1880年世界上第一本黄页电话号簿在美国问世，至今已有100多年的历史。
 以前，它长这个样子：
-![-w412](/assets/images/15959053121203.jpg)
+![-w412](../image/ios_yellow_page/15959053121203.jpg)
 
 后来，它长这个样子，上网了
 
-![w500](/assets/images/15959047443292.jpg)
+![w500](../image/ios_yellow_page/15959047443292.jpg)
 
 随着互联网等信息技术的发展，黄页逐渐退出了历史舞台，人们的浏览器被“百度”、“Bing”、“Sogou”、“Google”等搜索引擎替代，这符合人们的行为认知，也极大地提高了效率
 
 再后来，手机成为了每个人随时随地就能上网的工具，手机厂商发现这里能赚“5毛钱”，所以Android的黄页应运而生
 
-![-w341](/assets/images/15959064265953.jpg)
+![-w341](../image/ios_yellow_page/15959064265953.jpg)
 
 
 
 经过了服务商的整合，确实是要比某度搜索要快的，毕竟……
-![-w701](/assets/images/15959063542994.jpg)
+![-w701](../image/ios_yellow_page/15959063542994.jpg)
 我们也不好多说什么了
 不过作为外地开发商，Apple在这一点做的属实落后了半个世纪，所以
 
@@ -48,7 +49,7 @@ recommend: false
 
 导入常用联系人头像，优化 iOS 来电、信息界面体验。
 
-![](/assets/images/15970556799481.png)
+![](../image/ios_yellow_page/15970556799481.png)
 
 
 
@@ -80,7 +81,7 @@ recommend: false
    - 特殊情况特殊处理
  - 图像大小压缩在 `20 kB` 内
 
-![](/assets/images/15970557154990.png)
+![](../image/ios_yellow_page/15970557154990.png)
 
 
 ## 致谢
@@ -95,4 +96,4 @@ recommend: false
 ios黄页，可以后台回复“黄页”领取。
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

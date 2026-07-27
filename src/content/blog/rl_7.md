@@ -6,7 +6,8 @@ tags:
   - 策略梯度 Policy gradient
 id: "33814"
 date: 2020-08-11
-cover: "/assets/images/rl_7_cover.jpg"
+cover: "../image/rl_7/rl_7_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -15,13 +16,13 @@ recommend: false
 
 # 1. introduction
 策略梯度是以$P(a|s)$入手，概率$\pi(s,a)$的形式，同样是model free的
-![](/assets/images/15973090963916.jpg)
+![](../image/15973090963916.jpg)
 $$
 \pi_{\theta}(s, a)=\mathbb{P}[a \mid s, \theta]
 $$
 调整策略的概率分布，寻找最优策略$\pi_*$
 
-![-w497](/assets/images/15971227558962.jpg)
+![-w497](../image/rl_7/15971227558962.jpg)
 
 ## 特点
 - 优点：
@@ -54,7 +55,7 @@ find $\theta$ 最大化 $J(\theta)$
 
 # 2. Finite Difference PG 有限差分策略梯度
 对每个维度的权重，分别进行查分求梯度，然后迭代权重，至最优
-![-w449](/assets/images/15971425601126.jpg)
+![-w449](../image/rl_7/15971425601126.jpg)
 
 
 特点：
@@ -83,7 +84,7 @@ $$
 
 ### Softmax policy：策略概率按照指数分配
 线性组合 -> softmax = $\pi$ 是状态s下，采取每个a的概率
-![-w451](/assets/images/15971450080893.jpg)
+![-w451](../image/rl_7/15971450080893.jpg)
 
 通过取对数，拆分为加法，进而表示为
 
@@ -139,7 +140,7 @@ $$
 上节式子表示为Score function 和 Q 值在策略$\pi$下的**期望**
 在MC中，在每个episode在$\pi$下，产生的序列就满足分布，整个过程都迭代完后的值，自然就是期望，因此梯度前没有概率分布函数，用常值替代。
 
-![-w433](/assets/images/15971998167024.jpg)
+![-w433](../image/rl_7/15971998167024.jpg)
 
 
 - 特点：
@@ -168,7 +169,7 @@ $$
 - Critic 线性组合，TD(0)
 - Actor  PG更新
 - 逐步更新，在线实时
-![-w377](/assets/images/15976384741868.jpg)
+![-w377](../image/rl_7/15976384741868.jpg)
 
 -  AC算法中的偏差
  - 对PG的估计引入了偏差
@@ -191,31 +192,31 @@ $$
 \nabla_{\theta} J(\theta)=\mathbb{E}_{\pi_{\theta}}\left[\nabla_{\theta} \log \pi_{\theta}(s, a) Q_{w}(s, a)\right]
 $$
 - 证明过程，（参数梯度 = 0）
-![-w483](/assets/images/15976423506794.jpg)
+![-w483](../image/rl_7/15976423506794.jpg)
 
 ### Tricks——Advantage function critic
 核心思想：减去一个baseline，将MSE的减数和被减数都 往 0 方向拉，减小偏差
 Advantage function = PG减去B(s)，好的B(s)是状态价值函数，V(s)是和**策略无关**的值，所以**不改变梯度**的期望的值
-![-w465](/assets/images/15976428419935.jpg)
+![-w465](../image/rl_7/15976428419935.jpg)
 #### 实现方法
 - 通过两个估计函数 和 两套参数，分别估计V、Q，进而估计A
-![-w476](/assets/images/15976451232295.jpg)
+![-w476](../image/rl_7/15976451232295.jpg)
 
 - 直接用v值运算
 但是并不需要用2个估计函数，因为**TD误差是Q-V的无偏估计**
 
-![-w457](/assets/images/15976451043580.jpg)
+![-w457](../image/rl_7/15976451043580.jpg)
 
 ### 不同时间尺度下——Eligibility Traces
 几种时间尺度下的更新算法
 
 - 针对**Critic**过程使用TD(λ)
-![-w469](/assets/images/15976458664595.jpg)
+![-w469](../image/rl_7/15976458664595.jpg)
 
 - 针对**Actor**过程使用TD(λ)
-![-w512](/assets/images/15976475762634.jpg)
+![-w512](../image/rl_7/15976475762634.jpg)
 
-![-w473](/assets/images/15976476902568.jpg)
+![-w473](../image/rl_7/15976476902568.jpg)
 
 将TD(λ)的后向视角算法应用于实际问题时，可以在线实时更新，而且不需要完整的Episode。
 
@@ -259,14 +260,14 @@ $$
 
 
 # AC算法的进行actor梯度更新的可选形式
-![](/assets/images/16051921162903.jpg)
+![](../image/rl_7/16051921162903.jpg)
 
 # 只用值函数估计解决优势函数估计
-![](/assets/images/16052492307800.jpg)
+![](../image/rl_7/16052492307800.jpg)
 
 
 ## 总结PG
-![-w519](/assets/images/15976510887080.jpg)
+![-w519](../image/rl_7/15976510887080.jpg)
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

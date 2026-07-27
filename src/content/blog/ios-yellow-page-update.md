@@ -4,7 +4,8 @@ date: "2025-07-24"
 categories: "工具"
 tags: ["ios", "黄页", "iPhone", "CardDAV"]
 id: "52045"
-cover: "/assets/images/yellowpage.jpg"
+cover: "../image/ios-yellow-page-update/yellowpage.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---

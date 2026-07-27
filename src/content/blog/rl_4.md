@@ -6,7 +6,8 @@ tags:
   - 无模型预测 model-free prediction
 id: "64551"
 date: 2020-07-15
-cover: "/assets/images/rl_4_cover.jpg"
+cover: "../image/rl_4/rl_4_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -95,7 +96,7 @@ $$
 \hat{\mathcal{R}}_{s}^{a} =\frac{1}{N(s, a)} \sum_{k=1}^{K} \sum_{t=1}^{T_{k}} 1\left(s_{t}^{k}, a_{t}^{k}=s, a\right) r_{t}^{k}
 $$
 
-![MC-TD收敛速度对比](/assets/images/15972187186144.jpg)
+![MC-TD收敛速度对比](../image/rl_4/15972187186144.jpg)
 
 
 ## 总结：DP、MC、TD
@@ -113,15 +114,15 @@ $$
 
 MC: 采样，一次完整经历，用实际收获更新状态预估价值
 
-![MC-深度](/assets/images/15972190302462.png)
+![MC-深度](../image/rl_4/15972190302462.png)
 
 TD：采样，经历可不完整，用喜爱状态的预估状态价值预估收获再更新预估价值
-![TD-窄而浅](/assets/images/15972190329229.png)
+![TD-窄而浅](../image/rl_4/15972190329229.png)
 
 DP：没有采样，根据完整模型，依靠预估数据更新状态价值
-![DP-宽度](/assets/images/15972190846702.png)
+![DP-宽度](../image/rl_4/15972190846702.png)
 
-![全尺度搜索、动态规划、MC、TD 对比](/assets/images/15961728958158.jpg)
+![全尺度搜索、动态规划、MC、TD 对比](../image/rl_4/15961728958158.jpg)
 
 
 
@@ -131,33 +132,33 @@ DP：没有采样，根据完整模型，依靠预估数据更新状态价值
 因此，综合不同深度的视野，加权求和，即TD$(\lambda)$
 
 扩展TD(0)，视野扩展到N个step，N=全过程时，变为MC
-![](/assets/images/15961732715990.jpg)
+![](../image/rl_4/15961732715990.jpg)
 
 TD（N）推导
-![TD（N）](/assets/images/15961732821137.jpg)
-![不同深度TD效果对比](/assets/images/15972192509726.jpg)
+![TD（N）](../image/rl_4/15961732821137.jpg)
+![不同深度TD效果对比](../image/rl_4/15972192509726.jpg)
 
 对于某个问题来说，没有那个N值是最优的
 因此，用几何加权的方法来对视野做平均
 ## Forward 前向视角认知 $TD(\lambda)$
 - 例子：
 老鼠在连续接受了3次响铃和1次亮灯信号后遭到了电击，那么在分析遭电击的原因时，到底是响铃的因素较重要还是亮灯的因素更重要呢？
-![](/assets/images/15972196164084.png)
+![](../image/rl_4/15972196164084.png)
 
 - 两个启发：
  - 出现频率高的状态
  - 出现频率低的状态
 
-![-w561](/assets/images/15962140900575.jpg)
+![-w561](../image/rl_4/15962140900575.jpg)
 
 $\lambda$：对视野的平均
 for iteration： t -> t+1
 update value function
 
-![-w621](/assets/images/15961782979683.jpg)
+![-w621](../image/rl_4/15961782979683.jpg)
 
 引入权重概念，前面的重要，指数衰减
-![-w533](/assets/images/15961783140794.jpg)
+![-w533](../image/rl_4/15961783140794.jpg)
 
 ## Backward 反向认知TD(λ)：提供了**单步**更新的机制
 
@@ -179,18 +180,18 @@ V(s) & \leftarrow V(s)+\alpha \delta_{t} E_{t}(s)
 \end{aligned}
 $$
 
-![-w426](/assets/images/15962140598528.jpg)
+![-w426](../image/rl_4/15962140598528.jpg)
 
 
 $$
 \sum_{t=1}^{T} \alpha \delta_{t} E_{t}(s)=\sum_{t=1}^{T} \alpha\left(G_{t}^{\lambda}-V\left(S_{t}\right)\right) 1\left(S_{t}=s\right)
 $$
 
-![-w605](/assets/images/15964228971321.jpg)
+![-w605](../image/rl_4/15964228971321.jpg)
 
 ## 总结
 
-![-w627](/assets/images/15964233494644.jpg)
+![-w627](../image/rl_4/15964233494644.jpg)
 - Offline update：TD(0) = TD($\lambda$) = TD(1)
 - Online update： TD($\lambda$)前后向视图不一致，引入Exact online TD($\lambda$)可以解决这个问题
 - TD(0) 向后看一步
@@ -199,4 +200,4 @@ $$
 - 能在RL中被应用，看中了TD的自举特性
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

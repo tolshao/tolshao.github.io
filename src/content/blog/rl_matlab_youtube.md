@@ -6,7 +6,8 @@ tags:
   - Matlab
 id: "5666"
 date: 2020-09-08
-cover: "/assets/images/rl_matlab_youtube_cover.jpg"
+cover: "../image/rl_matlab_youtube/rl_matlab_youtube_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -16,7 +17,7 @@ recommend: false
 
 # 强化学习-11：Matlab RL
 
-![-w698](/assets/images/15953228371087.jpg)
+![-w698](../image/rl_matlab_youtube/15953228371087.jpg)
 
 - Agent： 
 由Policy 和 RL_Algorithm构成
@@ -32,7 +33,7 @@ recommend: false
 * Reward：根据当前状态得到的即刻奖励
 * Value：根据当前状态预测的整个周期的reward（包括未来）
 
-![-w389](/assets/images/15953233239703.jpg)
+![-w389](../image/rl_matlab_youtube/15953233239703.jpg)
 
 未来奖励折扣：未来Value不最优
 1. reward now > reward later
@@ -41,8 +42,8 @@ recommend: false
 * Balance: exploration探索 vs exploitation利用
 
 one step update
-![-w668](/assets/images/15953235640183.jpg)
-![-w651](/assets/images/15953236270668.jpg)
+![-w668](../image/rl_matlab_youtube/15953235640183.jpg)
+![-w651](../image/rl_matlab_youtube/15953236270668.jpg)
 
 ## RL workflow
 * Env：Real or simulated？
@@ -54,15 +55,15 @@ one step update
 ## 一些策略
 ### Q-function
 更新states-action表格，根据s，选a
-![-w395](/assets/images/15953248613942.jpg)
+![-w395](../image/rl_matlab_youtube/15953248613942.jpg)
 
 缺点：带来维度灾难
 对于连续空间，构建Value = w1 * state + w2 * action
 手段：函数近似器
-![-w1317](/assets/images/15953249979358.jpg)
+![-w1317](../image/rl_matlab_youtube/15953249979358.jpg)
 
 ### 策略梯度法
-![-w701](/assets/images/15953279655333.jpg)
+![-w701](../image/rl_matlab_youtube/15953279655333.jpg)
 
 缺点：
 1. 对于稀疏奖励问题，梯度小，训练慢
@@ -70,24 +71,24 @@ one step update
 
 ### Value-function based
 crictic评价网络
-![-w604](/assets/images/15953280498462.jpg)
+![-w604](../image/rl_matlab_youtube/15953280498462.jpg)
 * 贝尔曼方程：
 R:reward
 Q:当前Q
 maxQ'：未来最大的Q
 γ：折扣率discount factor[0,1]
 α：学习率learning rate
-![-w586](/assets/images/15953283341441.jpg)
+![-w586](../image/rl_matlab_youtube/15953283341441.jpg)
 
 
 ### AC算法
 图中有两个网络：actor、critic
 actor：根据policy给出最大概率下的action
-![-w744](/assets/images/15953289716908.jpg)
+![-w744](../image/rl_matlab_youtube/15953289716908.jpg)
 
 完成离线仿真和学习之后，将policy部署到硬件
 RL algorithm学习能力对于适应不确定干扰和缓变环境尤为重要
-![-w641](/assets/images/15953297916839.jpg)
+![-w641](../image/rl_matlab_youtube/15953297916839.jpg)
 
 #### AC网络的执行逻辑
 
@@ -106,12 +107,12 @@ s = s_
 
 
 加入视觉、雷达等传感器后，观测量维数暴增，全连接层不管用
-![-w408](/assets/images/15953840126963.jpg)
+![-w408](../image/rl_matlab_youtube/15953840126963.jpg)
 
 
 ## 改进RL系统需要注意的点
 鲁棒性、安全性、可变性、可验证性
-![-w765](/assets/images/15953856661541.jpg)
+![-w765](../image/rl_matlab_youtube/15953856661541.jpg)
 
 1. Robust：对于实际系统具有不确定性的值：制造装配公差引起的几何参数、力（力矩）、传感器采回的信号，送给agent前作随机处理。
 2. Safety：建立monitor，在系统出问题时接管到安全模式
@@ -120,20 +121,20 @@ s = s_
 
 
 ### 将RL-agent用于高级任务，低级任务交给传统
-![-w772](/assets/images/15953838314214.jpg)
+![-w772](../image/rl_matlab_youtube/15953838314214.jpg)
 
 
 ### 以传统架构实现，RL网络负责调参
 优点：结构可解释， 验证性强
 缺点：结构人为设计，对于复杂输入，性能非最优
-![-w764](/assets/images/15953858326711.jpg)
+![-w764](../image/rl_matlab_youtube/15953858326711.jpg)
 
 
 
 
 
 ## 几种算法类型
-![-w855](/assets/images/15936754840195.jpg)
+![-w855](../image/rl_matlab_youtube/15936754840195.jpg)
 
 Model-free：不尝试去理解环境, 环境给什么就是什么，一步一步等待真实世界的反馈, 再根据反馈采取下一步行动。
 
@@ -153,4 +154,4 @@ Off-policy：可以选择自己玩, 也可以选择看着别人玩, 通过看别
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

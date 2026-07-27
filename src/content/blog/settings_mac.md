@@ -8,7 +8,8 @@ tags:
   - 黑苹果
 id: "45671"
 date: 2020-04-01
-cover: "/assets/images/settings_mac_cover.jpg"
+cover: "../image/settings_mac/settings_mac_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -121,11 +122,11 @@ interact
 
 在配置iterm2（iTerm2 -> Preferences -> Profiles）
 
-![](/assets/images/16023214284111.png)
+![](../image/settings_mac/16023214284111.png)
 
 - 3. 在profiles选项卡选择对应配置文件登录
 
-![](/assets/images/16023214488409.png)
+![](../image/settings_mac/16023214488409.png)
 
 
 
@@ -384,4 +385,4 @@ root 管理器：magisk
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

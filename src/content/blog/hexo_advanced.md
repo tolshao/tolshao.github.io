@@ -4,7 +4,8 @@ date: "2020-08-12"
 categories: "博客"
 tags: ["Hexo", "Blog"]
 id: "6809"
-cover: "/assets/images/hexo_advanced_cover.jpg"
+cover: "../image/hexo_advanced/hexo_advanced_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---

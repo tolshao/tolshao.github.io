@@ -4,7 +4,8 @@ date: "2021-01-07"
 categories: "设置"
 tags: ["settings", "HiDPI"]
 id: "56592"
-cover: "/assets/images/hidpi-on.png"
+cover: "../image/mac开启hidpi/hidpi-on.png"
+typora-root-url: ../
 top: false
 recommend: false
 ---

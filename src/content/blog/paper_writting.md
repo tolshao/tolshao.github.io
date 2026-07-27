@@ -6,7 +6,8 @@ tags:
   - Paper
 id: "64835"
 date: 2020-05-03
-cover: "/assets/images/paper_writting_cover.jpg"
+cover: "../image/paper_writting/paper_writting_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -46,12 +47,12 @@ recommend: false
 
 ## 1. 事实汇总
 ### Paper Structure
-![](/assets/images/15966331937167.jpg)
+![](../image/paper_writting/15966331937167.jpg)
 
 ### Review Process
-![](/assets/images/15966332078087.jpg)
+![](../image/paper_writting/15966332078087.jpg)
 
-![](/assets/images/15966332147634.jpg)
+![](../image/paper_writting/15966332147634.jpg)
 
 ### 文章第一印象
 * 图
@@ -59,11 +60,11 @@ recommend: false
 * 引用：数量20个、时间新
 
 ## 2. Introduction
-![](/assets/images/15966332219322.jpg)
+![](../image/paper_writting/15966332219322.jpg)
 
-![](/assets/images/15966332275940.jpg)
+![](../image/paper_writting/15966332275940.jpg)
 
-![](/assets/images/15966332337510.jpg)
+![](../image/paper_writting/15966332337510.jpg)
 
 
 ## 3. Method
@@ -73,18 +74,18 @@ recommend: false
 
 提供**足够的、准确的，技术细节**
 包括：架设、数学推导、验证、实验设备
-![](/assets/images/15966332460219.jpg)
+![](../image/paper_writting/15966332460219.jpg)
 
 
 注意：
 符号一致性，符号、单位、描述
-![](/assets/images/15966332525954.jpg)
+![](../image/paper_writting/15966332525954.jpg)
 
 
 编号更新
 
 ## 4. Result and Discussion（结果和讨论）
-![](/assets/images/15966332610267.jpg)
+![](../image/paper_writting/15966332610267.jpg)
 
 
 ## 5. 图表(Figure and Table)——第一印象
@@ -106,11 +107,11 @@ recommend: false
 总结 Result and discussion，重写，not copy
 
 ### 摘要：
-![](/assets/images/15966332705655.jpg)
+![](../image/paper_writting/15966332705655.jpg)
 
 
 ### 题目：
-![](/assets/images/15966332770401.jpg)
+![](../image/paper_writting/15966332770401.jpg)
 
 
 
@@ -193,5 +194,5 @@ novelty创新性
 # 审稿时间进度
 ![-w670](https://i.loli.net/2020/06/23/GeDM7k1pxFJlSHN.jpg)
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)
 

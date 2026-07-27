@@ -6,7 +6,8 @@ tags:
   - DL
 id: "41268"
 date: 2020-08-03
-cover: "/assets/images/deep_learning_summary_cover.jpg"
+cover: "../image/deep_learning_summary/deep_learning_summary_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -17,7 +18,7 @@ recommend: false
 
 从深度学习基础、卷积网络和循环网络三个方面介绍该笔记
 # 1. 深度学习基本概念
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-1-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-1-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-1-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-1-1024.jpg)
 
 
 
@@ -32,7 +33,7 @@ recommend: false
 右下：深度学习能发展起来主要是由于大数据的出现，神经网络的训练需要大量的数据；而大数据本身也反过来促进了更大型网络的出现。深度学习研究的一大突破是新型激活函数的出现，用 ReLU 函数替换sigmoid 函数可以在反向传播中保持快速的梯度下降过程，sigmoid 函数在正无穷处和负无穷处会出现趋于零的导数，这正是梯度消失导致训练缓慢甚至失败的主要原因。要研究深度学习，需要学会「idea—代码—实验—idea」的良性循环。
 
 # 2. logistic 回归
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-2-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-2-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-2-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-2-1024.jpg)
 
 
 
@@ -48,7 +49,7 @@ recommend: false
 右下：总结整个训练过程，从输入节点 x 开始，通过前向传播得到预测输出 y hat，用 y hat 和 y 得到损失函数值，开始执行反向传播，更新 w 和 b，重复迭代该过程，直到收敛。
 
 # 3. 浅层网络的特点
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-3-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-3-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-3-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-3-1024.jpg)
 
 
 
@@ -69,7 +70,7 @@ Leaky ReLU：避免了零激活值的结果，使得反向传播过程始终执�
 当将所有参数初始化为零的时候，会使所有的节点变得相同，在训练过程中只能学到相同的特征，而无法学到多层级、多样化的特征。解决办法是随机初始化所有参数，但仅需少量的方差就行，因此使用 Rand（0.01）进行初始化，其中 0.01 也是超参数之一。
 
 # 4. 深度神经网络的特点
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-4-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-4-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-4-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-4-1024.jpg)
 
 
 
@@ -83,7 +84,7 @@ Leaky ReLU：避免了零激活值的结果，使得反向传播过程始终执�
 # 5. 偏差与方差
 
 那么部署你的机器学习模型需要注意些什么？下图展示了构建 ML 应用所需要的数据集分割、偏差与方差等问题。
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-5-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-5-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-5-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-5-1024.jpg)
 
 
 
@@ -98,7 +99,7 @@ Leaky ReLU：避免了零激活值的结果，使得反向传播过程始终执�
 
 
 正则化是解决高方差或模型过拟合的主要手段，过去数年，研究者提出和开发了多种适合机器学习算法的正则化方法，如数据增强、L2 正则化（权重衰减）、L1 正则化、Dropout、Drop Connect、随机池化和提前终止等。
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-6-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-6-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-6-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-6-1024.jpg)
 
 
 
@@ -116,7 +117,7 @@ Bagging 是通过结合多个模型降低泛化误差的技术，主要的做法
 
 
 最优化是机器学习模型中非常非常重要的模块，它不仅主导了整个训练过程，同时还决定了最后模型性能的好坏和收敛需要的时长。以下两张信息图都展示了最优化方法需要关注的知识点，包括最优化的预备和具体的最优化方法。
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-7-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-7-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-7-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-7-1024.jpg)
 
 
 
@@ -127,7 +128,7 @@ Bagging 是通过结合多个模型降低泛化误差的技术，主要的做法
 梯度检验现在可能用的比较少，因为我们在 TensorFlow 或其它框架上执行最优化算法只需要调用优化器就行。梯度检验一般是使用数值的方法计算近似的导数并传播，因此它能检验我们基于解析式算出来的梯度是否正确。
 
 下面就是具体的最优化算法了，包括最基本的小批量随机梯度下降、带动量的随机梯度下降和 RMSProp 等适应性学习率算法。
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-8-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-8-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-8-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-8-1024.jpg)
 
 
 
@@ -144,7 +145,7 @@ Adam 算法同时获得了 AdaGrad 和 RMSProp 算法的优点。Adam 不仅如 
 
 
 以下是介绍超参数的信息图，它在神经网络中占据了重要的作用，因为它们可以直接提升模型的性能。
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-9-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-9-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-9-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-9-1024.jpg)
 
 
 
@@ -162,20 +163,20 @@ Adam 算法同时获得了 AdaGrad 和 RMSProp 算法的优点。Adam 不仅如 
 
 # 9. 结构化机器学习过程
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-10-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-10-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-10-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-10-1024.jpg)
 
 
 我们需要按过程或结构来设定我们的机器学习系统，首先需要设定模型要达到的目标，例如它的预期性能是多少、度量方法是什么等。然后分割训练、开发和测试集，并预期可能到达的优化水平。随后再构建模型并训练，在开发集和测试集完成验证后就可以用于推断了。
 
 # 10. 误差分析
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-11-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-11-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-11-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-11-1024.jpg)
 
 
 在完成训练后，我们可以分析误差的来源而改进性能，包括发现错误的标注、不正确的损失函数等。
 
 # 11. 训练集、开发集与测试集
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-12-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-12-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-12-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-12-1024.jpg)
 
 
 
@@ -183,7 +184,7 @@ Adam 算法同时获得了 AdaGrad 和 RMSProp 算法的优点。Adam 不仅如 
 
 # 12. 其它学习方法
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-13-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-13-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-13-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-13-1024.jpg)
 
 
 
@@ -195,7 +196,7 @@ Adam 算法同时获得了 AdaGrad 和 RMSProp 算法的优点。Adam 不仅如 
 
 # 13. 卷积神经网络基础
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-14-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-14-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-14-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-14-1024.jpg)
 
 
 
@@ -205,7 +206,7 @@ Adam 算法同时获得了 AdaGrad 和 RMSProp 算法的优点。Adam 不仅如 
 
 卷积运算的主要参数：
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-15-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-15-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-15-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-15-1024.jpg)
 
 
 
@@ -219,7 +220,7 @@ stride：两次卷积操作之间的步长大小。
 
 深度卷积神经网络的架构：
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-16-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-16-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-16-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-16-1024.jpg)
 
 
 
@@ -227,7 +228,7 @@ stride：两次卷积操作之间的步长大小。
 
 # 14. 经典卷积神经网络
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-17-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-17-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-17-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-17-1024.jpg)
 
 
 
@@ -236,7 +237,7 @@ AlexNet：图像分类网络，首次在 CNN 引入 ReLU 激活函数。
 VGG-16：图像分类网络，深度较大。
 # 15. 特殊卷积神经网络
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-18-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-18-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-18-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-18-1024.jpg)
 
 
 
@@ -245,7 +246,7 @@ Network in Network：使用 1x1 卷积核，可以将卷积运算变成类似于
 Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成多个通道，可以捕捉多种规模的特征，但缺点是计算量太大，可以通过 1x1 卷积减少通道数。
 # 16. 实践建议
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-19-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-19-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-19-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-19-1024.jpg)
 
 
 
@@ -255,7 +256,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 基准测试和竞赛中表现良好的诀窍：使用模型集成，使用多模型输出的平均结果；在测试阶段，将图像裁剪成多个副本分别测试，并将测试结果取平均。
 # 17. 目标检测算法
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-20-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-20-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-20-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-20-1024.jpg)
 
 
 
@@ -264,7 +265,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 
 # 18. 人脸识别
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-21-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-21-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-21-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-21-1024.jpg)
 
 
 
@@ -274,7 +275,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 
 # 19. 风格迁移
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-22-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-22-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-22-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-22-1024.jpg)
 
 
 
@@ -285,7 +286,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 
 # 20. 循环神经网络基础
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-23-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-23-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-23-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-23-1024.jpg)
 
 
 
@@ -296,7 +297,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 
 以下展示了 RNN 的应用、问题以及变体等：
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-24-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-23-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-24-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-23-1024.jpg)
 
 
 
@@ -305,7 +306,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 
 # 21. NLP 中的词表征
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-25-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-25-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-25-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-25-1024.jpg)
 
 
 
@@ -314,7 +315,7 @@ Inception Network：使用了多种尺寸卷积核的并行操作，再堆叠成
 
 除了以上所述的 Skip Grams，以下还展示了学习词嵌入的常见方法：
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-26-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-26-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-26-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-26-1024.jpg)
 
 
 
@@ -323,7 +324,7 @@ GloVe 词向量是很常见的词向量学习方法，它学到的词表征可�
 
 # 22. 序列到序列
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-27-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-27-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-27-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-27-1024.jpg)
 
 
 
@@ -333,7 +334,7 @@ GloVe 词向量是很常见的词向量学习方法，它学到的词表征可�
 
 编码器解码器架构加上注意力机制可以解决非常多的自然语言处理问题，以下介绍了 BLEU 分值和注意力机制。它们在机器翻译的架构和评估中都是不能缺少的部分。
 
-![notes-from-coursera-deep-learning-courses-by-andrew-ng-28-1024](/assets/images/notes-from-coursera-deep-learning-courses-by-andrew-ng-28-1024.jpg)
+![notes-from-coursera-deep-learning-courses-by-andrew-ng-28-1024](../image/deep_learning_summary/notes-from-coursera-deep-learning-courses-by-andrew-ng-28-1024.jpg)
 
 以上是所有关于吴恩达深度学习专项课程的信息图，由于它们包含的信息较多，我们只介绍了一部分，还有很多内容只是简单的一笔带过。所以各位读者最好可以下载该信息图，并在后面的学习过程中慢慢理解与优化。
 
@@ -341,4 +342,4 @@ GloVe 词向量是很常见的词向量学习方法，它学到的词表征可�
 关注微信公众号【探物及理】回复“深度学习笔记”下载
 
 ===
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

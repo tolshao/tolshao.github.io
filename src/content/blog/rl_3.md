@@ -6,7 +6,8 @@ tags:
   - 动态规划 dynamic programming
 id: "16787"
 date: 2020-07-10
-cover: "/assets/images/rl_3_cover.jpg"
+cover: "../image/rl_3/rl_3_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -38,9 +39,9 @@ $$
 问题：每走一步，r = -1，走到出口可以停止
 在随机策略下，迭代k，最使v收敛
 得到$v^{\pi}(s)$
-![-w395](/assets/images/15959276754125.jpg)
+![-w395](../image/rl_3/15959276754125.jpg)
 然后最简单的策略，greedy，往v值高的地方走。
-![-w562](/assets/images/15959300701562.jpg)
+![-w562](../image/rl_3/15959300701562.jpg)
 
 
 
@@ -110,4 +111,4 @@ $$
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

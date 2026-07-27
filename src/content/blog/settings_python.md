@@ -6,7 +6,8 @@ tags:
   - snippets
 id: "28408"
 date: 2020-01-01
-cover: "/assets/images/settings_python_cover.jpg"
+cover: "../image/settings_python/settings_python_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -87,4 +88,4 @@ plt.show()
 [地址](https://matplotlib.org/gallery.html)
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

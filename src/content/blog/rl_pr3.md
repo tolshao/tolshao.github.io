@@ -6,7 +6,8 @@ tags:
   - Sarsa
 id: "9368"
 date: 2020-09-03
-cover: "/assets/images/rl_pr3_cover.jpg"
+cover: "../image/rl_pr3/rl_pr3_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -49,7 +50,7 @@ class Agent():
 ## Agent class
 
 SARSA（0）的伪算法流程如下：
-![](/assets/images/15991172298667.png)
+![](../image/rl_pr3/15991172298667.png)
 
 ## 核心方法：learning
 
@@ -131,7 +132,7 @@ Sarsa（$\lambda$）相较于Sarsa（0）来说，引入了视野权重的概念
 
 - 伪算法如下
 
-![](/assets/images/15992869544578.png)
+![](../image/rl_pr3/15992869544578.png)
 
 与上节的Sarsa（0）的主要不同，体现在2个方面
 - Agent元素， 增加了E值，在时间尺度内记录（s，a）元组的迹值
@@ -831,4 +832,4 @@ if __name__ == "__main__":
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

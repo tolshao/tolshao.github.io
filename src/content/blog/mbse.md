@@ -6,7 +6,8 @@ tags:
   - MBSE
 id: "19122"
 date: 2020-07-08
-cover: "/assets/images/mbse_cover.jpg"
+cover: "../image/mbse/mbse_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -35,7 +36,7 @@ MBSE 是采用模型驱动的方式对系统工程的实践，本文就从系统
 
 下面就来看看每一项活动的具体内容。为了清晰展示各项活动的关联关系，下图展示了各项活动在我们熟知 V 流程中的位置。
 
-![]((/assets/images/15942030645422.jpg))
+![]((../image/mbse/15942030645422.jpg))
 
 ◆  ◆  ◆  ◆
 
@@ -58,4 +59,4 @@ MBSE 是采用模型驱动的方式对系统工程的实践，本文就从系统
 ## 技术领导力和技术管理
 技术领导力和技术管理活动主要包括项目策划，技术过程评估，技术控制，团队建设，交叉协同，提供通用语言和目标，风险管理和接口管理等；与项目管理不同的是，技术领导力和技术管理主要关注技术目标和技术指导。
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

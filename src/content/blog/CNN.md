@@ -4,7 +4,8 @@ date: "2020-07-15"
 categories: "机器学习笔记"
 tags: ["深度学习", "CNN", "卷积神经网络"]
 id: "71093"
-cover: "/assets/images/default_cover.jpg"
+cover: "../image/CNN/default_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---

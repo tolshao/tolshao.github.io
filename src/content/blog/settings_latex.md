@@ -6,7 +6,8 @@ tags:
   - Latex
 id: "64459"
 date: 2020-03-18
-cover: "/assets/images/settings_latex_cover.jpg"
+cover: "../image/settings_latex/settings_latex_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -101,4 +102,4 @@ https://zhuanlan.zhihu.com/p/31453719
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

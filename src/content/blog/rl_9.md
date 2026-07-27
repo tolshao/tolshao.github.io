@@ -7,7 +7,8 @@ tags:
   - 利用 exploitation
 id: "10630"
 date: 2020-08-23
-cover: "/assets/images/rl_9_cover.jpg"
+cover: "../image/rl_9/rl_9_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -44,7 +45,7 @@ recommend: false
 # 2、多臂赌博机 Multi-Armed Bandits
 ## 简介
 一个赌徒面前有N个赌博机,事先他不知道每台赌博机的真实盈利情况,他如何根据每次玩赌博机的结果来选择下次拉哪台或者是否停止赌博,来最大化自己的从头到尾的收益.
-![多臂赌博机](/assets/images/15984131897792.png)
+![多臂赌博机](../image/rl_9/15984131897792.png)
 
 
 将MDP简化为$\langle \mathcal A,\mathcal R \rangle$
@@ -85,7 +86,7 @@ $$
     - 算法停止探索
     - 算法卡在局部最优
 
-![-w449](/assets/images/15983345403824.jpg)
+![-w449](../image/rl_9/15983345403824.jpg)
 
 ## 2.1 朴素探索 native exploration
 ### greedy：卡在局部最优，总后悔线性增长
@@ -160,7 +161,7 @@ $$\lim _{t \rightarrow \infty} L_{t} \geq \log t \sum_{a \mid \Delta_{a}>0} \fra
 上限的选取，是基于概率的，选择要包容95%、99%的置信区间
 
 - 上限值$U_t(a)$ 以均值为基准，叠加在均值之上的
-- ![](/assets/images/15984959743685.jpg)
+- ![](../image/rl_9/15984959743685.jpg)
 
 - 对每个动作价值函数，进行估计上限$\hat U_t(a)$
 - 例如：$Q(a) \leq \hat Q_t(a) + \hat U_t(a)$ 具有高概率
@@ -171,12 +172,11 @@ $$\lim _{t \rightarrow \infty} L_{t} \geq \log t \sum_{a \mid \Delta_{a}>0} \fra
 $$
 a_t = \underset{a\in A}{\operatorname {argmax}}\left(\hat Q_t(a) + \hat U_t(a)\right)
 $$
-
 小结：随仿真进行，提高置信度
 
 #### 霍夫丁不等式 Hoeffding's inequality
 提供了置信上限的计算方法，要求先对数据进行缩放，缩放到[0,1]
-![-w422](/assets/images/15983397722162.jpg)
+![-w422](../image/rl_9/15983397722162.jpg)
 
 将不等式应用到奖励赌博机中
 
@@ -191,7 +191,6 @@ e^{-2 N_{t}(a)} U_{t}(a)^{2} &=p \\
 U_{t}(a) &=\sqrt{\frac{-\log p}{2 N_{t}(a)}}
 \end{aligned}
 $$
-
 实际操作过程中，随着采样点增多，我们希望对Q的估计越来越确信，所以逐步减少p值
 通过降低p，可以获取更多奖励，随着仿真进行，降低p值，e.g. $p = t^{-4}$
 $$U_{t}(a)=\sqrt{\frac{2 \log t}{N_{t}(a)}}$$
@@ -206,7 +205,7 @@ UCB算法趋向于对数渐进 总regret
 $$\lim _{t \rightarrow \infty} L_{t} \leq 8 \log t \sum_{a \mid \Delta_{a}>0} \Delta_{a}$$
 
 效果对比：
-![-w843](/assets/images/15983410378195.jpg)
+![-w843](../image/rl_9/15983410378195.jpg)
 
 - 小结：
     - 如果$\epsilon-greedy$调参合适，表现更好，参数差就是灾难
@@ -235,7 +234,7 @@ UCB可以被应用到：
 #### 贝叶斯UCB    
 - 计算方法：
     - 假设奖励服从高斯分布$R_a(r) = N(r;\mu_a,\sigma^2_a)$
-    ![-w400](/assets/images/15983418636815.jpg)
+    ![-w400](../image/rl_9/15983418636815.jpg)
 
     - 根据贝叶斯准则计算均值$\mu_a$ 和 方差 $\sigma^2_a$
     $$p\left[\mu_{a}, \sigma_{a}^{2} \mid h_{t}\right] \propto p\left[\mu_{a}, \sigma_{a}^{2}\right] \prod_{t \mid a_{t}=a} \mathcal{N}\left(r_{t} ; \mu_{a}, \sigma_{a}^{2}\right)$$
@@ -251,7 +250,7 @@ $$\pi\left(a \mid h_{t}\right)=\mathbb{P}\left[Q(a)>Q\left(a^{\prime}\right), \f
 
 按照纵坐标的大小去选
 
-![-w416](/assets/images/15983423942782.jpg)
+![-w416](../image/rl_9/15983423942782.jpg)
 
 特点：
 - 面对不确定性时，概率匹配是最优的
@@ -266,7 +265,6 @@ $$
 &=\mathbb{E}_{\mathcal{R} \mid h_{t}}[\mathbf{1}(a=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q(a))]
 \end{aligned}
 $$
-
 操作步骤：
 1. 使用贝叶斯法则计算后验分布$p[R|h_t]$
 2. 从后验分布中采样 R 值，根据奖励值期望，计算动作价值函数
@@ -329,7 +327,7 @@ beta 分布，根据计数，更新后验估计的分布函数
 4. 信息空间对应$beta(\alpha_a,\beta_a)$
 5. 每个状态转移 对应 一次贝叶斯模型更新
 
-![-w522](/assets/images/15983559828012.jpg)
+![-w522](../image/rl_9/15983559828012.jpg)
 
 
 ### Gittins indices for 贝叶斯赌博机
@@ -367,7 +365,7 @@ beta 分布，根据计数，更新后验估计的分布函数
 ## 线性 UCB
 ### 线性回归：
 构建线性回归Q值 函数估计器，求解估计参数，在状态s下可以求得最优动作a
-![-w546](/assets/images/15983574142837.jpg)
+![-w546](../image/rl_9/15983574142837.jpg)
 
 ### 线性 UCB
 最小二乘回归，使用参数$\theta$，估计动作价值函数
@@ -378,10 +376,10 @@ beta 分布，根据计数，更新后验估计的分布函数
 - 表示UCB背离了均值 c个标准差
 
 #### 几何解释：
-![-w566](/assets/images/15983578783024.jpg)
+![-w566](../image/rl_9/15983578783024.jpg)
 
 #### 求解线性UCB
-![-w559](/assets/images/15983580085583.jpg)
+![-w559](../image/rl_9/15983580085583.jpg)
 
 # 4、MDPs
 前述的利用/探索的规则，虽然是基于赌博机问题开发的，但是扩展到 full MDPs过程，同样有效
@@ -422,7 +420,6 @@ $$
     - 估计策略评估的不确定性，（简单）
     - 在策略提高的过程中，忽略不确定性
 - 最大化UCB on 最优价值函数 $Q^*(s,a)$
-
 $$
 a_{t}=\underset{a \in \mathcal{A}}{\operatorname{argmax}} Q\left(s_{t}, a\right)+U_{1}\left(s_{t}, a\right)+U_{2}\left(s_{t}, a\right)
 $$
@@ -476,4 +473,4 @@ $$
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

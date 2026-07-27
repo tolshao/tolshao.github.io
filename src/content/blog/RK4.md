@@ -6,7 +6,8 @@ tags:
   - 数值仿真
 id: "47018"
 date: 2020-08-05
-cover: "/assets/images/RK4_cover.jpg"
+cover: "../image/RK4/RK4_cover.jpg"
+typora-root-url: ../
 top: true
 recommend: false
 ---
@@ -15,7 +16,7 @@ recommend: false
 
 # 为什么要用RK4
 先po一张图，直观感受一下仿真的误差。
-![两种解算器与真实的误差](/assets/images/15956439603281.jpg)
+![两种解算器与真实的误差](../image/RK4/15956439603281.jpg)
 
 
 对于给定线性常微分方程
@@ -118,7 +119,7 @@ plt.show()
 这里推荐一个提高效率的工具Matplotlib cheat sheet
 
 对于一个经常画图的科研狗来说，这张图真是太太太太有必要了，因为时常遇到以下场景，不记得colormap名字，打开文档查一番，不记得线宽关键词，打开文档查一番，不记得marker名字，打开文档查一番。。。。。等等等等
-![](/assets/images/15956450473625.jpg)
+![](../image/RK4/15956450473625.jpg)
 
 所以，有了这张图，在平常画图的时候中遇到的95%需要查文档的问题都可以在这张图中找到答案。
 
@@ -126,4 +127,4 @@ plt.show()
 这个速查表，可以关注微信公众号“探物及理”后台回复“python画图”领取。
 
 ===
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

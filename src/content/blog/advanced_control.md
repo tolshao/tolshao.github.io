@@ -6,7 +6,8 @@ tags:
   - 经典控制理论
 id: "28407"
 date: 2020-04-05
-cover: "/assets/images/advanced_control_cover.jpg"
+cover: "../image/advanced_control/advanced_control_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -29,7 +30,7 @@ $\ddot x+2\omega_n\xi \dot x+\omega_n^2x=\frac{F}{m}$
 $H(s) = \frac{\omega_n^2}{s^2+2\xi\omega_ns+\omega_n^2}$
 
 
-![](/assets/images/15744291457149.jpg)
+![](../image/advanced_control/15744291457149.jpg)
 
 零极点图：
 极点全部在左，系统稳定
@@ -120,7 +121,7 @@ $\phi(s) = \frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}$
 G(s)是一个 
 
 
-![截屏2020-04-12 下午3.14.24](/assets/images/%E6%88%AA%E5%B1%8F2020-04-12%20%E4%B8%8B%E5%8D%883.14.24-1.png)
+![截屏2020-04-12 下午3.14.24](../image/advanced_control/%E6%88%AA%E5%B1%8F2020-04-12%20%E4%B8%8B%E5%8D%883.14.24-1.png)
 
 
 ### 非线性系统
@@ -225,7 +226,7 @@ $y = Cx+Du$
 ## 稳定性
 ### 两种类型
  1. Lyapunov稳定性：有界
-$\forall t_0, \forall \epsilon >0, \exists \delta (t_0, \epsilon):\left \| x(t_0)\right \|<\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left \| x(t) \right \| < \epsilon$![](/assets/images/15753853291223.jpg)
+$\forall t_0, \forall \epsilon >0, \exists \delta (t_0, \epsilon):\left \| x(t_0)\right \|<\delta(t_0,\epsilon)\Rightarrow \forall t \geqslant t_0,  \left \| x(t) \right \| < \epsilon$![](../image/advanced_control/15753853291223.jpg)
 $a \, of\,  \lambda_i \leqslant 0$实部
 判断方法：
 
@@ -260,10 +261,10 @@ clear;cla;clc;
 streamslice(x,y,0 * x + 2 * y,-3 * x + 0 * y );
 xlabel('x');ylabel('y');
 ```
-![w400](/assets/images/15747442437226.jpg)
+![w400](../image/advanced_control/15747442437226.jpg)
 
 特征值和相图的关系
-![](/assets/images/15753593791413.jpg)
+![](../image/advanced_control/15753593791413.jpg)
 
 
 ## 齐次状态方程解$\dot x = A x$
@@ -331,7 +332,8 @@ $f(A) = 0 \rightarrow A^n = \sum_{i=0}^{n-1}a_iA^i$
 ## 状态观测器
 ### 平凡观测器
 对于系统
-$$\tag{1}
+$$
+\tag{1}
 \dot x = Ax+Bu\\
 y = Cx + Du
 $$
@@ -341,19 +343,26 @@ $$
 结论：没有消除误差的能力，估计误差模型收敛性依赖于系统矩阵$A$，若$\det(A)=0$，则观测器误差不能收敛。
 ### 完全Luenberger观测器
 观测器分为，模拟器，修正器部分，通过输出`y`的信息来修正观测器的收敛性。
+$$
 $$\tag{1}
 \dot x = Ax+Bu\\
 y = Cx + Du
 $$
-$$\tag{2}
+$$
+\tag{2}
 \dot {\hat x} = A\hat x + Bu + L (y - \hat y)
+$$
+
 $$
 $$\tag{3}
 \dot {\hat y} = C \dot x+ Du
 $$
 将$(3)$代入$(1)$
-$$\tag{4}
-\dot {\hat x} = (A-LC)\hat x + (B-LD)u + Ly 
+$$
+\tag{4}
+\dot {\hat x} = (A-LC)\hat x + (B-LD)u + Ly
+$$
+
 $$
 定义$e = x - \hat x$，求解$\dot e$，联立$(1)$和$(4)$
 $$\tag{5}
@@ -385,7 +394,7 @@ $$ \underbrace{\left[\begin{array}{c}\dot{\mathbf{x}} \\ \dot{\mathbf{e}}\end{ar
 有$\det(\lambda L - A_e) = \det(\lambda L - A+BK) \det(\lambda L-A+LC)$
 表明：带有控制率和观测器的系统，可以先独立设计，在最后合成
 
-![](/assets/images/15755438743134.jpg)
+![](../image/advanced_control/15755438743134.jpg)
 
 
 # Kalman滤波器原理以及在matalb中的实现
@@ -404,15 +413,15 @@ $
 \end{bmatrix}
 $
 
-![w400](/assets/images/15748205077671.jpg)
+![w400](../image/advanced_control/15748205077671.jpg)
 
 卡尔曼方程≠状态观测器
-![m180](/assets/images/15755459115506.jpg)
+![m180](../image/advanced_control/15755459115506.jpg)
 
 
-![](/assets/images/15755450314782.jpg)
+![](../image/advanced_control/15755450314782.jpg)
 以小车为例，讲卡尔曼滤波最优状态估计
-![](/assets/images/15755448894756.jpg)
+![](../image/advanced_control/15755448894756.jpg)
 在上图中，P是观测值$\hat x$的方差
 R是观测器中，来自预估值的比例
 
@@ -431,4 +440,4 @@ Then, $\lim_{t->\infty} g(t)=0$
 Consquently, $\lim_{t->\infty} e = 0 (k\neq0)$
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

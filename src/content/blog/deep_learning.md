@@ -7,13 +7,14 @@ tags:
   - Coursera
 id: "46319"
 date: 2020-07-23
-cover: "/assets/images/deep_learning_cover.jpg"
+cover: "../image/deep_learning/deep_learning_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
 
 # AI->机器学习分类图
-![-w669](/assets/images/15936818055208.jpg)
+![-w669](../image/15936818055208.jpg)
 # 分类
 ## 几种网络结构分类
 NN——回归预测
@@ -38,7 +39,7 @@ Loss function 单个样本的误差
 
 # 神经网络
 ## 连式法则
-![-w720](/assets/images/15937407378448.jpg)
+![-w720](../image/deep_learning/15937407378448.jpg)
 
 ## 算法流程
 **General methodology**
@@ -58,15 +59,15 @@ Let's now implement those two models!
 ## 正则化
 1. L2，二范数
 2. L1，绝对值——容易造成**稀疏化**
-![-w594](/assets/images/15938728967496.jpg)
+![-w594](../image/deep_learning/15938728967496.jpg)
 3. dropout随机失活 正则化
 对于神经网络来说，用其中的一部分预测结果，等同于正则化的效果。不要让网络过分依赖某个神经元
 一般在靠前的层较低的存活率
 输入层和后面的层，存活率较高
-![-w815](/assets/images/15938730869088.jpg)
+![-w815](../image/deep_learning/15938730869088.jpg)
 1. 数据扩充Data augmentation
 2. Early stopping
-![-w554](/assets/images/15939156078394.jpg)
+![-w554](../image/deep_learning/15939156078394.jpg)
 发
 
 扩展到高维，同样的道理，L2 的限定区域是平滑的，与中心点等距；而 L1 的限定区域是包含凸点的，尖锐的。这些凸点更接近 Ein 的最优解位置，而在这些凸点上，很多 wj 为 0。
@@ -90,24 +91,24 @@ Let's now implement those two models!
 处理办法，✖️$\frac{1}{(1-\beta)^t}$
 ### 动量法 GD with momentum
 与指数加权滑动平均类似
-对梯度加权滤波![-w621](/assets/images/15939964494351.jpg)
+对梯度加权滤波![-w621](../image/deep_learning/15939964494351.jpg)
 ### Root mean square prop均方根传递
 压制导数过大的项，使各个特征值上的导数尽可能
 $(dw)^2$是element operation
-![-w534](/assets/images/15939972113707.jpg)
+![-w534](../image/deep_learning/15939972113707.jpg)
 ### Adam算法——Adaptive moment estimation自适应矩估计
 将 带动量GD 和 均方根RMS-prop 算法 结合
-![-w785](/assets/images/15939976636434.jpg)
+![-w785](../image/deep_learning/15939976636434.jpg)
 $\alpha$
 $\beta_1 = 0.9$
 $\beta_2 = 0.999$
 $\epsilon = 10^{-8}$
 
 ### learning rate decay
-![-w712](/assets/images/15939980880189.jpg)
+![-w712](../image/deep_learning/15939980880189.jpg)
 
 ## 优化过程问题
-![-w775](/assets/images/15939982916740.jpg)
+![-w775](../image/deep_learning/15939982916740.jpg)
 
 ## 4、超参数调参过程Tuning process
 1. try random values: don't use grid
@@ -116,7 +117,7 @@ $\epsilon = 10^{-8}$
 4. **BN归一化**Normalizing activations in a network
 通过γ和β，任意改变Z值的分布
 原理：减少隐藏层 变量值分布的不确定性
-![-w274](/assets/images/15940226217605.jpg)
+![-w274](../image/deep_learning/15940226217605.jpg)
 
 Predict时，用训练集得到的参数，进行同样的缩放
 
@@ -147,7 +148,7 @@ $F sore = \frac{PR}{P+R}$
 人类performance距离上限不远，一旦ML表现超过人类，人类很难根据偏差和方差，指导算法提高。
 
 ### 避免 偏差 和方差
-![-w1011](/assets/images/15941050602099.jpg)
+![-w1011](../image/deep_learning/15941050602099.jpg)
 
 
 ## 误差分析
@@ -166,17 +167,17 @@ Robust，如果error比较大，则主要成分不是少量的错误标签
 ### 新标签
 训练集保留原数据
 dev 和 test 集 去除原标签，得到新数据的精度
-![-w663](/assets/images/15941131936082.jpg)
+![-w663](../image/deep_learning/15941131936082.jpg)
 
 ### 不同分布下的变差和方差
 添加新样本后，D、T分布改变，其误差已经无法反应变差和方差
 从训练集T中，选出一小部分，作为Train-Dev集，验证训练，计算偏差和方差
-![-w819](/assets/images/15941140515319.jpg)
+![-w819](../image/deep_learning/15941140515319.jpg)
 
 如果误差在D、T集下降了，说明测试集较为简单
 横坐标：原集合、新集合
 纵坐标：人performance、新训练model、原训练model（训练集未加入新样本）
-![-w1161](/assets/images/15941143755868.jpg)
+![-w1161](../image/deep_learning/15941143755868.jpg)
 
 ### 解决数据分布不匹配办法
 * 获取数据
@@ -193,7 +194,7 @@ dev 和 test 集 去除原标签，得到新数据的精度
 根据数据量，决定需要训练的层数
 数据量较小，只训练Model1的末层
 #### 限制条件
-![-w629](/assets/images/15941159051232.jpg)
+![-w629](../image/deep_learning/15941159051232.jpg)
 
 
 ## 多任务学习Multi-task learning
@@ -201,7 +202,7 @@ dev 和 test 集 去除原标签，得到新数据的精度
 
 ### 限制条件
 任务之间的相似性
-![-w569](/assets/images/15941165734379.jpg)
+![-w569](../image/deep_learning/15941165734379.jpg)
 
 规模不够大时，多任务学习比单项学习  损害准确率
 
@@ -211,7 +212,7 @@ Start -> End，复杂任务不需要中间的各个模块
 
 * 传统方法，分模块，串联执行，完成任务
 
-![-w542](/assets/images/15941175308325.jpg)
+![-w542](../image/deep_learning/15941175308325.jpg)
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

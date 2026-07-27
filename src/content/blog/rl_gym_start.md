@@ -6,7 +6,8 @@ tags:
   - gym
 id: "40502"
 date: 2020-09-08
-cover: "/assets/images/rl_gym_start_cover.jpg"
+cover: "../image/rl_gym_start/rl_gym_start_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -51,7 +52,7 @@ env.close()
 ```
 它看起来应该像这样：
 
-![cartpole](/assets/images/cartpole.gif)
+![cartpole](../image/rl_gym_start/cartpole.gif)
 
 
 通常，我们会在允许球杆离开屏幕之前结束模拟。以后再说。现在，即使此环境已经返回`done = True`，也请忽略有关调用`step()`的警告。
@@ -71,7 +72,7 @@ env.close()
 - `info`(dict)：诊断信息，可用于调试。它有时对学习很有用(例如，它可能包含环境上次状态更改背后的原始概率)。但是，您的代理人的官方评估不允许将其用于学习。
 这只是经典“代理程序-环境循环”的实现。每个时间步长，代理都会选择一个动作，环境会返回观察结果和奖励。
 
-![agent and env](/assets/images/2.png)
+![agent and env](../image/rl_gym_start/2.png)
 
 该过程通过调用`reset()`开始，此返回初始`observation`。因此，编写前面的代码的更合适的方法是检查`done`flag：
 
@@ -92,7 +93,7 @@ env.close()
 ```
 
 这应该提供视频和类似以下的输出。您应该能够看到重置发生的位置。
-![cartpole](/assets/images/cartpole1.gif)
+![cartpole](../image/rl_gym_start/cartpole1.gif)
 
 
 ```
@@ -188,4 +189,4 @@ print(envs.registry.all())
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

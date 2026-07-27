@@ -6,7 +6,8 @@ tags:
   - snippets
 id: "52406"
 date: 2020-02-01
-cover: "/assets/images/settings_matlab_cover.jpg"
+cover: "../image/settings_matlab/settings_matlab_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -58,4 +59,4 @@ contour(u, v, z, [-0.5, -0.5], 'LineWidth', 2)
 ```
 区间是zlim
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

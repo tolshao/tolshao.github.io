@@ -6,7 +6,8 @@ tags:
   - gym
 id: "50894"
 date: 2020-09-03
-cover: "/assets/images/rl_pr2_gym_cover.jpg"
+cover: "../image/rl_pr2_gym/rl_pr2_gym_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -15,7 +16,7 @@ recommend: false
 首先先来回顾一下强化学习问题中，环境Env 和 代理Agent 分别承担的角色和作用。
 
 RL组成要素是Agent、Env
-![](/assets/images/15972068404024.png)
+![](../image/15972068404024.png)
 
 **代理**和**环境** 分别承担的作用
 -  Agent： 
@@ -28,7 +29,7 @@ RL组成要素是Agent、Env
     - 内部还需要完成执行状态转移、判断是否终止等任务
 -  Agent的构成的另一种理解
 组成要素：Policy、Value function、Model其中至少一个
-![-w410](/assets/images/15958481757170.jpg)
+![-w410](../image/15958481757170.jpg)
 
 
 
@@ -110,7 +111,7 @@ env.close()
 
 
 ## 例子
-![](/assets/images/15991043562505.jpg)
+![](../image/rl_pr2_gym/15991043562505.jpg)
 
 例程是一个简单的策略，杆左斜车左移，右斜则右移。
 
@@ -255,4 +256,4 @@ env.close()     # 关闭环境，一般涉及图像绘制的任务，此步为�
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

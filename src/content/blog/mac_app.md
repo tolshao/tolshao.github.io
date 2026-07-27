@@ -7,7 +7,8 @@ tags:
   - 工具
 id: "18232"
 date: 2020-05-01
-cover: "/assets/images/mac_app_cover.jpg"
+cover: "../image/mac_app/mac_app_cover.jpg"
+typora-root-url: ../
 top: true
 recommend: false
 ---
@@ -203,4 +204,4 @@ safari广告屏蔽插件
 
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)

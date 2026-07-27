@@ -4,7 +4,8 @@ date: "2020-08-19"
 categories: "工具"
 tags: ["图床", "Picgo", "jsDelivr"]
 id: "48156"
-cover: "/assets/images/img_bed.jpg"
+cover: "../image/img_bed/img_bed.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---

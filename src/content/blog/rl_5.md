@@ -6,7 +6,8 @@ tags:
   - 无模型控制 model-free control
 id: "50334"
 date: 2020-08-01
-cover: "/assets/images/rl_5_cover.jpg"
+cover: "../image/rl_5/rl_5_cover.jpg"
+typora-root-url: ../
 top: false
 recommend: false
 ---
@@ -23,7 +24,7 @@ recommend: false
 # On-policy MC control
 贪婪策略梯度法如果用V(s)，需要MDP已知
 对于已知MDP，可以通过策略迭代的方法，DP到最优策略
-![-w536](/assets/images/15972213696955.jpg)
+![-w536](../image/rl_5/15972213696955.jpg)
 
 要实现不基于模型的控制，需要满足两个条件：
 - 引入q(s,a)函数，而不是v(s)
@@ -32,20 +33,20 @@ recommend: false
 ## model-free policy using action-value function
 
 用Q（s，a），不需要已知MDP
-![-w492](/assets/images/15972213763038.jpg)
+![-w492](../image/rl_5/15972213763038.jpg)
 
 每个箭头对应一个段，Prediction一次，Control一次
-![-w343](/assets/images/15972215371325.jpg)
+![-w343](../image/rl_5/15972215371325.jpg)
 
 
 
 
 ## GLIE MC control（Greedy in the Limit with Infinite Exploration）
 保证试验进行一定次数是，所有a-s状态都被访问到很多次
-![-w514](/assets/images/15964296154206.jpg)
+![-w514](../image/rl_5/15964296154206.jpg)
 
 随实验次数进行，减小$\epsilon$值
-![-w505](/assets/images/15964297028232.jpg)
+![-w505](../image/rl_5/15964297028232.jpg)
 
 
 
@@ -54,37 +55,37 @@ recommend: false
 # ON-policy TD learning
 
 - TD与MC control 区别，希望引入TD的特性到on-policy learning
-![-w509](/assets/images/15965079350024.jpg)
+![-w509](../image/rl_5/15965079350024.jpg)
 
 ## Sasra
 ### Sasra（one-step）
 由贝尔曼公式推导
-![-w451](/assets/images/15964411373536.jpg)
+![-w451](../image/rl_5/15964411373536.jpg)
 
 ### 算法实现过程
-![-w535](/assets/images/15964401337385.jpg)
+![-w535](../image/rl_5/15964401337385.jpg)
 
 要保证Q值收敛，需要服从下列2个条件
 - 策略符合GLIE特性
 - 计算步长满足如图：
-![-w443](/assets/images/15964405409905.jpg)
+![-w443](../image/rl_5/15964405409905.jpg)
 
 ### n-step Sarsa
 与TD（λ）类似，扩展q的视野
 
-![-w576](/assets/images/15964411018416.jpg)
+![-w576](../image/rl_5/15964411018416.jpg)
 
 
 ## Forward view Sarsa(λ)
-![-w644](/assets/images/15964499708276.jpg)
+![-w644](../image/rl_5/15964499708276.jpg)
 
 ## Backward view Sarsa(λ)
 在正向视角中，迭代一次Q值，需要完整的一次episode
 为了解决这个问题，引入迹的概念，实现incremental update
-![-w621](/assets/images/15964503883163.jpg)
+![-w621](../image/rl_5/15964503883163.jpg)
 
 ### 算法流程
-![-w529](/assets/images/15965030748824.jpg)
+![-w529](../image/rl_5/15965030748824.jpg)
 
 Attention：迹E是属于episode的，切换episode后，E要归零
 
@@ -108,7 +109,7 @@ $$
 
 ## off-policy MC learning
 引入了概率缩放系数，判断两个策略动作概率函数
-![-w484](/assets/images/15965086023837.jpg)
+![-w484](../image/rl_5/15965086023837.jpg)
 
 -  缺点：
  - 方差会增加
@@ -116,7 +117,7 @@ $$
 
 ## off-policy TD learning
 利用期望分布的概念，在更新目标前x一个系数，对当前策略的置信度
-![-w426](/assets/images/15965088051921.jpg)
+![-w426](../image/rl_5/15965088051921.jpg)
 
 -  优点：
  - 低方差
@@ -152,22 +153,22 @@ $$
 =& R_{t+1}+\max _{a^{\prime}} \gamma Q\left(S_{t+1}, a^{\prime}\right)
 \end{aligned}
 $$
-![-w535](/assets/images/15965124141748.jpg)
+![-w535](../image/rl_5/15965124141748.jpg)
 
 迭代使$Q(s,a) \rightarrow q_* (s,a)$
 Attention：在迭代过程中，动作采用$\epsilon-greedy$策略，保证对位置环境的探索
 
 ### 算法流程
-![-w538](/assets/images/15965124556612.jpg)
+![-w538](../image/rl_5/15965124556612.jpg)
 
 
 # 总结
 ## DP TD的关系
-![-w619](/assets/images/15965127185793.jpg)
-![-w633](/assets/images/15965134695436.jpg)
+![-w619](../image/rl_5/15965127185793.jpg)
+![-w633](../image/rl_5/15965134695436.jpg)
 
 ## Q-learning 和 SARSA区别
-![-w711](/assets/images/15965139448881.jpg)
+![-w711](../image/rl_5/15965139448881.jpg)
 
 区别在于：
 - Q-learning：
@@ -177,4 +178,4 @@ Attention：在迭代过程中，动作采用$\epsilon-greedy$策略，保证对
 - SARSA：更新和执行都用$\epsilon-greedy$策略
 
 
-![](/assets/images/contact.jpg)
+![](../image/contact.jpg)
