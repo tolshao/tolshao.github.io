@@ -1,14 +1,15 @@
 import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
-// 把 frontmatter 中的相对图片引用 (`../images/...`、`./images/...`、`images/...`)
-// 改写为指向 public/assets/images/blog/<...> 的绝对 URL，与正文图片保持一致。
+// 把 frontmatter 中的相对图片引用 (`../image/...`、`./image/...`、`image/...`)
+// 改写为站点根绝对路径 `/image/<...>`，与正文图片保持一致；copy-blog-images
+// 集成负责把图片拷贝到 dist/image/。
 const coverSchema = z.string().optional().transform((val) => {
 	if (!val) return val;
 	if (/^(https?:|data:|\/\/)/.test(val)) return val;
-	if (val.startsWith('/assets/images/blog/')) return val;
-	const m = val.match(/^(?:\.\.?\/)?images\/(.+)$/);
-	if (m) return '/assets/images/blog/' + m[1];
+	if (val.startsWith('/image/')) return val;
+	const m = val.match(/^(?:\.\.?\/)?image\/([^)\s]+?)\s*$/);
+	if (m) return '/image/' + m[1];
 	return val;
 });
 

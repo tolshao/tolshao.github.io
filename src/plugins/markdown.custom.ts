@@ -3,6 +3,15 @@ import { visit } from 'unist-util-visit';
 import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
 
+// 把正文里 ../image/foo.jpg、./image/foo.jpg、image/foo.jpg 统一改写为
+// /image/foo.jpg（站点根绝对路径）。copy-blog-images 集成把图片拷贝到 dist/image/。
+function normalizeArticleImageSrc(src: unknown): string | undefined {
+  if (typeof src !== 'string' || !src) return undefined;
+  const m = src.match(/^(?:\.\.?\/)?image\/([^)\s]+?)\s*$/);
+  if (m) return '/image/' + m[1];
+  return undefined;
+}
+
 // 预处理文本：移除 LaTeX 公式内容，防止其干扰字数统计
 function stripLatexForWordCount(text: string): string {
   // Remove display math \[ ... \] and $$, \begin{}...\end{}
@@ -71,7 +80,9 @@ const addClassNames = () => {
       } else if (node.tagName === 'img') {
         // 添加 class 和 loading 属性
         node.properties.class = 'vh-article-img';
-        node.properties['data-vh-lz-src'] = node.properties.src;
+        // 把 ../image/... 规范化为相对文章页路径 ./image/...
+        const realSrc = normalizeArticleImageSrc(node.properties.src) || node.properties.src;
+        node.properties['data-vh-lz-src'] = realSrc;
         node.properties.src = '/assets/images/lazy-loading.webp';
         // 处理 section 标签
       } else if (node.tagName === 'section') {
