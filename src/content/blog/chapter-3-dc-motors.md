@@ -1,11 +1,11 @@
 ---
-title: "都 2026 了还讲碳刷电机？不懂它，你连 FOC 的门都摸不着"
+title: "[Chapter-3] 都 2026 了还讲碳刷电机？不懂它，你连 FOC 的门都摸不着"
 categories: 电机导论
 tags:
   - 电机
   - 直流电机
   - 电机驱动
-date: 2026-07-27
+date: 2026-07-03
 cover: "../image/chapter-3-dc-motors/cover.png"
 typora-root-url: ../
 id: "81713"

@@ -1,11 +1,11 @@
 ---
-title: "电机为什么会自己‘懂得’多出力？从一根导线看懂电机的全部底层逻辑"
+title: "[Chapter-1] 电机为什么会自己‘懂得’多出力？从一根导线看懂电机的全部底层逻辑"
 categories: 电机导论
 tags:
   - 电机
   - 电磁学
   - 电机驱动
-date: 2026-07-27
+date: 2026-07-01
 cover: "../image/chapter-1-electric-motors-basics/cover.png"
 typora-root-url: ../
 id: "81711"

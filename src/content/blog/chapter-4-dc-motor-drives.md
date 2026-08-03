@@ -1,11 +1,11 @@
 ---
-title: "电机有了，还得配个“大脑”：老列拆开调速柜，里头就两个环"
+title: "[Chapter-4] 电机有了，还得配个“大脑”：老列拆开调速柜，里头就两个环"
 categories: 电机导论
 tags:
   - 电机
   - 直流调速
   - 闭环控制
-date: 2026-07-27
+date: 2026-07-04
 cover: "../image/chapter-4-dc-motor-drives/cover.png"
 typora-root-url: ../
 id: "81714"

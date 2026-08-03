@@ -1,5 +1,5 @@
 ---
-title: "变频器到底在忙什么？从一只开关管看懂电机驱动的功率电子底座"
+title: "[Chapter-2] 变频器到底在忙什么？从一只开关管看懂电机驱动的功率电子底座"
 categories: 电机导论
 tags:
   - 电机驱动
@@ -7,7 +7,7 @@ tags:
   - 变频器
   - PWM
 id: "81712"
-date: 2026-07-27
+date: 2026-07-02
 cover: "../image/chapter-2-power-electronic-converters/cover.png"
 typora-root-url: ../
 top: false
