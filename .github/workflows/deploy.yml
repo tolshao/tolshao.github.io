@@ -7,6 +7,7 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  ABOUT_PRIVATE_PASSWORD: ${{ secrets.ABOUT_PRIVATE_PASSWORD }}
 
 permissions:
   contents: read
