@@ -525,20 +525,20 @@ $$
 
 ```mermaid
 flowchart TD
-    A([输入 Va、Vb、Vc、Ts、PRD]) --> B[60° 斜坐标变换<br/>计算 Vg、Vh]
-    B --> C[按 2Vdc/3 标幺化<br/>计算 Vr = Vg + Vh]
-    C --> D{根据 Vg、Vh、Vr<br/>判断六个扇区}
-    D --> E[将局部作用时间<br/>映射为 T1、T2]
-    E --> F[计算 T0 = 1 - T1 - T2]
-    F --> G{T0 < 0？}
-    G -- 是 --> H[按 T1 + T2 等比例限幅<br/>并令 T0 = 0]
-    G -- 否 --> I[保留 T0、T1、T2]
-    H --> J[计算 TL、TM、TH]
+    A(["输入 Va、Vb、Vc、Ts、PRD"]) --> B["60° 斜坐标变换<br/>计算 Vg、Vh"]
+    B --> C["按 2Vdc/3 标幺化<br/>计算 Vr = Vg + Vh"]
+    C --> D{"根据 Vg、Vh、Vr<br/>判断六个扇区"}
+    D --> E["将局部作用时间<br/>映射为 T1、T2"]
+    E --> F["计算 T0 = 1 - T1 - T2"]
+    F --> G{"T0 是否小于 0？"}
+    G -- "是" --> H["按 T1 + T2 等比例限幅<br/>并令 T0 = 0"]
+    G -- "否" --> I["保留 T0、T1、T2"]
+    H --> J["计算 TL、TM、TH"]
     I --> J
-    J --> K[换算 C0、C1、C2]
-    K --> L{按扇区排列<br/>C0、C1、C2}
-    L --> M([输出 CMPA、CMPB、CMPC])
-    M --> N([同步写入三相影子寄存器])
+    J --> K["换算 C0、C1、C2"]
+    K --> L{"按扇区排列<br/>C0、C1、C2"}
+    L --> M(["输出 CMPA、CMPB、CMPC"])
+    M --> N(["同步写入三相影子寄存器"])
 
     classDef io fill:#EAF2FB,stroke:#2878B5,color:#17324D,stroke-width:1.5px;
     classDef process fill:#F4F7FA,stroke:#6B7785,color:#17324D,stroke-width:1px;
