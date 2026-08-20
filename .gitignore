@@ -27,3 +27,8 @@ test/
 .edgeone/*
 .tef_dist/*
   
+.vercel
+.env*
+
+# Claude local settings
+.claude/

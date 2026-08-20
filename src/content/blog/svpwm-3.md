@@ -736,8 +736,6 @@ void SVPWM(const float u[5],
 
 ---
 
-> 参考阅读：[手撕系列（4）：空间矢量调制（SVPWM）](https://zhuanlan.zhihu.com/p/303998608)
-
 > 推荐关注公众号「探物及理」，探万物之然，及万理之源。
 >
 > ![](../image/contact.jpg)
