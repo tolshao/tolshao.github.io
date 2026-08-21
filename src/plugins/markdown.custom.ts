@@ -2,6 +2,7 @@
 import { visit } from 'unist-util-visit';
 import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
+import { renderMermaidSVG } from '@xingwangzhe/satteri-mermaid';
 
 // 把正文里 ../image/foo.jpg、./image/foo.jpg、image/foo.jpg 统一改写为
 // /image/foo.jpg（站点根绝对路径）。copy-blog-images 集成把图片拷贝到 dist/image/。
@@ -95,4 +96,71 @@ const addClassNames = () => {
   };
 }
 
-export { remarkNote, addClassNames }
+// 在 rehype 阶段把 ```mermaid 代码块替换为内联 SVG。
+// 必须在 addClassNames 之前运行，避免被 vh-code-box 包装。
+// shiki 已经把 ```mermaid 渲染成 <pre class="astro-code" data-language=mermaid>…，
+// 因此按 data-language / <code class="language-mermaid"> 双重判定。
+const rehypeMermaid = () => {
+  return (tree: any) => {
+    visit(tree, 'element', (node, index, parent) => {
+      if (!parent || index === null) return;
+      if (node.tagName !== 'pre') return;
+      const props = node.properties || {};
+      const dataLang = props['dataLanguage'] ?? props['data-language'];
+      const langAttr = Array.isArray(dataLang) ? dataLang[0] : dataLang;
+      const preClasses = ([] as string[]).concat(props.class || []);
+
+      let isMermaid = langAttr === 'mermaid' || preClasses.includes('language-mermaid');
+
+      const codeChild = (node.children || []).find(
+        (c: any) => c.type === 'element' && c.tagName === 'code',
+      );
+      if (!isMermaid && codeChild) {
+        const cls = (codeChild.properties && codeChild.properties.class) || [];
+        const classList = Array.isArray(cls) ? cls : [cls];
+        isMermaid = classList.includes('language-mermaid') || classList.includes('lang-mermaid');
+      }
+      if (!isMermaid) return;
+
+      // 还原源码：shiki 把每行包成 <span class="line">…</span>，需要把 span 内的纯文本拼回
+      const collectText = (n: any): string => {
+        if (!n) return '';
+        if (n.type === 'text') return n.value || '';
+        if (n.type === 'element') {
+          let out = '';
+          for (const c of n.children || []) out += collectText(c);
+          if (n.tagName === 'span' && (n.properties?.class || []).includes?.('line')) {
+            return out + '\n';
+          }
+          return out;
+        }
+        return '';
+      };
+      const source = collectText(codeChild || node).trim();
+      if (!source) return;
+
+      let svg: string;
+      try {
+        svg = renderMermaidSVG(source, {
+          responsive: true,
+          theme: 'default',
+          background: 'transparent',
+        });
+      } catch (e) {
+        // eslint-disable-next-line no-console
+        console.warn('[rehype-mermaid] render failed:', (e as Error).message);
+        return;
+      }
+
+      const divNode = {
+        type: 'element',
+        tagName: 'div',
+        properties: { class: 'vh-mermaid' },
+        children: [{ type: 'raw', value: svg }],
+      };
+      parent.children.splice(index, 1, divNode);
+    });
+  };
+};
+
+export { remarkNote, addClassNames, rehypeMermaid }

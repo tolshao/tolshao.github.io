@@ -11,8 +11,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import remarkMath from "remark-math";
 import rehypeSlug from "rehype-slug";
 import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import remarkDirective from "remark-directive";
-import { remarkNote, addClassNames } from './src/plugins/markdown.custom'
+import { remarkNote, addClassNames, rehypeMermaid } from './src/plugins/markdown.custom'
 // Markdown 配置================
 import SITE_INFO from './src/config';
 import swup from '@swup/astro';
@@ -121,10 +122,15 @@ export default defineConfig({
 				trust: true,
 				strict: false
 			}
-		], rehypeSlug, addClassNames],
+		], rehypeRaw, rehypeSlug, rehypeMermaid, addClassNames],
 		syntaxHighlight: 'shiki',
 		shikiConfig: { theme: 'github-light' },
 	},
-	vite: { resolve: { alias: { "@": path.resolve(__dirname, "./src") } } },
+	vite: {
+		resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
+		// satteri-mermaid 通过 createRequire(import.meta.url) 加载 napi-rs 预编译 .node，
+		// 必须保持为真实 Node 模块，否则 Vite 打包后会找不到 index.cjs / *.node
+		ssr: { external: ['@xingwangzhe/satteri-mermaid'] }
+	},
 	server: { host: '0.0.0.0' }
 });
