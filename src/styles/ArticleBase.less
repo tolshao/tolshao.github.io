@@ -653,3 +653,97 @@
     }
   }
 }
+
+// 浮动 TOC 按钮 (@rgglez/astro-tocbutton) —— 项目未启用 Tailwind，
+// 这里把组件依赖的工具类翻译为本项目的设计 token。
+// 组件 JS 会把容器 reparent 到 <body>，所以样式写在最外层。
+#toc-btn-container {
+  position: fixed;
+  z-index: 50;
+  bottom: 2rem;
+  inset-inline-start: 1rem;
+
+  &[data-position="bottom-right"], &[data-position="top-right"] {
+    inset-inline-start: auto;
+    inset-inline-end: 1rem;
+  }
+  &[data-position="top-left"], &[data-position="top-right"] {
+    bottom: auto;
+    top: 2rem;
+  }
+
+  &>#toc-btn {
+    position: relative;
+    background: var(--vh-card-bg, #fff);
+    color: var(--vh-font-1, #333);
+    padding: 0.25rem 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--vh-border-color, #e5e7eb);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, .15);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color .15s ease;
+
+    &:hover { color: var(--vh-theme, #2878b5); }
+
+    &:focus-visible {
+      outline: 2px dashed var(--vh-theme, #2878b5);
+      outline-offset: 2px;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+    }
+  }
+
+  &>#toc-popover {
+    position: absolute;
+    border-radius: 0.75rem;
+    border: 1px solid var(--vh-border-color, #e5e7eb);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
+    background: var(--vh-card-bg, #fff);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(0.5rem);
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+
+    &.opacity-100 {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+
+  &>#toc-nav {
+    padding: 0.75rem;
+    font-size: .875rem;
+    line-height: 1.4;
+
+    a.toc-link {
+      display: block;
+      padding: 0.25rem 0;
+      line-height: 1.4;
+      color: var(--vh-font-2, #555);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: color .15s ease;
+
+      &:hover { color: var(--vh-theme, #2878b5); }
+
+      &.pl-4  { padding-inline-start: 1rem;   }
+      &.pl-8  { padding-inline-start: 2rem;   }
+      &.pl-10 { padding-inline-start: 2.5rem; }
+      &.pl-12 { padding-inline-start: 3rem;   }
+    }
+  }
+}
