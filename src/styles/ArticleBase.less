@@ -723,27 +723,33 @@
     }
   }
 
-  &>#toc-nav {
+  // #toc-nav 在 #toc-popover 内部，不是 #toc-btn-container 的直接子节点，用后代选择器
+  #toc-nav {
     padding: 0.75rem;
     font-size: .875rem;
     line-height: 1.4;
 
     a.toc-link {
       display: block;
-      padding: 0.25rem 0;
+      padding: .5rem .625rem;
+      margin-bottom: 1px;
       line-height: 1.4;
       color: var(--vh-font-2, #555);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      transition: color .15s ease;
+      border-radius: .375rem;
+      transition: background-color .15s ease, color .15s ease;
 
-      &:hover { color: var(--vh-theme, #2878b5); }
+      &:hover {
+        color: var(--vh-theme, #2878b5);
+        background-color: rgba(40, 120, 181, .08);
+      }
 
-      &.pl-4  { padding-inline-start: 1rem;   }
-      &.pl-8  { padding-inline-start: 2rem;   }
-      &.pl-10 { padding-inline-start: 2.5rem; }
-      &.pl-12 { padding-inline-start: 3rem;   }
+      &.pl-4  { padding-inline-start: 1.25rem; }
+      &.pl-8  { padding-inline-start: 2rem;    }
+      &.pl-10 { padding-inline-start: 2.75rem; }
+      &.pl-12 { padding-inline-start: 3.5rem;  }
     }
   }
 }

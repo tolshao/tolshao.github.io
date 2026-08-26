@@ -13,7 +13,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
 import remarkDirective from "remark-directive";
-import { remarkNote, addClassNames, rehypeMermaid } from './src/plugins/markdown.custom'
+import { remarkNote, addClassNames, rehypeMermaid, stripKatexAnnotations } from './src/plugins/markdown.custom'
 // Markdown 配置================
 import SITE_INFO from './src/config';
 import swup from '@swup/astro';
@@ -122,7 +122,7 @@ export default defineConfig({
 				trust: true,
 				strict: false
 			}
-		], rehypeRaw, rehypeSlug, rehypeMermaid, addClassNames],
+		], rehypeRaw, rehypeSlug, rehypeMermaid, stripKatexAnnotations, addClassNames],
 		syntaxHighlight: 'shiki',
 		shikiConfig: { theme: 'github-light' },
 	},

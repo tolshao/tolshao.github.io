@@ -64,6 +64,23 @@ const remarkNote = () => {
 }
 
 
+// 只在标题（h2–h6）内去掉 rehype-katex 输出的 <annotation>。
+// 完整正文里仍保留 annotation，作为 MathML 不识别时的 LaTeX 回退（屏幕阅读器、无障碍）。
+// 但 TOC 之类靠 textContent 抽取标题文字的场景会把 annotation 的 LaTeX 原文也带进去，
+// 显示为 V_{g'} 这种源码。这里只对 heading 节点做剔除。
+const stripKatexAnnotations = () => {
+  return (tree: any) => {
+    const isHeading = (n: any) =>
+      n && n.type === 'element' && /^h[2-6]$/.test(n.tagName);
+    visit(tree, 'element', (node, _index, parent) => {
+      if (node.tagName !== 'annotation') return;
+      if (!parent || !isHeading(parent)) return;
+      parent.children = (parent.children as any[]).filter((c) => c !== node);
+    });
+  };
+};
+
+
 //  处理 HTML 标签
 const addClassNames = () => {
   return (tree: any) => {
@@ -163,4 +180,4 @@ const rehypeMermaid = () => {
   };
 };
 
-export { remarkNote, addClassNames, rehypeMermaid }
+export { remarkNote, addClassNames, rehypeMermaid, stripKatexAnnotations }
