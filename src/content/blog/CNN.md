@@ -4,7 +4,7 @@ date: "2020-07-15"
 categories: "机器学习笔记"
 tags: ["深度学习", "CNN", "卷积神经网络"]
 id: "71093"
-cover: "../image/CNN/default_cover.jpg"
+cover: "../image/CNN/cover.png"
 typora-root-url: ../
 top: false
 recommend: false
@@ -257,5 +257,7 @@ $\lambda$ 是 l 层的权重
 
 ### 3D形式
 ![-w695](../image/CNN/15943041391653.jpg)
+
+> 封面图来源：[Convolutional Neural Network.png](https://commons.wikimedia.org/wiki/File:Convolutional_Neural_Network.png)，作者 Irisbox，许可证 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。
 
 ![](../image/CNN/contact.jpg)
